@@ -1,0 +1,58 @@
+[18:19:46][session.cpp:787]: Init session
+[18:19:46][session.cpp:2419]: SSessionDlcCache: Voice of the People
+[18:19:46][session.cpp:2419]: SSessionDlcCache: Voice of the People Preorder
+[18:20:47][jominigamestate.cpp:232]: Creating gamestate
+[18:20:53][session.h:464]: Setting execute commands: yes
+[18:20:53][session.h:476]: Enabling recorded command replaying
+[18:20:53][multiplayer.cpp:181]: Adding local player
+[18:20:53][session.cpp:1234]: Replaying recorded commands: 0
+[18:20:53][session.h:470]: Setting record commands: no
+[18:20:53][session.cpp:1241]: Notifying callbacks with DoneReplayingCommands
+[18:20:53][ingamemultiplayeridlerlogic.cpp:191]: Handling session notification: done replaying commands for machine ID: 1
+[18:20:57][controlcommands.cpp:52]: CAddPlayer local player: UNKNOWN with machine ID: 1 sender: 1
+[18:20:57][controlcommands.cpp:1075]: Setting "done replaying commands" for machine ID: 1
+[18:20:57][controlcommands.cpp:399]: Setting playable: 5 for machine ID: 1
+[18:20:57][controlcommands.cpp:415]: Setting character controller
+[18:20:57][controlcommands.cpp:1032]: Setting "player here" for machine ID: 1
+[18:20:57][controlcommands.cpp:521]: Starting game, sender: 1
+[18:20:57][controlcommands.cpp:1075]: Setting "done replaying commands" for machine ID: 1
+[18:20:57][controlcommands.cpp:399]: Setting playable: 5 for machine ID: 1
+[18:20:57][session.cpp:2245]: Setting preparation lobby: no
+[18:31:01][session.cpp:1501]: Disconnecting from game
+[18:31:01][session.cpp:1552]: Already disconnected
+[18:31:01][session.h:464]: Setting execute commands: no
+[18:31:01][jominigamestate.cpp:239]: Destroying gamestate
+[18:31:01][ingamesavegametransferhandler.cpp:86]: Clearing pending save transfers
+[18:31:02][jominigamestate.cpp:232]: Creating gamestate
+[18:31:09][session.h:464]: Setting execute commands: yes
+[18:31:09][session.h:476]: Enabling recorded command replaying
+[18:31:09][multiplayer.cpp:181]: Adding local player
+[18:31:09][session.cpp:1234]: Replaying recorded commands: 0
+[18:31:09][session.h:470]: Setting record commands: no
+[18:31:09][session.cpp:1241]: Notifying callbacks with DoneReplayingCommands
+[18:31:09][ingamemultiplayeridlerlogic.cpp:191]: Handling session notification: done replaying commands for machine ID: 1
+[18:31:11][controlcommands.cpp:52]: CAddPlayer local player: UNKNOWN with machine ID: 1 sender: 1
+[18:31:11][controlcommands.cpp:1075]: Setting "done replaying commands" for machine ID: 1
+[18:31:11][controlcommands.cpp:399]: Setting playable: 5 for machine ID: 1
+[18:31:11][controlcommands.cpp:415]: Setting character controller
+[18:31:11][controlcommands.cpp:1032]: Setting "player here" for machine ID: 1
+[18:31:11][controlcommands.cpp:521]: Starting game, sender: 1
+[18:31:11][controlcommands.cpp:1075]: Setting "done replaying commands" for machine ID: 1
+[18:31:11][controlcommands.cpp:399]: Setting playable: 5 for machine ID: 1
+[18:31:11][session.cpp:2245]: Setting preparation lobby: no
+[18:31:35][session.cpp:1501]: Disconnecting from game
+[18:31:35][session.cpp:1552]: Already disconnected
+[18:31:35][session.h:464]: Setting execute commands: no
+[18:31:35][jominigamestate.cpp:239]: Destroying gamestate
+[18:31:35][ingamesavegametransferhandler.cpp:86]: Clearing pending save transfers
+[18:31:36][jominigamestate.cpp:232]: Creating gamestate
+[18:31:43][session.h:464]: Setting execute commands: yes
+[18:31:43][session.h:476]: Enabling recorded command replaying
+[18:31:43][multiplayer.cpp:181]: Adding local player
+[18:31:43][session.cpp:1234]: Replaying recorded commands: 0
+[18:31:43][session.h:470]: Setting record commands: no
+[18:31:43][session.cpp:1241]: Notifying callbacks with DoneReplayingCommands
+[18:31:43][ingamemultiplayeridlerlogic.cpp:191]: Handling session notification: done replaying commands for machine ID: 1
+[18:31:45][controlcommands.cpp:52]: CAddPlayer local player: UNKNOWN with machine ID: 1 sender: 1
+[18:31:45][controlcommands.cpp:1075]: Setting "done replaying commands" for machine ID: 1
+[18:31:45][controlcommands.cpp:399]: Setti

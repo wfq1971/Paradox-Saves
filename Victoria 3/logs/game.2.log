@@ -1,0 +1,2334 @@
+[17:12:36][game_concept_type.cpp:184]: Missing Loc for game concept: concept_zz_war_flags_nations
+[17:12:36][game_concept_type.cpp:192]: Missing Desc Loc for game concept: concept_zz_war_flags_nations_desc
+[17:13:04][modifier_types.cpp:413]: Modifier is missing loc key! Modifier: building_output_air_travel_add, LocKey: modifier_building_output_air_travel_add
+[17:13:04][modifier_types.cpp:422]: Modifier is missing description loc key! Modifier: building_output_air_travel_add, LocKey: modifier_building_output_air_travel_add_desc
+[17:13:04][modifier_types.cpp:413]: Modifier is missing loc key! Modifier: building_input_air_travel_add, LocKey: modifier_building_input_air_travel_add
+[17:13:04][modifier_types.cpp:422]: Modifier is missing description loc key! Modifier: building_input_air_travel_add, LocKey: modifier_building_input_air_travel_add_desc
+[17:13:04][modifier_types.cpp:413]: Modifier is missing loc key! Modifier: country_subsidies_bg_infres_agriculture, LocKey: modifier_country_subsidies_bg_infres_agriculture
+[17:13:04][modifier_types.cpp:422]: Modifier is missing description loc key! Modifier: country_subsidies_bg_infres_agriculture, LocKey: modifier_country_subsidies_bg_infres_agriculture_desc
+[17:13:04][modifier_types.cpp:413]: Modifier is missing loc key! Modifier: country_subsidies_bg_infres_ranching, LocKey: modifier_country_subsidies_bg_infres_ranching
+[17:13:04][modifier_types.cpp:422]: Modifier is missing description loc key! Modifier: country_subsidies_bg_infres_ranching, LocKey: modifier_country_subsidies_bg_infres_ranching_desc
+[17:13:04][modifier_types.cpp:413]: Modifier is missing loc key! Modifier: country_subsidies_bg_infres_plantations, LocKey: modifier_country_subsidies_bg_infres_plantations
+[17:13:04][modifier_types.cpp:422]: Modifier is missing description loc key! Modifier: country_subsidies_bg_infres_plantations, LocKey: modifier_country_subsidies_bg_infres_plantations_desc
+[17:13:07][jomini_eventtarget.cpp:606]: Failed to find a valid event target link 'max_autoexpand_queue_weeks' at  file: common/buildings/110_private_infrastructure.txt line: 26
+[17:13:08][production_method.cpp:106]: Production method references nonexistent technology type! Method: pm_regional_routes, Technology: telephones
+[17:13:08][production_method_group.cpp:48]: Production Method Group references nonexistent PM type! PMG: pmg_mining_equipment_building_gold_mine_infres, PM: pm_nuclear_pump_building_gold_mine
+[17:13:08][production_method_group.cpp:48]: Production Method Group references nonexistent PM type! PMG: pmg_mining_equipment_building_gold_mine_infres, PM: pm_automated_mining_machine_building_gold_mine
+[17:13:08][production_method_group.cpp:48]: Production Method Group references nonexistent PM type! PMG: pmg_explosives_building_gold_mine_infres, PM: pm_nuclear_dynamite_gold_mine
+[17:13:08][building_type.cpp:1433]: Building type is missing loc key! Building Type: building_airport
+[17:13:08][building_type.cpp:1439]: Production Method Group is missing loc key! Production Method Group: pmg_base_building_airport
+[17:13:08][building_type.cpp:1445]: Production Method is missing loc key! Production Method: pm_private_charters
+[17:13:08][building_type.cpp:1445]: Production Method is missing loc key! Production Method: pm_regional_routes
+[17:13:08][building_type.cpp:1445]: Production Method is missing loc key! Production Method: pm_domestic_routes
+[17:13:08][building_type.cpp:1445]: Production Method is missing loc key! Production Method: pm_international_routes
+[17:13:08][building_type.cpp:1439]: Production Method Group is missing loc key! Production Method Group: pmg_cargo_airport
+[17:13:08][building_type.cpp:1445]: Production Method is missing loc key! Production Method: pm_air_passenger_only
+[17:13:08][building_type.cpp:1445]: Production Method is missing loc key! Production Method: pm_air_mail
+[17:13:08][building_type.cpp:1445]: Production Method is missing loc key! Production Method: pm_air_freight
+[17:13:08][building_type.cpp:1439]: Production Method Group is missing loc key! Production Method Group: pmg_ownership_capital_building_airport
+[17:13:08][building_type.cpp:1445]: Production Method is missing loc key! Production Method: pm_privately_owned_building_airport
+[17:13:08][building_type.cpp:1445]: Production Method is missing loc key! Production Method: pm_publicly_traded_building_airport
+[17:13:08][building_type.cpp:1445]: Production Method is missing loc key! Production Method: pm_government_run_building_airport
+[17:13:08][building_type.cpp:1445]: Production Method is missing loc key! Production Method: pm_worker_cooperative_building_airport
+[17:13:08][building_type.cpp:1439]: Production Method Group is missing loc key! Production Method Group: pmg_mining_equipment_building_gold_mine_infres
+[17:13:08][building_type.cpp:1445]: Production Method is missing loc key! Production Method: pm_picks_and_shovels_building_gold_mine_infres
+[17:13:08][building_type.cpp:1445]: Production Method is missing loc key! Production Method: pm_atmospheric_engine_pump_building_gold_mine_infres
+[17:13:08][building_type.cpp:1445]: Production Method is missing loc key! Production Method: pm_condensing_engine_pump_building_gold_mine_infres
+[17:13:08][building_type.cpp:1445]: Production Method is missing loc key! Production Method: pm_diesel_pump_building_gold_mine_infres
+[17:13:08][building_type.cpp:1439]: Production Method Group is missing loc key! Production Method Group: pmg_explosives_building_gold_mine_infres
+[17:13:08][building_type.cpp:1445]: Production Method is missing loc key! Production Method: pm_nitroglycerin_building_gold_mine_infres
+[17:13:08][building_type.cpp:1445]: Production Method is missing loc key! Production Method: pm_dynamite_building_gold_mine_infres
+[17:13:08][building_type.cpp:1433]: Building type is missing loc key! Building Type: building_infres_construction_sector
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > '1848' is set to #1000000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/1848.txt' #9
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'africa_colonial_events' is set to #1010000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/africa_colonial_events.txt' #6
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/africa_colonial_events_02.txt' #2
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/africa_colonial_events_03.txt' #5
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'aipool' is set to #1020000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/aipool_trigger.txt' #1
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'alaska' is set to #1030000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/alaska_events.txt' #4
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'amazon' is set to #1040000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/amazon_events.txt' #4
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'assassination_events' is set to #1050000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/assassination_events.txt' #8
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'autocracy' is set to #1060000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/autocracy_events.txt' #3
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'belle_epoque_events' is set to #1070000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/belle_epoque_events.txt' #20
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'bic_breakup' is set to #1080000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/bic_breakup.txt' #1
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'boxer_rebellion_events' is set to #1090000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/boxer_rebellion_events.txt' #4
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'raj' is set to #1100000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/british_raj_events.txt' #7
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'can_aus' is set to #1110000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/canada_australia_events.txt' #8
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'canal_events' is set to #1120000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/canal_events.txt' #10
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'central_america' is set to #1130000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/central_america_events.txt' #2
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'character_events' is set to #1140000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/character_events.txt' #7
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'cholera' is set to #1150000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/cholera.txt' #1
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'civil_war_events' is set to #1160000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/civil_war_events.txt' #1
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'commander_events' is set to #1170000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/commander_events.txt' #4
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'communism' is set to #1180000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/communism.txt' #9
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'congo_free_state_events' is set to #1190000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/congo_free_state_events.txt' #6
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'corn_laws' is set to #1200000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/corn_laws_events.txt' #4
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'crime_events' is set to #1210000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/crime_events.txt' #6
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'cultural_homeland_events' is set to #1220000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/cultural_homeland_events.txt' #6
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'debug' is set to #1230000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/debug_events.txt' #13
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'decree_events' is set to #1240000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/decree_events.txt' #6
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/decree_events_02.txt' #10
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'dei_breakup' is set to #1250000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/dei_breakup.txt' #1
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'diplomatic_events' is set to #1260000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/diplomatic_events.txt' #1
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'diplomatic_friction' is set to #1270000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/diplomatic_friction_events.txt' #4
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'discrimination_events' is set to #1280000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/discrimination_events.txt' #4
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'dreadnought_hoax' is set to #1290000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/dreadnought_hoax.txt' #1
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'dual_monarchy' is set to #1300000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/dual_monarchy.txt' #1
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'east_indies' is set to #1310000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/east_indies_je_events.txt' #3
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'egyptian_crisis_events' is set to #1320000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/egyptian_crisis_events.txt' #3
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'ethiopia' is set to #1330000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/ethiopia.txt' #1
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'famine_political' is set to #1340000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/famine_political_events.txt' #5
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'fascism_events' is set to #1350000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/fascism_events.txt' #7
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'french_pretenders' is set to #1360000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/french_pretenders.txt' #8
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'french_pretenders_pulse' is set to #1370000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/french_pretenders_pulse.txt' #15
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'generals' is set to #1380000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/general_events.txt' #1
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'german_unification' is set to #1390000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/german_unification.txt' #5
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'goldrush' is set to #1400000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/gold_rush.txt' #5
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'government_conflicts' is set to #1410000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/government_conflicts_events.txt' #11
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'exhibition_events' is set to #1420000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/grand_exhibition_events.txt' #8
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'greece' is set to #1430000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/greece_events.txt' #3
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'hawaii_events' is set to #1440000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/hawaii_events.txt' #5
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'heavenly' is set to #1450000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/heavenly_kingdom_events.txt' #6
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'hispaniola_events' is set to #1460000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/hispaniola_events.txt' #5
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'historical_events' is set to #1470000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/historical_events.txt' #1
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'ig_leaders' is set to #1480000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/ig_leaders.txt' #7
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'ig_petitions' is set to #1490000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/ig_petitions.txt' #8
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'ig_revolutions' is set to #1500000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/ig_revolutions.txt' #9
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'ig_suppression_events' is set to #1510000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/ig_suppression_events.txt' #10
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'indochina' is set to #1520000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/indochina.txt' #4
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'industrial_accident_events' is set to #1530000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/industrial_accidents_events.txt' #6
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'italian_unification' is set to #1540000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/italian_unification.txt' #2
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'marx_events' is set to #1550000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/karl_marx_events.txt' #1
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'krakatoa' is set to #1560000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/krakatoa_events.txt' #5
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'krakow' is set to #1570000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/krakow_events.txt' #2
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'land_reclamation' is set to #1580000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/land_reclamation.txt' #1
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'liberalism' is set to #1590000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/liberalism.txt' #4
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'famine_events' is set to #1600000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/major_famine_events.txt' #4
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'major_railways' is set to #1610000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/major_railways.txt' #3
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'manifest_destiny' is set to #1620000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/manifest_destiny_events.txt' #3
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'meiji' is set to #1630000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/meiji_restoration.txt' #13
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'metro' is set to #1640000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/metro_events.txt' #1
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'regional_events' is set to #1650000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/misc_regional_events.txt' #0
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'native_resettlement' is set to #1660000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/native_resettlement.txt' #6
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'natural_disaster_events' is set to #1670000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/natural_disasters_events.txt' #8
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'neighbor_events' is set to #1680000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/neighbor_events.txt' #7
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'nihilism' is set to #1690000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/nihilism.txt' #13
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'obligation_events' is set to #1700000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/obligation_events.txt' #6
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'oil_rush' is set to #1710000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/oil_rush_events.txt' #5
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'opium_events' is set to #1720000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/opium_events.txt' #1
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'opium_wars' is set to #1730000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/opium_wars_events.txt' #8
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'oregon' is set to #1740000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/oregon_events.txt' #3
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'oscar_wilde_events' is set to #1750000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/oscar_wilde.txt' #1
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'patagonia' is set to #1760000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/patagonia.txt' #2
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'peoples_springtime' is set to #1770000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/peoples_springtime.txt' #8
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'pm_events' is set to #1780000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/pm_events.txt' #5
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'prohibition' is set to #1790000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/prohibition_events.txt' #8
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'prostitution' is set to #1800000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/prostitution_events.txt' #4
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'psychology_events' is set to #1810000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/psychology_events.txt' #6
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'wedding' is set to #1820000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/royal_wedding.txt' #3
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'russo_chinese' is set to #1830000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/russo_chinese_events.txt' #3
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'scotland_yard' is set to #1840000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/scotland_yard.txt' #1
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'secession_events' is set to #1850000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/secession_situations.txt' #9
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'sick_man' is set to #1860000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/sick_man_events.txt' #3
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'skyscraper' is set to #1870000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/skyscraper_events.txt' #2
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'slave_owner_paranoia_events' is set to #1880000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/slave_owner_paranoia_events.txt' #3
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'slave_revolt' is set to #1890000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/slave_revolts.txt' #3
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'south_america' is set to #1900000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/south_america_events.txt' #5
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'plague' is set to #1910000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/spanish_flu_events.txt' #10
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'sol_events' is set to #1920000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/standard_of_living_events.txt' #6
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'strike' is set to #1930000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/strike_events.txt' #9
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'suffragist_events' is set to #1940000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/suffragist_events.txt' #10
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'tanzimat_events' is set to #1950000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/tanzimat_events.txt' #9
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'technology_events' is set to #1960000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/technology_events.txt' #6
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'test' is set to #1970000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/test_events.txt' #0
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'texan_war_of_independence' is set to #1980000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/texan_war_of_independence_events.txt' #3
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'titanic' is set to #1990000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/titanic_events.txt' #3
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'trade_route_events' is set to #2000000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/trade_route_events.txt' #5
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'trains' is set to #2010000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/train_events.txt' #1
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'tunguska' is set to #2020000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/tunguska.txt' #1
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'urbanization_events' is set to #2030000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/urbanization_events.txt' #5
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'vampire_panic' is set to #2040000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/vampire_panic_events.txt' #1
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'veiled_protectorate' is set to #2050000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/veiled_protectorate_events.txt' #1
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'victoria' is set to #2060000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/victoria_events.txt' #2
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'warlord_china_events' is set to #2070000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/warlord_china_events.txt' #3
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'zanzibar' is set to #2080000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/zanzibar_events.txt' #1
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'agitator_legal_events' is set to #2090000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/agitators_events/agitator_law_events_2.txt' #30
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'agitators_election_events' is set to #2100000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/agitators_events/agitators_election_events.txt' #50
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'agitators_law_events' is set to #2110000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/agitators_events/agitators_law_events.txt' #30
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'algeria_events' is set to #2120000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/agitators_events/algeria_events.txt' #8
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'coup' is set to #2130000
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'coup_pulse_events' is set to #2140000
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'coup_aftermath_events' is set to #2150000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/agitators_events/coup_events.txt' #27
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'dreyfus' is set to #2160000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/agitators_events/dreyfus_events.txt' #9
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'exiles_events' is set to #2170000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/agitators_events/exiles_events.txt' #11
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'exiles_more_events' is set to #2180000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/agitators_events/exiles_events_02.txt' #10
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'garibaldi_events' is set to #2190000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/agitators_events/garibaldi_events.txt' #4
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'historical_agitators' is set to #2200000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/agitators_events/historic_agitator_events.txt' #22
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'land_ownership_law_events' is set to #2210000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/agitators_events/land_ownership_law_events.txt' #18
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'luddite_law_events' is set to #2220000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/agitators_events/luddite_law_events.txt' #6
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'natural_borders' is set to #2230000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/agitators_events/natural_borders.txt' #5
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'paris_commune' is set to #2240000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/agitators_events/paris_commune_events.txt' #4
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'paris_commune_pulse_events' is set to #2250000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/agitators_events/paris_commune_pulse_events.txt' #16
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'provisional_government_events' is set to #2260000
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'government_petition_events' is set to #2270000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/agitators_events/provisional_government_events.txt' #3
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'revolution_pulse1_events' is set to #2280000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/agitators_events/revolution_events_01.txt' #19
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'revolution_pulse_events' is set to #2290000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/agitators_events/revolution_events_02.txt' #40
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'revolution_pulse2_events' is set to #2300000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/agitators_events/revolution_events_03.txt' #9
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'silkworm_diseases' is set to #2310000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/agitators_events/silkworm_diseases.txt' #9
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'slave_revolt_events' is set to #2320000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/agitators_events/slave_revolt_events.txt' #1
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'yeet_agitator_events' is set to #2330000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/agitators_events/yeet_agitator_events.txt' #3
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'acw_events' is set to #2340000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/american_civil_war/acw_events.txt' #7
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'acw_followup_events' is set to #2350000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/american_civil_war/acw_followup_events.txt' #8
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'acw_je_events' is set to #2360000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/american_civil_war/acw_je_events.txt' #4
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'wild_west' is set to #2370000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/american_civil_war/acw_wild_west_events.txt' #3
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'communist_elections' is set to #2380000
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'cable_street' is set to #2390000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/election_events/communist_fascist_election_events.txt' #5
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'election_conservative_events' is set to #2400000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/election_events/election_conservative_events.txt' #4
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'election_contextual_events' is set to #2410000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/election_events/election_contextual_events.txt' #8
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'election_liberal_events' is set to #2420000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/election_events/election_liberal_events.txt' #4
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'election_moderate_events' is set to #2430000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/election_events/election_moderate_events.txt' #2
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'election_neutral' is set to #2440000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/election_events/election_neutral_events.txt' #8
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'election_other_parties_events' is set to #2450000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/election_events/election_other_parties_events.txt' #5
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'cold' is set to #2460000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/expedition_events/antarctic_expedition_events.txt' #15
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'expedition_events' is set to #2470000
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'ai_expedition_simulator' is set to #2480000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/expedition_events/central_africa_expedition_events.txt' #15
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/expedition_events/congo_river_expedition_events.txt' #19
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/expedition_events/niger_river_expedition_events.txt' #31
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/expedition_events/west_america_expedition_events.txt' #34
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'anarchy' is set to #2490000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/law_events/anarchy_law.txt' #3
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'anti_state_religion' is set to #2500000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/law_events/anti_state_religion_law_events.txt' #3
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'bureaucracy' is set to #2510000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/law_events/bureaucracy.txt' #3
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'children_rights_events' is set to #2520000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/law_events/children_rights_events.txt' #6
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'citizenship_laws' is set to #2530000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/law_events/citizenship_laws.txt' #6
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'colonization' is set to #2540000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/law_events/colonization_laws.txt' #4
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'conscription_laws' is set to #2550000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/law_events/conscription_laws.txt' #3
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'council_republic_law_events' is set to #2560000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/law_events/council_republic_law_events.txt' #3
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'distribution_of_power_laws' is set to #2570000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/law_events/distribution_of_power_laws.txt' #12
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'economy_laws' is set to #2580000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/law_events/economy_laws.txt' #6
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'education_laws' is set to #2590000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/law_events/education_laws.txt' #6
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'free_speech_laws' is set to #2600000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/law_events/free_speech_laws.txt' #6
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'healthcare_laws' is set to #2610000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/law_events/healthcare_laws.txt' #6
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'internal_security_events' is set to #2620000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/law_events/internal_security_events.txt' #6
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'isolation' is set to #2630000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/law_events/isolationism_law.txt' #2
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'labor_rights' is set to #2640000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/law_events/labor_rights_laws.txt' #6
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'law_events' is set to #2650000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/law_events/law_events.txt' #3
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'generic_laws' is set to #2660000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/law_events/law_events_01.txt' #12
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'law_notification' is set to #2670000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/law_events/law_notification.txt' #4
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'laws' is set to #2680000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/law_events/laws.txt' #1
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'laws_police' is set to #2690000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/law_events/laws_police.txt' #3
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'migration_laws' is set to #2700000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/law_events/migration_laws.txt' #6
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'monarchy_law_events' is set to #2710000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/law_events/monarchy_laws.txt' #4
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'republic_laws' is set to #2720000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/law_events/republic_laws.txt' #3
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'rights_of_women_laws' is set to #2730000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/law_events/rights_of_women_laws.txt' #7
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'single_party_state' is set to #2740000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/law_events/single_party_state_laws.txt' #7
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'slavery_law_events' is set to #2750000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/law_events/slavery_laws.txt' #7
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'state_atheism' is set to #2760000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/law_events/state_atheism.txt' #6
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'tax' is set to #2770000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/law_events/tax_laws.txt' #6
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'technocracy' is set to #2780000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/law_events/technocracy_law.txt' #3
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'theocracy' is set to #2790000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/law_events/theocracy.txt' #3
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'unable_to_enact' is set to #2800000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/law_events/unable_to_enact_events.txt' #2
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'welfare_laws' is set to #2810000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/law_events/welfare_laws_events.txt' #9
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'aviation' is set to #2820000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/tech_events/aviation.txt' #1
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'camera_film_pm_events' is set to #2830000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/tech_events/camera_film_pm_events.txt' #2
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'flamethrowers_event' is set to #2840000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/tech_events/flamethrowers_event.txt' #1
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'military_tech_events' is set to #2850000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/tech_events/military_tech_events_01.txt' #4
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'naval_tech_events' is set to #2860000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/tech_events/naval_tech_events.txt' #5
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'nursing_events' is set to #2870000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/tech_events/nursing_events.txt' #4
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'production_tech_events' is set to #2880000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/tech_events/production_tech_events.txt' #13
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'rubber_events' is set to #2890000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/tech_events/rubber_events.txt' #1
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'dt_society_events' is set to #2900000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/tech_events/society_events_01.txt' #3
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'society_tech_events' is set to #2910000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/tech_events/society_events_03.txt' #2
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/tech_events/society_tech_events.txt' #2
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'dan_society_tech_events' is set to #2920000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/tech_events/society_techs_02.txt' #1
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'trench_warfare' is set to #2930000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/tech_events/trench_warfare.txt' #1
+[17:13:09][jomini_eventmanager.cpp:624]: >=== NAMESPACE > 'war_crimes' is set to #2940000
+[17:13:09][jomini_eventmanager.cpp:577]: Events loaded events/tech_events/war_crimes_events.txt' #2
+[17:13:09][jomini_eventmanager.cpp:584]: >>> Total of : 1268
+[17:15:03][jomini_script_system.cpp:262]: Script system error!
+  Error: Failed to fetch variable for 'num_months_mobilized' due to not being set
+  Script location: file: common/character_interactions/00_character_interactions.txt line: 659
+
+[17:15:03][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'var' returned an unset scope
+  Script location: file: common/character_interactions/00_character_interactions.txt line: 659
+
+[17:15:03][jomini_script_system.cpp:262]: Script system error!
+  Error: Invalid left side during comparison 'var'
+  Script location: file: common/character_interactions/00_character_interactions.txt line: 659
+
+[17:15:13][battle_manager.cpp:1533]: Script error: Failed to create battle in 前线 due to either 'land_battle_size' or 'naval_battle_size' resulted in non-positive value, despite advancing commander having units.
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:16:07][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:17:50][jomini_script_system.cpp:262]: Script system error!
+  Error: Failed to fetch variable for 'num_months_mobilized' due to not being set
+  Script location: file: common/character_interactions/00_character_interactions.txt line: 659
+
+[17:17:50][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'var' returned an unset scope
+  Script location: file: common/character_interactions/00_character_interactions.txt line: 659
+
+[17:17:50][jomini_script_system.cpp:262]: Script system error!
+  Error: Invalid left side during comparison 'var'
+  Script location: file: common/character_interactions/00_character_interactions.txt line: 659
+
+[17:18:06][gamestatetick.cpp:2074]: TickTask Performance Events Log. TickTask Type: UpdateAI, LogID: 1, Time: 99ms
+Executing Command, toggle_goods_taxation_command, 0 ms, 0 ms      
+  ExecuteGameCommand, 0 ms, 0 ms      
+    PreExecute, 0 ms, 0 ms      
+    Locked, 0 ms, 0 ms      
+      InternalExecute, 0 ms, 0 ms      
+    PostExecute, 0 ms, 0 ms      
+  Command Executed, 0 ms, 0 ms      
+Executing Command, set_decree_command, 0 ms, 0 ms      
+  ExecuteGameCommand, 0 ms, 0 ms      
+    PreExecute, 0 ms, 0 ms      
+    Locked, 0 ms, 0 ms      
+      InternalExecute, 0 ms, 0 ms      
+    PostExecute, 0 ms, 0 ms      
+  Command Executed, 0 ms, 0 ms      
+Executing Command, set_character_order_command, 0 ms, 0 ms      
+  ExecuteGameCommand, 0 ms, 0 ms      
+    PreExecute, 0 ms, 0 ms      
+    Locked, 0 ms, 0 ms      
+      InternalExecute, 0 ms, 0 ms      
+    PostExecute, 0 ms, 0 ms      
+  Command Executed, 0 ms, 0 ms      
+Executing Command, cancel_trade_route, 0 ms, 0 ms      
+  ExecuteGameCommand, 0 ms, 0 ms      
+    PreExecute, 0 ms, 0 ms      
+    Locked, 0 ms, 0 ms      
+      InternalExecute, 0 ms, 0 ms      
+    PostExecute, 0 ms, 0 ms      
+  Command Executed, 0 ms, 0 ms      
+Executing Command, establish_trade_route, 1 ms,           
+  ExecuteGameCommand, 1 ms, 99 ms     
+    PreExecute, 1 ms, 1 ms      
+    Locked, 1 ms, 99 ms     
+      InternalExecute, 1 ms, 99 ms     
+    PostExecute, 99 ms, 99 ms     
+  Command Executed, 99 ms,           
+[17:18:55][jomini_script_system.cpp:262]: Script system error!
+  Error: Failed to fetch variable for 'num_months_mobilized' due to not being set
+  Script location: file: common/character_interactions/00_character_interactions.txt line: 659
+
+[17:18:55][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'var' returned an unset scope
+  Script location: file: common/character_interactions/00_character_interactions.txt line: 659
+
+[17:18:55][jomini_script_system.cpp:262]: Script system error!
+  Error: Invalid left side during comparison 'var'
+  Script location: file: common/character_interactions/00_character_interactions.txt line: 659
+
+[17:20:28][gamestatetick.cpp:2074]: TickTask Performance Events Log. TickTask Type: UpdateAI, LogID: 2, Time: 124ms
+Executing Command, toggle_goods_taxation_command, 0 ms, 0 ms      
+  ExecuteGameCommand, 0 ms, 0 ms      
+    PreExecute, 0 ms, 0 ms      
+    Locked, 0 ms, 0 ms      
+      InternalExecute, 0 ms, 0 ms      
+    PostExecute, 0 ms, 0 ms      
+  Command Executed, 0 ms, 0 ms      
+Executing Command, downsize_building_command, 0 ms, 2 ms      
+  ExecuteGameCommand, 0 ms, 2 ms      
+    PreExecute, 0 ms, 0 ms      
+    Locked, 0 ms, 2 ms      
+      InternalExecute, 0 ms, 2 ms      
+    PostExecute, 2 ms, 2 ms      
+  Command Executed, 2 ms, 2 ms      
+Executing Command, toggle_goods_taxation_command, 2 ms, 2 ms      
+  ExecuteGameCommand, 2 ms, 2 ms      
+    PreExecute, 2 ms, 2 ms      
+    Locked, 2 ms, 2 ms      
+      InternalExecute, 2 ms, 2 ms      
+    PostExecute, 2 ms, 2 ms      
+  Command Executed, 2 ms, 2 ms      
+Executing Command, activate_production_method_command, 2 ms, 3 ms      
+  ExecuteGameCommand, 2 ms, 3 ms      
+    PreExecute, 2 ms, 2 ms      
+    Locked, 2 ms, 3 ms      
+      InternalExecute, 2 ms, 3 ms      
+    PostExecute, 3 ms, 3 ms      
+  Command Executed, 3 ms, 3 ms      
+Executing Command, activate_production_method_command, 3 ms, 3 ms      
+  ExecuteGameCommand, 3 ms, 3 ms      
+    PreExecute, 3 ms, 3 ms      
+    Locked, 3 ms, 3 ms      
+      InternalExecute, 3 ms, 3 ms      
+    PostExecute, 3 ms, 3 ms      
+  Command Executed, 3 ms, 3 ms      
+Executing Command, activate_production_method_command, 3 ms, 3 ms      
+  ExecuteGameCommand, 3 ms, 3 ms      
+    PreExecute, 3 ms, 3 ms      
+    Locked, 3 ms, 3 ms      
+      InternalExecute, 3 ms, 3 ms      
+    PostExecute, 3 ms, 3 ms      
+  Command Executed, 3 ms, 3 ms      
+Executing Command, activate_production_method_command, 3 ms, 3 ms      
+  ExecuteGameCommand, 3 ms, 3 ms      
+    PreExecute, 3 ms, 3 ms      
+    Locked, 3 ms, 3 ms      
+      InternalExecute, 3 ms, 3 ms      
+    PostExecute, 3 ms, 3 ms      
+  Command Executed, 3 ms, 3 ms      
+Executing Command, activate_production_method_command, 3 ms, 3 ms      
+  ExecuteGameCommand, 3 ms, 3 ms      
+    PreExecute, 3 ms, 3 ms      
+    Locked, 3 ms, 3 ms      
+      InternalExecute, 3 ms, 3 ms      
+    PostExecute, 3 ms, 3 ms      
+  Command Executed, 3 ms, 3 ms      
+Executing Command, activate_production_method_command, 3 ms, 3 ms      
+  ExecuteGameCommand, 3 ms, 3 ms      
+    PreExecute, 3 ms, 3 ms      
+    Locked, 3 ms, 3 ms      
+      InternalExecute, 3 ms, 3 ms      
+    PostExecute, 3 ms, 3 ms      
+  Command Executed, 3 ms, 3 ms      
+Executing Command, activate_production_method_command, 3 ms, 4 ms      
+  ExecuteGameCommand, 3 ms, 4 ms      
+    PreExecute, 3 ms, 3 ms      
+    Locked, 3 ms, 4 ms      
+      InternalExecute, 3 ms, 4 ms      
+    PostExecute, 4 ms, 4 ms      
+  Command Executed, 4 ms, 4 ms      
+Executing Command, activate_production_method_command, 4 ms, 5 ms      
+  ExecuteGameCommand, 4 ms, 5 ms      
+    PreExecute, 4 ms, 4 ms      
+    Locked, 4 ms, 5 ms      
+      InternalExecute, 4 ms, 5 ms      
+    PostExecute, 5 ms, 5 ms      
+  Command Executed, 5 ms, 5 ms      
+Executing Command, activate_production_method_command, 5 ms, 5 ms      
+  ExecuteGameCommand, 5 ms, 5 ms      
+    PreExecute, 5 ms, 5 ms      
+    Locked, 5 ms, 5 ms      
+      InternalExecute, 5 ms, 5 ms      
+    PostExecute, 5 ms, 5 ms      
+  Command Executed, 5 ms, 5 ms      
+Executing Command, activate_production_method_command, 5 ms, 5 ms      
+  ExecuteGameCommand, 5 ms, 5 ms      
+    PreExecute, 5 ms, 5 ms      
+    Locked, 5 ms, 5 ms      
+      InternalExecute, 5 ms, 5 ms      
+    PostExecute, 5 ms, 5 ms      
+  Command Executed, 5 ms, 5 ms      
+Executing Command, establish_trade_route, 6 ms,           
+  ExecuteGameCommand, 6 ms, 124 ms    
+    PreExecute, 6 ms, 6 ms      
+    Locked, 6 ms, 124 ms    
+      InternalExecute, 6 ms, 124 ms    
+    PostExecute, 124 ms, 124 ms    
+  Command Executed, 124 ms,           
+[17:20:38][jomini_script_system.cpp:262]: Script system error!
+  Error: interest_group trigger [ Failed context switch ]
+  Script location: file: common/character_traits/skill_traits.txt line: 1676
+
+[17:20:38][jomini_script_system.cpp:262]: Script system error!
+  Error: interest_group trigger [ Failed context switch ]
+  Script location: file: common/character_traits/skill_traits.txt line: 1820
+
+[17:20:52][data_game_concept_type.cpp:38]: Failed to find game concept: concept_convoy, did you forget to add it to common/game_concepts?
+[17:20:52][data_game_concept_type.cpp:38]: Failed to find game concept: concept_convoy, did you forget to add it to common/game_concepts?
+[17:20:52][data_game_concept_type.cpp:38]: Failed to find game concept: concept_convoy, did you forget to add it to common/game_concepts?
+[17:20:52][data_game_concept_type.cpp:38]: Failed to find game concept: concept_convoy, did you forget to add it to common/game_concepts?
+[17:20:52][data_game_concept_type.cpp:38]: Failed to find game concept: concept_convoy, did you forget to add it to common/game_concepts?
+[17:20:52][data_game_concept_type.cpp:38]: Failed to find game concept: concept_convoy, did you forget to add it to common/game_concepts?
+[17:20:52][data_game_concept_type.cpp:38]: Failed to find game concept: concept_convoy, did you forget to add it to common/game_concepts?
+[17:20:52][data_game_concept_type.cpp:38]: Failed to find game concept: concept_convoy, did you forget to add it to common/game_concepts?
+[17:20:52][data_game_concept_type.cpp:38]: Failed to find game concept: concept_convoy, did you forget to add it to common/game_concepts?
+[17:20:52][data_game_concept_type.cpp:38]: Failed to find game concept: concept_convoy, did you forget to add it to common/game_concepts?
+[17:20:53][data_game_concept_type.cpp:38]: Failed to find game concept: concept_convoy, did you forget to add it to common/game_concepts?
+[17:20:53][data_game_concept_type.cpp:38]: Failed to find game concept: concept_convoy, did you forget to add it to common/game_concepts?
+[17:20:53][data_game_concept_type.cpp:38]: Failed to find game concept: concept_convoy, did you forget to add it to common/game_concepts?
+[17:20:53][data_game_concept_type.cpp:38]: Failed to find game concept: concept_convoy, did you forget to add it to common/game_concepts?
+[17:20:53][data_game_concept_type.cpp:38]: Failed to find game concept: concept_convoy, did you forget to add it to common/game_concepts?
+[17:20:53][data_game_concept_type.cpp:38]: Failed to find game concept: concept_convoy, did you forget to add it to common/game_concepts?
+[17:20:53][data_game_concept_type.cpp:38]: Failed to find game concept: concept_convoy, did you forget to add it to common/game_concepts?
+[17:20:53][data_game_concept_type.cpp:38]: Failed to find game concept: concept_convoy, did you forget to add it to common/game_concepts?
+[17:20:53][data_game_concept_type.cpp:38]: Failed to find game concept: concept_convoy, did you forget to add it to common/game_concepts?
+[17:20:53][data_game_concept_type.cpp:38]: Failed to find game concept: concept_convoy, did you forget to add it to common/game_concepts?
+[17:20:53][data_game_concept_type.cpp:38]: Failed to find game concept: concept_convoy, did you forget to add it to common/game_concepts?
+[17:20:53][data_game_concept_type.cpp:38]: Failed to find game concept: concept_convoy, did you forget to add it to common/game_concepts?
+[17:20:53][data_game_concept_type.cpp:38]: Failed to find game concept: concept_convoy, did you forget to add it to common/game_concepts?
+[17:20:54][data_game_concept_type.cpp:38]: Failed to find game concept: concept_convoy, did you forget to add it to common/game_concepts?
+[17:20:54][data_game_concept_type.cpp:38]: Failed to find game concept: concept_convoy, did you forget to add it to common/game_concepts?
+[17:20:54][data_game_concept_type.cpp:38]: Failed to find game concept: concept_convoy, did you forget to add it to common/game_concepts?
+[17:20:54][data_game_concept_type.cpp:38]: Failed to find game concept: concept_convoy, did you forget to add it to common/game_concepts?
+[17:20:54][data_game_concept_type.cpp:38]: Failed to find game concept: concept_convoy, did you forget to add it to common/game_concepts?
+[17:20:54][data_game_concept_type.cpp:38]: Failed to find game concept: concept_convoy, did you forget to add it to common/game_concepts?
+[17:21:03][battle_manager.cpp:1533]: Script error: Failed to create battle in 前线 due to either 'land_battle_size' or 'naval_battle_size' resulted in non-positive value, despite advancing commander having units.
+[17:21:58][gamestatetick.cpp:2074]: TickTask Performance Events Log. TickTask Type: UpdateActiveBattles, LogID: 3, Time: 19ms
+CBattleManager::UpdateActiveBattles, 0 ms,           
+  CBattle::UpdateTick, 0 ms, 1 ms      
+  CBattle::UpdateTick, 1 ms, 2 ms      
+  CBattle::UpdateTick, 2 ms, 3 ms      
+  CBattle::UpdateTick, 3 ms, 3 ms      
+  CBattle::UpdateTick, 3 ms, 4 ms      
+  CBattle::UpdateTick, 4 ms, 4 ms      
+  CBattle::UpdateTick, 4 ms, 5 ms      
+  TheaterRemoveProvince!, 美利坚合众国, 29681, 19 ms, 19 ms     
+  TheaterAddProvince!, 共产美利坚, 29681, 19 ms, 19 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29680, 19 ms, 19 ms     
+  TheaterAddProvince!, 共产美利坚, 29680, 19 ms, 19 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29682, 19 ms, 19 ms     
+  TheaterAddProvince!, 共产美利坚, 29682, 19 ms, 19 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29342, 19 ms, 19 ms     
+  TheaterAddProvince!, 共产美利坚, 29342, 19 ms, 19 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29683, 19 ms, 19 ms     
+  TheaterAddProvince!, 共产美利坚, 29683, 19 ms, 19 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29708, 19 ms, 19 ms     
+  TheaterAddProvince!, 共产美利坚, 29708, 19 ms, 19 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29333, 19 ms, 19 ms     
+  TheaterAddProvince!, 共产美利坚, 29333, 19 ms, 19 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29684, 19 ms, 19 ms     
+  TheaterAddProvince!, 共产美利坚, 29684, 19 ms, 19 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29699, 19 ms, 19 ms     
+  TheaterAddProvince!, 共产美利坚, 29699, 19 ms, 19 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29719, 19 ms, 19 ms     
+  TheaterAddProvince!, 共产美利坚, 29719, 19 ms, 19 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29321, 19 ms, 19 ms     
+  TheaterAddProvince!, 共产美利坚, 29321, 19 ms, 19 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29792, 19 ms, 19 ms     
+  TheaterAddProvince!, 共产美利坚, 29792, 19 ms, 19 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29700, 19 ms, 19 ms     
+  TheaterAddProvince!, 共产美利坚, 29700, 19 ms, 19 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29734, 19 ms, 19 ms     
+  TheaterAddProvince!, 共产美利坚, 29734, 19 ms, 19 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29341, 19 ms, 19 ms     
+  TheaterAddProvince!, 共产美利坚, 29341, 19 ms, 19 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29353, 19 ms, 19 ms     
+  TheaterAddProvince!, 共产美利坚, 29353, 19 ms, 19 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29331, 19 ms, 19 ms     
+  TheaterAddProvince!, 共产美利坚, 29331, 19 ms, 19 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29685, 19 ms, 19 ms     
+  TheaterAddProvince!, 共产美利坚, 29685, 19 ms, 19 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29718, 19 ms, 19 ms     
+  TheaterAddProvince!, 共产美利坚, 29718, 19 ms, 19 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29344, 19 ms, 19 ms     
+  TheaterAddProvince!, 共产美利坚, 29344, 19 ms, 19 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29351, 19 ms, 19 ms     
+  TheaterAddProvince!, 共产美利坚, 29351, 19 ms, 19 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29691, 19 ms, 19 ms     
+  TheaterAddProvince!, 共产美利坚, 29691, 19 ms, 19 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29707, 19 ms, 19 ms     
+  TheaterAddProvince!, 共产美利坚, 29707, 19 ms, 19 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29352, 19 ms, 19 ms     
+  TheaterAddProvince!, 共产美利坚, 29352, 19 ms, 19 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29690, 19 ms, 19 ms     
+  TheaterAddProvince!, 共产美利坚, 29690, 19 ms, 19 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29693, 19 ms, 19 ms     
+  TheaterAddProvince!, 共产美利坚, 29693, 19 ms, 19 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29692, 19 ms, 19 ms     
+  TheaterAddProvince!, 共产美利坚, 29692, 19 ms, 19 ms     
+[17:22:00][gamestatetick.cpp:2074]: TickTask Performance Events Log. TickTask Type: UpdateAI, LogID: 4, Time: 130ms
+Executing Command, cancel_trade_route, 0 ms, 0 ms      
+  ExecuteGameCommand, 0 ms, 0 ms      
+    PreExecute, 0 ms, 0 ms      
+    Locked, 0 ms, 0 ms      
+      InternalExecute, 0 ms, 0 ms      
+    PostExecute, 0 ms, 0 ms      
+  Command Executed, 0 ms, 0 ms      
+Executing Command, establish_trade_route, 1 ms,           
+  ExecuteGameCommand, 1 ms, 130 ms    
+    PreExecute, 1 ms, 1 ms      
+    Locked, 1 ms, 130 ms    
+      InternalExecute, 1 ms, 130 ms    
+    PostExecute, 130 ms, 130 ms    
+  Command Executed, 130 ms,           
+[17:22:34][jomini_script_system.cpp:262]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country' is not valid (国家 （4294967295）) ]
+  Script location: file: common/diplomatic_plays/00_diplomatic_plays.txt line: 333
+
+[17:22:34][jomini_script_system.cpp:262]: Script system error!
+  Error: scope:initiator trigger [ Failed context switch ]
+  Script location: file: common/diplomatic_plays/00_diplomatic_plays.txt line: 334
+
+[17:22:34][jomini_script_system.cpp:262]: Script system error!
+  Error: enact_preferred_governance_principle effect [ Scoped object is not valid. Type: 国家 （4294967295） ]
+  Script location: file: common/on_actions/00_code_on_actions.txt line: 2180
+
+[17:22:34][jomini_script_system.cpp:262]: Script system error!
+  Error: scope:target trigger [ Failed context switch ]
+  Script location: file: common/on_actions/00_code_on_actions.txt line: 2186
+
+[17:22:50][jomini_script_system.cpp:262]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country' is not valid (国家 （4294967295）) ]
+  Script location: file: common/diplomatic_plays/00_diplomatic_plays.txt line: 333
+
+[17:22:50][jomini_script_system.cpp:262]: Script system error!
+  Error: scope:initiator trigger [ Failed context switch ]
+  Script location: file: common/diplomatic_plays/00_diplomatic_plays.txt line: 334
+
+[17:22:50][jomini_script_system.cpp:262]: Script system error!
+  Error: enact_preferred_governance_principle effect [ Scoped object is not valid. Type: 国家 （4294967295） ]
+  Script location: file: common/on_actions/00_code_on_actions.txt line: 2180
+
+[17:22:50][jomini_script_system.cpp:262]: Script system error!
+  Error: scope:target trigger [ Failed context switch ]
+  Script location: file: common/on_actions/00_code_on_actions.txt line: 2186
+
+[17:23:06][jomini_script_system.cpp:262]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country' is not valid (国家 （4294967295）) ]
+  Script location: file: common/diplomatic_plays/00_diplomatic_plays.txt line: 333
+
+[17:23:06][jomini_script_system.cpp:262]: Script system error!
+  Error: scope:initiator trigger [ Failed context switch ]
+  Script location: file: common/diplomatic_plays/00_diplomatic_plays.txt line: 334
+
+[17:23:06][jomini_script_system.cpp:262]: Script system error!
+  Error: enact_preferred_governance_principle effect [ Scoped object is not valid. Type: 国家 （4294967295） ]
+  Script location: file: common/on_actions/00_code_on_actions.txt line: 2180
+
+[17:23:06][jomini_script_system.cpp:262]: Script system error!
+  Error: scope:target trigger [ Failed context switch ]
+  Script location: file: common/on_actions/00_code_on_actions.txt line: 2186
+
+[17:23:22][jomini_script_system.cpp:262]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country' is not valid (国家 （4294967295）) ]
+  Script location: file: common/diplomatic_plays/00_diplomatic_plays.txt line: 333
+
+[17:23:22][jomini_script_system.cpp:262]: Script system error!
+  Error: scope:initiator trigger [ Failed context switch ]
+  Script location: file: common/diplomatic_plays/00_diplomatic_plays.txt line: 334
+
+[17:23:22][jomini_script_system.cpp:262]: Script system error!
+  Error: enact_preferred_governance_principle effect [ Scoped object is not valid. Type: 国家 （4294967295） ]
+  Script location: file: common/on_actions/00_code_on_actions.txt line: 2180
+
+[17:23:22][jomini_script_system.cpp:262]: Script system error!
+  Error: scope:target trigger [ Failed context switch ]
+  Script location: file: common/on_actions/00_code_on_actions.txt line: 2186
+
+[17:23:40][jomini_script_system.cpp:262]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country' is not valid (国家 （4294967295）) ]
+  Script location: file: common/diplomatic_plays/00_diplomatic_plays.txt line: 333
+
+[17:23:40][jomini_script_system.cpp:262]: Script system error!
+  Error: scope:initiator trigger [ Failed context switch ]
+  Script location: file: common/diplomatic_plays/00_diplomatic_plays.txt line: 334
+
+[17:23:40][jomini_script_system.cpp:262]: Script system error!
+  Error: enact_preferred_governance_principle effect [ Scoped object is not valid. Type: 国家 （4294967295） ]
+  Script location: file: common/on_actions/00_code_on_actions.txt line: 2180
+
+[17:23:40][jomini_script_system.cpp:262]: Script system error!
+  Error: scope:target trigger [ Failed context switch ]
+  Script location: file: common/on_actions/00_code_on_actions.txt line: 2186
+
+[17:23:56][jomini_script_system.cpp:262]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country' is not valid (国家 （4294967295）) ]
+  Script location: file: common/diplomatic_plays/00_diplomatic_plays.txt line: 333
+
+[17:23:56][jomini_script_system.cpp:262]: Script system error!
+  Error: scope:initiator trigger [ Failed context switch ]
+  Script location: file: common/diplomatic_plays/00_diplomatic_plays.txt line: 334
+
+[17:23:56][jomini_script_system.cpp:262]: Script system error!
+  Error: enact_preferred_governance_principle effect [ Scoped object is not valid. Type: 国家 （4294967295） ]
+  Script location: file: common/on_actions/00_code_on_actions.txt line: 2180
+
+[17:23:56][jomini_script_system.cpp:262]: Script system error!
+  Error: scope:target trigger [ Failed context switch ]
+  Script location: file: common/on_actions/00_code_on_actions.txt line: 2186
+
+[17:24:01][battle_manager.cpp:1533]: Script error: Failed to create battle in 前线 due to either 'land_battle_size' or 'naval_battle_size' resulted in non-positive value, despite advancing commander having units.
+[17:24:12][jomini_script_system.cpp:262]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country' is not valid (国家 （4294967295）) ]
+  Script location: file: common/diplomatic_plays/00_diplomatic_plays.txt line: 333
+
+[17:24:12][jomini_script_system.cpp:262]: Script system error!
+  Error: scope:initiator trigger [ Failed context switch ]
+  Script location: file: common/diplomatic_plays/00_diplomatic_plays.txt line: 334
+
+[17:24:12][jomini_script_system.cpp:262]: Script system error!
+  Error: enact_preferred_governance_principle effect [ Scoped object is not valid. Type: 国家 （4294967295） ]
+  Script location: file: common/on_actions/00_code_on_actions.txt line: 2180
+
+[17:24:12][jomini_script_system.cpp:262]: Script system error!
+  Error: scope:target trigger [ Failed context switch ]
+  Script location: file: common/on_actions/00_code_on_actions.txt line: 2186
+
+[17:24:28][jomini_script_system.cpp:262]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country' is not valid (国家 （4294967295）) ]
+  Script location: file: common/diplomatic_plays/00_diplomatic_plays.txt line: 333
+
+[17:24:28][jomini_script_system.cpp:262]: Script system error!
+  Error: scope:initiator trigger [ Failed context switch ]
+  Script location: file: common/diplomatic_plays/00_diplomatic_plays.txt line: 334
+
+[17:24:28][jomini_script_system.cpp:262]: Script system error!
+  Error: enact_preferred_governance_principle effect [ Scoped object is not valid. Type: 国家 （4294967295） ]
+  Script location: file: common/on_actions/00_code_on_actions.txt line: 2180
+
+[17:24:28][jomini_script_system.cpp:262]: Script system error!
+  Error: scope:target trigger [ Failed context switch ]
+  Script location: file: common/on_actions/00_code_on_actions.txt line: 2186
+
+[17:26:01][jomini_script_system.cpp:262]: Script system error!
+  Error: Failed to fetch variable for 'num_months_mobilized' due to not being set
+  Script location: file: common/character_interactions/00_character_interactions.txt line: 659
+
+[17:26:01][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'var' returned an unset scope
+  Script location: file: common/character_interactions/00_character_interactions.txt line: 659
+
+[17:26:01][jomini_script_system.cpp:262]: Script system error!
+  Error: Invalid left side during comparison 'var'
+  Script location: file: common/character_interactions/00_character_interactions.txt line: 659
+
+[17:26:28][battle_manager.cpp:1533]: Script error: Failed to create battle in 前线 due to either 'land_battle_size' or 'naval_battle_size' resulted in non-positive value, despite advancing commander having units.
+[17:26:37][gamestatetick.cpp:2074]: TickTask Performance Events Log. TickTask Type: UpdateActiveBattles, LogID: 5, Time: 23ms
+CBattleManager::UpdateActiveBattles, 0 ms,           
+  CBattle::UpdateTick, 0 ms, 1 ms      
+  CBattle::UpdateTick, 1 ms, 1 ms      
+  CBattle::UpdateTick, 1 ms, 2 ms      
+  CBattle::UpdateTick, 2 ms, 5 ms      
+  CBattle::UpdateTick, 5 ms, 5 ms      
+  CBattle::UpdateTick, 5 ms, 9 ms      
+  CBattle::UpdateTick, 9 ms, 10 ms     
+  CBattle::UpdateTick, 10 ms, 11 ms     
+  CBattle::UpdateTick, 11 ms, 11 ms     
+  CBattle::UpdateTick, 11 ms, 12 ms     
+  CBattle::UpdateTick, 12 ms, 12 ms     
+  CBattle::UpdateTick, 12 ms, 13 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29328, 22 ms, 22 ms     
+  TheaterAddProvince!, 共产美利坚, 29328, 22 ms, 22 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29318, 22 ms, 22 ms     
+  TheaterAddProvince!, 共产美利坚, 29318, 22 ms, 22 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29326, 22 ms, 22 ms     
+  TheaterAddProvince!, 共产美利坚, 29326, 22 ms, 22 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29324, 22 ms, 22 ms     
+  TheaterAddProvince!, 共产美利坚, 29324, 22 ms, 22 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29337, 22 ms, 22 ms     
+  TheaterAddProvince!, 共产美利坚, 29337, 22 ms, 22 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29346, 22 ms, 22 ms     
+  TheaterAddProvince!, 共产美利坚, 29346, 22 ms, 22 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29309, 22 ms, 22 ms     
+  TheaterAddProvince!, 共产美利坚, 29309, 22 ms, 22 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29350, 22 ms, 22 ms     
+  TheaterAddProvince!, 共产美利坚, 29350, 22 ms, 22 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29705, 22 ms, 22 ms     
+  TheaterAddProvince!, 共产美利坚, 29705, 22 ms, 22 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29706, 22 ms, 22 ms     
+  TheaterAddProvince!, 共产美利坚, 29706, 22 ms, 22 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29723, 22 ms, 22 ms     
+  TheaterAddProvince!, 共产美利坚, 29723, 22 ms, 22 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29308, 22 ms, 22 ms     
+  TheaterAddProvince!, 共产美利坚, 29308, 22 ms, 22 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29314, 22 ms, 22 ms     
+  TheaterAddProvince!, 共产美利坚, 29314, 22 ms, 22 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29325, 22 ms, 22 ms     
+  TheaterAddProvince!, 共产美利坚, 29325, 22 ms, 22 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29330, 22 ms, 22 ms     
+  TheaterAddProvince!, 共产美利坚, 29330, 22 ms, 22 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29339, 22 ms, 22 ms     
+  TheaterAddProvince!, 共产美利坚, 29339, 22 ms, 22 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29356, 22 ms, 22 ms     
+  TheaterAddProvince!, 共产美利坚, 29356, 22 ms, 22 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29349, 22 ms, 22 ms     
+  TheaterAddProvince!, 共产美利坚, 29349, 22 ms, 22 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29366, 22 ms, 22 ms     
+  TheaterAddProvince!, 共产美利坚, 29366, 22 ms, 22 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29368, 22 ms, 22 ms     
+  TheaterAddProvince!, 共产美利坚, 29368, 22 ms, 22 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29311, 22 ms, 22 ms     
+  TheaterAddProvince!, 共产美利坚, 29311, 22 ms, 22 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29323, 22 ms, 22 ms     
+  TheaterAddProvince!, 共产美利坚, 29323, 22 ms, 22 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29335, 22 ms, 22 ms     
+  TheaterAddProvince!, 共产美利坚, 29335, 22 ms, 22 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29334, 22 ms, 22 ms     
+  TheaterAddProvince!, 共产美利坚, 29334, 22 ms, 22 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29345, 22 ms, 22 ms     
+  TheaterAddProvince!, 共产美利坚, 29345, 22 ms, 22 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29347, 22 ms, 22 ms     
+  TheaterAddProvince!, 共产美利坚, 29347, 22 ms, 22 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29365, 22 ms, 22 ms     
+  TheaterAddProvince!, 共产美利坚, 29365, 22 ms, 22 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29364, 22 ms, 22 ms     
+  TheaterAddProvince!, 共产美利坚, 29364, 22 ms, 22 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29376, 22 ms, 22 ms     
+  TheaterAddProvince!, 共产美利坚, 29376, 22 ms, 22 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29380, 22 ms, 22 ms     
+  TheaterAddProvince!, 共产美利坚, 29380, 22 ms, 22 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29313, 22 ms, 22 ms     
+  TheaterAddProvince!, 共产美利坚, 29313, 22 ms, 22 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29316, 22 ms, 22 ms     
+  TheaterAddProvince!, 共产美利坚, 29316, 22 ms, 22 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29320, 22 ms, 22 ms     
+  TheaterAddProvince!, 共产美利坚, 29320, 22 ms, 22 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29317, 22 ms, 22 ms     
+  TheaterAddProvince!, 共产美利坚, 29317, 22 ms, 22 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29336, 22 ms, 22 ms     
+  TheaterAddProvince!, 共产美利坚, 29336, 22 ms, 22 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29338, 22 ms, 22 ms     
+  TheaterAddProvince!, 共产美利坚, 29338, 22 ms, 22 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29355, 22 ms, 22 ms     
+  TheaterAddProvince!, 共产美利坚, 29355, 22 ms, 22 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29363, 22 ms, 22 ms     
+  TheaterAddProvince!, 共产美利坚, 29363, 22 ms, 22 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29372, 22 ms, 22 ms     
+  TheaterAddProvince!, 共产美利坚, 29372, 23 ms, 23 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29371, 23 ms, 23 ms     
+  TheaterAddProvince!, 共产美利坚, 29371, 23 ms, 23 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29383, 23 ms, 23 ms     
+  TheaterAddProvince!, 共产美利坚, 29383, 23 ms, 23 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29298, 23 ms, 23 ms     
+  TheaterAddProvince!, 共产美利坚, 29298, 23 ms, 23 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29307, 23 ms, 23 ms     
+  TheaterAddProvince!, 共产美利坚, 29307, 23 ms, 23 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29306, 23 ms, 23 ms     
+  TheaterAddProvince!, 共产美利坚, 29306, 23 ms, 23 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29310, 23 ms, 23 ms     
+  TheaterAddProvince!, 共产美利坚, 29310, 23 ms, 23 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29322, 23 ms, 23 ms     
+  TheaterAddProvince!, 共产美利坚, 29322, 23 ms, 23 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29329, 23 ms, 23 ms     
+  TheaterAddProvince!, 共产美利坚, 29329, 23 ms, 23 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29343, 23 ms, 23 ms     
+  TheaterAddProvince!, 共产美利坚, 29343, 23 ms, 23 ms     
+  TheaterRemoveProvince!, 美利坚合众国, 29354, 23 ms, 23 ms     
+  TheaterAddProvince!, 共产美利坚, 29354, 23 ms, 23 ms     
+[17:28:55][battle_manager.cpp:1533]: Script error: Failed to create battle in 前线 due to either 'land_battle_size' or 'naval_battle_size' resulted in non-positive value, despite advancing commander having units.
+[17:29:44][jomini_script_system.cpp:262]: Script system error!
+  Error: scope:target_country trigger [ Failed context switch ]
+  Script location: file: common/diplomatic_plays/00_diplomatic_plays.txt line: 389
+
+[17:29:44][jomini_script_system.cpp:262]: Script system error!
+  Error: scope:target_country trigger [ Failed context switch ]
+  Script location: file: common/diplomatic_plays/00_diplomatic_plays.txt line: 389
+
+[17:30:21][gamestatetick.cpp:2074]: TickTask Performance Events Log. TickTask Type: UpdateAI, LogID: 6, Time: 142ms
+Executing Command, queue_construction, 0 ms, 0 ms      
+  ExecuteGameCommand, 0 ms, 0 ms      
+    PreExecute, 0 ms, 0 ms      
+    Locked, 0 ms, 0 ms      
+      InternalExecute, 0 ms, 0 ms      
+    PostExecute, 0 ms, 0 ms      
+  Command Executed, 0 ms, 0 ms      
+Executing Command, remove_decree_command, 0 ms, 0 ms      
+  ExecuteGameCommand, 0 ms, 0 ms      
+    PreExecute, 0 ms, 0 ms      
+    Locked, 0 ms, 0 ms      
+      InternalExecute, 0 ms, 0 ms      
+    PostExecute, 0 ms, 0 ms      
+  Command Executed, 0 ms, 0 ms      
+Executing Command, activate_production_method_command, 0 ms, 1 ms      
+  ExecuteGameCommand, 0 ms, 1 ms      
+    PreExecute, 0 ms, 0 ms      
+    Locked, 0 ms, 1 ms      
+      InternalExecute, 0 ms, 1 ms      
+    PostExecute, 1 ms, 1 ms      
+  Command Executed, 1 ms, 1 ms      
+Executing Command, activate_production_method_command, 1 ms, 1 ms      
+  ExecuteGameCommand, 1 ms, 1 ms      
+    PreExecute, 1 ms, 1 ms      
+    Locked, 1 ms, 1 ms      
+      InternalExecute, 1 ms, 1 ms      
+    PostExecute, 1 ms, 1 ms      
+  Command Executed, 1 ms, 1 ms      
+Executing Command, activate_production_method_command, 1 ms, 1 ms      
+  ExecuteGameCommand, 1 ms, 1 ms      
+    PreExecute, 1 ms, 1 ms      
+    Locked, 1 ms, 1 ms      
+      InternalExecute, 1 ms, 1 ms      
+    PostExecute, 1 ms, 1 ms      
+  Command Executed, 1 ms, 1 ms      
+Executing Command, downsize_building_command, 1 ms, 2 ms      
+  ExecuteGameCommand, 1 ms, 2 ms      
+    PreExecute, 1 ms, 1 ms      
+    Locked, 1 ms, 2 ms      
+      InternalExecute, 1 ms, 2 ms      
+    PostExecute, 2 ms, 2 ms      
+  Command Executed, 2 ms, 2 ms      
+Executing Command, capitulate_command, 2 ms,           
+  ExecuteGameCommand, 2 ms, 142 ms    
+    PreExecute, 2 ms, 2 ms      
+    Locked, 2 ms, 142 ms    
+      InternalExecute, 2 ms, 142 ms    
+        TheaterRemoveProvince!, 不列颠军队起义, 19373, 2 ms, 2 ms      
+        TheaterAddProvince!, 大不列颠, 19373, 2 ms, 2 ms      
+        TheaterRemoveProvince!, 不列颠军队起义, 19375, 2 ms, 2 ms      
+        TheaterAddProvince!, 大不列颠, 19375, 2 ms, 2 ms      
+        TheaterRemoveProvince!, 大不列颠, 19381, 2 ms, 2 ms      
+        TheaterAddProvince!, 不列颠军队起义, 19381, 2 ms, 2 ms      
+        TheaterRemoveProvince!, 大不列颠, 19872, 2 ms, 2 ms      
+        TheaterAddProvince!, 不列颠军队起义, 19872, 2 ms, 2 ms      
+        TheaterRemoveProvince!, 大不列颠, 19873, 2 ms, 2 ms      
+        TheaterAddProvince!, 不列颠军队起义, 19873, 2 ms, 2 ms      
+        TheaterRemoveProvince!, 大不列颠, 19874, 2 ms, 2 ms      
+        TheaterAddProvince!, 不列颠军队起义, 19874, 2 ms, 2 ms      
+        TheaterRemoveProvince!, 大不列颠, 19876, 2 ms, 2 ms      
+        TheaterAddProvince!, 不列颠军队起义, 19876, 2 ms, 2 ms      
+        TheaterRemoveProvince!, 大不列颠, 19877, 2 ms, 2 ms      
+        TheaterAddProvince!, 不列颠军队起义, 19877, 2 ms, 2 ms      
+        TheaterRemoveProvince!, 大不列颠, 19878, 2 ms, 2 ms      
+        TheaterAddProvince!, 不列颠军队起义, 19878, 2 ms, 2 ms      
+        TheaterRemoveProvince!, 大不列颠, 19880, 2 ms, 2 ms      
+        TheaterAddProvince!, 不列颠军队起义, 19880, 2 ms, 2 ms      
+        TheaterRemoveProvince!, 大不列颠, 19882, 2 ms, 2 ms      
+        TheaterAddProvince!, 不列颠军队起义, 19882, 2 ms, 2 ms      
+        TheaterRemoveProvince!, 大不列颠, 19888, 2 ms, 2 ms      
+        TheaterAddProvince!, 不列颠军队起义, 19888, 2 ms, 2 ms      
+        TheaterRemoveProvince!, 大不列颠, 19891, 2 ms, 2 ms      
+        TheaterAddProvince!, 不列颠军队起义, 19891, 2 ms, 2 ms      
+        TheaterRemoveProvince!, 大不列颠, 19893, 2 ms, 2 ms      
+        TheaterAddProvince!, 不列颠军队起义, 19893, 3 ms, 3 ms      
+        WarGoalExecuteEffects!, annex_country, 9 ms, 142 ms    
+          WarGoalExecute!, annex_country, 9 ms, 142 ms    
+            ChangeOwnershipOfState!, 大不列颠, 9 ms, 28 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19403, 18 ms, 18 ms     
+              TheaterAddProvince!, 大不列颠, 19403, 18 ms, 18 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19404, 18 ms, 18 ms     
+              TheaterAddProvince!, 大不列颠, 19404, 18 ms, 18 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19405, 18 ms, 18 ms     
+              TheaterAddProvince!, 大不列颠, 19405, 18 ms, 18 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19406, 18 ms, 18 ms     
+              TheaterAddProvince!, 大不列颠, 19406, 18 ms, 18 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19407, 18 ms, 18 ms     
+              TheaterAddProvince!, 大不列颠, 19407, 18 ms, 18 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19408, 18 ms, 18 ms     
+              TheaterAddProvince!, 大不列颠, 19408, 18 ms, 18 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19409, 18 ms, 18 ms     
+              TheaterAddProvince!, 大不列颠, 19409, 18 ms, 18 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19410, 18 ms, 18 ms     
+              TheaterAddProvince!, 大不列颠, 19410, 18 ms, 18 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19411, 18 ms, 18 ms     
+              TheaterAddProvince!, 大不列颠, 19411, 18 ms, 18 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19412, 18 ms, 18 ms     
+              TheaterAddProvince!, 大不列颠, 19412, 18 ms, 18 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19413, 18 ms, 18 ms     
+              TheaterAddProvince!, 大不列颠, 19413, 18 ms, 18 ms     
+              CalcMarketToJoin!, 中英格兰, 18 ms, 18 ms     
+              LinkToMarket, 18 ms, 19 ms     
+            CalcMarketToJoin!, 中英格兰, 28 ms, 28 ms     
+            ChangeOwnershipOfState!, 大不列颠, 28 ms, 38 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19377, 35 ms, 35 ms     
+              TheaterAddProvince!, 大不列颠, 19377, 35 ms, 35 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19378, 35 ms, 35 ms     
+              TheaterAddProvince!, 大不列颠, 19378, 35 ms, 35 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19379, 35 ms, 35 ms     
+              TheaterAddProvince!, 大不列颠, 19379, 35 ms, 35 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19380, 35 ms, 35 ms     
+              TheaterAddProvince!, 大不列颠, 19380, 35 ms, 35 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19381, 35 ms, 35 ms     
+              TheaterAddProvince!, 大不列颠, 19381, 35 ms, 35 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19382, 35 ms, 35 ms     
+              TheaterAddProvince!, 大不列颠, 19382, 35 ms, 35 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19383, 35 ms, 35 ms     
+              TheaterAddProvince!, 大不列颠, 19383, 35 ms, 35 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19384, 35 ms, 35 ms     
+              TheaterAddProvince!, 大不列颠, 19384, 35 ms, 35 ms     
+              CalcMarketToJoin!, 兰开夏, 35 ms, 35 ms     
+              LinkToMarket, 35 ms, 36 ms     
+            CalcMarketToJoin!, 兰开夏, 38 ms, 38 ms     
+            ChangeOwnershipOfState!, 大不列颠, 38 ms, 49 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19394, 45 ms, 45 ms     
+              TheaterAddProvince!, 大不列颠, 19394, 45 ms, 45 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19395, 45 ms, 45 ms     
+              TheaterAddProvince!, 大不列颠, 19395, 45 ms, 45 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19396, 45 ms, 45 ms     
+              TheaterAddProvince!, 大不列颠, 19396, 45 ms, 45 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19397, 45 ms, 45 ms     
+              TheaterAddProvince!, 大不列颠, 19397, 45 ms, 45 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19398, 45 ms, 45 ms     
+              TheaterAddProvince!, 大不列颠, 19398, 45 ms, 45 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19399, 45 ms, 45 ms     
+              TheaterAddProvince!, 大不列颠, 19399, 45 ms, 45 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19400, 45 ms, 45 ms     
+              TheaterAddProvince!, 大不列颠, 19400, 45 ms, 45 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19401, 45 ms, 45 ms     
+              TheaterAddProvince!, 大不列颠, 19401, 45 ms, 45 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19402, 45 ms, 45 ms     
+              TheaterAddProvince!, 大不列颠, 19402, 45 ms, 45 ms     
+              CalcMarketToJoin!, 约克郡, 45 ms, 45 ms     
+              LinkToMarket, 45 ms, 46 ms     
+            CalcMarketToJoin!, 约克郡, 49 ms, 49 ms     
+            ChangeOwnershipOfState!, 大不列颠, 49 ms, 66 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19872, 59 ms, 59 ms     
+              TheaterAddProvince!, 大不列颠, 19872, 59 ms, 59 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19873, 59 ms, 59 ms     
+              TheaterAddProvince!, 大不列颠, 19873, 59 ms, 59 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19874, 59 ms, 59 ms     
+              TheaterAddProvince!, 大不列颠, 19874, 59 ms, 59 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19875, 59 ms, 59 ms     
+              TheaterAddProvince!, 大不列颠, 19875, 59 ms, 59 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19876, 59 ms, 59 ms     
+              TheaterAddProvince!, 大不列颠, 19876, 59 ms, 59 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19877, 59 ms, 59 ms     
+              TheaterAddProvince!, 大不列颠, 19877, 59 ms, 59 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19878, 59 ms, 59 ms     
+              TheaterAddProvince!, 大不列颠, 19878, 59 ms, 59 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19879, 59 ms, 59 ms     
+              TheaterAddProvince!, 大不列颠, 19879, 59 ms, 59 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19880, 59 ms, 59 ms     
+              TheaterAddProvince!, 大不列颠, 19880, 59 ms, 59 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19881, 59 ms, 59 ms     
+              TheaterAddProvince!, 大不列颠, 19881, 59 ms, 59 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19882, 59 ms, 59 ms     
+              TheaterAddProvince!, 大不列颠, 19882, 59 ms, 59 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19883, 59 ms, 59 ms     
+              TheaterAddProvince!, 大不列颠, 19883, 59 ms, 59 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19884, 59 ms, 59 ms     
+              TheaterAddProvince!, 大不列颠, 19884, 59 ms, 59 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19885, 59 ms, 59 ms     
+              TheaterAddProvince!, 大不列颠, 19885, 59 ms, 59 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19886, 59 ms, 59 ms     
+              TheaterAddProvince!, 大不列颠, 19886, 59 ms, 59 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19887, 59 ms, 59 ms     
+              TheaterAddProvince!, 大不列颠, 19887, 59 ms, 59 ms     
+              CalcMarketToJoin!, 苏格兰低地, 59 ms, 59 ms     
+              LinkToMarket, 59 ms, 60 ms     
+            CalcMarketToJoin!, 苏格兰低地, 66 ms, 66 ms     
+            ChangeOwnershipOfState!, 大不列颠, 66 ms, 78 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19385, 74 ms, 74 ms     
+              TheaterAddProvince!, 大不列颠, 19385, 74 ms, 74 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19386, 74 ms, 74 ms     
+              TheaterAddProvince!, 大不列颠, 19386, 74 ms, 74 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19387, 74 ms, 74 ms     
+              TheaterAddProvince!, 大不列颠, 19387, 74 ms, 74 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19388, 74 ms, 74 ms     
+              TheaterAddProvince!, 大不列颠, 19388, 74 ms, 74 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19389, 74 ms, 75 ms     
+              TheaterAddProvince!, 大不列颠, 19389, 75 ms, 75 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19390, 75 ms, 75 ms     
+              TheaterAddProvince!, 大不列颠, 19390, 75 ms, 75 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19391, 75 ms, 75 ms     
+              TheaterAddProvince!, 大不列颠, 19391, 75 ms, 75 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19392, 75 ms, 75 ms     
+              TheaterAddProvince!, 大不列颠, 19392, 75 ms, 75 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19393, 75 ms, 75 ms     
+              TheaterAddProvince!, 大不列颠, 19393, 75 ms, 75 ms     
+              CalcMarketToJoin!, 威尔士, 75 ms, 75 ms     
+              LinkToMarket, 75 ms, 76 ms     
+            CalcMarketToJoin!, 威尔士, 78 ms, 78 ms     
+            ChangeOwnershipOfState!, 大不列颠, 78 ms, 90 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19423, 85 ms, 85 ms     
+              TheaterAddProvince!, 大不列颠, 19423, 85 ms, 85 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19424, 85 ms, 85 ms     
+              TheaterAddProvince!, 大不列颠, 19424, 85 ms, 85 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19425, 85 ms, 85 ms     
+              TheaterAddProvince!, 大不列颠, 19425, 85 ms, 85 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19426, 85 ms, 85 ms     
+              TheaterAddProvince!, 大不列颠, 19426, 85 ms, 85 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19427, 85 ms, 85 ms     
+              TheaterAddProvince!, 大不列颠, 19427, 85 ms, 85 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19428, 85 ms, 85 ms     
+              TheaterAddProvince!, 大不列颠, 19428, 85 ms, 85 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19429, 85 ms, 85 ms     
+              TheaterAddProvince!, 大不列颠, 19429, 85 ms, 85 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19430, 85 ms, 85 ms     
+              TheaterAddProvince!, 大不列颠, 19430, 85 ms, 85 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19431, 85 ms, 85 ms     
+              TheaterAddProvince!, 大不列颠, 19431, 85 ms, 85 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19432, 85 ms, 85 ms     
+              TheaterAddProvince!, 大不列颠, 19432, 85 ms, 85 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19433, 85 ms, 85 ms     
+              TheaterAddProvince!, 大不列颠, 19433, 85 ms, 85 ms     
+              CalcMarketToJoin!, 西南诸郡, 85 ms, 85 ms     
+              LinkToMarket, 85 ms, 86 ms     
+            CalcMarketToJoin!, 西南诸郡, 90 ms, 90 ms     
+            ChangeOwnershipOfState!, 大不列颠, 90 ms, 104 ms    
+              TheaterRemoveProvince!, 不列颠军队起义, 19414, 97 ms, 97 ms     
+              TheaterAddProvince!, 大不列颠, 19414, 97 ms, 97 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19415, 97 ms, 97 ms     
+              TheaterAddProvince!, 大不列颠, 19415, 97 ms, 97 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19416, 97 ms, 97 ms     
+              TheaterAddProvince!, 大不列颠, 19416, 97 ms, 97 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19417, 97 ms, 97 ms     
+              TheaterAddProvince!, 大不列颠, 19417, 97 ms, 97 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19418, 97 ms, 97 ms     
+              TheaterAddProvince!, 大不列颠, 19418, 97 ms, 97 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19419, 97 ms, 97 ms     
+              TheaterAddProvince!, 大不列颠, 19419, 97 ms, 97 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19420, 97 ms, 97 ms     
+              TheaterAddProvince!, 大不列颠, 19420, 97 ms, 97 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19421, 97 ms, 97 ms     
+              TheaterAddProvince!, 大不列颠, 19421, 97 ms, 97 ms     
+              TheaterRemoveProvince!, 不列颠军队起义, 19422, 97 ms, 97 ms     
+              TheaterAddProvince!, 大不列颠, 19422, 97 ms, 97 ms     
+              CalcMarketToJoin!, 东盎格利亚, 97 ms, 98 ms     
+              LinkToMarket, 98 ms, 98 ms     
+            CalcMarketToJoin!, 东盎格利亚, 104 ms, 104 ms    
+            ChangeOwnershipOfState!, 大不列颠, 104 ms, 122 ms    
+              TheaterRemoveProvince!, 不列颠军队起义, 19888, 117 ms, 117 ms    
+              TheaterAddProvince!, 大不列颠, 19888, 117 ms, 117 ms    
+              TheaterRemoveProvince!, 不列颠军队起义, 19889, 117 ms, 117 ms    
+              TheaterAddProvince!, 大不列颠, 19889, 117 ms, 117 ms    
+              TheaterRemoveProvince!, 不列颠军队起义, 19890, 117 ms, 117 ms    
+              TheaterAddProvince!, 大不列颠, 19890, 117 ms, 117 ms    
+              TheaterRemoveProvince!, 不列颠军队起义, 19891, 117 ms, 117 ms    
+              TheaterAddProvince!, 大不列颠, 19891, 117 ms, 117 ms    
+              TheaterRemoveProvince!, 不列颠军队起义, 19892, 117 ms, 117 ms    
+              TheaterAddProvince!, 大不列颠, 19892, 117 ms, 117 ms    
+              TheaterRemoveProvince!, 不列颠军队起义, 19893, 117 ms, 117 ms    
+              TheaterAddProvince!, 大不列颠, 19893, 117 ms, 117 ms    
+              TheaterRemoveProvince!, 不列颠军队起义, 19894, 117 ms, 117 ms    
+              TheaterAddProvince!, 大不列颠, 19894, 117 ms, 117 ms    
+              TheaterRemoveProvince!, 不列颠军队起义, 19895, 117 ms, 117 ms    
+              TheaterAddProvince!, 大不列颠, 19895, 117 ms, 117 ms    
+              CalcMarketToJoin!, 阿尔斯特, 117 ms, 117 ms    
+              LinkToMarket, 117 ms, 118 ms    
+            CalcMarketToJoin!, 阿尔斯特, 122 ms, 122 ms    
+            RemoveActiveParticipant!, 不列颠军队起义, 122 ms, 140 ms    
+              EndPlay!, tooltippable_name tooltip:dw_652671673,YD3bbcIDAAA=,DATA_STRATEGIC_REGION_NAME_TOOLTIP,StrategicRegionTooltip 北海!!的tooltippable_concept tooltip:dw_1813705710,yA1jhcEDAAA=,DATA_GAME_CONCEPT_TYPE_NAME_TOOLTIP,GameConceptTypeTooltip 外交博弈!!, 124 ms, 140 ms    
+            RemoveActiveParticipant!, 不列颠军队起义, 140 ms, 140 ms    
+        RemoveActiveParticipant!, 不列颠军队起义, 142 ms, 142 ms    
+    PostExecute, 142 ms, 142 ms    
+  Command Executed, 142 ms,           
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Tried to get workplace of unemployed pop
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'workplace' returned an unset scope
+  Script location: file: events/communism.txt line: 736
+
+[17:30:45][jomini_script_system.cpp:262]: Script system error!
+  Error: workplace trigger [ Failed context switch ]
+  Script location: file: events/communism.txt line: 736
+
+[17:31:40][battle_manager.cpp:1533]: Script error: Failed to create battle in 前线 due to either 'land_battle_size' or 'naval_battle_size' resulted in non-positive value, despite advancing commander having units.
+[17:34:12][battle_manager.cpp:1533]: Script error: Failed to create battle in 前线 due to either 'land_battle_size' or 'naval_battle_size' resulted in non-positive value, despite advancing commander having units.
+[17:35:02][jomini_script_system.cpp:262]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country' is not valid (国家 （4294967295）) ]
+  Script location: file: common/diplomatic_plays/00_diplomatic_plays.txt line: 333
+
+[17:35:02][jomini_script_system.cpp:262]: Script system error!
+  Error: scope:initiator trigger [ Failed context switch ]
+  Script location: file: common/diplomatic_plays/00_diplomatic_plays.txt line: 334
+
+[17:35:02][jomini_script_system.cpp:262]: Script system error!
+  Error: enact_preferred_governance_principle effect [ Scoped object is not valid. Type: 国家 （4294967295） ]
+  Script location: file: common/on_actions/00_code_on_actions.txt line: 2180
+
+[17:35:02][jomini_script_system.cpp:262]: Script system error!
+  Error: scope:target trigger [ Failed context switch ]
+  Script location: file: common/on_actions/00_code_on_actions.txt line: 2186
+
+[17:35:18][jomini_script_system.cpp:262]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country' is not valid (国家 （4294967295）) ]
+  Script location: file: common/diplomatic_plays/00_diplomatic_plays.txt line: 333
+
+[17:35:18][jomini_script_system.cpp:262]: Script system error!
+  Error: scope:initiator trigger [ Failed context switch ]
+  Script location: file: common/diplomatic_plays/00_diplomatic_plays.txt line: 334
+
+[17:35:18][jomini_script_system.cpp:262]: Script system error!
+  Error: enact_preferred_governance_principle effect [ Scoped object is not valid. Type: 国家 （4294967295） ]
+  Script location: file: common/on_actions/00_code_on_actions.txt line: 2180
+
+[17:35:18][jomini_script_system.cpp:262]: Script system error!
+  Error: scope:target trigger [ Failed context switch ]
+  Script location: file: common/on_actions/00_code_on_actions.txt line: 2186
+
+[17:35:34][jomini_script_system.cpp:262]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country' is not valid (国家 （4294967295）) ]
+  Script location: file: common/diplomatic_plays/00_diplomatic_plays.txt line: 333
+
+[17:35:34][jomini_script_system.cpp:262]: Script system error!
+  Error: scope:initiator trigger [ Failed context switch ]
+  Script location: file: common/diplomatic_plays/00_diplomatic_plays.txt line: 334
+
+[17:35:34][jomini_script_system.cpp:262]: Script system error!
+  Error: enact_preferred_governance_principle effect [ Scoped object is not valid. Type: 国家 （4294967295） ]
+  Script location: file: common/on_actions/00_code_on_actions.txt line: 2180
+
+[17:35:34][jomini_script_system.cpp:262]: Script system error!
+  Error: scope:target trigger [ Failed context switch ]
+  Script location: file: common/on_actions/00_code_on_actions.txt line: 2186
+
+[17:35:52][jomini_script_system.cpp:262]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country' is not valid (国家 （4294967295）) ]
+  Script location: file: common/diplomatic_plays/00_diplomatic_plays.txt line: 333
+
+[17:35:52][jomini_script_system.cpp:262]: Script system error!
+  Error: scope:initiator trigger [ Failed context switch ]
+  Script location: file: common/diplomatic_plays/00_diplomatic_plays.txt line: 334
+
+[17:35:52][jomini_script_system.cpp:262]: Script system error!
+  Error: enact_preferred_governance_principle effect [ Scoped object is not valid. Type: 国家 （4294967295） ]
+  Script location: file: common/on_actions/00_code_on_actions.txt line: 2180
+
+[17:35:52][jomini_script_system.cpp:262]: Script system error!
+  Error: scope:target trigger [ Failed context switch ]
+  Script location: file: common/on_actions/00_code_on_actions.txt line: 2186
+
+[17:36:08][jomini_script_system.cpp:262]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country' is not valid (国家 （4294967295）) ]
+  Script location: file: common/diplomatic_plays/00_diplomatic_plays.txt line: 333
+
+[17:36:08][jomini_script_system.cpp:262]: Script system error!
+  Error: scope:initiator trigger [ Failed context switch ]
+  Script location: file: common/diplomatic_plays/00_diplomatic_plays.txt line: 334
+
+[17:36:08][jomini_script_system.cpp:262]: Script system error!
+  Error: enact_preferred_governance_principle effect [ Scoped object is not valid. Type: 国家 （4294967295） ]
+  Script location: file: common/on_actions/00_code_on_actions.txt line: 2180
+
+[17:36:08][jomini_script_system.cpp:262]: Script system error!
+  Error: scope:target trigger [ Failed context switch ]
+  Script location: file: common/on_actions/00_code_on_actions.txt line: 2186
+
+[17:36:24][jomini_script_system.cpp:262]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country' is not valid (国家 （4294967295）) ]
+  Script location: file: common/diplomatic_plays/00_diplomatic_plays.txt line: 333
+
+[17:36:24][jomini_script_system.cpp:262]: Script system error!
+  Error: scope:initiator trigger [ Failed context switch ]
+  Script location: file: common/diplomatic_plays/00_diplomatic_plays.txt line: 334
+
+[17:36:24][jomini_script_system.cpp:262]: Script system error!
+  Error: enact_preferred_governance_principle effect [ Scoped object is not valid. Type: 国家 （4294967295） ]
+  Script location: file: common/on_actions/00_code_on_actions.txt line: 2180
+
+[17:36:24][jomini_script_system.cpp:262]: Script system error!
+  Error: scope:target trigger [ Failed context switch ]
+  Script location: file: common/on_actions/00_code_on_actions.txt line: 2186
+
+[17:36:37][battle_manager.cpp:1533]: Script error: Failed to create battle in 前线 due to either 'land_battle_size' or 'naval_battle_size' resulted in non-positive value, despite advancing commander having units.
+[17:36:40][jomini_script_system.cpp:262]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country' is not valid (国家 （4294967295）) ]
+  Script location: file: common/diplomatic_plays/00_diplomatic_plays.txt line: 333
+
+[17:36:40][jomini_script_system.cpp:262]: Script system error!
+  Error: scope:initiator trigger [ Failed context switch ]
+  Script location: file: common/diplomatic_plays/00_diplomatic_plays.txt line: 334
+
+[17:36:40][jomini_script_system.cpp:262]: Script system error!
+  Error: enact_preferred_governance_principle effect [ Scoped object is not valid. Type: 国家 （4294967295） ]
+  Script location: file: common/on_actions/00_code_on_actions.txt line: 2180
+
+[17:36:40][jomini_script_system.cpp:262]: Script system error!
+  Error: scope:target trigger [ Failed context switch ]
+  Script location: file: common/on_actions/00_code_on_actions.txt line: 2186
+
+[17:36:56][jomini_script_system.cpp:262]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country' is not valid (国家 （4294967295）) ]
+  Script location: file: common/diplomatic_plays/00_diplomatic_plays.txt line: 333
+
+[17:36:56][jomini_script_system.cpp:262]: Script system error!
+  Error: scope:initiator trigger [ Failed context switch ]
+  Script location: file: common/diplomatic_plays/00_diplomatic_plays.txt line: 334
+
+[17:36:56][jomini_script_system.cpp:262]: Script system error!
+  Error: enact_preferred_governance_principle effect [ Scoped object is not valid. Type: 国家 （4294967295） ]
+  Script location: file: common/on_actions/00_code_on_actions.txt line: 2180
+
+[17:36:56][jomini_script_system.cpp:262]: Script system error!
+  Error: scope:target trigger [ Failed context switch ]
+  Script location: file: common/on_actions/00_code_on_actions.txt line: 2186
+
+[17:37:14][jomini_script_system.cpp:262]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country' is not valid (国家 （4294967295）) ]
+  Script location: file: common/diplomatic_plays/00_diplomatic_plays.txt line: 333
+
+[17:37:14][jomini_script_system.cpp:262]: Script system error!
+  Error: scope:initiator trigger [ Failed context switch ]
+  Script location: file: common/diplomatic_plays/00_diplomatic_plays.txt line: 334
+
+[17:37:14][jomini_script_system.cpp:262]: Script system error!
+  Error: enact_preferred_governance_principle effect [ Scoped object is not valid. Type: 国家 （4294967295） ]
+  Script location: file: common/on_actions/00_code_on_actions.txt line: 2180
+
+[17:37:14][jomini_script_system.cpp:262]: Script system error!
+  Error: scope:target trigger [ Failed context switch ]
+  Script location: file: common/on_actions/00_code_on_actions.txt line: 2186
+
+[17:37:14][jomini_script_system.cpp:262]: Script system error!
+  Error: interest_group trigger [ Failed context switch ]
+  Script location: file: common/character_traits/skill_traits.txt line: 1676
+
+[17:37:14][jomini_script_system.cpp:262]: Script system error!
+  Error: interest_group trigger [ Failed context switch ]
+  Script location: file: common/character_traits/skill_traits.txt line: 1820
+
+[17:37:30][jomini_script_system.cpp:262]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country' is not valid (国家 （4294967295）) ]
+  Script location: file: common/diplomatic_plays/00_diplomatic_plays.txt line: 333
+
+[17:37:30][jomini_script_system.cpp:262]: Script system error!
+  Error: scope:initiator trigger [ Failed context switch ]
+  Script location: file: common/diplomatic_plays/00_diplomatic_plays.txt line: 334
+
+[17:37:30][jomini_script_system.cpp:262]: Script system error!
+  Error: enact_preferred_governance_principle effect [ Scoped object is not valid. Type: 国家 （4294967295） ]
+  Script location: file: common/on_actions/00_code_on_actions.txt line: 2180
+
+[17:37:30][jomini_script_system.cpp:262]: Script system error!
+  Error: scope:target trigger [ Failed context switch ]
+  Script location: file: common/on_actions/00_code_on_actions.txt line: 2186
+
+[17:40:23][jomini_script_system.cpp:262]: Script system error!
+  Error: Undefined event target 'fertile_ground_ig'
+  Script location: file: events/agitators_events/exiles_events_02.txt line: 1372
+
+[17:40:23][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'scope' returned an unset scope
+  Script location: file: events/agitators_events/exiles_events_02.txt line: 1372
+
+[17:40:23][jomini_script_system.cpp:262]: Script system error!
+  Error: scope:fertile_ground_ig trigger [ Failed context switch ]
+  Script location: file: events/agitators_events/exiles_events_02.txt line: 1372
+
+[17:40:23][jomini_script_system.cpp:262]: Script system error!
+  Error: Undefined event target 'fertile_ground_ig'
+  Script location: file: events/agitators_events/exiles_events_02.txt line: 1359
+
+[17:40:23][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'scope' returned an unset scope
+  Script location: file: events/agitators_events/exiles_events_02.txt line: 1359
+
+[17:40:23][jomini_script_system.cpp:262]: Script system error!
+  Error: add_modifier effect [ Wrong scope for effect: none, expected country, building, character, front, institution, interest_group, journalentry, political_movement, state ]
+  Script location: file: events/agitators_events/exiles_events_02.txt line: 1360
+
+[17:40:31][jomini_script_system.cpp:262]: Script system error!
+  Error: interest_group trigger [ Failed context switch ]
+  Script location: file: common/character_traits/skill_traits.txt line: 1676
+
+[17:40:31][jomini_script_system.cpp:262]: Script system error!
+  Error: interest_group trigger [ Failed context switch ]
+  Script location: file: common/character_traits/skill_traits.txt line: 1820
+
+[17:42:05][data_game_concept_type.cpp:38]: Failed to find game concept: concept_politically_inactive_involved, did you forget to add it to common/game_concepts?
+[17:42:05][data_game_concept_type.cpp:38]: Failed to find game concept: concept_politically_inactive_involved, did you forget to add it to common/game_concepts?
+[17:42:06][data_game_concept_type.cpp:38]: Failed to find game concept: concept_politically_inactive_involved, did you forget to add it to common/game_concepts?
+[17:42:06][data_game_concept_type.cpp:38]: Failed to find game concept: concept_politically_inactive_involved, did you forget to add it to common/game_concepts?
+[17:42:53][jomini_script_system.cpp:262]: Script system error!
+  Error: Undefined event target 'fertile_ground_ig'
+  Script location: file: events/agitators_events/exiles_events_02.txt line: 1372
+
+[17:42:53][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'scope' returned an unset scope
+  Script location: file: events/agitators_events/exiles_events_02.txt line: 1372
+
+[17:42:53][jomini_script_system.cpp:262]: Script system error!
+  Error: scope:fertile_ground_ig trigger [ Failed context switch ]
+  Script location: file: events/agitators_events/exiles_events_02.txt line: 1372
+
+[17:43:43][jomini_script_system.cpp:262]: Script system error!
+  Error: Undefined event target 'fertile_ground_ig'
+  Script location: file: events/agitators_events/exiles_events_02.txt line: 1372
+
+[17:43:43][jomini_script_system.cpp:262]: Script system error!
+  Error: Event target link 'scope' returned an unset scope
+  Script location: file: events/agitators_events/exiles_events_02.txt line: 1372
+
+[17:43:43][jomini_script_system.cpp:262]: Script system error!
+  Error: scope:fertile_ground_ig trigger [ Failed context switch ]
+  Script location: file: events/agitators_events/exiles_events_02.txt line: 1372
+
+[17:53:13][jomini_script_system.cpp:262]: Script system error!
+  Error: interest_group trigger [ Failed context switch ]
+  Script location: file: common/character_traits/skill_traits.txt line: 1676
+
+[17:53:13][jomini_script_system.cpp:262]: Script system error!
+  Error: interest_group trigger [ Failed context switch ]
+  Script location: file: common/character_traits/skill_traits.txt line: 1820
+
+[17:56:59][jomini_script_system.cpp:262]: Script system error!
+  Error: add_modifier effect [ Wrong scope for effect: civil_war, expected country, building, character, front, institution, interest_group, journalentry, political_movement, state ]
+  Script location: file: events/agitators_events/revolution_events_03.txt line: 605
+
+[18:00:27][gamestatetick.cpp:2074]: TickTask Performance Events Log. TickTask Type: UpdateColonizationProgress, LogID: 7, Time: 53ms
+ExecuteGameCommand, 0 ms,           
+  PreExecute, 0 ms, 0 ms      
+  Locked, 0 ms,           
+    InternalExecute, 0 ms, 0 ms      
+    UpdateModifiers, InvalidAtStart: 14404, CurrentInvalid: 14404, 0 ms, 53 ms     
+    RunCounterBasedUpdates, 53 ms,           
+      UpdateBuildingMaxLevel, 53 ms,           
+[18:00:36][jomini_script_system.cpp:262]: Script system error!
+  Error: interest_group trigger [ Failed context switch ]
+  Script location: file: common/character_traits/skill_traits.txt line: 1676
+
+[18:00:36][jomini_script_system.cpp:262]: Script system error!
+  Error: interest_group trigger [ Failed context switch ]
+  Script location: file: common/character_traits/skill_traits.txt line: 1820
+
+[18:16:21][jomini_script_system.cpp:262]: Script system error!
+  Error: interest_group trigger [ Failed context switch ]
+  Script location: file: common/character_traits/skill_traits.txt line: 1676
+
+[18:16:21][jomini_script_system.cpp:262]: Script system error!
+  Error: interest_group trigger [ Failed context switch ]
+  Script location: file: common/character_traits/skill_traits.txt line: 1820
+
