@@ -1,86 +1,58 @@
-[21:40:51][session.cpp:787]: Init session
-[21:40:51][session.cpp:2419]: SSessionDlcCache: Voice of the People
-[21:40:51][session.cpp:2419]: SSessionDlcCache: Voice of the People Preorder
-[21:41:54][jominigamestate.cpp:232]: Creating gamestate
-[21:41:58][session.h:464]: Setting execute commands: yes
-[21:41:58][session.h:476]: Enabling recorded command replaying
-[21:41:58][multiplayer.cpp:181]: Adding local player
-[21:41:58][session.cpp:1234]: Replaying recorded commands: 0
-[21:41:58][session.h:470]: Setting record commands: no
-[21:41:58][session.cpp:1241]: Notifying callbacks with DoneReplayingCommands
-[21:41:58][ingamemultiplayeridlerlogic.cpp:191]: Handling session notification: done replaying commands for machine ID: 1
-[21:42:00][controlcommands.cpp:52]: CAddPlayer local player: UNKNOWN with machine ID: 1 sender: 1
-[21:42:00][controlcommands.cpp:1075]: Setting "done replaying commands" for machine ID: 1
-[21:42:00][controlcommands.cpp:399]: Setting playable: 5 for machine ID: 1
-[21:42:00][controlcommands.cpp:415]: Setting character controller
-[21:42:00][controlcommands.cpp:1032]: Setting "player here" for machine ID: 1
-[21:42:00][controlcommands.cpp:1075]: Setting "done replaying commands" for machine ID: 1
-[21:42:00][controlcommands.cpp:399]: Setting playable: 5 for machine ID: 1
-[21:42:51][session.cpp:1501]: Disconnecting from game
-[21:42:51][session.cpp:1552]: Already disconnected
-[21:42:51][session.h:464]: Setting execute commands: no
-[21:42:51][jominigamestate.cpp:239]: Destroying gamestate
-[21:42:51][ingamesavegametransferhandler.cpp:86]: Clearing pending save transfers
-[21:42:52][jominigamestate.cpp:232]: Creating gamestate
-[21:42:56][session.h:464]: Setting execute commands: yes
-[21:42:56][session.h:476]: Enabling recorded command replaying
-[21:42:56][multiplayer.cpp:181]: Adding local player
-[21:42:56][session.cpp:1234]: Replaying recorded commands: 0
-[21:42:56][session.h:470]: Setting record commands: no
-[21:42:56][session.cpp:1241]: Notifying callbacks with DoneReplayingCommands
-[21:42:56][ingamemultiplayeridlerlogic.cpp:191]: Handling session notification: done replaying commands for machine ID: 1
-[21:42:57][controlcommands.cpp:52]: CAddPlayer local player: UNKNOWN with machine ID: 1 sender: 1
-[21:42:57][controlcommands.cpp:1075]: Setting "done replaying commands" for machine ID: 1
-[21:42:57][controlcommands.cpp:399]: Setting playable: 5 for machine ID: 1
-[21:42:57][controlcommands.cpp:415]: Setting character controller
-[21:42:57][controlcommands.cpp:1032]: Setting "player here" for machine ID: 1
-[21:42:57][controlcommands.cpp:521]: Starting game, sender: 1
-[21:42:57][controlcommands.cpp:1075]: Setting "done replaying commands" for machine ID: 1
-[21:42:57][controlcommands.cpp:399]: Setting playable: 5 for machine ID: 1
-[21:42:58][session.cpp:2245]: Setting preparation lobby: no
-[21:49:38][session.cpp:1501]: Disconnecting from game
-[21:49:38][session.cpp:1552]: Already disconnected
-[21:49:38][session.h:464]: Setting execute commands: no
-[21:49:38][jominigamestate.cpp:239]: Destroying gamestate
-[21:49:38][ingamesavegametransferhandler.cpp:86]: Clearing pending save transfers
-[21:49:39][jominigamestate.cpp:232]: Creating gamestate
-[21:49:43][session.h:464]: Setting execute commands: yes
-[21:49:43][session.h:476]: Enabling recorded command replaying
-[21:49:43][multiplayer.cpp:181]: Adding local player
-[21:49:43][session.cpp:1234]: Replaying recorded commands: 0
-[21:49:43][session.h:470]: Setting record commands: no
-[21:49:43][session.cpp:1241]: Notifying callbacks with DoneReplayingCommands
-[21:49:43][ingamemultiplayeridlerlogic.cpp:191]: Handling session notification: done replaying commands for machine ID: 1
-[21:49:44][controlcommands.cpp:52]: CAddPlayer local player: UNKNOWN with machine ID: 1 sender: 1
-[21:49:44][controlcommands.cpp:1075]: Setting "done replaying commands" for machine ID: 1
-[21:49:44][controlcommands.cpp:399]: Setting playable: 5 for machine ID: 1
-[21:49:44][controlcommands.cpp:415]: Setting character controller
-[21:49:44][controlcommands.cpp:1032]: Setting "player here" for machine ID: 1
-[21:49:44][controlcommands.cpp:521]: Starting game, sender: 1
-[21:49:44][controlcommands.cpp:1075]: Setting "done replaying commands" for machine ID: 1
-[21:49:44][controlcommands.cpp:399]: Setting playable: 5 for machine ID: 1
-[21:49:45][session.cpp:2245]: Setting preparation lobby: no
-[21:50:21][session.cpp:1501]: Disconnecting from game
-[21:50:21][session.cpp:1552]: Already disconnected
-[21:50:21][session.h:464]: Setting execute commands: no
-[21:50:21][jominigamestate.cpp:239]: Destroying gamestate
-[21:50:21][ingamesavegametransferhandler.cpp:86]: Clearing pending save transfers
-[21:50:21][jominigamestate.cpp:232]: Creating gamestate
-[21:50:26][session.h:464]: Setting execute commands: yes
-[21:50:26][session.h:476]: Enabling recorded command replaying
-[21:50:26][multiplayer.cpp:181]: Adding local player
-[21:50:26][session.cpp:1234]: Replaying recorded commands: 0
-[21:50:26][session.h:470]: Setting record commands: no
-[21:50:26][session.cpp:1241]: Notifying callbacks with DoneReplayingCommands
-[21:50:26][ingamemultiplayeridlerlogic.cpp:191]: Handling session notification: done replaying commands for machine ID: 1
-[21:50:27][controlcommands.cpp:52]: CAddPlayer local player: UNKNOWN with machine ID: 1 sender: 1
-[21:50:27][controlcommands.cpp:1075]: Setting "done replaying commands" for machine ID: 1
-[21:50:27][controlcommands.cpp:399]: Setting playable: 5 for machine ID: 1
-[21:50:27][controlcommands.cpp:415]: Setting character controller
-[21:50:27][controlcommands.cpp:1032]: Setting "player here" for machine ID: 1
-[21:50:27][controlcommands.cpp:521]: Starting game, sender: 1
-[21:50:27][controlcommands.cpp:1075]: Setting "done replaying commands" for machine ID: 1
-[21:50:27][controlcommands.cpp:399]: Setting playable: 5 for machine ID: 1
-[21:50:27][session.cpp:2245]: Setting preparation lobby: no
-[21:57:48][ingamesavegametransferhandler.cpp:86]: Clearing pending save transfers
-[21:57:49][jominigamestate.cpp:239]: Destroying gamestate
+[10:03:47][session.cpp:787]: Init session
+[10:03:47][session.cpp:2419]: SSessionDlcCache: Voice of the People
+[10:03:47][session.cpp:2419]: SSessionDlcCache: Voice of the People Preorder
+[10:05:44][jominigamestate.cpp:232]: Creating gamestate
+[10:05:50][session.h:464]: Setting execute commands: yes
+[10:05:50][session.h:476]: Enabling recorded command replaying
+[10:05:50][multiplayer.cpp:181]: Adding local player
+[10:05:50][session.cpp:1234]: Replaying recorded commands: 0
+[10:05:50][session.h:470]: Setting record commands: no
+[10:05:50][session.cpp:1241]: Notifying callbacks with DoneReplayingCommands
+[10:05:50][ingamemultiplayeridlerlogic.cpp:191]: Handling session notification: done replaying commands for machine ID: 1
+[10:05:52][controlcommands.cpp:52]: CAddPlayer local player: UNKNOWN with machine ID: 1 sender: 1
+[10:05:52][controlcommands.cpp:1075]: Setting "done replaying commands" for machine ID: 1
+[10:05:52][controlcommands.cpp:399]: Setting playable: 5 for machine ID: 1
+[10:05:52][controlcommands.cpp:415]: Setting character controller
+[10:05:52][controlcommands.cpp:1032]: Setting "player here" for machine ID: 1
+[10:05:52][controlcommands.cpp:1075]: Setting "done replaying commands" for machine ID: 1
+[10:05:52][controlcommands.cpp:399]: Setting playable: 5 for machine ID: 1
+[15:03:47][session.cpp:1501]: Disconnecting from game
+[15:03:47][session.cpp:1552]: Already disconnected
+[15:03:47][session.h:464]: Setting execute commands: no
+[15:03:48][jominigamestate.cpp:239]: Destroying gamestate
+[15:03:48][ingamesavegametransferhandler.cpp:86]: Clearing pending save transfers
+[15:03:55][jominigamestate.cpp:232]: Creating gamestate
+[15:04:02][session.h:464]: Setting execute commands: yes
+[15:04:02][session.h:476]: Enabling recorded command replaying
+[15:04:02][multiplayer.cpp:181]: Adding local player
+[15:04:02][session.cpp:1234]: Replaying recorded commands: 0
+[15:04:02][session.h:470]: Setting record commands: no
+[15:04:02][session.cpp:1241]: Notifying callbacks with DoneReplayingCommands
+[15:04:02][ingamemultiplayeridlerlogic.cpp:191]: Handling session notification: done replaying commands for machine ID: 1
+[15:04:04][controlcommands.cpp:52]: CAddPlayer local player: UNKNOWN with machine ID: 1 sender: 1
+[15:04:04][controlcommands.cpp:1075]: Setting "done replaying commands" for machine ID: 1
+[15:04:04][controlcommands.cpp:399]: Setting playable: 5 for machine ID: 1
+[15:04:04][controlcommands.cpp:415]: Setting character controller
+[15:04:04][controlcommands.cpp:1032]: Setting "player here" for machine ID: 1
+[15:04:04][controlcommands.cpp:521]: Starting game, sender: 1
+[15:04:04][controlcommands.cpp:1075]: Setting "done replaying commands" for machine ID: 1
+[15:04:04][controlcommands.cpp:399]: Setting playable: 5 for machine ID: 1
+[15:04:05][session.cpp:2245]: Setting preparation lobby: no
+[15:13:45][session.cpp:1501]: Disconnecting from game
+[15:13:45][session.cpp:1552]: Already disconnected
+[15:13:45][session.h:464]: Setting execute commands: no
+[15:13:45][jominigamestate.cpp:239]: Destroying gamestate
+[15:13:45][ingamesavegametransferhandler.cpp:86]: Clearing pending save transfers
+[15:13:46][jominigamestate.cpp:232]: Creating gamestate
+[15:13:52][session.h:464]: Setting execute commands: yes
+[15:13:52][session.h:476]: Enabling recorded command replaying
+[15:13:52][multiplayer.cpp:181]: Adding local player
+[15:13:52][session.cpp:1234]: Replaying recorded commands: 0
+[15:13:52][session.h:470]: Setting record commands: no
+[15:13:52][session.cpp:1241]: Notifying callbacks with DoneReplayingCommands
+[15:13:52][ingamemultiplayeridlerlogic.cpp:191]: Handling session notification: done replaying commands for machine ID: 1
+[15:13:54][controlcommands.cpp:52]: CAddPlayer local player: UNKNOWN with machine ID: 1 sender: 1
+[15:13:54][controlcommands.cpp:1075]: Setting "done replaying commands" for machine ID: 1
+[15:13:54][controlcommands.cpp:399]: Setting playable: 5 for machine ID: 1
+[15:13:54][controlcommands.cpp:415]: Setting character controller
+[15:13:54][controlcomma
