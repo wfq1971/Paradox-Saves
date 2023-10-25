@@ -1,36 +1,34 @@
-[16:46:56][pdx_gui_factory.cpp:923]: gui/toolspropertytypes.gui:424 - Failed parsing data statement 'FilterablePropertyList.Search' for property 'ontextchanged'(854)
+[21:50:37][pdx_gui_factory.cpp:923]: gui/toolspropertytypes.gui:424 - Failed parsing data statement 'FilterablePropertyList.Search' for property 'ontextchanged'(854)
 
-[16:46:56][pdx_gui_localize.cpp:236]: gui/toolspropertytypes.gui:426 - Failed parsing localized text: [FilterablePropertyList.GetSearchText]
+[21:50:37][pdx_gui_localize.cpp:236]: gui/toolspropertytypes.gui:426 - Failed parsing localized text: [FilterablePropertyList.GetSearchText]
 
-[16:46:56][pdx_gui_factory.cpp:928]: gui/toolspropertytypes.gui:426 - Failed converting property 'text'(143)
+[21:50:37][pdx_gui_factory.cpp:928]: gui/toolspropertytypes.gui:426 - Failed converting property 'text'(143)
 
-[16:46:56][pdx_gui_factory.cpp:923]: gui/toolspropertytypes.gui:432 - Failed parsing data statement 'FilterablePropertyList.ClearSearchText' for property 'onclick'(775)
+[21:50:37][pdx_gui_factory.cpp:923]: gui/toolspropertytypes.gui:432 - Failed parsing data statement 'FilterablePropertyList.ClearSearchText' for property 'onclick'(775)
 
-[16:46:56][pdx_gui_localize.cpp:236]: gui/toolspropertytypes.gui:450 - Failed parsing localized text: [FilterablePropertyList.GetPropertiesLabel]
+[21:50:37][pdx_gui_localize.cpp:236]: gui/toolspropertytypes.gui:450 - Failed parsing localized text: [FilterablePropertyList.GetPropertiesLabel]
 
-[16:46:56][pdx_gui_factory.cpp:928]: gui/toolspropertytypes.gui:450 - Failed converting property 'text'(143)
+[21:50:37][pdx_gui_factory.cpp:928]: gui/toolspropertytypes.gui:450 - Failed converting property 'text'(143)
 
-[16:46:56][pdx_gui_factory.cpp:923]: gui/toolspropertytypes.gui:424 - Failed parsing data statement 'FilterablePropertyList.Search' for property 'ontextchanged'(854)
+[21:50:38][pdx_gui_factory.cpp:923]: gui/toolspropertytypes.gui:424 - Failed parsing data statement 'FilterablePropertyList.Search' for property 'ontextchanged'(854)
 
-[16:46:56][pdx_gui_localize.cpp:236]: gui/toolspropertytypes.gui:426 - Failed parsing localized text: [FilterablePropertyList.GetSearchText]
+[21:50:38][pdx_gui_localize.cpp:236]: gui/toolspropertytypes.gui:426 - Failed parsing localized text: [FilterablePropertyList.GetSearchText]
 
-[16:46:56][pdx_gui_factory.cpp:928]: gui/toolspropertytypes.gui:426 - Failed converting property 'text'(143)
+[21:50:38][pdx_gui_factory.cpp:928]: gui/toolspropertytypes.gui:426 - Failed converting property 'text'(143)
 
-[16:46:56][pdx_gui_factory.cpp:923]: gui/toolspropertytypes.gui:432 - Failed parsing data statement 'FilterablePropertyList.ClearSearchText' for property 'onclick'(775)
+[21:50:38][pdx_gui_factory.cpp:923]: gui/toolspropertytypes.gui:432 - Failed parsing data statement 'FilterablePropertyList.ClearSearchText' for property 'onclick'(775)
 
-[16:46:56][pdx_gui_localize.cpp:236]: gui/toolspropertytypes.gui:450 - Failed parsing localized text: [FilterablePropertyList.GetPropertiesLabel]
+[21:50:38][pdx_gui_localize.cpp:236]: gui/toolspropertytypes.gui:450 - Failed parsing localized text: [FilterablePropertyList.GetPropertiesLabel]
 
-[16:46:56][pdx_gui_factory.cpp:928]: gui/toolspropertytypes.gui:450 - Failed converting property 'text'(143)
+[21:50:38][pdx_gui_factory.cpp:928]: gui/toolspropertytypes.gui:450 - Failed converting property 'text'(143)
 
-[16:53:19][pdx_gui_factory.cpp:1492]: gui/states_panel.gui:990 - Error setting properties for '' (container)
+[22:01:22][pdx_gui_factory.cpp:1492]: gui/states_panel.gui:990 - Error setting properties for '' (container)
 
-[17:38:08][pdx_gui_factory.cpp:1492]: gui/states_panel.gui:990 - Error setting properties for '' (container)
+[22:02:53][pdx_gui_factory.cpp:1492]: gui/states_panel.gui:990 - Error setting properties for '' (container)
 
-[17:38:08][pdx_gui_factory.cpp:1492]: gui/states_panel.gui:990 - Error setting properties for '' (container)
+[22:02:53][pdx_gui_factory.cpp:1492]: gui/states_panel.gui:990 - Error setting properties for '' (container)
 
-[17:55:02][pdx_gui_factory.cpp:1492]: gui/states_panel.gui:990 - Error setting properties for '' (container)
+[22:32:39][pdx_gui_factory.cpp:1492]: gui/states_panel.gui:990 - Error setting properties for '' (container)
 
-[18:16:11][pdx_gui_factory.cpp:1492]: gui/states_panel.gui:990 - Error setting properties for '' (container)
-
-[18:16:11][pdx_gui_factory.cpp:1492]: gui/states_panel.gui:990 - Error setting properties for '' (container)
+[22:38:13][pdx_gui_factory.cpp:1492]: gui/states_panel.gui:990 - Error setting properties for '' (container)
 

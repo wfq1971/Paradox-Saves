@@ -1,14 +1,14 @@
-[16:33:07][game_setup.cpp:203]: Exe Git Version: release/1.4.2 : b4c91ce3a
-[16:33:07][game_setup.cpp:204]: Build Timestamp: 2023-09-04 13:06:00 +0000 long hash: b4c91ce3a0927a0b5434e11a155680fc21a7769b
-[16:33:07][systemsettings.cpp:207]: CPU Model:       Intel(R) Xeon(R) CPU E5-2670 v2 @ 2.50GHz
-[16:33:07][systemsettings.cpp:208]: CPU Speed: 2494MHz
-[16:33:07][systemsettings.cpp:209]: CPU Physical Cores: 10
-[16:33:07][systemsettings.cpp:210]: CPU Logical Cores: 20
-[16:33:07][systemsettings.cpp:211]: System Memory: 32688
-[16:33:07][systemsettings.cpp:212]: OS: Windows 10 x86_64
-[16:33:07][systemsettings.cpp:213]: OS Language: zh
-[16:33:07][contextowner.cpp:788]: GPU Name: NVIDIA GeForce GTX 1060 3GB
-[16:33:07][contextowner.cpp:789]: GPU Vendor: nVidia
-[16:33:07][contextowner.cpp:790]: GPU Id: 7170
-[16:33:07][contextowner.cpp:791]: GPU Dedicated Memory: 2979
-[16:33:15][gameapplication.cpp:1036]: Loading cursors...
+[16:46:44][game_setup.cpp:203]: Exe Git Version: release/1.4.2 : b4c91ce3a
+[16:46:44][game_setup.cpp:204]: Build Timestamp: 2023-09-04 13:06:00 +0000 long hash: b4c91ce3a0927a0b5434e11a155680fc21a7769b
+[16:46:44][systemsettings.cpp:207]: CPU Model:       Intel(R) Xeon(R) CPU E5-2670 v2 @ 2.50GHz
+[16:46:44][systemsettings.cpp:208]: CPU Speed: 2494MHz
+[16:46:44][systemsettings.cpp:209]: CPU Physical Cores: 10
+[16:46:44][systemsettings.cpp:210]: CPU Logical Cores: 20
+[16:46:44][systemsettings.cpp:211]: System Memory: 32688
+[16:46:44][systemsettings.cpp:212]: OS: Windows 10 x86_64
+[16:46:44][systemsettings.cpp:213]: OS Language: zh
+[16:46:45][contextowner.cpp:788]: GPU Name: NVIDIA GeForce GTX 1060 3GB
+[16:46:45][contextowner.cpp:789]: GPU Vendor: nVidia
+[16:46:45][contextowner.cpp:790]: GPU Id: 7170
+[16:46:45][contextowner.cpp:791]: GPU Dedicated Memory: 2979
+[16:46:52][gameapplication.cpp:1036]: Loading cursors...
