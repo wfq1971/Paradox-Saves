@@ -1,0 +1,34 @@
+# Crash Information
+AppName: Victoria 3 
+AppVersion: 1.4.2 
+SCMBranch: release/1.4.2 
+SCMCommit: b4c91ce3a0927a0b5434e11a155680fc21a7769b 
+SCMTimeStamp: "2023-09-04 13:06:00 +0000" 
+DateTime: "2023-10-26 22:54:41 +0800" 
+BuildType: ReleaseLto 
+Platform: Windows 
+Store: steam 
+Architecture: 64-bit 
+OperatingSystem: Windows 10 x86_64 
+SystemLanguage: zh 
+CPUModel:       Intel(R) Xeon(R) CPU E5-2670 v2 @ 2.50GHz 
+CPUSpeed: 2494 
+CPUPhysicalCores: 10 
+CPULogicalCores: 20 
+SystemMemory: 32688 
+GPUName: NVIDIA GeForce GTX 1060 3GB 
+GPUVendor: nVidia 
+GPUId: 7170 
+GPUDedicatedMemory: 2978 
+LaunchArguments: --continuelastsave --gdprcompliant --paradoxaccountuserid="" --pdxlaunchersessiontoken="" 
+DLC_1: Voice of the People 
+DLC_2: Voice of the People Preorder 
+DLC_3: Victoria 2 Remastered Soundtrack 
+Mod_1: Treasury to Investment Pool 
+Mod_2: Airports 
+Mod_3: Prioritize Radio production - ラジオを優先して生産 
+Mod_4: [on-off] Autonomous Investment Pool 
+Mod_5: Trade electricity 
+Mod_6: Doodles War Flags & Flag Tweaks 
+Mod_7: 种植园运输方式新增 
+Mod_8: Infinite Resources Buildings with Investment Pool 

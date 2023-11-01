@@ -3,7 +3,12 @@
 		"save_to_cloud":	true
 	},
 	"Graphics":	{
+		"shader_quality":	"low",
+		"mapobject_quality":	"low",
+		"shadowmap_resolution":	"disabled",
+		"texture_quality":	"low",
 		"fullscreen_resolution":	"1920x1080",
+		"anisotropic_filtering":	"DISABLED",
 		"quality":	"custom"
 	},
 	"interface":	{

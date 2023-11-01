@@ -120,13 +120,13 @@
 		notification=feed
 	}
 	diplo_play_start_third_party_notification_group={
-		notification=feed
+		notification=none
 	}
 	diplo_play_declare_neutrality_notification_group={
-		notification=feed
+		notification=none
 	}
 	diplo_play_war_start_third_party_notification_group={
-		notification=feed
+		notification=none
 	}
 	diplo_play_subject_notification_group={
 		notification=feed
@@ -171,16 +171,16 @@
 		notification=feed
 	}
 	commander_move_notification_group={
-		notification=feed
+		notification=none
 	}
 	country_conscription_notification_group={
-		notification=feed
+		notification=none
 	}
 	wargoal_notification_group={
-		notification=feed
+		notification=none
 	}
 	significant_trade_route_notification_group={
-		notification=feed
+		notification=none
 	}
 	naval_invasion_against_us_notification_group={
 		notification=feed
@@ -192,7 +192,7 @@
 		notification=feed
 	}
 	convoys_raided_notification_group={
-		notification=feed
+		notification=none
 	}
 	journal_entry_activation_notification_group={
 		notification=feed
@@ -216,7 +216,7 @@
 		notification=feed
 	}
 	shipping_lane_trade_route_invalidated_notification_group={
-		notification=feed
+		notification=none
 	}
 	shipping_lane_commander_order_invalidated_notification_group={
 		notification=feed
