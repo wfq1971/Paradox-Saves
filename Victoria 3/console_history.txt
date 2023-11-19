@@ -1,3 +1,9 @@
 event debug.4
 event debug.1
 event debug.2
+help
+fast
+help fast
+fastbuild
+fastreserch
+fastresearch

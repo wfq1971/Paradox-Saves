@@ -1,24 +1,39 @@
-[23:36:06][pdx_gui_factory.cpp:923]: gui/toolspropertytypes.gui:424 - Failed parsing data statement 'FilterablePropertyList.Search' for property 'ontextchanged'(854)
-
-[23:36:06][pdx_gui_localize.cpp:236]: gui/toolspropertytypes.gui:426 - Failed parsing localized text: [FilterablePropertyList.GetSearchText]
-
-[23:36:06][pdx_gui_factory.cpp:928]: gui/toolspropertytypes.gui:426 - Failed converting property 'text'(143)
-
-[23:36:06][pdx_gui_factory.cpp:923]: gui/toolspropertytypes.gui:432 - Failed parsing data statement 'FilterablePropertyList.ClearSearchText' for property 'onclick'(775)
-
-[23:36:06][pdx_gui_localize.cpp:236]: gui/toolspropertytypes.gui:450 - Failed parsing localized text: [FilterablePropertyList.GetPropertiesLabel]
-
-[23:36:06][pdx_gui_factory.cpp:928]: gui/toolspropertytypes.gui:450 - Failed converting property 'text'(143)
-
-[23:36:11][pdx_gui_factory.cpp:923]: gui/toolspropertytypes.gui:424 - Failed parsing data statement 'FilterablePropertyList.Search' for property 'ontextchanged'(854)
-
-[23:36:11][pdx_gui_localize.cpp:236]: gui/toolspropertytypes.gui:426 - Failed parsing localized text: [FilterablePropertyList.GetSearchText]
-
-[23:36:11][pdx_gui_factory.cpp:928]: gui/toolspropertytypes.gui:426 - Failed converting property 'text'(143)
-
-[23:36:11][pdx_gui_factory.cpp:923]: gui/toolspropertytypes.gui:432 - Failed parsing data statement 'FilterablePropertyList.ClearSearchText' for property 'onclick'(775)
-
-[23:36:11][pdx_gui_localize.cpp:236]: gui/toolspropertytypes.gui:450 - Failed parsing localized text: [FilterablePropertyList.GetPropertiesLabel]
-
-[23:36:11][pdx_gui_factory.cpp:928]: gui/toolspropertytypes.gui:450 - Failed converting property 'text'(143)
-
+[23:01:26][pdx_gui_factory.cpp:923]: gui/toolspropertytypes.gui:424 - Failed parsing data statement 'FilterablePropertyList.Search' for property 'ontextchanged'(854)
+[23:01:26][pdx_gui_localize.cpp:236]: gui/toolspropertytypes.gui:426 - Failed parsing localized text: [FilterablePropertyList.GetSearchText]
+[23:01:26][pdx_gui_factory.cpp:928]: gui/toolspropertytypes.gui:426 - Failed converting property 'text'(143)
+[23:01:26][pdx_gui_factory.cpp:923]: gui/toolspropertytypes.gui:432 - Failed parsing data statement 'FilterablePropertyList.ClearSearchText' for property 'onclick'(775)
+[23:01:26][pdx_gui_localize.cpp:236]: gui/toolspropertytypes.gui:450 - Failed parsing localized text: [FilterablePropertyList.GetPropertiesLabel]
+[23:01:26][pdx_gui_factory.cpp:928]: gui/toolspropertytypes.gui:450 - Failed converting property 'text'(143)
+[23:01:27][pdx_gui_factory.cpp:923]: gui/toolspropertytypes.gui:424 - Failed parsing data statement 'FilterablePropertyList.Search' for property 'ontextchanged'(854)
+[23:01:27][pdx_gui_localize.cpp:236]: gui/toolspropertytypes.gui:426 - Failed parsing localized text: [FilterablePropertyList.GetSearchText]
+[23:01:27][pdx_gui_factory.cpp:928]: gui/toolspropertytypes.gui:426 - Failed converting property 'text'(143)
+[23:01:27][pdx_gui_factory.cpp:923]: gui/toolspropertytypes.gui:432 - Failed parsing data statement 'FilterablePropertyList.ClearSearchText' for property 'onclick'(775)
+[23:01:27][pdx_gui_localize.cpp:236]: gui/toolspropertytypes.gui:450 - Failed parsing localized text: [FilterablePropertyList.GetPropertiesLabel]
+[23:01:27][pdx_gui_factory.cpp:928]: gui/toolspropertytypes.gui:450 - Failed converting property 'text'(143)
+[23:01:34][pdx_gui_factory.cpp:923]: gui/settings/editor_setting_types.gui:57 - Failed parsing data statement 'Select_int32(ScopedEditorSettingsPage.GetPage.IsSelected,'(int32)2','(int32)1')' for property 'upframe'(842)
+[23:01:34][pdx_gui_localize.cpp:236]: gui/settings/editor_setting_types.gui:52 - Failed parsing localized text: [ScopedEditorSettingsPage.GetPage.GetName]
+[23:01:34][pdx_gui_factory.cpp:928]: gui/settings/editor_setting_types.gui:52 - Failed converting property 'text'(143)
+[23:01:34][pdx_gui_factory.cpp:923]: gui/settings/editor_setting_types.gui:56 - Failed parsing data statement 'ScopedEditorSettingsPage.AccessPage.OnClick' for property 'onclick'(775)
+[23:01:34][pdx_gui_factory.cpp:923]: gui/toolspropertytypes.gui:503 - Failed parsing data statement 'FilterablePropertyList.Search' for property 'ontextchanged'(854)
+[23:01:34][pdx_gui_localize.cpp:236]: gui/toolspropertytypes.gui:505 - Failed parsing localized text: [FilterablePropertyList.GetSearchText]
+[23:01:34][pdx_gui_factory.cpp:928]: gui/toolspropertytypes.gui:505 - Failed converting property 'text'(143)
+[23:01:34][pdx_gui_factory.cpp:923]: gui/toolspropertytypes.gui:511 - Failed parsing data statement 'FilterablePropertyList.ClearSearchText' for property 'onclick'(775)
+[23:01:34][pdx_gui_localize.cpp:236]: gui/toolspropertytypes.gui:529 - Failed parsing localized text: [FilterablePropertyList.GetPropertiesLabel]
+[23:01:34][pdx_gui_factory.cpp:928]: gui/toolspropertytypes.gui:529 - Failed converting property 'text'(143)
+[23:01:34][pdx_gui_localize.cpp:236]: gui/settings/editor_setting_types.gui:90 - Failed parsing localized text: [EditorSettingsWindow.GetWindowName]
+[23:01:34][pdx_gui_factory.cpp:928]: gui/settings/editor_setting_types.gui:90 - Failed converting property 'text'(143)
+[23:01:34][pdx_gui_factory.cpp:923]: gui/settings/editor_setting_types.gui:101 - Failed parsing data statement 'EditorSettingsWindow.Close' for property 'onclick'(775)
+[23:01:34][pdx_gui_factory.cpp:923]: gui/settings/editor_setting_types.gui:156 - Failed parsing data statement 'EditorSettingsWindow.AccessPages' for property 'datamodel'(1002)
+[23:01:34][pdx_gui_factory.cpp:923]: gui/settings/editor_setting_types.gui:57 - Failed parsing data statement 'Select_int32(ScopedEditorSettingsPage.GetPage.IsSelected,'(int32)2','(int32)1')' for property 'upframe'(842)
+[23:01:34][pdx_gui_localize.cpp:236]: gui/settings/editor_setting_types.gui:52 - Failed parsing localized text: [ScopedEditorSettingsPage.GetPage.GetName]
+[23:01:34][pdx_gui_factory.cpp:928]: gui/settings/editor_setting_types.gui:52 - Failed converting property 'text'(143)
+[23:01:34][pdx_gui_factory.cpp:923]: gui/settings/editor_setting_types.gui:56 - Failed parsing data statement 'ScopedEditorSettingsPage.AccessPage.OnClick' for property 'onclick'(775)
+[23:01:34][pdx_gui_factory.cpp:923]: gui/settings/editor_setting_types.gui:236 - Failed parsing data statement 'EditorSettingsWindow.OnApply' for property 'onclick'(775)
+[23:01:34][pdx_gui_factory.cpp:923]: gui/settings/editor_setting_types.gui:237 - Failed parsing data statement 'EditorSettingsWindow.AllowApply' for property 'enabled'(773)
+[23:01:34][pdx_gui_factory.cpp:923]: gui/settings/editor_setting_types.gui:249 - Failed parsing data statement 'EditorSettingsWindow.Restore' for property 'onclick'(775)
+[23:01:34][pdx_gui_factory.cpp:923]: gui/settings/editor_setting_types.gui:250 - Failed parsing data statement 'EditorSettingsWindow.HasChanged' for property 'enabled'(773)
+[23:01:34][pdx_gui_factory.cpp:923]: gui/settings/editor_setting_types.gui:261 - Failed parsing data statement 'EditorSettingsWindow.SaveAndClose' for property 'onclick'(775)
+[23:01:34][pdx_gui_localize.cpp:236]: gui/POPS/create_social_profile_window_base.gui:83 - Failed parsing localized text: CREATE_SOCIAL_PROFILE_ERROR
+[23:01:34][pdx_gui_factory.cpp:928]: gui/POPS/create_social_profile_window_base.gui:83 - Failed converting property 'text'(143)
+[23:01:35][pdx_gui_localize.cpp:236]: gui/POPS/create_social_profile_window_base.gui:83 - Failed parsing localized text: CREATE_SOCIAL_PROFILE_ERROR
+[23:01:35][pdx_gui_factory.cpp:928]: gui/POPS/create_social_profile_window_base.gui:83 - Failed converting property 'text'(143)

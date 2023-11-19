@@ -1,5 +1,5 @@
 ﻿game_rules_preset={
 	name="LastAppliedRules"
-	setting={ achievements_allowed lenient_ai_behavior low_ai_aggression autonomous_investment_pool all_formable_nations all_releasable_nations moderate_consolidation allow_monument_effects allow_subject_flags allow_subject_map_color infres_player_only infres_private_construction_not_allowed allow_war_flags }
+	setting={ achievements_allowed lenient_ai_behavior low_ai_aggression autonomous_investment_pool all_formable_nations all_releasable_nations aggressive_consolidation allow_monument_effects allow_subject_flags allow_subject_map_color infres_player_only infres_private_construction_not_allowed allow_war_flags }
 	ironman=no
 }
