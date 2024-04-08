@@ -1,10 +1,6 @@
-[21:26:58][jomini_log.cpp:42]: [AUTOMATION_SINGLE_STAT][time-to-reach-title-menu]:[80.453]
+[15:44:10][jomini_log.cpp:42]: [AUTOMATION_SINGLE_STAT][time-to-reach-title-menu]:[65.284]
 
-[21:28:06][jomini_log.cpp:42]: [AUTOMATION_SINGLE_STAT][time-to-complete-generate-from-bookmark-task]:[20.402]
+[15:44:19][jomini_log.cpp:42]: [AUTOMATION_SINGLE_STAT][time-to-reach-ingame-idler]:[73.643]
 
-[21:28:06][jomini_log.cpp:42]: [AUTOMATION_SINGLE_STAT][time-to-save-initial-save]:[0.7]
-
-[21:28:06][jomini_log.cpp:42]: [AUTOMATION_SINGLE_STAT][time-to-load-initial-save]:[0.027]
-
-[21:28:08][jomini_log.cpp:42]: [AUTOMATION_SINGLE_STAT][time-to-reach-ingame-idler]:[150.773]
+[17:40:54][jomini_log.cpp:42]: [AUTOMATION_SINGLE_STAT][time-to-reach-ingame-idler]:[7068.865]
 

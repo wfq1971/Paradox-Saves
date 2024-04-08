@@ -1,9 +1,49 @@
-event debug.4
 event debug.1
 event debug.2
-help
-fast
+fast help
 help fast
-fastbuild
-fastreserch
-fastresearch
+fastbattle
+fasttravel
+fasttraval
+fasttravels
+fasthire
+fastbattle
+
+fastbattle
+yesman
+yesmen
+gui.createwidget gui/advcm_main.gui advcm_main_window
+GUI.ClearWidgets advcm_main_window
+gui.createwidget gui/advcm_main.gui advcm_main_window
+GUI.ClearWidgets advcm_main_window
+gui.createwidget gui/advcm_main.gui advcm_main_window
+GUI.ClearWidgets advcm_main_window
+gui.createwidget gui/advcm_main.gui advcm_main_window
+GUI.ClearWidgets advcm_main_window
+gui.createwidget gui/advcm_main.gui advcm_main_window
+event advcm.7
+gui.createwidget gui/advcm_main.gui advcm_main_window
+event advcm.7
+GUI.ClearWidgets advcm_main_window
+gui.createwidget gui/advcm_main.gui advcm_main_window
+event advcm.7
+GUI.ClearWidgets advcm_main_window
+gui.createwidget gui/advcm_main.gui advcm_main_window
+debug_mode
+gui.createwidget gui/advcm_modifiers.gui advcm_modifiers_window
+gui.createwidget gui/advcm_main.gui advcm_main_window
+GUI.ClearWidgets advcm_main_window
+GUI.ClearWidgets advcm_modifiers_window
+gui.CreateDockable gui/debug_menues.gui language_window
+settings
+gui.CreateDockable gui/debug_menues.gui environment_debug_window
+explorer
+gui.CreateDockable gui/debug_menues.gui ui_master_menu
+gui.CreateDockable gui/debug_menues.gui flags_window
+TheaterTool
+Script.Profiling.Gui
+explorer
+gui.createwidget gui/advcm_main.gui advcm_main_window
+GUI.ClearWidgets advcm_main_window
+gui.createwidget gui/advcm_main.gui advcm_main_window
+GUI.ClearWidgets advcm_main_window

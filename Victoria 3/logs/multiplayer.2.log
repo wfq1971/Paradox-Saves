@@ -1,20 +1,22 @@
-[20:27:24][session.cpp:787]: Init session
-[20:27:24][session.cpp:2419]: SSessionDlcCache: Voice of the People
-[20:27:24][session.cpp:2419]: SSessionDlcCache: Voice of the People Preorder
-[20:28:01][jominigamestate.cpp:232]: Creating gamestate
-[20:28:09][session.h:464]: Setting execute commands: yes
-[20:28:09][session.h:476]: Enabling recorded command replaying
-[20:28:09][multiplayer.cpp:181]: Adding local player
-[20:28:09][session.cpp:1234]: Replaying recorded commands: 0
-[20:28:09][session.h:470]: Setting record commands: no
-[20:28:09][session.cpp:1241]: Notifying callbacks with DoneReplayingCommands
-[20:28:09][ingamemultiplayeridlerlogic.cpp:191]: Handling session notification: done replaying commands for machine ID: 1
-[20:28:13][controlcommands.cpp:52]: CAddPlayer local player: UNKNOWN with machine ID: 1 sender: 1
-[20:28:13][controlcommands.cpp:1075]: Setting "done replaying commands" for machine ID: 1
-[20:28:13][controlcommands.cpp:399]: Setting playable: 5 for machine ID: 1
-[20:28:13][controlcommands.cpp:415]: Setting character controller
-[20:28:13][controlcommands.cpp:1032]: Setting "player here" for machine ID: 1
-[20:28:13][controlcommands.cpp:1075]: Setting "done replaying commands" for machine ID: 1
-[20:28:13][controlcommands.cpp:399]: Setting playable: 5 for machine ID: 1
-[21:04:44][ingamesavegametransferhandler.cpp:86]: Clearing pending save transfers
-[21:04:46][jominigamestate.cpp:239]: Destroying gamestate
+[11:50:06][session.cpp:798]: Init session
+[11:50:06][session.cpp:2468]: SSessionDlcCache: Voice of the People Preorder
+[11:50:06][session.cpp:2468]: SSessionDlcCache: Region Pack 1
+[11:50:06][session.cpp:2468]: SSessionDlcCache: Voice of the People
+[11:50:06][session.cpp:2468]: SSessionDlcCache: American Buildings Pack
+[11:51:52][jominigamestate.cpp:208]: Creating gamestate
+[11:51:58][session.h:473]: Setting execute commands: yes
+[11:51:58][session.h:485]: Enabling recorded command replaying
+[11:51:58][multiplayer.cpp:183]: Adding local player
+[11:51:58][session.cpp:1245]: Replaying recorded commands: 0
+[11:51:58][session.h:479]: Setting record commands: no
+[11:51:58][session.cpp:1252]: Notifying callbacks with DoneReplayingCommands
+[11:51:58][multiplayer_helper.h:50]: Handling session notification: done replaying commands for machine ID: 1
+[11:51:59][controlcommands.cpp:52]: CAddPlayer local player: UNKNOWN with machine ID: 1 sender: 1
+[11:51:59][controlcommands.cpp:1075]: Setting "done replaying commands" for machine ID: 1
+[11:51:59][controlcommands.cpp:399]: Setting playable: 9 for machine ID: 1
+[11:51:59][controlcommands.cpp:415]: Setting character controller
+[11:51:59][controlcommands.cpp:1032]: Setting "player here" for machine ID: 1
+[11:51:59][controlcommands.cpp:1075]: Setting "done replaying commands" for machine ID: 1
+[11:51:59][controlcommands.cpp:399]: Setting playable: 9 for machine ID: 1
+[15:17:57][session_state_transfer_handler.cpp:84]: Clearing pending save transfers
+[15:17:59][jominigamestate.cpp:215]: Destroying gamestate
