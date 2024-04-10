@@ -1,4 +1,6 @@
-[15:26:09][jomini_log.cpp:42]: [AUTOMATION_SINGLE_STAT][time-to-reach-title-menu]:[128.857]
+[15:44:10][jomini_log.cpp:42]: [AUTOMATION_SINGLE_STAT][time-to-reach-title-menu]:[65.284]
 
-[15:26:17][jomini_log.cpp:42]: [AUTOMATION_SINGLE_STAT][time-to-reach-ingame-idler]:[136.677]
+[15:44:19][jomini_log.cpp:42]: [AUTOMATION_SINGLE_STAT][time-to-reach-ingame-idler]:[73.643]
+
+[17:40:54][jomini_log.cpp:42]: [AUTOMATION_SINGLE_STAT][time-to-reach-ingame-idler]:[7068.865]
 
