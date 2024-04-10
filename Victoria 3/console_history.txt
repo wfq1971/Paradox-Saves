@@ -47,3 +47,29 @@ gui.createwidget gui/advcm_main.gui advcm_main_window
 GUI.ClearWidgets advcm_main_window
 gui.createwidget gui/advcm_main.gui advcm_main_window
 GUI.ClearWidgets advcm_main_window
+gui.createwidget gui/advcm_main.gui advcm_main_window
+GUI.ClearWidgets advcm_main_window
+yesssir
+yessir
+yesir
+yesman
+yesmen
+gui.createwidget gui/advcm_main.gui advcm_main_window
+event advcm.6
+event advcm.7
+gui.createwidget gui/advcm_main.gui advcm_main_window
+event advcm.7
+GUI.ClearWidgets advcm_main_window
+gui.createwidget gui/advcm_main.gui advcm_main_window
+gui.createwidget gui/advcm_modifiers.gui advcm_modifiers_window
+GUI.ClearWidgets advcm_main_window
+GUI.ClearWidgets advcm_modifiers_window
+gui.createwidget gui/advcm_main.gui advcm_main_window
+gui.createwidget gui/advcm_modifiers.gui advcm_modifiers_window
+gui.createwidget gui/advcm_main.gui advcm_main_window
+GUI.ClearWidgets advcm_main_window
+GUI.ClearWidgets advcm_modifiers_window
+gui.createwidget gui/advcm_main.gui advcm_main_window
+GUI.ClearWidgets advcm_main_window
+fasthire
+fastbuild

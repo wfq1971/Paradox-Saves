@@ -1,0 +1,203 @@
+[23:16:34][pdx_gui_factory.cpp:158]: Calling GuiFactory setup callback registered by gameguitypes
+[23:16:34][pdx_gui_factory.cpp:158]: Calling GuiFactory setup callback registered by entity_editor_gfx_type
+[23:16:34][pdx_gui_factory.cpp:158]: Calling GuiFactory setup callback registered by portrait_gui_types
+[23:16:34][pdx_gui_factory.cpp:158]: Calling GuiFactory setup callback registered by jomini_gui_gfxtype_entity
+[23:16:38][pdx_gui_factory.cpp:158]: Calling GuiFactory setup callback registered by gameguitypes
+[23:16:38][pdx_gui_factory.cpp:158]: Calling GuiFactory setup callback registered by entity_editor_gfx_type
+[23:16:38][pdx_gui_factory.cpp:158]: Calling GuiFactory setup callback registered by portrait_gui_types
+[23:16:38][pdx_gui_factory.cpp:158]: Calling GuiFactory setup callback registered by jomini_gui_gfxtype_entity
+[23:17:09][pdx_gui_factory.cpp:342]: failed reading callback, at line 222 in file gui/advcm_main.gui
+[23:17:35][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
+[23:17:35][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
+[23:17:37][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
+[23:17:37][pdx_gui_factory.cpp:934]: gui/toolspropertytypes.gui:424 - Failed parsing data statement 'FilterablePropertyList.Search' for property 'ontextchanged'(854)
+[23:17:37][pdx_gui_localize.cpp:236]: gui/toolspropertytypes.gui:426 - Failed parsing localized text: [FilterablePropertyList.GetSearchText]
+[23:17:37][pdx_gui_factory.cpp:939]: gui/toolspropertytypes.gui:426 - Failed converting property 'text'(143)
+[23:17:37][pdx_gui_factory.cpp:934]: gui/toolspropertytypes.gui:432 - Failed parsing data statement 'FilterablePropertyList.ClearSearchText' for property 'onclick'(775)
+[23:17:37][pdx_gui_localize.cpp:236]: gui/toolspropertytypes.gui:450 - Failed parsing localized text: [FilterablePropertyList.GetPropertiesLabel]
+[23:17:37][pdx_gui_factory.cpp:939]: gui/toolspropertytypes.gui:450 - Failed converting property 'text'(143)
+[23:17:42][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
+[23:17:42][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
+[23:17:42][pdx_gui_factory.cpp:934]: gui/toolspropertytypes.gui:424 - Failed parsing data statement 'FilterablePropertyList.Search' for property 'ontextchanged'(854)
+[23:17:42][pdx_gui_localize.cpp:236]: gui/toolspropertytypes.gui:426 - Failed parsing localized text: [FilterablePropertyList.GetSearchText]
+[23:17:42][pdx_gui_factory.cpp:939]: gui/toolspropertytypes.gui:426 - Failed converting property 'text'(143)
+[23:17:42][pdx_gui_factory.cpp:934]: gui/toolspropertytypes.gui:432 - Failed parsing data statement 'FilterablePropertyList.ClearSearchText' for property 'onclick'(775)
+[23:17:42][pdx_gui_localize.cpp:236]: gui/toolspropertytypes.gui:450 - Failed parsing localized text: [FilterablePropertyList.GetPropertiesLabel]
+[23:17:42][pdx_gui_factory.cpp:939]: gui/toolspropertytypes.gui:450 - Failed converting property 'text'(143)
+[23:17:43][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
+[23:17:43][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
+[23:17:43][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
+[23:17:43][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
+[23:17:45][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
+[23:17:45][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
+[23:17:45][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
+[23:17:45][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
+[23:17:45][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
+[23:17:45][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
+[23:17:45][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
+[23:17:45][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
+[23:17:46][pdx_gui_factory.cpp:934]: gui/toolspropertytypes.gui:503 - Failed parsing data statement 'FilterablePropertyList.Search' for property 'ontextchanged'(854)
+[23:17:46][pdx_gui_localize.cpp:236]: gui/toolspropertytypes.gui:505 - Failed parsing localized text: [FilterablePropertyList.GetSearchText]
+[23:17:46][pdx_gui_factory.cpp:939]: gui/toolspropertytypes.gui:505 - Failed converting property 'text'(143)
+[23:17:46][pdx_gui_factory.cpp:934]: gui/toolspropertytypes.gui:511 - Failed parsing data statement 'FilterablePropertyList.ClearSearchText' for property 'onclick'(775)
+[23:17:46][pdx_gui_localize.cpp:236]: gui/toolspropertytypes.gui:529 - Failed parsing localized text: [FilterablePropertyList.GetPropertiesLabel]
+[23:17:46][pdx_gui_factory.cpp:939]: gui/toolspropertytypes.gui:529 - Failed converting property 'text'(143)
+[23:17:46][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
+[23:17:46][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
+[23:17:47][pdx_gui_localize.cpp:236]: gui/POPS/create_social_profile_window_base.gui:83 - Failed parsing localized text: CREATE_SOCIAL_PROFILE_ERROR
+[23:17:47][pdx_gui_factory.cpp:939]: gui/POPS/create_social_profile_window_base.gui:83 - Failed converting property 'text'(143)
+[23:17:47][pdx_gui_localize.cpp:236]: gui/POPS/create_social_profile_window_base.gui:83 - Failed parsing localized text: CREATE_SOCIAL_PROFILE_ERROR
+[23:17:47][pdx_gui_factory.cpp:939]: gui/POPS/create_social_profile_window_base.gui:83 - Failed converting property 'text'(143)
+[23:17:47][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
+[23:17:47][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
+[23:17:48][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
+[23:17:48][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
+[23:17:48][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
+[23:17:48][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
+[23:17:48][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
+[23:17:48][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
+[23:17:48][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
+[23:17:48][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
+[23:23:27][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:23:27][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:16][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:16][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:16][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:16][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:16][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:16][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:16][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:16][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:16][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:16][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:16][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:16][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:16][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:16][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:16][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:16][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:16][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:16][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:16][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:16][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:16][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:16][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:16][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:16][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:16][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:16][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:16][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:16][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:16][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:16][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:16][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:16][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:16][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:16][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:16][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:16][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:17][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:17][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:17][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:17][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:17][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:17][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:17][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:17][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:17][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:17][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:17][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:17][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:17][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:17][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:17][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:17][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:44][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:44][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:44][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:44][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:44][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:44][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:44][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:25:44][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:44][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:44][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:44][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:44][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:44][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:44][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:44][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:44][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:44][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:44][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:44][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:44][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:44][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:44][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:44][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:44][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:44][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:44][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:44][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:44][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:44][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:44][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:44][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:44][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:44][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:44][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:44][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:44][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:44][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:44][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:44][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:44][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:44][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:44][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:44][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:44][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:44][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:44][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:44][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:44][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:45][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:45][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:45][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:45][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:45][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:45][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:45][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:45][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:45][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:45][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:45][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:45][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:45][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:45][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:45][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:45][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:45][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:45][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:45][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:45][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:45][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:45][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:45][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:45][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:45][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:45][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:28:45][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:29:22][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:29:22][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:29:22][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:29:22][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:29:22][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:29:22][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:32:28][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:32:28][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:33:55][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:33:55][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:33:55][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:33:55][pdx_gui_factory.h:610]: gui/building_details_panel.gui:2122 - Malformed item desc '', item descriptions can only contain a single child and no properties
+[23:49:44][pdx_gui_factory.cpp:1509]: gui/states_panel.gui:1460 - Error setting properties for '' (container)
+[23:49:44][pdx_gui_factory.cpp:1509]: gui/states_panel.gui:1460 - Error setting properties for '' (container)

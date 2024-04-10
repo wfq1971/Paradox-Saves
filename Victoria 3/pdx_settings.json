@@ -3,7 +3,19 @@
 		"save_on_exit":	false
 	},
 	"Graphics":	{
+		"buildings_cutoff":	true,
+		"shader_quality":	"low",
+		"portrait_render_scale":	"none",
+		"mapobject_quality":	"off",
+		"animated_portraits":	false,
+		"portraits_ssao":	false,
+		"bloom_enabled":	false,
+		"refraction_quality":	"disabled",
 		"texture_streaming":	false,
+		"shadowmap_resolution":	"disabled",
+		"mesh_lod_bias":	"low",
+		"mesh_lod_fade":	false,
+		"texture_quality":	"low",
 		"fullscreen_resolution":	"2560x1080",
 		"windowed_resolution":	"1920x1080",
 		"device":	"NVIDIA GeForce GTX 1080",
@@ -11,14 +23,15 @@
 		"upscale_quality":	"off",
 		"anti_aliasing":	"DISABLED",
 		"portrait_multi_sampling":	"x2",
-		"anisotropic_filtering":	"x4",
-		"quality":	"medium"
+		"anisotropic_filtering":	"DISABLED",
+		"quality":	"custom"
 	},
 	"interface":	{
 },
 	"map_modes":	{
 },
 	"System":	{
+		"user_bindings":	"user_bindings/user.bindings",
 		"language":	"l_simp_chinese"
 	},
 	"Theme":	{
