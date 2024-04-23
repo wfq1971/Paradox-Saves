@@ -73,3 +73,5 @@ gui.createwidget gui/advcm_main.gui advcm_main_window
 GUI.ClearWidgets advcm_main_window
 fasthire
 fastbuild
+fathire
+fasthire
