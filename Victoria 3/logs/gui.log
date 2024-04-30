@@ -1,158 +1,30 @@
-[00:15:30][pdx_gui_factory.cpp:158]: Calling GuiFactory setup callback registered by gameguitypes
-[00:15:30][pdx_gui_factory.cpp:158]: Calling GuiFactory setup callback registered by entity_editor_gfx_type
-[00:15:30][pdx_gui_factory.cpp:158]: Calling GuiFactory setup callback registered by portrait_gui_types
-[00:15:30][pdx_gui_factory.cpp:158]: Calling GuiFactory setup callback registered by jomini_gui_gfxtype_entity
-[00:15:33][pdx_gui_factory.cpp:158]: Calling GuiFactory setup callback registered by gameguitypes
-[00:15:33][pdx_gui_factory.cpp:158]: Calling GuiFactory setup callback registered by entity_editor_gfx_type
-[00:15:33][pdx_gui_factory.cpp:158]: Calling GuiFactory setup callback registered by portrait_gui_types
-[00:15:33][pdx_gui_factory.cpp:158]: Calling GuiFactory setup callback registered by jomini_gui_gfxtype_entity
-[00:15:33][pdx_gui_factory.cpp:342]: failed reading callback, at line 136 in file gui/gensokyo_kawashiro.gui
-[00:15:34][pdx_gui_file_desc.h:43]: gui/sakuya.gui:332 - Duplicate property 'visible'(774)
-[00:15:34][pdx_gui_factory.cpp:349]: failed reading property, at line 332 in file gui/sakuya.gui
-[00:15:34][pdx_gui_file_desc.h:43]: gui/sakuya.gui:348 - Duplicate property 'visible'(774)
-[00:15:34][pdx_gui_factory.cpp:349]: failed reading property, at line 348 in file gui/sakuya.gui
-[00:15:34][pdx_gui_file_desc.h:43]: gui/sakuya.gui:364 - Duplicate property 'visible'(774)
-[00:15:34][pdx_gui_factory.cpp:349]: failed reading property, at line 364 in file gui/sakuya.gui
-[00:15:34][pdx_gui_file_desc.h:43]: gui/sakuya.gui:380 - Duplicate property 'visible'(774)
-[00:15:34][pdx_gui_factory.cpp:349]: failed reading property, at line 380 in file gui/sakuya.gui
-[00:15:34][pdx_gui_file_desc.h:43]: gui/sakuya.gui:396 - Duplicate property 'visible'(774)
-[00:15:34][pdx_gui_factory.cpp:349]: failed reading property, at line 396 in file gui/sakuya.gui
-[00:15:34][pdx_gui_file_desc.h:43]: gui/sakuya.gui:412 - Duplicate property 'visible'(774)
-[00:15:34][pdx_gui_factory.cpp:349]: failed reading property, at line 412 in file gui/sakuya.gui
-[00:15:34][pdx_gui_file_desc.h:43]: gui/sakuya.gui:428 - Duplicate property 'visible'(774)
-[00:15:34][pdx_gui_factory.cpp:349]: failed reading property, at line 428 in file gui/sakuya.gui
-[00:15:34][pdx_gui_file_desc.h:43]: gui/sakuya.gui:444 - Duplicate property 'visible'(774)
-[00:15:34][pdx_gui_factory.cpp:349]: failed reading property, at line 444 in file gui/sakuya.gui
-[00:15:34][pdx_gui_file_desc.h:43]: gui/sakuya.gui:460 - Duplicate property 'visible'(774)
-[00:15:34][pdx_gui_factory.cpp:349]: failed reading property, at line 460 in file gui/sakuya.gui
-[00:15:34][pdx_gui_file_desc.h:43]: gui/sakuya.gui:825 - Duplicate property 'visible'(774)
-[00:15:34][pdx_gui_factory.cpp:349]: failed reading property, at line 825 in file gui/sakuya.gui
-[00:15:34][pdx_gui_file_desc.h:43]: gui/sakuya.gui:1848 - Duplicate property 'visible'(774)
-[00:15:34][pdx_gui_factory.cpp:349]: failed reading property, at line 1848 in file gui/sakuya.gui
-[00:15:34][pdx_gui_file_desc.h:43]: gui/sakuya.gui:2040 - Duplicate property 'visible'(774)
-[00:15:34][pdx_gui_factory.cpp:349]: failed reading property, at line 2040 in file gui/sakuya.gui
-[00:15:34][pdx_gui_file_desc.h:43]: gui/sakuya.gui:2061 - Duplicate property 'visible'(774)
-[00:15:34][pdx_gui_factory.cpp:349]: failed reading property, at line 2061 in file gui/sakuya.gui
-[00:15:34][pdx_gui_factory.cpp:342]: failed reading callback, at line 2380 in file gui/sakuya.gui
-[00:15:34][pdx_gui_file_desc.h:43]: gui/sakuya_money.gui:104 - Duplicate property 'visible'(774)
-[00:15:34][pdx_gui_factory.cpp:349]: failed reading property, at line 104 in file gui/sakuya_money.gui
-[00:15:34][pdx_gui_file_desc.h:43]: gui/sakuya_money.gui:127 - Duplicate property 'visible'(774)
-[00:15:34][pdx_gui_factory.cpp:349]: failed reading property, at line 127 in file gui/sakuya_money.gui
-[00:15:34][pdx_gui_file_desc.h:43]: gui/sakuya_money.gui:150 - Duplicate property 'visible'(774)
-[00:15:34][pdx_gui_factory.cpp:349]: failed reading property, at line 150 in file gui/sakuya_money.gui
-[00:15:34][pdx_gui_file_desc.h:43]: gui/sakuya_money.gui:174 - Duplicate property 'visible'(774)
-[00:15:34][pdx_gui_factory.cpp:349]: failed reading property, at line 174 in file gui/sakuya_money.gui
-[00:15:34][pdx_gui_file_desc.h:43]: gui/sakuya_money.gui:192 - Duplicate property 'visible'(774)
-[00:15:34][pdx_gui_factory.cpp:349]: failed reading property, at line 192 in file gui/sakuya_money.gui
-[00:15:34][pdx_gui_file_desc.h:43]: gui/sakuya_money.gui:210 - Duplicate property 'visible'(774)
-[00:15:34][pdx_gui_factory.cpp:349]: failed reading property, at line 210 in file gui/sakuya_money.gui
-[00:15:34][pdx_gui_file_desc.h:43]: gui/sakuya_money.gui:455 - Duplicate property 'visible'(774)
-[00:15:34][pdx_gui_factory.cpp:349]: failed reading property, at line 455 in file gui/sakuya_money.gui
-[00:15:34][pdx_gui_file_desc.h:43]: gui/sakuya_money.gui:474 - Duplicate property 'visible'(774)
-[00:15:34][pdx_gui_factory.cpp:349]: failed reading property, at line 474 in file gui/sakuya_money.gui
-[00:15:34][pdx_gui_file_desc.h:43]: gui/sakuya_money.gui:501 - Duplicate property 'visible'(774)
-[00:15:34][pdx_gui_factory.cpp:349]: failed reading property, at line 501 in file gui/sakuya_money.gui
-[00:15:34][pdx_gui_file_desc.h:43]: gui/sakuya_money.gui:550 - Duplicate property 'visible'(774)
-[00:15:34][pdx_gui_factory.cpp:349]: failed reading property, at line 550 in file gui/sakuya_money.gui
-[00:15:34][pdx_gui_file_desc.h:43]: gui/sakuya_money.gui:575 - Duplicate property 'visible'(774)
-[00:15:34][pdx_gui_factory.cpp:349]: failed reading property, at line 575 in file gui/sakuya_money.gui
-[00:15:34][pdx_gui_file_desc.h:43]: gui/sakuya_money.gui:599 - Duplicate property 'visible'(774)
-[00:15:34][pdx_gui_factory.cpp:349]: failed reading property, at line 599 in file gui/sakuya_money.gui
-[00:15:34][pdx_gui_file_desc.h:43]: gui/sakuya_money.gui:624 - Duplicate property 'visible'(774)
-[00:15:34][pdx_gui_factory.cpp:349]: failed reading property, at line 624 in file gui/sakuya_money.gui
-[00:15:34][pdx_gui_file_desc.h:43]: gui/sakuya_money.gui:647 - Duplicate property 'visible'(774)
-[00:15:34][pdx_gui_factory.cpp:349]: failed reading property, at line 647 in file gui/sakuya_money.gui
-[00:15:34][pdx_gui_file_desc.h:43]: gui/sakuya_money.gui:669 - Duplicate property 'visible'(774)
-[00:15:34][pdx_gui_factory.cpp:349]: failed reading property, at line 669 in file gui/sakuya_money.gui
-[00:15:34][pdx_gui_file_desc.h:43]: gui/sakuya_money.gui:691 - Duplicate property 'visible'(774)
-[00:15:34][pdx_gui_factory.cpp:349]: failed reading property, at line 691 in file gui/sakuya_money.gui
-[00:15:34][pdx_gui_file_desc.h:43]: gui/sakuya_money.gui:797 - Duplicate property 'visible'(774)
-[00:15:34][pdx_gui_factory.cpp:349]: failed reading property, at line 797 in file gui/sakuya_money.gui
-[00:15:34][pdx_gui_file_desc.h:43]: gui/sakuya_money.gui:946 - Duplicate property 'visible'(774)
-[00:15:34][pdx_gui_factory.cpp:349]: failed reading property, at line 946 in file gui/sakuya_money.gui
-[00:15:34][pdx_gui_file_desc.h:43]: gui/sakuya_money.gui:996 - Duplicate property 'visible'(774)
-[00:15:34][pdx_gui_factory.cpp:349]: failed reading property, at line 996 in file gui/sakuya_money.gui
-[00:15:34][pdx_gui_file_desc.h:43]: gui/sakuya_money.gui:1019 - Duplicate property 'visible'(774)
-[00:15:34][pdx_gui_factory.cpp:349]: failed reading property, at line 1019 in file gui/sakuya_money.gui
-[00:15:34][pdx_gui_file_desc.h:43]: gui/sakuya_money.gui:1037 - Duplicate property 'visible'(774)
-[00:15:34][pdx_gui_factory.cpp:349]: failed reading property, at line 1037 in file gui/sakuya_money.gui
-[00:15:34][pdx_gui_file_desc.h:43]: gui/sakuya_money.gui:1393 - Duplicate property 'visible'(774)
-[00:15:34][pdx_gui_factory.cpp:349]: failed reading property, at line 1393 in file gui/sakuya_money.gui
-[00:15:34][pdx_gui_file_desc.h:43]: gui/sakuya_money.gui:1747 - Duplicate property 'visible'(774)
-[00:15:34][pdx_gui_factory.cpp:349]: failed reading property, at line 1747 in file gui/sakuya_money.gui
-[00:15:34][pdx_gui_file_desc.h:43]: gui/sakuya_money.gui:1770 - Duplicate property 'visible'(774)
-[00:15:34][pdx_gui_factory.cpp:349]: failed reading property, at line 1770 in file gui/sakuya_money.gui
-[00:15:34][pdx_gui_file_desc.h:43]: gui/sakuya_money.gui:2000 - Duplicate property 'visible'(774)
-[00:15:34][pdx_gui_factory.cpp:349]: failed reading property, at line 2000 in file gui/sakuya_money.gui
-[00:15:34][pdx_gui_file_desc.h:43]: gui/sakuya_money.gui:2025 - Duplicate property 'visible'(774)
-[00:15:34][pdx_gui_factory.cpp:349]: failed reading property, at line 2025 in file gui/sakuya_money.gui
-[00:15:34][pdx_gui_file_desc.h:43]: gui/sakuya_money.gui:2050 - Duplicate property 'visible'(774)
-[00:15:34][pdx_gui_factory.cpp:349]: failed reading property, at line 2050 in file gui/sakuya_money.gui
-[00:15:34][pdx_gui_file_desc.h:43]: gui/sakuya_money.gui:2073 - Duplicate property 'visible'(774)
-[00:15:34][pdx_gui_factory.cpp:349]: failed reading property, at line 2073 in file gui/sakuya_money.gui
-[00:15:34][pdx_gui_file_desc.h:43]: gui/sakuya_money.gui:2636 - Duplicate property 'visible'(774)
-[00:15:34][pdx_gui_factory.cpp:349]: failed reading property, at line 2636 in file gui/sakuya_money.gui
-[00:15:34][pdx_gui_file_desc.h:43]: gui/sakuya_money.gui:2659 - Duplicate property 'visible'(774)
-[00:15:34][pdx_gui_factory.cpp:349]: failed reading property, at line 2659 in file gui/sakuya_money.gui
-[00:15:34][pdx_gui_file_desc.h:43]: gui/sakuya_money.gui:2770 - Duplicate property 'visible'(774)
-[00:15:34][pdx_gui_factory.cpp:349]: failed reading property, at line 2770 in file gui/sakuya_money.gui
-[00:15:34][pdx_gui_file_desc.h:43]: gui/sakuya_money.gui:2793 - Duplicate property 'visible'(774)
-[00:15:34][pdx_gui_factory.cpp:349]: failed reading property, at line 2793 in file gui/sakuya_money.gui
-[00:15:34][pdx_gui_file_desc.h:43]: gui/sakuya_money.gui:3487 - Duplicate property 'visible'(774)
-[00:15:34][pdx_gui_factory.cpp:349]: failed reading property, at line 3487 in file gui/sakuya_money.gui
-[00:15:34][pdx_gui_file_desc.h:43]: gui/sakuya_money.gui:3510 - Duplicate property 'visible'(774)
-[00:15:34][pdx_gui_factory.cpp:349]: failed reading property, at line 3510 in file gui/sakuya_money.gui
-[00:15:37][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
-[00:15:37][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
-[00:15:38][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
-[00:15:38][pdx_gui_factory.cpp:934]: gui/toolspropertytypes.gui:424 - Failed parsing data statement 'FilterablePropertyList.Search' for property 'ontextchanged'(854)
-[00:15:38][pdx_gui_localize.cpp:236]: gui/toolspropertytypes.gui:426 - Failed parsing localized text: [FilterablePropertyList.GetSearchText]
-[00:15:38][pdx_gui_factory.cpp:939]: gui/toolspropertytypes.gui:426 - Failed converting property 'text'(143)
-[00:15:38][pdx_gui_factory.cpp:934]: gui/toolspropertytypes.gui:432 - Failed parsing data statement 'FilterablePropertyList.ClearSearchText' for property 'onclick'(775)
-[00:15:38][pdx_gui_localize.cpp:236]: gui/toolspropertytypes.gui:450 - Failed parsing localized text: [FilterablePropertyList.GetPropertiesLabel]
-[00:15:38][pdx_gui_factory.cpp:939]: gui/toolspropertytypes.gui:450 - Failed converting property 'text'(143)
-[00:15:39][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
-[00:15:39][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
-[00:15:39][pdx_gui_factory.cpp:934]: gui/toolspropertytypes.gui:424 - Failed parsing data statement 'FilterablePropertyList.Search' for property 'ontextchanged'(854)
-[00:15:39][pdx_gui_localize.cpp:236]: gui/toolspropertytypes.gui:426 - Failed parsing localized text: [FilterablePropertyList.GetSearchText]
-[00:15:39][pdx_gui_factory.cpp:939]: gui/toolspropertytypes.gui:426 - Failed converting property 'text'(143)
-[00:15:39][pdx_gui_factory.cpp:934]: gui/toolspropertytypes.gui:432 - Failed parsing data statement 'FilterablePropertyList.ClearSearchText' for property 'onclick'(775)
-[00:15:39][pdx_gui_localize.cpp:236]: gui/toolspropertytypes.gui:450 - Failed parsing localized text: [FilterablePropertyList.GetPropertiesLabel]
-[00:15:39][pdx_gui_factory.cpp:939]: gui/toolspropertytypes.gui:450 - Failed converting property 'text'(143)
-[00:15:40][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
-[00:15:40][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
-[00:15:40][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
-[00:15:40][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
-[00:15:43][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
-[00:15:43][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
-[00:15:43][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
-[00:15:43][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
-[00:15:43][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
-[00:15:43][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
-[00:15:43][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
-[00:15:43][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
-[00:15:44][pdx_gui_factory.cpp:934]: gui/toolspropertytypes.gui:503 - Failed parsing data statement 'FilterablePropertyList.Search' for property 'ontextchanged'(854)
-[00:15:44][pdx_gui_localize.cpp:236]: gui/toolspropertytypes.gui:505 - Failed parsing localized text: [FilterablePropertyList.GetSearchText]
-[00:15:44][pdx_gui_factory.cpp:939]: gui/toolspropertytypes.gui:505 - Failed converting property 'text'(143)
-[00:15:44][pdx_gui_factory.cpp:934]: gui/toolspropertytypes.gui:511 - Failed parsing data statement 'FilterablePropertyList.ClearSearchText' for property 'onclick'(775)
-[00:15:44][pdx_gui_localize.cpp:236]: gui/toolspropertytypes.gui:529 - Failed parsing localized text: [FilterablePropertyList.GetPropertiesLabel]
-[00:15:44][pdx_gui_factory.cpp:939]: gui/toolspropertytypes.gui:529 - Failed converting property 'text'(143)
-[00:15:44][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
-[00:15:44][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
-[00:15:44][pdx_gui_localize.cpp:236]: gui/POPS/create_social_profile_window_base.gui:83 - Failed parsing localized text: CREATE_SOCIAL_PROFILE_ERROR
-[00:15:44][pdx_gui_factory.cpp:939]: gui/POPS/create_social_profile_window_base.gui:83 - Failed converting property 'text'(143)
-[00:15:44][pdx_gui_localize.cpp:236]: gui/POPS/create_social_profile_window_base.gui:83 - Failed parsing localized text: CREATE_SOCIAL_PROFILE_ERROR
-[00:15:44][pdx_gui_factory.cpp:939]: gui/POPS/create_social_profile_window_base.gui:83 - Failed converting property 'text'(143)
-[00:15:45][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
-[00:15:45][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
-[00:15:45][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
-[00:15:45][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
-[00:15:45][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
-[00:15:45][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
-[00:15:45][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
-[00:15:45][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
-[00:15:45][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
-[00:15:45][pdx_gui_factory.cpp:724]: gui/building_details_panel.gui:2123 - 'FancyTooltip_CombatUnitType' is not a valid widget/property
-[00:21:33][pdx_gui_gfxtype_line.cpp:341]: gui/politics_panel_types.gui:1604 - Line must have atleast 2 points
-[00:21:33][pdx_gui_gfxtype_line.cpp:341]: gui/goods_panel.gui:403 - Line must have atleast 2 points
-[00:45:49][pdx_gui_factory.cpp:1509]: gui/states_panel.gui:1460 - Error setting properties for '' (container)
+[20:19:31][pdx_gui_factory.cpp:158]: Calling GuiFactory setup callback registered by gameguitypes
+[20:19:31][pdx_gui_factory.cpp:158]: Calling GuiFactory setup callback registered by entity_editor_gfx_type
+[20:19:31][pdx_gui_factory.cpp:158]: Calling GuiFactory setup callback registered by portrait_gui_types
+[20:19:31][pdx_gui_factory.cpp:158]: Calling GuiFactory setup callback registered by jomini_gui_gfxtype_entity
+[20:19:54][pdx_gui_factory.cpp:158]: Calling GuiFactory setup callback registered by gameguitypes
+[20:19:54][pdx_gui_factory.cpp:158]: Calling GuiFactory setup callback registered by entity_editor_gfx_type
+[20:19:54][pdx_gui_factory.cpp:158]: Calling GuiFactory setup callback registered by portrait_gui_types
+[20:19:54][pdx_gui_factory.cpp:158]: Calling GuiFactory setup callback registered by jomini_gui_gfxtype_entity
+[20:20:26][pdx_gui_factory.cpp:934]: gui/toolspropertytypes.gui:424 - Failed parsing data statement 'FilterablePropertyList.Search' for property 'ontextchanged'(854)
+[20:20:26][pdx_gui_localize.cpp:236]: gui/toolspropertytypes.gui:426 - Failed parsing localized text: [FilterablePropertyList.GetSearchText]
+[20:20:26][pdx_gui_factory.cpp:939]: gui/toolspropertytypes.gui:426 - Failed converting property 'text'(143)
+[20:20:26][pdx_gui_factory.cpp:934]: gui/toolspropertytypes.gui:432 - Failed parsing data statement 'FilterablePropertyList.ClearSearchText' for property 'onclick'(775)
+[20:20:26][pdx_gui_localize.cpp:236]: gui/toolspropertytypes.gui:450 - Failed parsing localized text: [FilterablePropertyList.GetPropertiesLabel]
+[20:20:26][pdx_gui_factory.cpp:939]: gui/toolspropertytypes.gui:450 - Failed converting property 'text'(143)
+[20:20:29][pdx_gui_factory.cpp:934]: gui/toolspropertytypes.gui:424 - Failed parsing data statement 'FilterablePropertyList.Search' for property 'ontextchanged'(854)
+[20:20:29][pdx_gui_localize.cpp:236]: gui/toolspropertytypes.gui:426 - Failed parsing localized text: [FilterablePropertyList.GetSearchText]
+[20:20:29][pdx_gui_factory.cpp:939]: gui/toolspropertytypes.gui:426 - Failed converting property 'text'(143)
+[20:20:29][pdx_gui_factory.cpp:934]: gui/toolspropertytypes.gui:432 - Failed parsing data statement 'FilterablePropertyList.ClearSearchText' for property 'onclick'(775)
+[20:20:29][pdx_gui_localize.cpp:236]: gui/toolspropertytypes.gui:450 - Failed parsing localized text: [FilterablePropertyList.GetPropertiesLabel]
+[20:20:29][pdx_gui_factory.cpp:939]: gui/toolspropertytypes.gui:450 - Failed converting property 'text'(143)
+[20:20:38][pdx_gui_factory.cpp:934]: gui/toolspropertytypes.gui:503 - Failed parsing data statement 'FilterablePropertyList.Search' for property 'ontextchanged'(854)
+[20:20:38][pdx_gui_localize.cpp:236]: gui/toolspropertytypes.gui:505 - Failed parsing localized text: [FilterablePropertyList.GetSearchText]
+[20:20:38][pdx_gui_factory.cpp:939]: gui/toolspropertytypes.gui:505 - Failed converting property 'text'(143)
+[20:20:38][pdx_gui_factory.cpp:934]: gui/toolspropertytypes.gui:511 - Failed parsing data statement 'FilterablePropertyList.ClearSearchText' for property 'onclick'(775)
+[20:20:38][pdx_gui_localize.cpp:236]: gui/toolspropertytypes.gui:529 - Failed parsing localized text: [FilterablePropertyList.GetPropertiesLabel]
+[20:20:38][pdx_gui_factory.cpp:939]: gui/toolspropertytypes.gui:529 - Failed converting property 'text'(143)
+[20:20:39][pdx_gui_localize.cpp:236]: gui/POPS/create_social_profile_window_base.gui:83 - Failed parsing localized text: CREATE_SOCIAL_PROFILE_ERROR
+[20:20:39][pdx_gui_factory.cpp:939]: gui/POPS/create_social_profile_window_base.gui:83 - Failed converting property 'text'(143)
+[20:20:40][pdx_gui_localize.cpp:236]: gui/POPS/create_social_profile_window_base.gui:83 - Failed parsing localized text: CREATE_SOCIAL_PROFILE_ERROR
+[20:20:40][pdx_gui_factory.cpp:939]: gui/POPS/create_social_profile_window_base.gui:83 - Failed converting property 'text'(143)

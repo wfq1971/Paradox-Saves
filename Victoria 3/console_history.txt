@@ -75,3 +75,45 @@ fasthire
 fastbuild
 fathire
 fasthire
+help
+military help
+gui.debug
+gui_editor
+GUI.CreateWidget gui/window_component_library.gui component_library_window
+gui.clearwidgets
+settings
+particleeditor
+clearspawnedentities
+explorer
+tweak Audio.
+Script.Profiling.Gui
+reload texture
+fasthire
+reload texture
+explorer
+TheaterTool
+gui.CreateDockable gui/debug_menues.gui flags_window
+reload texture
+particleeditor
+gui.CreateDockable gui/debug_menues.gui environment_debug_window
+gui.CreateDockable gui/debug_menues.gui mesh_debug_window
+tweak Cities.
+data_types_explorer
+Camera.Restrictions
+gui.debug
+gui.CreateDockable gui/debug_menues.gui Particle_Tools
+particleeditor
+compound_nodeeditor
+GUI.CreateDockable Entity.Editor
+DeltaTimeScale 0
+DeltaTimeScale 0.5
+DeltaTimeScale 0
+3dstats
+Particles.Stats
+Entity.Info
+textureviewer
+Reload texture /gfx/particles
+Reload assets gfx/models/
+tweak Audio.
+particleeditorffasthire
+fasthire
