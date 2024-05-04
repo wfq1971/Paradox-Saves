@@ -1,4 +1,0 @@
-last_lesson_chain="lesson_chain_journal_guides"
-completed_lessons={
-	economic_dominance_complete
-}

@@ -117,3 +117,5 @@ Reload assets gfx/models/
 tweak Audio.
 particleeditorffasthire
 fasthire
+gui.createwidget gui/advcm_main.gui advcm_main_window
+GUI.ClearWidgets advcm_main_window
