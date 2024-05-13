@@ -1,0 +1,416 @@
+[14:51:58][jominiapplication.cpp:250]: Changing game speed to: 2
+
+[14:52:20][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[14:53:43][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[14:53:48][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[14:54:01][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[14:54:04][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[14:54:04][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[14:54:05][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[15:04:42][jominiapplication.cpp:250]: Changing game speed to: 4
+
+[15:04:59][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[15:05:13][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[15:05:24][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: 0
+
+[15:05:48][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[15:06:08][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: 0
+
+[15:07:40][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[15:07:51][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[15:07:55][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[15:10:18][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[15:10:22][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[15:13:36][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[15:13:40][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[15:13:48][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[15:13:52][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[15:15:50][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: 0
+
+[15:16:09][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[15:16:40][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: 1
+
+[15:16:55][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[15:17:48][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: 1
+
+[15:18:08][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[15:18:32][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: 1
+
+[15:18:45][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[15:18:49][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: 1
+
+[15:18:51][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[15:23:38][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[15:23:44][jominiapplication.cpp:250]: Removing Human! Name: UNKNOWN, ID: 1
+
+[15:23:46][jominiapplication.cpp:250]: Changing game speed to: 4
+
+[15:24:03][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[15:24:04][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[15:24:07][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[15:24:09][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[15:24:17][jominiapplication.cpp:250]: Removing Human! Name: UNKNOWN, ID: 1
+
+[15:24:18][jominiapplication.cpp:250]: Changing game speed to: 4
+
+[15:24:35][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[15:24:51][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[15:24:55][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[15:25:23][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[15:25:25][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[15:26:35][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: 1
+
+[15:26:35][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[15:26:36][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: 1
+
+[15:26:50][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[15:27:20][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[15:28:41][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[15:28:44][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[15:28:47][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[15:29:56][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: 1
+
+[15:30:58][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[15:31:39][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[15:31:50][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[15:31:52][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[15:31:58][jominiapplication.cpp:250]: Removing Human! Name: UNKNOWN, ID: 1
+
+[15:32:00][jominiapplication.cpp:250]: Changing game speed to: 4
+
+[15:33:36][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[15:33:41][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[15:33:46][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[15:34:20][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[15:34:53][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[15:34:59][jominiapplication.cpp:250]: Changing game speed to: 4
+
+[15:35:11][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[15:35:57][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: 1
+
+[15:36:18][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[15:36:24][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[15:36:33][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[15:36:46][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[15:36:54][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[15:37:16][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[15:37:44][jominiapplication.cpp:250]: Removing Human! Name: UNKNOWN, ID: 1
+
+[15:37:46][jominiapplication.cpp:250]: Changing game speed to: 4
+
+[15:38:05][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[15:38:22][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[15:38:39][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[15:39:17][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: 1
+
+[15:39:18][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[15:40:49][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[15:40:57][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[15:41:07][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[15:41:11][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[15:41:41][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: 0
+
+[15:41:48][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[15:41:58][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[15:42:01][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[15:42:35][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: 0
+
+[15:42:40][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[15:45:33][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[15:45:36][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[15:45:57][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[15:46:00][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[15:46:05][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[15:46:19][jominiapplication.cpp:250]: Removing Human! Name: UNKNOWN, ID: 1
+
+[15:46:21][jominiapplication.cpp:250]: Changing game speed to: 2
+
+[16:10:19][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[16:10:26][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[16:12:39][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[16:13:40][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: 1
+
+[18:19:52][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[18:20:20][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[18:20:24][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[18:21:08][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: 1
+
+[18:28:14][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[18:32:26][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[18:32:31][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[18:33:47][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: 0
+
+[18:33:58][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[18:37:28][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[18:37:31][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[18:53:21][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: 1
+
+[18:54:36][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[18:54:50][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[18:54:56][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[18:56:43][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[18:56:47][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[19:01:44][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[19:01:48][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[19:04:52][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[19:05:06][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[19:06:59][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: 1
+
+[19:07:13][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[19:07:59][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: 0
+
+[19:08:04][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[19:14:03][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: 1
+
+[19:14:57][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[19:16:49][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: 1
+
+[19:17:29][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[19:18:41][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[19:18:45][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[19:21:39][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: 1
+
+[19:23:12][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[19:25:30][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: 1
+
+[19:26:26][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[19:27:14][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[19:27:22][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[19:29:03][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: 1
+
+[19:29:35][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[19:32:51][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[19:32:56][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[19:35:24][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[19:35:29][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[19:36:51][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: 1
+
+[19:37:23][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[19:37:41][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[19:37:45][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[19:41:51][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[19:42:05][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[19:42:10][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[19:42:12][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[19:43:07][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[19:43:10][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[19:43:10][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[19:43:14][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[19:43:31][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: 1
+
+[19:45:18][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[19:45:37][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: 1
+
+[19:45:53][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[19:45:59][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: 1
+
+[19:46:09][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[19:46:21][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: 1
+
+[19:46:39][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[19:47:30][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[19:47:34][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[19:48:24][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: 1
+
+[19:50:15][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[19:51:47][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: 0
+
+[19:51:52][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[19:53:22][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: 1
+
+[19:53:41][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[19:56:51][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[19:56:54][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[20:00:38][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[20:00:44][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[20:03:55][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[20:04:00][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[20:05:28][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: 1
+
+[20:05:56][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[20:06:46][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: 1
+
+[20:07:25][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[20:14:20][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: 0
+
+[20:16:00][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[20:16:44][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[20:16:49][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[20:16:52][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[20:16:54][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[20:20:57][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[20:21:14][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[20:25:05][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: 1
+
+[20:25:58][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[20:29:56][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[20:30:07][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[20:35:03][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[20:35:08][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[20:36:02][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: 1
+
+[20:36:16][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[20:36:59][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: 0
+
+[20:37:18][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[20:39:59][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[20:40:35][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[20:41:33][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: -1
+
+[20:41:38][jominiapplication.cpp:250]: Pause Toggled! Paused: false, PlayerID: 0
+
+[20:43:08][jominiapplication.cpp:250]: Pause Toggled! Paused: true, PlayerID: 1
+
