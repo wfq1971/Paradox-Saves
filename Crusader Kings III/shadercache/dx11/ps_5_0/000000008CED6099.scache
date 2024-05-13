@@ -1,0 +1,2635 @@
+
+
+// === Shader Info === 
+
+// Shader file: gfx/FX/pdxmesh.shader
+// Effect: standard_atlas_mapobject
+
+
+
+// === Defines === 
+
+#define PDX_DIRECTX_11
+#define PIXEL_SHADER
+#define PDX_HLSL
+#define VENDOR_NVIDIA
+#define JOMINI_MAP_OBJECT
+#define PDX_MESH_UV1
+#define ATLAS
+#define PDX_MAX_HEIGHTMAP_COMPRESS_LEVELS 5
+#define JOMINI_REFRACTION_ENABLED
+#define PDX_WINDOWS
+
+
+// === HLSL Macros === 
+
+#define PDX_POSITION SV_Position
+#define PDX_COLOR SV_Target
+#define PDX_COLOR0 SV_Target0
+#define PDX_COLOR0_SRC1 SV_Target1 // Use this when doing dual source blending, currently only supports that for render target #0
+#define PDX_COLOR1 SV_Target1
+#define PDX_COLOR2 SV_Target2
+#define PDX_COLOR3 SV_Target3
+#define PDX_COLOR4 SV_Target4
+#define PDX_COLOR5 SV_Target5
+#define PDX_COLOR6 SV_Target6
+#define PDX_COLOR7 SV_Target7
+#define PDX_VertexID SV_VertexID
+#define PDX_InstanceID SV_InstanceID
+#define PDX_DispatchThreadID SV_DispatchThreadID
+#define PDX_GroupThreadID SV_GroupThreadID
+#define PDX_GroupID SV_GroupID
+#define PDX_GroupIndex SV_GroupIndex
+#define PDX_TessFactor SV_TessFactor
+#define PDX_InsideTessFactor SV_InsideTessFactor
+#define PDX_OutputControlPointID SV_OutputControlPointID
+#define PDX_DomainLocation SV_DomainLocation
+#define PDX_RenderTargetArrayIndex SV_RenderTargetArrayIndex
+#define PDX_ViewportArrayIndex SV_ViewportArrayIndex
+
+#define PdxDomainTypeTriangle "tri"
+#define PdxDomainTypeQuad "quad"
+#define PdxDomainTypeIsoline "isoline"
+
+#define PdxPartitioningModeInteger "integer"
+#define PdxPartitioningModeFractionalEven "fractional_even"
+#define PdxPartitioningModeFractionalOdd "fractional_odd"
+
+#define PdxPrimitiveTypePoint point
+#define PdxPrimitiveTypeLine line
+#define PdxPrimitiveTypeTriangle triangle
+#define PdxPrimitiveTypeLineAdjacency lineadj
+#define PdxPrimitiveTypeTriangleAdjacency triangleadj
+
+#define PdxTessellatorOutputTopologyPoint "point"
+#define PdxTessellatorOutputTopologyLine "line"
+#define PdxTessellatorOutputTopologyTriangleCw "triangle_cw"
+#define PdxTessellatorOutputTopologyTriangleCcw "triangle_ccw"
+
+#define PdxMeshShaderOutputTopologyLine "line"
+#define PdxMeshShaderOutputTopologyTriangle "triangle"
+
+#define mod( X, Y ) ( (X) % (Y) )
+
+float2x2 Create2x2( in float2 x, in float2 y )
+{
+	return transpose( float2x2( x, y ) );
+}
+// TODO, Create3x3 should be transposed in hlsl, and not in glsl, and then the mul() arguments should be reversed
+#define Create3x3 float3x3
+float4x4 Create4x4( in float4 x, in float4 y, in float4 z, in float4 w )
+{
+	return transpose( float4x4( x, y, z, w ) );
+}
+
+#define GetMatrixData( Matrix, row, col ) ( Matrix [ row ] [ col ] )
+
+float3x3 CastTo3x3( in float4x4 M )
+{
+	return (float3x3)M;
+}
+
+#define lessThan( a, b ) ( (a) < (b) )
+
+float2 vec2(float vValue) { return float2(vValue, vValue); }
+float3 vec3(float vValue) { return float3(vValue, vValue, vValue); }
+float4 vec4(float vValue) { return float4(vValue, vValue, vValue, vValue); }
+
+
+struct PdxTextureSampler2D
+{
+    Texture2D 		_Texture;
+    SamplerState 	_Sampler;
+};
+struct PdxTextureSampler2DMS
+{
+    Texture2DMS<float4>		_Texture;
+};
+
+struct PdxTextureSampler2DArray
+{
+    Texture2DArray	_Texture;
+    SamplerState 	_Sampler;
+};
+
+struct PdxTextureSampler3D
+{
+    Texture3D 		_Texture;
+    SamplerState 	_Sampler;
+};
+
+struct PdxTextureSamplerCube
+{
+    TextureCube 	_Texture;
+    SamplerState 	_Sampler;
+};
+
+struct PdxTextureSampler2DCmp
+{
+    Texture2D 				_Texture;
+    SamplerComparisonState 	_Sampler;
+};
+
+// These are for separate Texture/Sampler objects
+#define PdxSampleTex2D(tex,samp,uv) (tex).Sample( (samp), (uv) )
+#define PdxSampleTex2DLod(tex,samp,uv,lod) (tex).SampleLevel( (samp), (uv), (lod) )
+#define PdxSampleTex2DGrad(tex,samp,uv,ddx,ddy) (tex).SampleGrad( (samp), (uv), (ddx), (ddy) )
+#define PdxSampleTex2DGather(tex,samp,uv) (tex).Gather( (samp), (uv) )
+
+#define PdxSampleTex3D(tex,samp,uv) (tex).Sample( (samp), (uv) )
+#define PdxSampleTex3DLod(tex,samp,uv,lod) (tex).SampleLevel( (samp), (uv), (lod) )
+
+#define PdxTexture2DSize(tex,size) (tex).GetDimensions( (size).x, (size).y )
+#define PdxTexture2DLoad(tex,uv,lod) (tex).Load( int3((uv), (lod)) )
+
+#define PdxTexture2DArraySize(tex,size,elements) (tex).GetDimensions( (size).x, (size).y, elements )
+
+#define PdxTexture3DSize(tex,size) (tex).GetDimensions( (size).x, (size).y, (size).z )
+#define PdxTexture3DLoad(tex,uv,lod) (tex).Load( int4((uv), (lod)) )
+
+// These are for the combined TextureSampler objects
+#define PdxTex2DSize(samp,size) PdxTexture2DSize( (samp)._Texture, (size) )
+#define PdxTex2D(samp,uv) PdxSampleTex2D( (samp)._Texture, (samp)._Sampler, (uv) )
+#define PdxTex2DLod(samp,uv,lod) PdxSampleTex2DLod( (samp)._Texture, (samp)._Sampler, (uv), (lod) )
+#define PdxTex2DLodOffset(samp,uv,lod,offset) (samp)._Texture.SampleLevel( (samp)._Sampler, (uv), (lod), (offset) )
+#define PdxTex2DBias(samp,uv,bias) (samp)._Texture.SampleBias( (samp)._Sampler, (uv), (bias) )
+#define PdxTex2DGrad(samp,uv,ddx,ddy) PdxSampleTex2DGrad( (samp)._Texture, (samp)._Sampler, (uv), (ddx), (ddy) )
+#define PdxTex2DGather(samp,uv) PdxSampleTex2DGather( (samp)._Texture, (samp)._Sampler, (uv) )
+#define PdxTex2DLoad(samp,uv,lod) PdxTexture2DLoad( (samp)._Texture, (uv), (lod) )
+#define PdxTex2DMultiSampled(samp,texelcoord,sampleidx) (samp)._Texture.Load( (texelcoord), (sampleidx) )
+#define PdxTex2DMSSize(samp,size,samples) (samp)._Texture.GetDimensions( (size).x, (size).y, (samples) )
+
+#define PdxTex3D(samp,uv) PdxSampleTex3D( (samp)._Texture, (samp)._Sampler, (uv) )
+#define PdxTex3DLod(samp,uv,lod) PdxSampleTex3DLod( (samp)._Texture, (samp)._Sampler, (uv), (lod) )
+#define PdxTex3DLoad(samp,uv,lod) PdxTexture3DLoad( (samp)._Texture, (uv), (lod) )
+
+#define PdxTexCube(samp,uv) (samp)._Texture.Sample( (samp)._Sampler, (uv) )
+#define PdxTexCubeLod(samp,uv,lod) (samp)._Texture.SampleLevel( (samp)._Sampler, (uv), (lod) )
+#define PdxTexCubeBias(samp,uv,bias) (samp)._Texture.SampleBias( (samp)._Sampler, (uv), (bias) )
+
+#define PdxTex2DCmpLod0(samp,uv,value) (samp)._Texture.SampleCmpLevelZero( (samp)._Sampler, (uv), (value) )
+
+// Vulkan fails to compile shaders with this function call properly
+// Commenting it out until we can fix this issue
+//#define PdxCalculateLod(samp,uv) (samp)._Texture.CalculateLevelOfDetail( (samp)._Sampler, (uv) )
+
+float4x4 FixProjection( float4x4 ProjectionMatrix )
+{
+	// Enable for "debug" drawing to see if some objects is missing fix
+	#if 0
+	for ( int i = 0; i < 4; ++i )
+	{
+		GetMatrixData( ProjectionMatrix, 0, i ) *= 0.5;
+		GetMatrixData( ProjectionMatrix, 1, i ) *= 0.5;
+	}
+	#endif
+	
+	return ProjectionMatrix;
+}
+
+#define PdxBufferFloat  Buffer<float>
+#define PdxBufferFloat2	Buffer<float2>
+#define PdxBufferFloat3	Buffer<float3>
+#define PdxBufferFloat4	Buffer<float4>
+#define PdxBufferInt  	Buffer<int>
+#define PdxBufferInt2	Buffer<int2>
+#define PdxBufferInt3	Buffer<int3>
+#define PdxBufferInt4	Buffer<int4>
+#define PdxBufferUint   Buffer<uint>
+#define PdxBufferUint2	Buffer<uint2>
+#define PdxBufferUint3	Buffer<uint3>
+#define PdxBufferUint4	Buffer<uint4>
+
+#define PdxStructuredBuffer StructuredBuffer
+#define PdxRWStructuredBuffer RWStructuredBuffer
+#define PdxRasterizerOrderedBuffer RasterizerOrderedBuffer
+#define PdxRasterizerOrderedStructuredBuffer RasterizerOrderedStructuredBuffer
+
+float 	PdxReadBuffer( in PdxBufferFloat Buf, int Index )  		{ return Buf.Load( Index ); }
+float2	PdxReadBuffer2( in PdxBufferFloat2 Buf, int Index )		{ return Buf.Load( Index ); }
+float3	PdxReadBuffer3( in PdxBufferFloat3 Buf, int Index )		{ return Buf.Load( Index ); }
+float4	PdxReadBuffer4( in PdxBufferFloat4 Buf, int Index )		{ return Buf.Load( Index ); }
+
+int  	PdxReadBuffer( in PdxBufferInt Buf, int Index ) 		{ return Buf.Load( Index ); }
+int2 	PdxReadBuffer2( in PdxBufferInt2 Buf, int Index )		{ return Buf.Load( Index ); }
+int3 	PdxReadBuffer3( in PdxBufferInt3 Buf, int Index )    	{ return Buf.Load( Index ); }
+int4 	PdxReadBuffer4( in PdxBufferInt4 Buf, int Index )    	{ return Buf.Load( Index ); }
+
+uint  	PdxReadBuffer( in PdxBufferUint Buf, int Index )    	{ return Buf.Load( Index ); }
+uint2 	PdxReadBuffer2( in PdxBufferUint2 Buf, int Index )  	{ return Buf.Load( Index ); }
+uint3 	PdxReadBuffer3( in PdxBufferUint3 Buf, int Index )  	{ return Buf.Load( Index ); }
+uint4 	PdxReadBuffer4( in PdxBufferUint4 Buf, int Index )  	{ return Buf.Load( Index ); }
+
+#define PdxReadRWBuffer(buffer,index) (buffer)[(index)]
+#define PdxWriteRWBuffer(buffer,index,value) (buffer)[(index)] = (value)
+
+#define UINT16_MAX 0xffff
+#define PI 3.14159265359
+
+float2x2 Create2x2( float a, float b, float c, float d ) { return Create2x2( float2( a, b ), float2( c, d ) ); }
+
+#define PdxSampleTex2DLod0(tex,samp,uv) PdxSampleTex2DLod( (tex), (samp), (uv), 0 )
+
+#define PdxTexture2DLoad0(tex,uv) PdxTexture2DLoad( (tex), (uv), 0 )
+
+#define PdxTex2DProj(samp,uv_proj) PdxTex2DLod0( (samp), (uv_proj).xy / (uv_proj).w )
+#define PdxTex2DLod0(samp,uv) PdxTex2DLod( (samp), (uv), 0 )
+#define PdxTex2DLod0Offset(samp,uv,offset) PdxTex2DLodOffset( (samp), (uv), 0, (offset) )
+#define PdxTex2DLoad0(samp,uv) PdxTex2DLoad( (samp), (uv), 0 )
+
+#define PdxTex3DLod0(samp,uv) PdxTex3DLod( (samp), (uv), 0 )
+#define PdxTex3DLoad0(samp,uv) PdxTex3DLoad( (samp), (uv), 0 )
+
+float4 FixProjectionAndMul( float4x4 ProjectionMatrix, float4 Vector )
+{
+	return mul( FixProjection( ProjectionMatrix ), Vector );
+}
+
+
+
+// === Vertex Structs === 
+
+struct VS_INPUT_PDXMESHSTANDARD
+{
+	float3 Position : POSITION;
+	float3 Normal : TEXCOORD0;
+	float4 Tangent : TEXCOORD1;
+	float2 UV0 : TEXCOORD2;
+#ifdef PDX_MESH_UV1
+	float2 UV1 : TEXCOORD3;
+#endif
+#ifdef PDX_MESH_UV2
+	float2 UV2 : TEXCOORD4;
+#endif
+	uint4 InstanceIndices : TEXCOORD5;
+#ifdef PDX_MESH_SKINNED
+	uint4 BoneIndex : TEXCOORD6;
+	float3 BoneWeight : TEXCOORD7;
+#endif
+	uint VertexID : PDX_VertexID;
+};
+struct VS_OUTPUT_PDXMESHSHADOW
+{
+	float4 Position : PDX_POSITION;
+	float2 UV : TEXCOORD0;
+};
+struct VS_OUTPUT_PDXMESHSHADOWSTANDARD
+{
+	float4 Position : PDX_POSITION;
+	float3 UV_InstanceIndex : TEXCOORD0;
+};
+struct VS_INPUT_DEBUGNORMAL
+{
+	float3 Position : POSITION;
+	float3 Normal : TEXCOORD0;
+#ifdef PDX_MESH_SKINNED
+	uint4 BoneIndex : TEXCOORD1;
+	float3 BoneWeight : TEXCOORD2;
+#endif
+	uint2 InstanceIndices : TEXCOORD4;
+	uint VertexID : PDX_VertexID;
+};
+struct VS_OUTPUT_DEBUGNORMAL
+{
+	float4 Position : PDX_POSITION;
+};
+struct VS_INPUT_PDX_TERRAIN
+{
+	float2 UV : TEXCOORD0;
+	float2 LodDirection : TEXCOORD1;
+	uint4 NodeOffset_Scale_Lerp : TEXCOORD2;
+};
+struct VS_INPUT_PDX_TERRAIN_SKIRT
+{
+	float2 UV : TEXCOORD0;
+	float2 LodDirection : TEXCOORD1;
+	uint4 NodeOffset_Scale_Lerp : TEXCOORD2;
+	uint VertexID : PDX_VertexID;
+};
+struct VS_INPUT_WATER
+{
+	int2 Position : POSITION;
+};
+struct VS_OUTPUT_WATER
+{
+	float4 Position : PDX_POSITION;
+	float3 WorldSpacePos : TEXCOORD0;
+	float2 UV01 : TEXCOORD1;
+};
+struct VS_INPUT_PDXMESH_MAPOBJECT
+{
+	float3 Position : POSITION;
+	float3 Normal : TEXCOORD0;
+	float4 Tangent : TEXCOORD1;
+	float2 UV0 : TEXCOORD2;
+#ifdef PDX_MESH_UV1
+	float2 UV1 : TEXCOORD3;
+#endif
+#ifdef PDX_MESH_UV2
+	float2 UV2 : TEXCOORD4;
+#endif
+	uint InstanceIndex24_Opacity8 : TEXCOORD5;
+};
+struct VS_INPUT_DEBUGNORMAL_BATCHED
+{
+	float3 Position : POSITION;
+	float3 Normal : TEXCOORD0;
+	uint InstanceIndex : TEXCOORD4;
+	uint VertexID : PDX_VertexID;
+};
+struct VS_OUTPUT_DEBUGNORMAL_BATCHED
+{
+	float4 Position : PDX_POSITION;
+};
+struct VS_OUTPUT_MAPOBJECT_SHADOW
+{
+	float4 Position : PDX_POSITION;
+	float2 UV : TEXCOORD0;
+	uint InstanceIndex24_Opacity8 : TEXCOORD1;
+};
+struct VS_OUTPUT
+{
+	float4 Position : PDX_POSITION;
+	float3 Normal : TEXCOORD0;
+	float3 Tangent : TEXCOORD1;
+	float3 Bitangent : TEXCOORD2;
+	float2 UV0 : TEXCOORD3;
+	float2 UV1 : TEXCOORD4;
+	float3 WorldSpacePos : TEXCOORD5;
+	uint InstanceIndex : TEXCOORD6;
+};
+
+
+// === Constant Buffers === 
+
+cbuffer pdx_hlsl_cb53
+{
+	float4x4 ViewProjectionMatrix;
+	float4x4 InvViewProjectionMatrix;
+	float4x4 ViewMatrix;
+	float4x4 InvViewMatrix;
+	float4x4 ProjectionMatrix;
+	float4x4 InvProjectionMatrix;
+	float4x4 ShadowMapTextureMatrix;
+	float3 CameraPosition;
+	float ZNear;
+	float3 CameraLookAtDir;
+	float ZFar;
+	float3 CameraUpDir;
+	float CameraFoV;
+	float3 CameraRightDir;
+	float _UpscaleLodBias;
+	float _UpscaleLodBiasNative;
+	float _UpscaleLodBiasMultiplier;
+	float _UpscaleLodBiasMultiplierNative;
+	float _UpscaleLodBiasEnabled;
+}
+cbuffer pdx_hlsl_cb29
+{
+	float4 Data[2];
+}
+cbuffer pdx_hlsl_cb30
+{
+	float4 JointVertexMatrices[3];
+}
+cbuffer pdx_hlsl_cb52
+{
+	float ShadowFadeFactor;
+	float Bias;
+	float KernelScale;
+	float ShadowScreenSpaceScale;
+	int NumSamples;
+	float4 DiscSamples[8];
+}
+cbuffer pdx_hlsl_cb13
+{
+	float4 TileToHeightMapScaleAndOffset[PDX_MAX_HEIGHTMAP_COMPRESS_LEVELS];
+	float2 WorldSpaceToLookup;
+	float2 OriginalHeightmapToWorldSpace;
+	float2 IndirectionSize;
+	float2 PackedHeightMapSize;
+	float BaseTileSize;
+	float HeightScale;
+}
+cbuffer pdx_hlsl_cb12
+{
+	float3 NormalScale;
+	float QuadtreeLeafNodeScale;
+	float2 NormalStepSize;
+	float2 DetailTileFactor;
+	float DetailBlendRange;
+	float SkirtSize;
+	float2 NormQuadtreeToWorld;
+	float2 WorldSpaceToTerrain0To1;
+	float2 WorldSpaceToDetail;
+	float2 DetailTexelSize;
+	float2 DetailTextureSize;
+	float2 WorldExtents;
+}
+cbuffer pdx_hlsl_cb17
+{
+	float3 AmbientPosX;
+	float CubemapIntensity;
+	float3 AmbientNegX;
+	float3 AmbientPosY;
+	float3 AmbientNegY;
+	float3 AmbientPosZ;
+	float3 AmbientNegZ;
+	float3 ShadowAmbientPosX;
+	float3 ShadowAmbientNegX;
+	float3 ShadowAmbientPosY;
+	float3 ShadowAmbientNegY;
+	float3 ShadowAmbientPosZ;
+	float3 ShadowAmbientNegZ;
+	float FogMax;
+	float3 SunDiffuse;
+	float SunIntensity;
+	float3 ToSunDir;
+	float FogBegin2;
+	float3 FogColor;
+	float FogEnd2;
+	float4x4 CubemapYRotation;
+	float TreeSwayLoopSpeed;
+	float TreeSwayWindStrengthSpatialModifier;
+	float TreeSwaySpeed;
+	float TreeSwayWindClusterSizeModifier;
+	float3 TreeSwayWorldDirection;
+	float TreeHeightImpactOnSway;
+	float TreeSwayScale;
+}
+cbuffer pdx_hlsl_cb9
+{
+	float2 FogOfWarAlphaMapSize;
+	float2 InverseWorldSize;
+	float2 FogOfWarPatternSpeed;
+	float FogOfWarPatternStrength;
+	float FogOfWarPatternTiling;
+	float FogOfWarTime;
+	float FogOfWarAlphaMin;
+}
+cbuffer pdx_hlsl_cb11
+{
+	float2 _ScreenResolution;
+	float _WaterReflectionNormalFlatten;
+	float _WaterZoomedInZoomedOutFactor;
+	float3 _WaterToSunDir;
+	float _WaterDiffuseMultiplier;
+	float3 _WaterColorShallow;
+	float _WaterSpecular;
+	float3 _WaterColorDeep;
+	float _WaterSpecularFactor;
+	float3 _WaterColorMapTint;
+	float _WaterColorMapTintFactor;
+	float _WaterGlossScale;
+	float _WaterGlossBase;
+	float _WaterFresnelBias;
+	float _WaterFresnelPow;
+	float _WaterCubemapIntensity;
+	float _WaterFoamScale;
+	float _WaterFoamDistortFactor;
+	float _WaterFoamShoreMaskDepth;
+	float _WaterFoamShoreMaskSharpness;
+	float _WaterFoamNoiseScale;
+	float _WaterFoamNoiseSpeed;
+	float _WaterFoamStrength;
+	float _WaterRefractionScale;
+	float _WaterRefractionShoreMaskDepth;
+	float _WaterRefractionShoreMaskSharpness;
+	float _WaterRefractionFade;
+	float2 _WaterWave1Scale;
+	float _WaterWave1Rotation;
+	float _WaterWave1Speed;
+	float2 _WaterWave2Scale;
+	float _WaterWave2Rotation;
+	float _WaterWave2Speed;
+	float2 _WaterWave3Scale;
+	float _WaterWave3Rotation;
+	float _WaterWave3Speed;
+	float _WaterWave1NormalFlatten;
+	float _WaterWave2NormalFlatten;
+	float _WaterWave3NormalFlatten;
+	float _WaterFlowTime;
+	float2 _WaterFlowMapSize;
+	float _WaterFlowNormalScale;
+	float _WaterFlowNormalFlatten;
+	float _WaterHeight;
+	float _WaterFadeShoreMaskDepth;
+	float _WaterFadeShoreMaskSharpness;
+	float _WaterSeeThroughDensity;
+	float _WaterSeeThroughShoreMaskDepth;
+	float _WaterSeeThroughShoreMaskSharpness;
+}
+cbuffer pdx_hlsl_cb4
+{
+	float2 MapSize;
+	float GlobalTime;
+	float FlatMapHeight;
+	float FlatMapLerp;
+	float MapHighlightIntensity;
+	float SnowHighlightIntensity;
+	int HasFlatMapLightingEnabled;
+}
+
+
+// === Samplers === 
+
+SamplerState _sampler_0_ : register(s0);
+SamplerState _sampler_1_ : register(s1);
+SamplerState _sampler_2_ : register(s2);
+SamplerState _sampler_3_ : register(s3);
+SamplerComparisonState _sampler_4_ : register(s4);
+
+
+// === Textures === 
+
+Texture2D HeightLookupTexture_Texture;
+static PdxTextureSampler2D HeightLookupTexture = { HeightLookupTexture_Texture, _sampler_0_ };
+Texture2D PackedHeightTexture_Texture;
+static PdxTextureSampler2D PackedHeightTexture = { PackedHeightTexture_Texture, _sampler_1_ };
+Texture2D SnowDiffuseMap_Texture;
+static PdxTextureSampler2D SnowDiffuseMap = { SnowDiffuseMap_Texture, _sampler_2_ };
+Texture2D WinterTexture_Texture;
+static PdxTextureSampler2D WinterTexture = { WinterTexture_Texture, _sampler_2_ };
+Texture2DArray DetailTextures_Texture;
+static PdxTextureSampler2DArray DetailTextures = { DetailTextures_Texture, _sampler_2_ };
+Texture2DArray NormalTextures_Texture;
+static PdxTextureSampler2DArray NormalTextures = { NormalTextures_Texture, _sampler_2_ };
+Texture2DArray MaterialTextures_Texture;
+static PdxTextureSampler2DArray MaterialTextures = { MaterialTextures_Texture, _sampler_2_ };
+Texture2D DetailIndexTexture_Texture;
+static PdxTextureSampler2D DetailIndexTexture = { DetailIndexTexture_Texture, _sampler_0_ };
+Texture2D DetailMaskTexture_Texture;
+static PdxTextureSampler2D DetailMaskTexture = { DetailMaskTexture_Texture, _sampler_0_ };
+Texture2D ColorTexture_Texture;
+static PdxTextureSampler2D ColorTexture = { ColorTexture_Texture, _sampler_3_ };
+Texture2D DiffuseMap_Texture;
+static PdxTextureSampler2D DiffuseMap = { DiffuseMap_Texture, _sampler_2_ };
+Texture2D PropertiesMap_Texture;
+static PdxTextureSampler2D PropertiesMap = { PropertiesMap_Texture, _sampler_2_ };
+Texture2D NormalMap_Texture;
+static PdxTextureSampler2D NormalMap = { NormalMap_Texture, _sampler_2_ };
+Texture2D LightIndexMap_Texture;
+static PdxTextureSampler2D LightIndexMap = { LightIndexMap_Texture, _sampler_0_ };
+Texture2D LightDataMap_Texture;
+static PdxTextureSampler2D LightDataMap = { LightDataMap_Texture, _sampler_0_ };
+Texture2D UniqueMap_Texture;
+static PdxTextureSampler2D UniqueMap = { UniqueMap_Texture, _sampler_2_ };
+Texture2D DetailMap_Texture;
+static PdxTextureSampler2D DetailMap = { DetailMap_Texture, _sampler_2_ };
+Texture2D LightingMap_Texture;
+static PdxTextureSampler2D LightingMap = { LightingMap_Texture, _sampler_2_ };
+TextureCube EnvironmentMap_Texture;
+static PdxTextureSamplerCube EnvironmentMap = { EnvironmentMap_Texture, _sampler_1_ };
+Texture2D ShadowTexture_Texture;
+static PdxTextureSampler2DCmp ShadowTexture = { ShadowTexture_Texture, _sampler_4_ };
+Texture2D FogOfWarAlpha_Texture;
+static PdxTextureSampler2D FogOfWarAlpha = { FogOfWarAlpha_Texture, _sampler_2_ };
+Texture2D FlagTexture_Texture;
+static PdxTextureSampler2D FlagTexture = { FlagTexture_Texture, _sampler_2_ };
+
+
+// === RW Textures === 
+
+
+
+// === Buffer Textures === 
+
+PdxBufferFloat4 MapObjectBuffer;
+
+
+// === RW Buffer Textures === 
+
+
+
+// === Shader Code === 
+
+float CalcViewSpaceDepth( float Depth )
+{
+	Depth = 2.0 * Depth - 1.0;
+	float ZLinear = 2.0 * ZNear * ZFar / (ZFar + ZNear - Depth * (ZFar - ZNear));
+	return ZLinear;
+}
+
+float3 ViewSpacePosFromDepth( float Depth, float2 UV )
+{
+	float x = UV.x * 2.0 - 1.0;
+	float y = (1.0 - UV.y) * 2.0 - 1.0;
+	
+	float4 ProjectedPos = float4( x, y, Depth, 1.0 );
+	
+	float4 ViewSpacePos = mul( InvProjectionMatrix, ProjectedPos );
+	
+	return ViewSpacePos.xyz / ViewSpacePos.w;
+}
+
+float3 WorldSpacePositionFromDepth( float Depth, float2 UV )
+{
+	float3 WorldSpacePos = mul( InvViewMatrix, float4( ViewSpacePosFromDepth( Depth, UV ), 1.0 ) ).xyz;		
+	return WorldSpacePos;  
+}
+float CalcRandom( float Seed )
+{
+	float DotProduct = float( Seed ) * 12.9898;
+	return frac( sin( DotProduct ) * 43758.5453 );
+}
+
+float CalcRandom( float2 Seed )
+{
+	float DotProduct = dot( Seed, float2( 12.9898, 78.233 ) );
+	return frac( sin( DotProduct ) * 43758.5453 );
+}
+
+float CalcRandom( float3 Seed )
+{
+	float DotProduct = dot( Seed, float3( 12.9898,78.233,144.7272 ) );
+	return frac( sin( DotProduct ) * 43758.5453 );
+}
+
+float CalcNoise( float2 Pos ) 
+{
+	int2 i = int2( floor( Pos ) );
+	float2 f = frac( Pos );
+
+	float a = CalcRandom( i );
+	float b = CalcRandom( i + int2( 1, 0 ) );
+	float c = CalcRandom( i + int2( 0, 1 ) );
+	float d = CalcRandom( i + int2( 1, 1 ) );
+	
+	float2 u = f*f*(3.0-2.0*f);
+	return lerp(a, b, u.x) + 
+			(c - a)* u.y * (1.0 - u.x) + 
+			(d - b) * u.x * u.y;
+}
+static const int PDXMESH_MAX_INFLUENCE = 4;
+static const int PDXMESH_WORLD_MATRIX_OFFSET = 0;
+static const int PDXMESH_CONSTANTS_OFFSET = 4;
+static const int PDXMESH_USER_DATA_OFFSET = 5;
+
+float4x4 PdxMeshGetWorldMatrix( uint nIndex )
+{
+	return Create4x4( 
+		Data[nIndex + PDXMESH_WORLD_MATRIX_OFFSET + 0], 
+		Data[nIndex + PDXMESH_WORLD_MATRIX_OFFSET + 1], 
+		Data[nIndex + PDXMESH_WORLD_MATRIX_OFFSET + 2], 
+		Data[nIndex + PDXMESH_WORLD_MATRIX_OFFSET + 3] );
+}
+
+// OffsetJointIndex -> JointsInstanceIndex + JointIndex
+float4x4 PdxMeshGetJointVertexMatrix( uint OffsetJointIndex )
+{
+	uint BeginIndex = OffsetJointIndex * 3;
+
+	float4 XAxis = float4( JointVertexMatrices[ BeginIndex ].x, JointVertexMatrices[ BeginIndex ].y, JointVertexMatrices[ BeginIndex ].z, 0.0f );
+	float4 YAxis = float4( JointVertexMatrices[ BeginIndex ].w, JointVertexMatrices[ BeginIndex + 1 ].x, JointVertexMatrices[ BeginIndex + 1 ].y, 0.0f );
+	float4 ZAxis = float4( JointVertexMatrices[ BeginIndex + 1 ].z, JointVertexMatrices[ BeginIndex + 1 ].w, JointVertexMatrices[ BeginIndex + 2 ].x, 0.0f );
+	float4 Translation = float4( JointVertexMatrices[ BeginIndex + 2 ].y, JointVertexMatrices[ BeginIndex + 2 ].z, JointVertexMatrices[ BeginIndex + 2 ].w, 1.0f );
+
+	return Create4x4( XAxis, YAxis, ZAxis, Translation );
+}
+
+float PdxMeshGetOpacity( uint ObjectInstanceIndex )
+{
+	return Data[ ObjectInstanceIndex + PDXMESH_CONSTANTS_OFFSET ].x;
+} 
+
+uint GetActiveBlendShapes( uint ObjectInstanceIndex )
+{
+	return uint( Data[ ObjectInstanceIndex + PDXMESH_CONSTANTS_OFFSET ].y );
+}
+
+uint GetActiveDecals( uint ObjectInstanceIndex ) 
+{
+	return uint( Data[ ObjectInstanceIndex + PDXMESH_CONSTANTS_OFFSET ].z );
+}
+
+float PdxMeshGetMeshDummyValue( uint ObjectInstanceIndex ) 
+{
+	return Data[ ObjectInstanceIndex + PDXMESH_CONSTANTS_OFFSET ].w;
+}
+// Gamma correction utility
+float ToGamma(float aLinear)
+{
+	return pow(aLinear, 1.0/2.2);
+}
+float3 ToGamma(float3 aLinear)
+{
+	return pow(aLinear, vec3(1.0/2.2));
+}
+float ToLinear(float aGamma)
+{
+	return pow(aGamma, 2.2);
+}
+float3 ToLinear(float3 aGamma)
+{
+	return pow(aGamma, vec3(2.2));
+}
+float4 ToLinear(float4 aGamma)
+{
+	return float4(pow(aGamma.rgb, vec3(2.2)), aGamma.a);
+}
+
+// Color value conversions
+float3 RGBtoHSV( float3 RGB )
+{
+	float4 K = float4(0.0, -1.0 / 3.0, 2.0 / 3.0, -1.0);
+	float4 p = RGB.g < RGB.b ? float4(RGB.bg, K.wz) : float4(RGB.gb, K.xy);
+	float4 q = RGB.r < p.x ? float4(p.xyw, RGB.r) : float4(RGB.r, p.yzx);
+
+	float d = q.x - min(q.w, q.y);
+	float e = 1.0e-10;
+	return float3( abs(q.z + (q.w - q.y) / (6.0 * d + e)), d / (q.x + e), q.x );
+}
+float3 HSVtoRGB( float3 HSV )
+{
+	float4 K = float4(1.0, 2.0 / 3.0, 1.0 / 3.0, 3.0);
+	float3 p = abs( frac(HSV.xxx + K.xyz) * 6.0 - K.www );
+	return HSV.z * lerp( K.xxx, clamp(p - K.xxx, 0.0, 1.0), HSV.y );
+}
+float3 HSVtoRGB( float H, float S, float V )
+{
+	return HSVtoRGB( float3( H, S, V ) );
+}
+float4 RGBtoHSV( float4 RGBa )
+{
+	return float4( RGBtoHSV( RGBa.rgb ), RGBa.a );
+}
+float4 HSVtoRGB( float4 HSVa )
+{
+	return float4( HSVtoRGB( HSVa.xyz ), HSVa.a );
+}
+float4 HSVtoRGB( float H, float S, float V, float a )
+{
+	return HSVtoRGB( float4( H, S, V, a ) );
+}
+
+// Below are multiple blend mode utilities (See: https://en.wikipedia.org/wiki/Blend_modes)
+// Most of these uses a typical implementation unless stated otherwise
+
+// Multiply blend mode
+float3 Multiply( float3 Base, float3 Blend, float Opacity )
+{
+	return Base * Blend * Opacity + Base * ( 1.0 - Opacity );
+}
+
+// Overlay blend mode
+float Overlay( float Base, float Blend )
+{
+	return (Base < 0.5) ? (2.0 * Base * Blend) : (1.0 - 2.0 * (1.0 - Base) * (1.0 - Blend));
+}
+float3 Overlay( float3 Base, float3 Blend )
+{
+	return float3( Overlay(Base.r, Blend.r), Overlay(Base.g, Blend.g), Overlay(Base.b, Blend.b) );
+}
+float Overlay( float Base, float Blend, float Opacity )
+{
+	return Overlay( Base, Blend ) * Opacity + Base * (1.0 - Opacity );
+}
+float3 Overlay( float3 Base, float3 Blend, float Opacity )
+{
+	return Overlay( Base, Blend ) * Opacity + Base * (1.0 - Opacity );
+}
+float3 GetOverlay( float3 Color, float3 OverlayColor, float OverlayPercent )
+{
+	// Flip OverlayColor/BaseColor since that was how it was before
+	return lerp( Color, Overlay( OverlayColor, Color ), OverlayPercent );
+}
+float GetOverlay( float Color, float OverlayColor, float OverlayPercent )
+{
+	// Flip OverlayColor/BaseColor since that was how it was before
+	return lerp( Color, Overlay( OverlayColor, Color ), OverlayPercent );
+}
+
+// Color dodge blend mode (Dodge and burn)
+float ColorDodge( float Base, float Blend )
+{
+	return (Blend == 1.0) ? Blend : min( Base / (1.0 - Blend), 1.0 );
+}
+float3 ColorDodge( float3 Base, float3 Blend )
+{
+	return float3( ColorDodge(Base.r, Blend.r), ColorDodge(Base.g, Blend.g), ColorDodge(Base.b, Blend.b) );
+}
+float3 ColorDodge( float3 Base, float3 Blend, float Opacity )
+{
+	return ColorDodge( Base, Blend ) * Opacity + Base * ( 1.0 - Opacity );
+}
+
+// Pegtop's SoftLight blend formula
+float SoftLight( float Base, float Blend )
+{
+	return ( 1 - 2 * Blend ) * Base * Base + 2 * Base * Blend;
+}
+float3 SoftLight( float3 Base, float3 Blend )
+{
+	return float3( SoftLight( Base.r, Blend.r ), SoftLight( Base.g, Blend.g ), SoftLight( Base.b, Blend.b ) );
+}
+float SoftLight( float Base, float Blend, float Opacity )
+{
+	return lerp( Base, SoftLight( Base, Blend ), Opacity );
+}
+float3 SoftLight( float3 Base, float3 Blend, float Opacity )
+{
+	return lerp( Base, SoftLight( Base, Blend ), Opacity );
+}
+
+// Hardlight blend mode
+float HardLight(float Base, float Blend)
+{
+	return Blend >= 0.5 ? 1.0 - 2 * ( 1.0 - Blend ) * ( 1.0 - Base ) : 2.0 * Base * Blend;
+}
+float3 HardLight( float3 Base, float3 Blend )
+{
+	return float3( HardLight( Base.r, Blend.r ), HardLight( Base.g, Blend.g ), HardLight( Base.b, Blend.b ) );
+}
+float HardLight( float Base, float Blend, float Opacity )
+{
+	return lerp( Base, HardLight( Base, Blend ), Opacity );
+}
+float3 HardLight( float3 Base, float3 Blend, float Opacity )
+{
+	return lerp( Base, HardLight( Base, Blend ), Opacity );
+}
+
+// Simple arithmetic blend modes (See: https://en.wikipedia.org/wiki/Blend_modes#Simple_arithmetic_blend_modes)
+// Lighten only blend mode
+float3 Add( float3 Base, float3 Blend, float Opacity )
+{
+	return ( Base + Blend ) * Opacity + Base * ( 1.0 - Opacity );
+}
+float Lighten( float Base, float Blend )
+{
+	return max( Base, Blend );
+}
+float3 Lighten( float3 Base, float3 Blend )
+{
+	return float3( Lighten(Base.r, Blend.r), Lighten(Base.g, Blend.g), Lighten(Base.b, Blend.b) );
+}
+float3 Lighten( float3 Base, float3 Blend, float Opacity )
+{
+	return Lighten( Base, Blend ) * Opacity + Base * ( 1.0 - Opacity );
+}
+
+// Darken only blend mode
+float Darken( float Base, float Blend )
+{
+	return min( Base, Blend );
+}
+float3 Darken( float3 Base, float3 Blend )
+{
+	return float3( Darken(Base.r, Blend.r), Darken(Base.g, Blend.g), Darken(Base.b, Blend.b) );
+}
+float3 Darken( float3 Base, float3 Blend, float Opacity )
+{
+	return Darken( Base, Blend ) * Opacity + Base * ( 1.0 - Opacity );
+}
+
+float3 Levels( float3 vInColor, float3 vMinInput, float3 vMaxInput )
+{
+	float3 vRet = saturate( vInColor - vMinInput );
+	vRet /= vMaxInput - vMinInput;
+	return saturate( vRet );
+}
+float Levels( float vInValue, float vMinValue, float vMaxValue )
+{
+	return saturate( ( vInValue - vMinValue ) / ( vMaxValue - vMinValue ) );
+}
+
+// Intuitive way to dynamically grow and shrink masks, similar to Histogram Scan in Substance Designer.
+// vInValue is typically a mask texture, vPosition is the value to be remapped to 0.5, vRange is the softness of that remap.
+float LevelsScan( float vInValue, float vPosition, float vRange )
+{
+	return Levels( vInValue, vPosition - ( vRange / 2 ), vPosition + ( vRange / 2 ) );
+}
+
+float3 UnpackNormal( float4 NormalMapSample )
+{
+	float3 vNormalSample = NormalMapSample.rgb - 0.5;
+	vNormalSample.g = -vNormalSample.g;
+	return vNormalSample;
+}
+
+float3 UnpackNormal( in PdxTextureSampler2D NormalTex, float2 uv )
+{
+	return UnpackNormal( PdxTex2D( NormalTex, uv ) );
+}
+
+float3 UnpackRRxGNormal( float4 NormalMapSample )
+{
+	float x = NormalMapSample.g * 2.0 - 1.0;
+	float y = NormalMapSample.a * 2.0 - 1.0;
+	y = -y;
+	float z = sqrt( saturate( 1.0 - x * x - y * y ) );
+	return float3( x, y, z );
+}
+
+float3 UnpackRRxGNormal( in PdxTextureSampler2D NormalTex, float2 uv )
+{
+	return UnpackRRxGNormal( PdxTex2D( NormalTex, uv ) );
+}
+
+float3 ReorientNormal( float3 BaseNormal, float3 DetailNormal )
+{
+	float3 t = BaseNormal + float3( 0.0, 0.0, 1.0 );
+	float3 u = DetailNormal * float3( -1.0, -1.0, 1.0 );
+	float3 Normal = normalize( t * dot( t, u ) - u * t.z );
+	return Normal;
+}
+
+float Fresnel( float NdotL, float FresnelBias, float FresnelPow )
+{
+	return saturate( FresnelBias + (1.0 - FresnelBias) * pow( 1.0 - NdotL, FresnelPow ) );
+}
+
+static const uint BITS_IN_BYTE = 8;
+static const uint UINT_8_MAX = 255;
+static const uint UINT_16_MAX = 65535;
+
+float Unpack16BitUnorm( in uint Value )
+{
+	return float( Value ) / UINT_16_MAX;
+}
+
+bool UnpackBitAt( in uint Byte, in uint BitIndex )
+{
+	return ( ( 1 << BitIndex ) & Byte ) != 0;
+}
+
+// Unpack the lower 16 bits into the high and low order byte vector
+uint2 Unpack16BitToBytes( in uint Value )
+{
+	return uint2( Value & UINT_8_MAX, ( Value >> 8 ) & UINT_8_MAX );
+}
+
+uint4 Unpack32BitToBytes( in uint Value )
+{
+	return uint4(
+		Value & UINT_8_MAX,
+		( Value >> 8 ) & UINT_8_MAX,
+		( Value >> 16 ) & UINT_8_MAX,
+		( Value >> 24 ) & UINT_8_MAX
+	);
+}
+
+#define REMAP_IMPL NewMin + ( NewMax - NewMin ) * ( (Value - OldMin) / (OldMax - OldMin) )
+float Remap( float Value, float OldMin, float OldMax, float NewMin, float NewMax ) { return REMAP_IMPL; }
+float2 Remap( float2 Value, float2 OldMin, float2 OldMax, float2 NewMin, float2 NewMax ) { return REMAP_IMPL; }
+float3 Remap( float3 Value, float3 OldMin, float3 OldMax, float3 NewMin, float3 NewMax ) { return REMAP_IMPL; }
+#undef REMAP_IMPL
+#define REMAP_IMPL NewMin + ( NewMax - NewMin ) * saturate( (Value - OldMin) / (OldMax - OldMin) )
+float RemapClamped( float Value, float OldMin, float OldMax, float NewMin, float NewMax ) { return REMAP_IMPL; }
+float2 RemapClamped( float2 Value, float2 OldMin, float2 OldMax, float2 NewMin, float2 NewMax ) { return REMAP_IMPL; }
+float3 RemapClamped( float3 Value, float3 OldMin, float3 OldMax, float3 NewMin, float3 NewMax ) { return REMAP_IMPL; }
+#undef REMAP_IMPL
+float2 GetLookupCoordinates( float2 WorldSpacePosXZ )
+{
+	return clamp( WorldSpacePosXZ * WorldSpaceToLookup, vec2( 0.0 ), vec2( 0.999999 ) );
+}
+
+float4 SampleLookupTexture( float2 LookupCoordinates )
+{
+	float4 IndirectionSample = PdxTex2DLod0( HeightLookupTexture, ( floor( LookupCoordinates * IndirectionSize ) + vec2( 0.5 ) ) / IndirectionSize ) * 255.0;
+	return IndirectionSample;
+}
+
+float2 GetTileUV( float2 LookupCoordinates, float4 IndirectionSample, out float CurrentTileScale )
+{
+	float CurrentTileSize = (BaseTileSize - 1.0) / IndirectionSample.z + 1;
+	float CurrentTileOffset = 0.5 / CurrentTileSize;
+	CurrentTileScale = (CurrentTileSize - 1.0) / CurrentTileSize;
+	
+	float2 WithinTileZeroToOne = frac( LookupCoordinates * IndirectionSize );
+	float2 WithinTileUV = vec2( CurrentTileOffset ) + WithinTileZeroToOne * CurrentTileScale;
+	float2 TileUV = IndirectionSample.rg + WithinTileUV;
+	
+	return TileUV;
+}
+
+float2 GetHeightMapCoordinates( float2 WorldSpacePosXZ )
+{
+	float2 LookupCoordinates = GetLookupCoordinates( WorldSpacePosXZ );
+	float4 IndirectionSample = SampleLookupTexture( LookupCoordinates );
+
+	float4 CurrentTileToHeightMapScaleAndOffset = TileToHeightMapScaleAndOffset[int(IndirectionSample.w)];
+	float CurrentTileScale;
+	float2 TileUV = GetTileUV( LookupCoordinates, IndirectionSample, CurrentTileScale );
+	
+	float2 HeightMapCoord = TileUV * CurrentTileToHeightMapScaleAndOffset.xy + CurrentTileToHeightMapScaleAndOffset.zw; // 0 -> 1 in packed heightmap
+	return HeightMapCoord;
+}
+
+float GetHeight01( float2 WorldSpacePosXZ )
+{
+	float2 HeightMapCoord = GetHeightMapCoordinates( WorldSpacePosXZ );
+	return PdxTex2DLod0( PackedHeightTexture, HeightMapCoord ).r;
+}
+
+float GetHeight( float2 WorldSpacePosXZ )
+{
+	return GetHeight01( WorldSpacePosXZ ) * HeightScale;
+}
+
+
+float GetHeightMultisample01( float2 WorldSpacePosXZ, float FilterSize )
+{
+	//return GetHeight( WorldSpacePosXZ );
+
+	float2 LookupCoordinates = GetLookupCoordinates( WorldSpacePosXZ );
+	float2 FilterSizeInWorldSpace = FilterSize * OriginalHeightmapToWorldSpace;
+	float2 FilterSizeInLookup = FilterSizeInWorldSpace * WorldSpaceToLookup * IndirectionSize;
+	
+	float2 FracCoordinates = frac( LookupCoordinates * IndirectionSize );
+	float2 MinFracCoordinatesScaled = min( FracCoordinates, vec2(1.0) - FracCoordinates );
+	bool2 InBorder = lessThan( MinFracCoordinatesScaled, FilterSizeInLookup );
+
+	float Height = 0.0;
+	if ( any( InBorder ) )
+	{
+		Height = GetHeight01( WorldSpacePosXZ );
+		Height += GetHeight01( WorldSpacePosXZ + float2( -FilterSizeInWorldSpace.x, 0 ) );
+		Height += GetHeight01( WorldSpacePosXZ + float2( 0, -FilterSizeInWorldSpace.y ) );
+		Height += GetHeight01( WorldSpacePosXZ + float2( FilterSizeInWorldSpace.x, 0 ) );
+		Height += GetHeight01( WorldSpacePosXZ + float2( 0, FilterSizeInWorldSpace.y ) );
+		Height += GetHeight01( WorldSpacePosXZ + float2( -FilterSizeInWorldSpace.x, -FilterSizeInWorldSpace.y ) );
+		Height += GetHeight01( WorldSpacePosXZ + float2(  FilterSizeInWorldSpace.x, -FilterSizeInWorldSpace.y ) );
+		Height += GetHeight01( WorldSpacePosXZ + float2(  FilterSizeInWorldSpace.x,  FilterSizeInWorldSpace.y ) );
+		Height += GetHeight01( WorldSpacePosXZ + float2( -FilterSizeInWorldSpace.x,  FilterSizeInWorldSpace.y ) );
+	}
+	else
+	{
+		float4 IndirectionSample = SampleLookupTexture( LookupCoordinates );
+		
+		float4 CurrentTileToHeightMapScaleAndOffset = TileToHeightMapScaleAndOffset[int(IndirectionSample.w)];
+		float CurrentTileScale;
+		float2 TileUV = GetTileUV( LookupCoordinates, IndirectionSample, CurrentTileScale );
+		
+		float2 HeightMapCoord = TileUV * CurrentTileToHeightMapScaleAndOffset.xy + CurrentTileToHeightMapScaleAndOffset.zw; // 0 -> 1 in packed heightmap
+		float2 FilterSizeInTile = FilterSizeInLookup * CurrentTileToHeightMapScaleAndOffset.xy * CurrentTileScale;
+		
+		Height = PdxTex2DLod0( PackedHeightTexture, HeightMapCoord ).r;
+		Height += PdxTex2DLod0( PackedHeightTexture, HeightMapCoord + float2( -FilterSizeInTile.x, 0 ) ).r;
+		Height += PdxTex2DLod0( PackedHeightTexture, HeightMapCoord + float2( 0, -FilterSizeInTile.y ) ).r;
+		Height += PdxTex2DLod0( PackedHeightTexture, HeightMapCoord + float2( FilterSizeInTile.x, 0 ) ).r;
+		Height += PdxTex2DLod0( PackedHeightTexture, HeightMapCoord + float2( 0, FilterSizeInTile.y ) ).r;
+		Height += PdxTex2DLod0( PackedHeightTexture, HeightMapCoord + float2( -FilterSizeInTile.x, -FilterSizeInTile.y ) ).r;
+		Height += PdxTex2DLod0( PackedHeightTexture, HeightMapCoord + float2(  FilterSizeInTile.x, -FilterSizeInTile.y ) ).r;
+		Height += PdxTex2DLod0( PackedHeightTexture, HeightMapCoord + float2(  FilterSizeInTile.x,  FilterSizeInTile.y ) ).r;
+		Height += PdxTex2DLod0( PackedHeightTexture, HeightMapCoord + float2( -FilterSizeInTile.x,  FilterSizeInTile.y ) ).r;
+	}
+	
+	Height /= 9.0;
+	return Height;
+}
+
+float GetHeightMultisample( float2 WorldSpacePosXZ, float FilterSize )
+{
+	return GetHeightMultisample01( WorldSpacePosXZ, FilterSize ) * HeightScale;
+}
+
+
+// SAVE
+static const float c_x0 = -1.0;
+static const float c_x1 =  0.0;
+static const float c_x2 =  1.0;
+static const float c_x3 =  2.0;
+    
+//=======================================================================================
+float CubicLagrange(float A, float B, float C, float D, float t)
+{
+	return
+		A * 
+		(
+			(t - c_x1) / (c_x0 - c_x1) * 
+			(t - c_x2) / (c_x0 - c_x2) *
+			(t - c_x3) / (c_x0 - c_x3)
+		) +
+		B * 
+		(
+			(t - c_x0) / (c_x1 - c_x0) * 
+			(t - c_x2) / (c_x1 - c_x2) *
+			(t - c_x3) / (c_x1 - c_x3)
+		) +
+		C * 
+		(
+			(t - c_x0) / (c_x2 - c_x0) * 
+			(t - c_x1) / (c_x2 - c_x1) *
+			(t - c_x3) / (c_x2 - c_x3)
+		) +       
+		D * 
+		(
+			(t - c_x0) / (c_x3 - c_x0) * 
+			(t - c_x1) / (c_x3 - c_x1) *
+			(t - c_x2) / (c_x3 - c_x2)
+		);
+}
+    
+//=======================================================================================
+float BicubicLagrangeBilinearGetHeight01( float2 WorldSpacePosXZ )
+{
+	float2 Pixel = WorldSpacePosXZ - 0.5;
+
+	float2 FracCoord = frac(Pixel);
+	Pixel = floor(Pixel) + 0.5;
+	
+	float C00 = GetHeight01( float2( Pixel.x - 1, Pixel.y - 1 ) );
+	float C10 = GetHeight01( float2( Pixel.x - 0, Pixel.y - 1 ) );
+	float C20 = GetHeight01( float2( Pixel.x + 1, Pixel.y - 1 ) );
+	float C30 = GetHeight01( float2( Pixel.x + 2, Pixel.y - 1 ) );
+	
+	float C01 = GetHeight01( float2( Pixel.x - 1, Pixel.y - 0 ) );
+	float C11 = GetHeight01( float2( Pixel.x - 0, Pixel.y - 0 ) );
+	float C21 = GetHeight01( float2( Pixel.x + 1, Pixel.y - 0 ) );
+	float C31 = GetHeight01( float2( Pixel.x + 2, Pixel.y - 0 ) );
+	
+	float C02 = GetHeight01( float2( Pixel.x - 1, Pixel.y + 1 ) );
+	float C12 = GetHeight01( float2( Pixel.x - 0, Pixel.y + 1 ) );
+	float C22 = GetHeight01( float2( Pixel.x + 1, Pixel.y + 1 ) );
+	float C32 = GetHeight01( float2( Pixel.x + 2, Pixel.y + 1 ) );
+	
+	float C03 = GetHeight01( float2( Pixel.x - 1, Pixel.y + 2 ) );
+	float C13 = GetHeight01( float2( Pixel.x - 0, Pixel.y + 2 ) );
+	float C23 = GetHeight01( float2( Pixel.x + 1, Pixel.y + 2 ) );
+	float C33 = GetHeight01( float2( Pixel.x + 2, Pixel.y + 2 ) );
+	
+	float CP0X = CubicLagrange(C00, C10, C20, C30, FracCoord.x);
+	float CP1X = CubicLagrange(C01, C11, C21, C31, FracCoord.x);
+	float CP2X = CubicLagrange(C02, C12, C22, C32, FracCoord.x);
+	float CP3X = CubicLagrange(C03, C13, C23, C33, FracCoord.x);
+	
+	return CubicLagrange(CP0X, CP1X, CP2X, CP3X, FracCoord.y);
+}
+
+//float BilinearGetHeight( float3 WorldSpacePos )
+//{
+//	float2 Pixel = WorldSpacePos.xz;
+//	
+//	float2 FracCoord = frac(Pixel);
+//	Pixel = floor(Pixel);
+//	
+//	float H11 = GetHeight01( float3( Pixel.x, 0.0, Pixel.y ) );
+//	float H21 = GetHeight01( float3( Pixel.x + 1.0, 0.0, Pixel.y ) );
+//	float H12 = GetHeight01( float3( Pixel.x, 0.0, Pixel.y + 1.0 ) );
+//	float H22 = GetHeight01( float3( Pixel.x + 1.0, 0.0, Pixel.y + 1.0 ) );
+//	
+//	//return H11;
+//	//return FracCoord.x;
+//	
+//	float h1 = lerp( H11, H21, FracCoord.x );
+//	float h2 = lerp( H12, H22, FracCoord.x );
+//	return lerp( h1, h2, FracCoord.y );
+//}
+// These macros can be used as drop in replacements for their counterparts without the "Upscale" postfix.
+// They will take care of using the correct lod bias when sampling the textures to account for rendering happening in lower resolution. (See https://gsg.pages.build.paradox-interactive.com/tech/cw/develop/clausewitz/pdx_gfx/upscaling/ for more information)
+// Note that by default when using upscaling it will add an extra -1 lod bias, this is to try and boost the quality a bit, it works because the temporal anti aliasing component can take care of some of the aliasing artifacts that is introduced by the lod bias.
+// This might not always be preferrable, in those cases the "UpscaleBias" postfix versions can be used to undo the extra lod bias, the provided bias should most likely be in the range (0.0, 1.0), for example doing PdxTex2DUpscaleBias( Tex, Uv, 1.0 ) will net you the same texture quality you would get rendering in native resolution.
+// There is also a "UpscaleNative" that is basically the same as UpscaleBias with bias 1.0, but slightly more optimized.
+
+#ifdef PDX_UPSCALING_ENABLED
+	float2 ApplyUpscaleLodBiasMultiplier( float2 Derivative ) { return Derivative * _UpscaleLodBiasMultiplier; }
+	float2 ApplyUpscaleNativeLodBiasMultiplier( float2 Derivative ) { return Derivative * _UpscaleLodBiasMultiplierNative; }
+	
+	#define PdxTex2DUpscale( TextureSampler, Uv ) PdxTex2DBias( (TextureSampler), (Uv), _UpscaleLodBias )
+	#define PdxTex2DUpscaleNative( TextureSampler, Uv ) PdxTex2DBias( (TextureSampler), (Uv), _UpscaleLodBiasNative )
+	#define PdxTex2DUpscaleBias( TextureSampler, Uv, Bias ) PdxTex2DBias( (TextureSampler), (Uv), (_UpscaleLodBias + (Bias) * _UpscaleLodBiasEnabled) )
+	
+	#define PdxTex2DGradUpscale( TextureSampler, Uv, Ddx, Ddy ) PdxTex2DGrad( (TextureSampler), (Uv), ApplyUpscaleLodBiasMultiplier( Ddx ), ApplyUpscaleLodBiasMultiplier( Ddy ) )
+	#define PdxTex2DGradUpscaleNative( TextureSampler, Uv, Ddx, Ddy ) PdxTex2DGrad( (TextureSampler), (Uv), ApplyUpscaleNativeLodBiasMultiplier( Ddx ), ApplyUpscaleNativeLodBiasMultiplier( Ddy ) )
+	#define PdxTex2DGradUpscaleBias( TextureSampler, Uv, Ddx, Ddy, Bias ) PdxTex2DGrad( (TextureSampler), (Uv), ApplyUpscaleLodBiasMultiplier( Ddx ) * exp2( (Bias) * _UpscaleLodBiasEnabled ), ApplyUpscaleLodBiasMultiplier( Ddy ) * exp2( (Bias) * _UpscaleLodBiasEnabled ) )
+#else
+	float2 ApplyUpscaleLodBiasMultiplier( float2 Derivative ) { return Derivative; }
+	float2 ApplyUpscaleNativeLodBiasMultiplier( float2 Derivative ) { return Derivative; }
+	
+	#define PdxTex2DUpscale( TextureSampler, Uv ) PdxTex2D( (TextureSampler), (Uv) )
+	#define PdxTex2DUpscaleNative( TextureSampler, Uv ) PdxTex2D( (TextureSampler), (Uv) )
+	// We intentionally discard the Bias argument here since that is used to tweak the upscale added lodbias
+	#define PdxTex2DUpscaleBias( TextureSampler, Uv, Bias ) PdxTex2D( (TextureSampler), (Uv) )
+	
+	#define PdxTex2DGradUpscale( TextureSampler, Uv, Ddx, Ddy ) PdxTex2DGrad( (TextureSampler), (Uv), Ddx, Ddy )
+	#define PdxTex2DGradUpscaleNative( TextureSampler, Uv, Ddx, Ddy ) PdxTex2DGrad( (TextureSampler), (Uv), Ddx, Ddy )
+	// We intentionally discard the Bias argument here since that is used to tweak the upscale added lodbias
+	#define PdxTex2DGradUpscaleBias( TextureSampler, Uv, Ddx, Ddy, Bias ) PdxTex2DGrad( (TextureSampler), (Uv), Ddx, Ddy )
+#endif
+float GetLerpedHeight( float2 WorldSpacePosXZ, float2 LodDirection )
+{
+	float h1 = GetHeight( WorldSpacePosXZ - LodDirection );
+	float h2 = GetHeight( WorldSpacePosXZ + LodDirection );
+
+	//h1 = GetHeightMultisample( WorldSpacePosXZ - LodDirection, 0.25 );
+	//h2 = GetHeightMultisample( WorldSpacePosXZ + LodDirection, 0.25 );
+
+	return (h1 + h2) * 0.5;
+}
+
+float3 CalculateNormal( float2 WorldSpacePosXZ )
+{
+#ifdef TERRAIN_WRAP_X
+	float TerrainSizeX = 1.0 / WorldSpaceToTerrain0To1.x;
+
+	float HeightMinX = GetHeight01( float2( mod( WorldSpacePosXZ.x + TerrainSizeX - NormalStepSize.x, TerrainSizeX ), WorldSpacePosXZ.y ) );
+	float HeightMaxX = GetHeight01( float2( mod( WorldSpacePosXZ.x + TerrainSizeX + NormalStepSize.x, TerrainSizeX ), WorldSpacePosXZ.y ) );
+#else
+	float HeightMinX = GetHeight01( WorldSpacePosXZ + float2(-NormalStepSize.x, 0) );
+	float HeightMaxX = GetHeight01( WorldSpacePosXZ + float2(NormalStepSize.x, 0) );
+#endif
+	float HeightMinZ = GetHeight01( WorldSpacePosXZ + float2(0, -NormalStepSize.y) );
+	float HeightMaxZ = GetHeight01( WorldSpacePosXZ + float2(0, NormalStepSize.y) );
+
+	//float2 LookupCoordinates = GetLookupCoordinates( WorldSpacePosXZ );
+	//float2 NormalStepSizeInLookup = NormalStepSize * WorldSpaceToLookup * IndirectionSize;
+	//
+	//float2 FracCoordinates = frac( LookupCoordinates * IndirectionSize );
+	//float2 MinFracCoordinatesScaled = min( FracCoordinates, vec2(1.0) - FracCoordinates );
+	//bool2 InBorder = lessThan( MinFracCoordinatesScaled, NormalStepSizeInLookup );
+    //
+	//float HeightMinX = 0.0;
+	//float HeightMaxX = 0.0;
+	//float HeightMinZ = 0.0;
+	//float HeightMaxZ = 0.0;
+	//if ( any( InBorder ) )
+	//{
+	//	HeightMinX = GetHeight01( WorldSpacePosXZ + float2(-NormalStepSize.x, 0) );
+	//	HeightMaxX = GetHeight01( WorldSpacePosXZ + float2(NormalStepSize.x, 0) );
+	//	HeightMinZ = GetHeight01( WorldSpacePosXZ + float2(0, -NormalStepSize.y) );
+	//	HeightMaxZ = GetHeight01( WorldSpacePosXZ + float2(0, NormalStepSize.y) );
+	//}
+	//else
+	//{
+	//	float4 IndirectionSample = SampleLookupTexture( LookupCoordinates );
+	//
+	//	float4 CurrentTileToHeightMapScaleAndOffset = TileToHeightMapScaleAndOffset[int(IndirectionSample.w)];
+	//	float CurrentTileScale;
+	//	float2 TileUV = GetTileUV( LookupCoordinates, IndirectionSample, CurrentTileScale );
+	//
+	//	float2 HeightMapCoord = TileUV * CurrentTileToHeightMapScaleAndOffset.xy + CurrentTileToHeightMapScaleAndOffset.zw; // 0 -> 1 in packed heightmap
+	//	float2 NormalStepSizeInTile = NormalStepSizeInLookup * CurrentTileToHeightMapScaleAndOffset.xy * CurrentTileScale;
+	//
+	//	HeightMinX = PdxTex2DLod0( PackedHeightTexture, HeightMapCoord + float2(-NormalStepSizeInTile.x, 0) );
+	//	HeightMaxX = PdxTex2DLod0( PackedHeightTexture, HeightMapCoord + float2(NormalStepSizeInTile.x, 0) );
+	//	HeightMinZ = PdxTex2DLod0( PackedHeightTexture, HeightMapCoord + float2(0, -NormalStepSizeInTile.y) );
+	//	HeightMaxZ = PdxTex2DLod0( PackedHeightTexture, HeightMapCoord + float2(0, NormalStepSizeInTile.y) );
+	//}
+
+	float3 Normal = float3( HeightMinX - HeightMaxX, 2.0, HeightMinZ - HeightMaxZ ) * NormalScale;
+	return normalize(Normal);
+}
+
+// Rotates normals to the heightmap terrain normal
+float3 SimpleRotateNormalToTerrain( float3 Normal, float2 WorldSpacePosXZ )
+{
+	float3 TerrainNormal = CalculateNormal( WorldSpacePosXZ );
+	float3 Up = float3( 0.0, 1.0, 0.0 );
+
+	float3 Axis = cross( Up, TerrainNormal );
+	float Angle = acos( dot( Up, TerrainNormal ) ) * abs( Normal.y );
+
+	return lerp( dot( Axis, Normal ) * Axis, Normal, cos( Angle ) ) + cross( Axis, Normal ) * sin( Angle );
+}
+
+// For debugging
+float GetTextureBorder( float2 UV, float2 TextureSize, float BorderSize )
+{
+	float2 FracScaledUV = frac( UV * TextureSize );
+	if ( FracScaledUV.x < BorderSize || FracScaledUV.x > (1.0 - BorderSize) || FracScaledUV.y < BorderSize || FracScaledUV.y > (1.0 - BorderSize) )
+	{
+		return 1.0;
+	}
+	else
+	{
+		return 0.0;
+	}
+}
+
+float GetModValue( float value, float vMod )
+{
+	return mod(round(value), vMod) * (1.0 / (vMod - 1.0));
+}
+
+float GetModValueFloor( float value, float vMod )
+{
+	return mod(floor(value), vMod) * (1.0 / (vMod - 1.0));
+}
+
+float GetMod2Value( float value )
+{
+	if ( abs( mod( round(value), 2.0 ) - 1.0 ) < 0.01 )
+	{
+		return 1.0;
+	}
+	else
+	{
+		return 0.0;
+	}
+}
+float CalculateDistanceFogFactor( float3 WorldSpacePos )
+{
+	float3 Diff = CameraPosition - WorldSpacePos;
+	float vFogFactor = 1.0 - abs( normalize( Diff ).y ); // abs b/c of reflections
+	float vSqDistance = dot( Diff, Diff );
+
+	float vMin = min( ( vSqDistance - FogBegin2 ) / ( FogEnd2 - FogBegin2 ), FogMax );
+	return saturate( vMin * vFogFactor );
+}
+
+float3 ApplyDistanceFog( float3 Color, float vFogFactor )
+{
+	return lerp( Color, FogColor, vFogFactor );
+}
+
+float3 ApplyDistanceFog( float3 Color, float3 WorldSpacePos )
+{
+	return ApplyDistanceFog( Color, CalculateDistanceFogFactor( WorldSpacePos ) );
+}
+// --------------------------------------------------------------
+// A collection of constants that can be used to tweak the shaders
+// To update: run "reloadfx all"
+// --------------------------------------------------------------
+
+static const float TWO_PI = 6.28318530718f;
+static const float HALF_PI = 1.57079632679f;
+
+// --------------------------------------------------------------
+// ------------------    Lighting       -------------------------
+// --------------------------------------------------------------
+static const float SHADOW_AMBIENT_MIN_FACTOR = 0.0;
+static const float SHADOW_AMBIENT_MAX_FACTOR = 0.3;
+
+
+// --------------------------------------------------------------
+// ------------------    TERRAIN        -------------------------
+// --------------------------------------------------------------
+static const float COLORMAP_OVERLAY_STRENGTH 	= 1.00f;
+
+
+// --------------------------------------------------------------
+// ------------------    WATER          -------------------------
+// --------------------------------------------------------------
+static const float  WATER_TIME_SCALE	= 1.0f / 50.0f;
+
+
+// --------------------------------------------------------------
+// ------------------    HOVERING       -------------------------
+// --------------------------------------------------------------
+static const float3  HOVER_COLOR	= float3(1.0f, 0.772f, 0.341f);
+static const float HOVER_INTENSITY = 10.0f;
+static const float HOVER_FRESNEL_BIAS = 0.004f;
+static const float HOVER_FRESNEL_POWER = 8.0f;
+float4x4 GetWorldMatrixMapObject( in uint InstanceIndex )
+{
+	int i = int(InstanceIndex) * 4;
+	return Create4x4( PdxReadBuffer4( MapObjectBuffer, i+0 ), PdxReadBuffer4( MapObjectBuffer, i+1 ), PdxReadBuffer4( MapObjectBuffer, i+2 ), PdxReadBuffer4( MapObjectBuffer, i+3 ) );
+}
+uint UnpackAndGetMapObjectInstanceIndex( in uint InstanceIndex24_Opacity8 )
+{
+	return ( InstanceIndex24_Opacity8 >> 8 ) & uint(0x00ffffff);
+}
+float UnpackAndGetMapObjectOpacity( in uint InstanceIndex24_Opacity8 )
+{
+	const float OpacityScale = 1.0f / float(0x0000007f);
+	float Opacity = float(uint(InstanceIndex24_Opacity8 & uint(0x0000007f))) * OpacityScale;
+	if( (InstanceIndex24_Opacity8 & uint(0x00000080) ) != 0 )
+	{
+		Opacity *= -1.0f;
+	}
+	return Opacity;
+}
+float4x4 UnpackAndGetMapObjectWorldMatrix( in uint InstanceIndex24_Opacity8 )
+{
+	uint InstanceIndex = UnpackAndGetMapObjectInstanceIndex( InstanceIndex24_Opacity8 );
+	return GetWorldMatrixMapObject( InstanceIndex );
+}
+void UnpackMapObjectInstanceData( in uint InstanceIndex24_Opacity8, out uint InstanceIndex, out float Opacity )
+{
+	InstanceIndex = UnpackAndGetMapObjectInstanceIndex( InstanceIndex24_Opacity8 );
+	Opacity = UnpackAndGetMapObjectOpacity( InstanceIndex24_Opacity8 );
+}
+
+#ifndef PDXMESH_AlphaBlendShadowMap
+	#define PDXMESH_AlphaBlendShadowMap DiffuseMap
+#endif
+
+#ifndef PDXMESH_DISABLE_DITHERED_OPACITY
+	#define PDXMESH_USE_DITHERED_OPACITY
+#endif
+
+void PdxMeshApplyDitheredOpacity( in float Opacity, in float2 NoiseCoordinate )
+{
+	#ifdef PDXMESH_SCREENDOOR_DITHER				
+		const float4x4 ThresholdMatrix =
+		{
+			1.0 / 17.0,  9.0 / 17.0,  3.0 / 17.0, 11.0 / 17.0,
+			13.0 / 17.0,  5.0 / 17.0, 15.0 / 17.0,  7.0 / 17.0,
+			4.0 / 17.0, 12.0 / 17.0,  2.0 / 17.0, 10.0 / 17.0,
+			16.0 / 17.0,  8.0 / 17.0, 14.0 / 17.0,  6.0 / 17.0
+		};
+		float Factor = ThresholdMatrix[NoiseCoordinate.x % 4][NoiseCoordinate.y % 4];
+	#else
+		float Factor = CalcRandom( NoiseCoordinate );
+	#endif
+	
+	clip( Opacity - Factor * sign( Opacity ) );
+}
+
+float PdxMeshApplyOpacity( in float Alpha, in float2 NoiseCoordinate, in float Opacity )
+{
+	#ifdef PDXMESH_USE_DITHERED_OPACITY
+		if( Opacity < 1.0f )
+		{
+			PdxMeshApplyDitheredOpacity( Opacity, NoiseCoordinate );
+		}
+	#endif
+	return Alpha;
+}
+
+// Generate the texture co-ordinates for a PCF kernel
+void CalculateCoordinates( float2 ShadowCoord, inout float2 TexCoords[5] )
+{
+	// Generate the texture co-ordinates for the specified depth-map size
+	TexCoords[0] = ShadowCoord + float2( -KernelScale, 0.0f );
+	TexCoords[1] = ShadowCoord + float2( 0.0f, KernelScale );
+	TexCoords[2] = ShadowCoord + float2( KernelScale, 0.0f );
+	TexCoords[3] = ShadowCoord + float2( 0.0f, -KernelScale );
+	TexCoords[4] = ShadowCoord;
+}
+
+float CalculateShadow( float4 ShadowProj, PdxTextureSampler2D ShadowMap )
+{
+	ShadowProj.xyz = ShadowProj.xyz / ShadowProj.w;
+	
+	float2 TexCoords[5];
+	CalculateCoordinates( ShadowProj.xy, TexCoords );
+	
+	// Sample each of them checking whether the pixel under test is shadowed or not
+	float fShadowTerm = 0.0f;
+	for( int i = 0; i < 5; i++ )
+	{				
+		float A = PdxTex2DLod0( ShadowMap, TexCoords[i] ).r;
+		float B = ShadowProj.z - Bias;
+		
+		// Texel is shadowed
+		fShadowTerm += ( A < 0.99f && A < B ) ? 0.0 : 1.0;
+	}
+	
+	// Get the average
+	fShadowTerm = fShadowTerm / 5.0f;
+	return lerp( 1.0, fShadowTerm, ShadowFadeFactor );
+}
+
+float2 RotateDisc( float2 Disc, float2 Rotate )
+{
+	return float2( Disc.x * Rotate.x - Disc.y * Rotate.y, Disc.x * Rotate.y + Disc.y * Rotate.x );
+}
+
+float CalculateShadow( float4 ShadowProj, PdxTextureSampler2DCmp ShadowMap )
+{
+	ShadowProj.xyz = ShadowProj.xyz / ShadowProj.w;
+	
+	float RandomAngle = CalcRandom( round( ShadowScreenSpaceScale * ShadowProj.xy ) ) * 3.14159 * 2.0;
+	float2 Rotate = float2( cos( RandomAngle ), sin( RandomAngle ) );
+
+	// Sample each of them checking whether the pixel under test is shadowed or not
+	float ShadowTerm = 0.0;
+	for( int i = 0; i < NumSamples; i++ )
+	{
+		float4 Samples = DiscSamples[i] * KernelScale;
+		ShadowTerm += PdxTex2DCmpLod0( ShadowMap, ShadowProj.xy + RotateDisc( Samples.xy, Rotate ), ShadowProj.z - Bias );
+		ShadowTerm += PdxTex2DCmpLod0( ShadowMap, ShadowProj.xy + RotateDisc( Samples.zw, Rotate ), ShadowProj.z - Bias );
+	}
+	
+	// Get the average
+	ShadowTerm *= 0.5; // We have 2 samples per "sample"
+	ShadowTerm = ShadowTerm / float(NumSamples);
+	
+	float3 FadeFactor = saturate( float3( 1.0 - abs( 0.5 - ShadowProj.xy ) * 2.0, 1.0 - ShadowProj.z ) * 32.0 ); // 32 is just a random strength on the fade
+	ShadowTerm = lerp( 1.0, ShadowTerm, min( min( FadeFactor.x, FadeFactor.y ), FadeFactor.z ) );
+	
+	return lerp( 1.0, ShadowTerm, ShadowFadeFactor );
+}
+
+float4 CalcHeightBlendFactors( float4 MaterialHeights, float4 MaterialFactors, float BlendRange )
+{
+	float4 Mat = MaterialHeights + MaterialFactors;
+	float BlendStart = max( max( Mat.x, Mat.y ), max( Mat.z, Mat.w ) ) - BlendRange;
+
+	float4 MatBlend = max( Mat - vec4( BlendStart ), vec4( 0.0 ) );
+
+	float Epsilon = 0.00001;
+	return float4( MatBlend ) / ( dot( MatBlend, vec4( 1.0 ) ) + Epsilon );
+}
+
+float2 CalcDetailUV( float2 WorldSpacePosXZ )
+{
+	return WorldSpacePosXZ * DetailTileFactor;
+}
+
+void CalculateDetails( float2 WorldSpacePosXZ, out float4 DetailDiffuseHeight, out float3 DetailNormal, out float4 DetailMaterial )
+{
+	float2 DetailCoordinates = WorldSpacePosXZ * WorldSpaceToDetail;
+	float2 DetailCoordinatesScaled = DetailCoordinates * DetailTextureSize;
+	float2 DetailCoordinatesScaledFloored = floor( DetailCoordinatesScaled );
+	float2 DetailCoordinatesFrac = DetailCoordinatesScaled - DetailCoordinatesScaledFloored;
+	DetailCoordinates = DetailCoordinatesScaledFloored * DetailTexelSize + DetailTexelSize * 0.5;
+
+	float4 Factors = float4(
+		(1.0 - DetailCoordinatesFrac.x) * (1.0 - DetailCoordinatesFrac.y),
+		DetailCoordinatesFrac.x * (1.0 - DetailCoordinatesFrac.y),
+		(1.0 - DetailCoordinatesFrac.x) * DetailCoordinatesFrac.y,
+		DetailCoordinatesFrac.x * DetailCoordinatesFrac.y
+	);
+
+	float4 DetailIndex = PdxTex2D( DetailIndexTexture, DetailCoordinates ) * 255.0;
+	float4 DetailMask = PdxTex2D( DetailMaskTexture, DetailCoordinates ) * Factors[0];
+
+	float2 Offsets[3];
+	Offsets[0] = float2( DetailTexelSize.x, 0.0 );
+	Offsets[1] = float2( 0.0, DetailTexelSize.y );
+	Offsets[2] = float2( DetailTexelSize.x, DetailTexelSize.y );
+
+	for ( int k = 0; k < 3; ++k )
+	{
+		float2 DetailCoordinates2 = DetailCoordinates + Offsets[k];
+
+		float4 DetailIndices = PdxTex2DLod0( DetailIndexTexture, DetailCoordinates2 ) * 255.0;
+		float4 DetailMasks = PdxTex2DLod0( DetailMaskTexture, DetailCoordinates2 ) * Factors[k+1];
+
+		for ( int i = 0; i < 4; ++i )
+		{
+			for ( int j = 0; j < 4; ++j )
+			{
+				if ( DetailIndex[j] == DetailIndices[i] )
+				{
+					DetailMask[j] += DetailMasks[i];
+				}
+			}
+		}
+	}
+
+	float2 DetailUV = CalcDetailUV( WorldSpacePosXZ );
+	
+	float2 DDX = ApplyUpscaleLodBiasMultiplier( ddx(DetailUV) );
+	float2 DDY = ApplyUpscaleLodBiasMultiplier( ddy(DetailUV) );
+
+	float4 DetailTexture0 = PdxTex2DGrad( DetailTextures, float3( DetailUV, DetailIndex[0] ), DDX, DDY ) * smoothstep( 0.0, 0.1, DetailMask[0] );
+	float4 DetailTexture1 = PdxTex2DGrad( DetailTextures, float3( DetailUV, DetailIndex[1] ), DDX, DDY ) * smoothstep( 0.0, 0.1, DetailMask[1] );
+	float4 DetailTexture2 = PdxTex2DGrad( DetailTextures, float3( DetailUV, DetailIndex[2] ), DDX, DDY ) * smoothstep( 0.0, 0.1, DetailMask[2] );
+	float4 DetailTexture3 = PdxTex2DGrad( DetailTextures, float3( DetailUV, DetailIndex[3] ), DDX, DDY ) * smoothstep( 0.0, 0.1, DetailMask[3] );
+
+	float4 BlendFactors = CalcHeightBlendFactors( float4( DetailTexture0.a, DetailTexture1.a, DetailTexture2.a, DetailTexture3.a ), DetailMask, DetailBlendRange );
+	//BlendFactors = DetailMask;
+
+	DetailDiffuseHeight = DetailTexture0 * BlendFactors.x +
+					DetailTexture1 * BlendFactors.y +
+					DetailTexture2 * BlendFactors.z +
+					DetailTexture3 * BlendFactors.w;
+
+	DetailMaterial = vec4( 0.0 );
+	float4 DetailNormalSample = vec4( 0.0 );
+
+	for ( int i = 0; i < 4; ++i )
+	{
+		float BlendFactor = BlendFactors[i];
+		if ( BlendFactor > 0.0 )
+		{
+			float3 ArrayUV = float3( DetailUV, DetailIndex[i] );
+			float4 NormalTexture = PdxTex2DGrad( NormalTextures, ArrayUV, DDX, DDY );
+			float4 MaterialTexture = PdxTex2DGrad( MaterialTextures, ArrayUV, DDX, DDY );
+
+			DetailNormalSample += NormalTexture * BlendFactor;
+			DetailMaterial += MaterialTexture * BlendFactor;
+		}
+	}
+
+	DetailNormal = UnpackRRxGNormal( DetailNormalSample ).xyz;
+}
+
+//-------------------------------
+// Debugging --------------------
+//-------------------------------
+float3 GetNumMaterials( float4 Index )
+{
+	int nNumMaterials = 0;
+	for ( int i = 0; i < 4; ++i )
+	{
+		if ( Index[i] < 1.0 )
+		{
+			nNumMaterials++;
+		}
+	}
+
+	if ( nNumMaterials == 1 )
+		return float3( 1, 0, 0 );
+	else if ( nNumMaterials == 2 )
+		return float3( 0, 1, 0 );
+	else if ( nNumMaterials == 3 )
+		return float3( 0, 0, 1 );
+	else if ( nNumMaterials == 4 )
+		return float3( 1, 1, 0 );
+
+	return float3( 0, 0, 0 );
+}
+
+
+//#define TERRAIN_DEBUG
+//#define TERRAIN_DEBUG_WIREFRAME
+//#define TERRAIN_DEBUG_HEIGHT
+//#define TERRAIN_DEBUG_LOOKUP_BORDER
+//#define TERRAIN_DEBUG_HEIGHTMAP_BORDER
+//#define TERRAIN_DEBUG_NORMAL
+//#define TERRAIN_DEBUG_NUM_MATERIALS
+//#define TERRAIN_DEBUG_DETAIL_BORDER
+//#define TERRAIN_DEBUG_DETAIL_MASK
+//#define TERRAIN_DEBUG_DETAIL_INDEX
+void TerrainDebug( inout float3 Color, float3 WorldSpacePos )
+{
+#ifdef TERRAIN_DEBUG
+	float3 Result = float3(0,0,0);
+
+	float2 LookupCoordinates = GetLookupCoordinates( WorldSpacePos.xz );
+#ifdef TERRAIN_DEBUG_WIREFRAME
+	float3 Wireframe = vec3( GetTextureBorder( LookupCoordinates, IndirectionSize * (BaseTileSize - 1), 0.02 ) );
+	Result += Wireframe;
+#endif
+
+#ifdef TERRAIN_DEBUG_HEIGHT
+	Result += float3( GetHeight01( WorldSpacePos.xz ), 0, 0 );
+#endif
+
+#ifdef TERRAIN_DEBUG_LOOKUP_BORDER
+	float3 LookupBorder = float3( 0.0, 0.0, GetTextureBorder( LookupCoordinates, IndirectionSize, 0.0006 ) );
+	Result += LookupBorder;
+#endif
+#ifdef TERRAIN_DEBUG_HEIGHTMAP_BORDER
+	float2 HeightMapCoord = GetHeightMapCoordinates( WorldSpacePos.xz );
+	float3 HeightMapBorder = float3( GetTextureBorder( HeightMapCoord, PackedHeightMapSize, 0.02 ), 0.0, 0.0 );
+	Result += HeightMapBorder;
+#endif
+
+#ifdef TERRAIN_DEBUG_NORMAL
+	Result = saturate( CalculateNormal( WorldSpacePos.xz ) );
+#endif
+
+	float2 DetailCoordinates = WorldSpacePos.xz * WorldSpaceToDetail + DetailTexelSize * 0.5;
+	float4 DetailMask = PdxTex2D( DetailMaskTexture, DetailCoordinates );
+	float4 DetailIndex = PdxTex2D( DetailIndexTexture, DetailCoordinates );
+#ifdef TERRAIN_DEBUG_NUM_MATERIALS
+	Result = GetNumMaterials( DetailIndex );
+#endif
+#ifdef TERRAIN_DEBUG_DETAIL_BORDER
+	float3 IndexBorder = float3( 0.0, 0.0, GetTextureBorder( DetailCoordinates, DetailTextureSize, 0.05 ) );
+	Result += IndexBorder; // * GetModValueFloor( DetailCoordinates.y * (DetailTextureSize.y), 4 );
+#endif
+#ifdef TERRAIN_DEBUG_DETAIL_MASK
+	DetailMask /= dot( DetailMask, vec4( 1.0 ) );
+	Result += DetailMask.rgb;
+#endif
+
+#ifdef TERRAIN_DEBUG_DETAIL_INDEX
+	Result += DetailIndex.rgb;
+#endif
+
+	Color = Result;
+#endif
+}
+
+float CalcLightFalloff( float LightRadius, float Distance, float Falloff )
+{
+	// TODO other, square, falloff?
+	return saturate( (LightRadius - Distance) / Falloff );
+}
+
+float CalcLightFalloff( float LightRadius, float Distance )
+{
+	// This is basically the unreal method, square distance falloff but capped at "LightRadius" distance and capped at intensity 1 at distance 0.
+	return pow( saturate( 1.0 - pow( Distance / LightRadius, 4.0 ) ), 2.0 ) / ( Distance * Distance + 1.0 );
+}
+
+
+float3 MetalnessToDiffuse( float Metalness, float3 Diffuse )
+{
+	return lerp( Diffuse, vec3(0.0), Metalness );
+}
+
+float3 MetalnessToSpec( float Metalness, float3 Diffuse, float Spec )
+{
+	return lerp( vec3(Spec), Diffuse, Metalness );
+}
+
+
+#ifndef PDX_NumMips
+	#define PDX_NumMips 10.0
+#endif
+
+#ifndef PDX_MipOffset
+	#define PDX_MipOffset 2.0
+#endif
+
+#define PDX_SimpleLighting
+
+
+struct SMaterialProperties
+{
+	float 	_PerceptualRoughness;
+	float 	_Roughness;
+	float	_Metalness;
+	
+	float3	_DiffuseColor;
+	float3	_SpecularColor;
+	float3	_Normal;
+};
+
+struct SLightingProperties
+{
+	float3		_ToCameraDir;
+	float3		_ToLightDir;
+	float3		_LightIntensity;
+	float		_ShadowTerm;
+	float		_CubemapIntensity;
+	// this rotation matrix is used to rotate cubemap sampling vectors, thus "faking" a rotation of the cubemap
+	float4x4	_CubemapYRotation;
+};
+
+float RemapSpec( float SampledSpec )
+{
+	return 0.25 * SampledSpec;
+}
+	
+float RoughnessFromPerceptualRoughness( float PerceptualRoughness )
+{
+	return PerceptualRoughness * PerceptualRoughness;
+}
+
+float BurleyToMipSimple( float PerceptualRoughness )
+{
+   float Scale = PerceptualRoughness * (1.7 - 0.7 * PerceptualRoughness);
+   return Scale * ( PDX_NumMips - 1 - PDX_MipOffset );
+}
+
+float3 GetSpecularDominantDir( float3 Normal, float3 Reflection, float Roughness )
+{
+	float Smoothness = saturate( 1.0 - Roughness );
+	float LerpFactor = Smoothness * ( sqrt( Smoothness ) + Roughness );
+	return normalize( lerp( Normal, Reflection, LerpFactor ) );
+}
+
+float GetReductionInMicrofacets( float Roughness )
+{
+	return 1.0 / (Roughness*Roughness + 1.0);
+}
+
+float F_Schlick( float f0, float f90, float CosAngle )
+{
+	return f0 + ( f90 - f0 ) * pow( 1.0 - CosAngle, 5.0 );
+}
+
+float3 F_Schlick( float3 f0, float3 f90, float CosAngle )
+{
+	return f0 + ( f90 - f0 ) * pow( 1.0 - CosAngle, 5.0 );
+}
+        
+
+float DisneyDiffuse( float NdotV, float NdotL, float LdotH, float LinearRoughness )
+{
+	float EnergyBias = lerp( 0.0, 0.5, LinearRoughness );
+	float EnergyFactor = lerp( 1.0, 1.0 / 1.51, LinearRoughness );
+	float f90 = EnergyBias + 2.0 * LdotH * LdotH * LinearRoughness;
+	float LightScatter = F_Schlick( 1.0, f90, NdotL );
+	float ViewScatter = F_Schlick( 1.0, f90, NdotV );
+	
+	return LightScatter * ViewScatter * EnergyFactor;
+}
+
+float CalcDiffuseBRDF( float NdotV, float NdotL, float LdotH, float PerceptualRoughness )
+{
+#ifdef PDX_SimpleLighting
+	return 1.0 / PI;
+#else
+	return DisneyDiffuse( NdotV, NdotL, LdotH, PerceptualRoughness ) / PI;
+#endif
+}
+
+
+float D_GGX( float NdotH, float Alpha )
+{
+	float Alpha2 = Alpha * Alpha;
+	float f = ( NdotH * Alpha2 - NdotH ) * NdotH + 1.0;
+	return Alpha2 / (PI * f * f);
+}
+
+float G1( float CosAngle, float k )
+{
+	return 1.0 / ( CosAngle * ( 1.0 - k ) + k );
+}
+
+float V_Schlick( float NdotL, float NdotV, float Alpha )
+{
+	float k = Alpha * 0.5;
+	return G1( NdotL, k ) * G1( NdotV, k ) * 0.25;
+}
+
+float V_Optimized( float LdotH, float Alpha )
+{
+	float k = Alpha * 0.5;
+	float k2 = k*k;
+	float invk2 = 1.0 - k2;
+	return 0.25 / ( LdotH * LdotH * invk2 + k2 );
+}
+        
+float3 CalcSpecularBRDF( float3 SpecularColor, float LdotH, float NdotH, float NdotL, float NdotV, float Roughness )
+{
+	float3 F = F_Schlick( SpecularColor, vec3(1.0), LdotH );
+	float D = D_GGX( NdotH, lerp( 0.03, 1.0, Roughness ) ); // Remap to avoid super small and super bright highlights
+#ifdef PDX_SimpleLighting
+	float Vis = V_Optimized( LdotH, Roughness );
+#else
+	float Vis = V_Schlick( NdotL, NdotV, Roughness );
+#endif
+	return D * F * Vis;
+}
+
+void CalculateLightingFromLight( SMaterialProperties MaterialProps, float3 ToCameraDir, float3 ToLightDir, float3 LightIntensity, out float3 DiffuseOut, out float3 SpecularOut )
+{
+	float3 H = normalize( ToCameraDir + ToLightDir );
+	float NdotV = saturate( dot( MaterialProps._Normal, ToCameraDir ) ) + 1e-5;
+	float NdotL = saturate( dot( MaterialProps._Normal, ToLightDir ) ) + 1e-5;
+	float NdotH = saturate( dot( MaterialProps._Normal, H ) );
+	float LdotH = saturate( dot( ToLightDir, H ) );
+	
+	float DiffuseBRDF = CalcDiffuseBRDF( NdotV, NdotL, LdotH, MaterialProps._PerceptualRoughness );
+	DiffuseOut = DiffuseBRDF * MaterialProps._DiffuseColor * LightIntensity * NdotL;
+	
+#ifdef PDX_HACK_ToSpecularLightDir
+	float3 H_Spec = normalize( ToCameraDir + PDX_HACK_ToSpecularLightDir );
+	float NdotL_Spec = saturate( dot( MaterialProps._Normal, PDX_HACK_ToSpecularLightDir ) ) + 1e-5;
+	float NdotH_Spec = saturate( dot( MaterialProps._Normal, H_Spec ) );
+	float LdotH_Spec = saturate( dot( PDX_HACK_ToSpecularLightDir, H_Spec ) );
+	float3 SpecularBRDF = CalcSpecularBRDF( MaterialProps._SpecularColor, LdotH_Spec, NdotH_Spec, NdotL_Spec, NdotV, MaterialProps._Roughness );
+	SpecularOut = SpecularBRDF * LightIntensity * NdotL;
+#else
+	float3 SpecularBRDF = CalcSpecularBRDF( MaterialProps._SpecularColor, LdotH, NdotH, NdotL, NdotV, MaterialProps._Roughness );
+	SpecularOut = SpecularBRDF * LightIntensity * NdotL;
+#endif
+}
+
+void CalculateLightingFromLight( SMaterialProperties MaterialProps, SLightingProperties LightingProps, out float3 DiffuseOut, out float3 SpecularOut )
+{
+	CalculateLightingFromLight( MaterialProps, LightingProps._ToCameraDir, LightingProps._ToLightDir, LightingProps._LightIntensity * LightingProps._ShadowTerm, DiffuseOut, SpecularOut );
+}
+
+void CalculateLightingFromIBL( SMaterialProperties MaterialProps, SLightingProperties LightingProps, PdxTextureSamplerCube EnvironmentMap, out float3 DiffuseIBLOut, out float3 SpecularIBLOut )
+{
+	float3 RotatedDiffuseCubemapUV = mul( CastTo3x3( LightingProps._CubemapYRotation ), MaterialProps._Normal );
+	float3 DiffuseRad = PdxTexCubeLod( EnvironmentMap, RotatedDiffuseCubemapUV, ( PDX_NumMips - 1 - PDX_MipOffset ) ).rgb * LightingProps._CubemapIntensity; // TODO, maybe we should split diffuse and spec intensity?
+	DiffuseIBLOut = DiffuseRad * MaterialProps._DiffuseColor;
+	
+	float3 ReflectionVector = reflect( -LightingProps._ToCameraDir, MaterialProps._Normal );
+	float3 DominantReflectionVector = GetSpecularDominantDir( MaterialProps._Normal, ReflectionVector, MaterialProps._Roughness );
+
+	float NdotR = saturate( dot( MaterialProps._Normal, DominantReflectionVector ) );
+	float3 SpecularReflection = F_Schlick( MaterialProps._SpecularColor, vec3( 1.0f ), NdotR );
+	float SpecularFade = GetReductionInMicrofacets( MaterialProps._Roughness );
+
+	float MipLevel = BurleyToMipSimple( MaterialProps._PerceptualRoughness );
+	float3 RotatedSpecularCubemapUV = mul( CastTo3x3( LightingProps._CubemapYRotation ), DominantReflectionVector );
+	float3 SpecularRad = PdxTexCubeLod( EnvironmentMap, RotatedSpecularCubemapUV, MipLevel ).rgb * LightingProps._CubemapIntensity; // TODO, maybe we should split diffuse and spec intensity?
+	#ifdef IOR
+		float3 RefractionVector = refract( -LightingProps._ToCameraDir, MaterialProps._Normal, 1.0f / IOR );
+		float3 DominantRefractionVector = GetSpecularDominantDir( MaterialProps._Normal, RefractionVector, MaterialProps._Roughness );
+		float3 RefractionRotatedSpecularCubemapUV = mul( CastTo3x3( LightingProps._CubemapYRotation ), DominantRefractionVector );
+		float3 RefractionSpecularRad = PdxTexCubeLod( EnvironmentMap, RefractionRotatedSpecularCubemapUV, MipLevel ).rgb * LightingProps._CubemapIntensity;
+		float Refraction_strength = 0.15f;
+			#if defined( REFRACTION_STRENGTH )
+				Refraction_strength = REFRACTION_STRENGTH;
+			#endif
+		RefractionSpecularRad = RefractionSpecularRad * (1 - MaterialProps._Roughness) * Refraction_strength;
+		SpecularIBLOut = lerp ( RefractionSpecularRad, SpecularRad, SpecularReflection ) * SpecularFade;
+	#else
+		SpecularIBLOut = SpecularRad * SpecularFade * SpecularReflection;
+	#endif
+}
+
+float4x4 Float4x4Identity()
+{
+	return float4x4( 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0 );
+}
+
+SMaterialProperties GetMaterialProperties( float3 SampledDiffuse, float3 Normal, float SampledRoughness, float SampledSpec, float SampledMetalness )
+{
+	SMaterialProperties MaterialProps;
+	
+	MaterialProps._PerceptualRoughness = SampledRoughness;
+	MaterialProps._Roughness = RoughnessFromPerceptualRoughness( MaterialProps._PerceptualRoughness );
+
+	float SpecRemapped = RemapSpec( SampledSpec );
+	MaterialProps._Metalness = SampledMetalness;
+
+	MaterialProps._DiffuseColor = MetalnessToDiffuse( MaterialProps._Metalness, SampledDiffuse );
+	MaterialProps._SpecularColor = MetalnessToSpec( MaterialProps._Metalness, SampledDiffuse, SpecRemapped );
+	
+	MaterialProps._Normal = Normal;
+	
+	return MaterialProps;
+}
+
+//-------------------------------
+// Common lighting functions ----
+//-------------------------------
+SLightingProperties GetSunLightingProperties( float3 WorldSpacePos, float ShadowTerm )
+{
+	SLightingProperties LightingProps;
+	LightingProps._ToCameraDir = normalize( CameraPosition - WorldSpacePos );
+	LightingProps._ToLightDir = ToSunDir;
+	LightingProps._LightIntensity = SunDiffuse * SunIntensity;
+	LightingProps._ShadowTerm = ShadowTerm;
+	LightingProps._CubemapIntensity = CubemapIntensity;
+	LightingProps._CubemapYRotation = CubemapYRotation;
+	
+	return LightingProps;
+}
+
+SLightingProperties GetSunLightingProperties( float3 WorldSpacePos, PdxTextureSampler2DCmp ShadowMap )
+{
+	float4 ShadowProj = mul( ShadowMapTextureMatrix, float4( WorldSpacePos, 1.0 ) );
+	float ShadowTerm = CalculateShadow( ShadowProj, ShadowMap );
+	
+	return GetSunLightingProperties( WorldSpacePos, ShadowTerm );
+}
+
+float3 CalculateSunLighting( SMaterialProperties MaterialProps, SLightingProperties LightingProps, PdxTextureSamplerCube EnvironmentMap )
+{
+	float3 DiffuseLight;
+	float3 SpecularLight;
+	CalculateLightingFromLight( MaterialProps, LightingProps, DiffuseLight, SpecularLight );
+	
+	float3 DiffuseIBL;
+	float3 SpecularIBL;
+	CalculateLightingFromIBL( MaterialProps, LightingProps, EnvironmentMap, DiffuseIBL, SpecularIBL );
+	
+	return DiffuseLight + SpecularLight + DiffuseIBL + SpecularIBL;
+}
+
+
+//-------------------------------
+// Debugging --------------------
+//-------------------------------
+//#define PDX_DEBUG_NORMAL
+//#define PDX_DEBUG_DIFFUSE
+//#define PDX_DEBUG_SPEC
+//#define PDX_DEBUG_SPEC_RANGES
+//#define PDX_DEBUG_ROUGHNESS
+//#define PDX_DEBUG_METALNESS
+//#define PDX_DEBUG_SHADOW
+//#define PDX_DEBUG_SUN_LIGHT_SIMPLE_DIFFUSE // AKA Daniel mode
+//#define PDX_DEBUG_SUN_LIGHT_ONLY_SPECULAR
+//#define PDX_DEBUG_SUN_LIGHT
+//#define PDX_DEBUG_SUN_LIGHT_WITH_SHADOW
+//#define PDX_DEBUG_IBL_SIMPLE_DIFFUSE
+//#define PDX_DEBUG_IBL_DIFFUSE
+//#define PDX_DEBUG_IBL_SPECULAR
+//#define PDX_DEBUG_IBL
+
+void DebugReturn( inout float3 Out, SMaterialProperties MaterialProps, SLightingProperties LightingProps )
+{
+#ifdef PDX_DEBUG_NORMAL
+	Out = saturate( MaterialProps._Normal );
+#endif
+
+#ifdef PDX_DEBUG_DIFFUSE
+	Out = MaterialProps._DiffuseColor;
+#endif
+
+#ifdef PDX_DEBUG_SPEC
+	Out = MaterialProps._SpecularColor;
+#endif
+
+#ifdef PDX_DEBUG_ROUGHNESS
+	Out = vec3( MaterialProps._PerceptualRoughness );
+#endif
+
+#ifdef PDX_DEBUG_METALNESS
+	Out = vec3( MaterialProps._Metalness );
+#endif
+
+#ifdef PDX_DEBUG_SPEC_RANGES
+	// Shows extremely low specular values in red
+	// Shows common material values in green (2-6%)
+	// Shows gemstone material values in yellow (8-17%)
+	// Shows metalness in blue
+	// Shows everything else in gray scale	
+	// Values based on page 14-15 in http://renderwonk.com/publications/s2010-shading-course/hoffman/s2010_physically_based_shading_hoffman_a_notes.pdf
+	float Spec = MaterialProps._SpecularColor.r;
+	
+	float e = 0.002f;
+	float ErrorThreshold = 0.01f;
+	float DielectricLow = 0.02f;
+	float DielectricHigh = 0.06f;
+	float GemstoneLow = 0.08f;
+	float GemstoneHigh = 0.17f;
+	
+	float Error = smoothstep( ErrorThreshold, 0.0, Spec );
+	float CommonMask = smoothstep( DielectricLow-e, DielectricLow, Spec ) * smoothstep( DielectricHigh+e, DielectricHigh, Spec);
+	float GemstoneMask = smoothstep( GemstoneLow-e, GemstoneLow, Spec ) * smoothstep( GemstoneHigh+e, GemstoneHigh, Spec);
+	float ScaledSpec = ( Spec / RemapSpec(1.0f) );
+	float3 DebugSpecColor = float3( GemstoneMask, CommonMask + GemstoneMask, 0.0 ) * ScaledSpec;
+	Out = lerp( vec3(ScaledSpec), DebugSpecColor, CommonMask + GemstoneMask );
+	Out = lerp( Out, float3(1.0,0.0,0.0), Error );
+	Out = lerp( Out, float3(0.0,0.0,1.0), MaterialProps._Metalness );
+#endif
+
+#ifdef PDX_DEBUG_SHADOW
+	Out = vec3( LightingProps._ShadowTerm );
+#endif
+
+#ifdef PDX_DEBUG_SUN_LIGHT_SIMPLE_DIFFUSE
+	SMaterialProperties MaterialPropsCopy = MaterialProps;
+	MaterialPropsCopy._DiffuseColor = vec3( 1.0 );
+	MaterialPropsCopy._SpecularColor = vec3( 0.0 );
+	
+	float3 SpecularLight;
+	CalculateLightingFromLight( MaterialPropsCopy, LightingProps, Out, SpecularLight );
+#endif
+
+#ifdef PDX_DEBUG_SUN_LIGHT_ONLY_SPECULAR			
+	float3 DiffuseLight;			
+	CalculateLightingFromLight( MaterialProps, LightingProps, DiffuseLight, Out );
+#endif
+
+#if defined( PDX_DEBUG_SUN_LIGHT ) || defined( PDX_DEBUG_SUN_LIGHT_WITH_SHADOW )
+	float3 DiffuseLight;
+	float3 SpecularLight;
+
+	#ifdef PDX_DEBUG_SUN_LIGHT_WITH_SHADOW
+		CalculateLightingFromLight( MaterialProps, LightingProps, DiffuseLight, SpecularLight );
+	#else
+		SLightingProperties LightingPropsNoShadow = LightingProps;
+		LightingPropsNoShadow._ShadowTerm = 1.0;
+		CalculateLightingFromLight( MaterialProps, LightingPropsNoShadow, DiffuseLight, SpecularLight );
+	#endif
+	
+	Out = DiffuseLight + SpecularLight;
+#endif
+}
+
+void DebugReturn( inout float3 Out, SMaterialProperties MaterialProps, SLightingProperties LightingProps, PdxTextureSamplerCube EnvironmentMap )
+{
+	DebugReturn( Out, MaterialProps, LightingProps );
+
+#if defined( PDX_DEBUG_IBL ) || defined( PDX_DEBUG_IBL_DIFFUSE ) || defined( PDX_DEBUG_IBL_SPECULAR ) || defined( PDX_DEBUG_IBL_SIMPLE_DIFFUSE )
+	float3 DiffuseIBL;
+	float3 SpecularIBL;
+	
+	SMaterialProperties MaterialPropsCopy = MaterialProps;
+	#ifdef PDX_DEBUG_IBL_SIMPLE_DIFFUSE
+		MaterialPropsCopy._DiffuseColor = vec3( 1.0 );
+	#endif
+	
+	CalculateLightingFromIBL( MaterialPropsCopy, LightingProps, EnvironmentMap, DiffuseIBL, SpecularIBL );
+	
+	#if defined( PDX_DEBUG_IBL_DIFFUSE ) || defined( PDX_DEBUG_IBL_SIMPLE_DIFFUSE )
+		Out = DiffuseIBL;
+	#endif
+	#ifdef PDX_DEBUG_IBL_SPECULAR
+		Out = SpecularIBL;
+	#endif
+	#ifdef PDX_DEBUG_IBL
+		Out = DiffuseIBL + SpecularIBL;
+	#endif
+#endif
+}
+
+#ifndef FOG_OF_WAR_BLEND_FUNCTION
+	#define FOG_OF_WAR_BLEND_FUNCTION loc_BlendFogOfWar
+	float4 loc_BlendFogOfWar( float Alpha )
+	{
+		return float4( vec3(0.0), 1.0 - Alpha );
+	}
+#endif
+
+void loc_ApplyFogOfWarPattern( inout float Alpha, in float3 Coordinate, PdxTextureSampler2D FogOfWarAlphaMask )
+{
+	if( FogOfWarPatternStrength > 0.0f )
+	{
+		float2 UV = Coordinate.xz * InverseWorldSize * FogOfWarPatternTiling;
+		UV += FogOfWarPatternSpeed * FogOfWarTime;
+		float Noise1 = 1.0f - PdxTex2D( FogOfWarAlphaMask, UV ).g;
+		float Noise2 = 1.0f - PdxTex2D( FogOfWarAlphaMask, UV * -0.13 ).g;
+		float Detail = 0.5f;
+		
+		float Noise = saturate( Noise2 * (1.0f-Detail) + Detail * 0.5f + (Noise1-0.5f) * Detail );
+		
+		Noise *= 1.0f - Alpha;
+		Alpha = smoothstep( 0.0, 1.0, Alpha + Noise * FogOfWarPatternStrength );
+	}
+}
+float GetFogOfWarAlpha( in float3 Coordinate, PdxTextureSampler2D FogOfWarAlphaMask )
+{		
+	float Alpha = PdxTex2D( FogOfWarAlphaMask, Coordinate.xz * InverseWorldSize ).r;
+	
+	loc_ApplyFogOfWarPattern( Alpha, Coordinate, FogOfWarAlphaMask );
+	
+	return FogOfWarAlphaMin + Alpha * (1.0f - FogOfWarAlphaMin);
+}
+float GetFogOfWarAlphaMultiSampled( in float3 Coordinate, PdxTextureSampler2D FogOfWarAlphaMask )
+{
+	float Width = 5.0f;
+	float Alpha = 0.0f; 
+	Alpha += PdxTex2D( FogOfWarAlphaMask, ( Coordinate.xz + float2( 0,-1) * Width ) * InverseWorldSize ).r;
+	Alpha += PdxTex2D( FogOfWarAlphaMask, ( Coordinate.xz + float2(-1, 0) * Width ) * InverseWorldSize ).r;
+	Alpha += PdxTex2D( FogOfWarAlphaMask, ( Coordinate.xz + float2( 1, 0) * Width ) * InverseWorldSize ).r;
+	Alpha += PdxTex2D( FogOfWarAlphaMask, ( Coordinate.xz + float2( 0, 1) * Width ) * InverseWorldSize ).r;
+	Alpha /= 4.0f;
+	
+	loc_ApplyFogOfWarPattern( Alpha, Coordinate, FogOfWarAlphaMask );
+	
+	return FogOfWarAlphaMin + Alpha * (1.0f - FogOfWarAlphaMin);
+}
+
+float3 FogOfWarBlend( float3 Color, float Alpha )
+{		
+	float4 ColorAndAlpha = FOG_OF_WAR_BLEND_FUNCTION( Alpha );
+	return lerp( Color, ColorAndAlpha.rgb, ColorAndAlpha.a );
+}
+
+// Immediate mode
+float3 JominiApplyFogOfWar( in float3 Color, in float3 Coordinate, PdxTextureSampler2D FogOfWarAlphaMask )
+{
+#ifdef JOMINI_DISABLE_FOG_OF_WAR
+	return Color;
+#else
+	float Alpha = GetFogOfWarAlpha( Coordinate, FogOfWarAlphaMask );
+	return FogOfWarBlend( Color, Alpha );
+#endif
+}
+float3 JominiApplyFogOfWarMultiSampled( in float3 Color, in float3 Coordinate, PdxTextureSampler2D FogOfWarAlphaMask )
+{
+#ifdef JOMINI_DISABLE_FOG_OF_WAR
+	return Color;
+#else
+	float Alpha = GetFogOfWarAlphaMultiSampled( Coordinate, FogOfWarAlphaMask );
+	return FogOfWarBlend( Color, Alpha );
+#endif
+}
+
+// Post process
+float4 JominiApplyFogOfWar( in float3 WorldSpacePos, PdxTextureSampler2D FogOfWarAlphaMask )
+{
+#ifdef JOMINI_DISABLE_FOG_OF_WAR
+	return float4( vec3(0.0), 1.0 );
+#else
+	return FOG_OF_WAR_BLEND_FUNCTION( GetFogOfWarAlpha( WorldSpacePos, FogOfWarAlphaMask ) );
+#endif
+}
+
+#ifndef ApplyFogOfWar		
+#define ApplyFogOfWar JominiApplyFogOfWar
+#endif
+#ifndef ApplyFogOfWarMultiSampled		
+#define ApplyFogOfWarMultiSampled JominiApplyFogOfWarMultiSampled
+#endif
+
+float3 SampleNormalMapTexture( PdxTextureSampler2D Texture, float2 UV, float2 Scale, float Rotation, float Offset, float NormalFlatten )
+{
+	float2 Rotate = float2( cos( Rotation ), sin( Rotation ) );
+
+	float2 UVCoord = float2( UV.x * Rotate.x - UV.y * Rotate.y, UV.x * Rotate.y + UV.y * Rotate.x );
+	UVCoord *= Scale;
+	UVCoord.x += Offset;
+	
+	float3 Normal = UnpackNormal( PdxTex2DUpscaleNative( Texture, UVCoord ) ).xzy;
+	
+	float2 InvRotate = float2( cos( -Rotation ), sin( -Rotation ) );
+	Normal.xz = float2( Normal.x * InvRotate.x - Normal.z * InvRotate.y, Normal.x * InvRotate.y + Normal.z * InvRotate.x );
+	Normal.z *= -1;
+	
+	Normal.y *= NormalFlatten;
+	
+	return normalize( Normal );
+}
+
+void SampleFlowTexture( PdxTextureSampler2D FlowMapTexture, PdxTextureSampler2D FlowNormalTexture, float2 FlowCoord, float2 NormalCoord, float2 Offset, float2 DDX, float2 DDY, out float3 Normal, out float FoamMask )
+{
+	float3 FlowMap = PdxTex2DLod0( FlowMapTexture, FlowCoord ).rgb;
+	float2 FlowDir = FlowMap.xy * 2.0 - 1.0;
+	FlowDir = FlowDir / ( length( FlowDir ) + 0.000001 ); // Intel did not like normalize()
+
+	float2x2 FlowRotMat = Create2x2( -FlowDir.y, FlowDir.x, -FlowDir.x, -FlowDir.y );
+	float2x2 FlowInvRotMat = Create2x2( -FlowDir.y, -FlowDir.x, FlowDir.x, -FlowDir.y );
+	float4 Sample = PdxTex2DGrad( FlowNormalTexture, mul( FlowInvRotMat, NormalCoord ) - Offset * FlowMap.b, DDX, DDY );
+	
+	Normal = UnpackNormal( Sample ).xzy;
+	Normal.y *= 1.0 / max( 0.01, FlowMap.b );
+	Normal.xz = mul( FlowRotMat, Normal.xz );
+	
+	FoamMask = Sample.a * FlowMap.b;
+}
+
+float3 CalcFlow( PdxTextureSampler2D FlowMapTexture, PdxTextureSampler2D FlowNormalTexture, float2 FlowMapUV, float2 NormalMapUV, out float FoamMask )
+{
+	float FlowMapScale = 1.5;				
+	float2 FlowCoordScale = _WaterFlowMapSize * FlowMapScale;
+	float2 FlowCoord = FlowMapUV * FlowCoordScale;
+	
+	float2 BlendFactor = abs( 2.0 * frac( FlowCoord ) - 1.0 ) - 0.5;
+	BlendFactor = 0.5 - 4.0 * BlendFactor * BlendFactor * BlendFactor;
+	//BlendFactor = 1.0 - abs( 2.0 * frac( FlowCoord ) - 1.0 );
+	
+	float2 NormalCoord = NormalMapUV * _WaterFlowNormalScale;
+	float2 DDX = ApplyUpscaleNativeLodBiasMultiplier( ddx( NormalCoord ) );
+	float2 DDY = ApplyUpscaleNativeLodBiasMultiplier( ddy( NormalCoord ) );
+	
+	float2 Offset = float2( 0.0, -_WaterFlowTime );
+	
+	float4 Sample1;
+	SampleFlowTexture( FlowMapTexture, FlowNormalTexture, floor( FlowCoord ) / FlowCoordScale, NormalCoord, Offset, DDX, DDY, Sample1.xyz, Sample1.a );
+	float4 Sample2;
+	SampleFlowTexture( FlowMapTexture, FlowNormalTexture, floor( FlowCoord + float2(0.5, 0.0) ) / FlowCoordScale, NormalCoord, Offset, DDX, DDY, Sample2.xyz, Sample2.a );
+	float4 Sample3;
+	SampleFlowTexture( FlowMapTexture, FlowNormalTexture, floor( FlowCoord + float2(0.0, 0.5) ) / FlowCoordScale, NormalCoord, Offset, DDX, DDY, Sample3.xyz, Sample3.a );
+	float4 Sample4;
+	SampleFlowTexture( FlowMapTexture, FlowNormalTexture, floor( FlowCoord + float2(0.5, 0.5) ) / FlowCoordScale, NormalCoord, Offset, DDX, DDY, Sample4.xyz, Sample4.a );
+	
+	float4 Sample12 = lerp( Sample2, Sample1, BlendFactor.x );
+	float4 Sample34 = lerp( Sample4, Sample3, BlendFactor.x );
+	
+	float4 Sample = lerp( Sample34, Sample12, BlendFactor.y );
+	
+	Sample.y *= _WaterFlowNormalFlatten;
+	float3 Normal = normalize( Sample.xyz );
+	
+	FoamMask = Sample.a;
+	return Normal;
+}
+
+static const float MaxHeight = 50.0;
+float CompressWorldSpace( float3 WorldSpacePos )
+{
+	float3 CameraPos = CameraPosition;
+	if ( CameraPos.y > MaxHeight )
+	{
+		float Above = CameraPos.y - MaxHeight;
+		float3 ToCameraDir = normalize( CameraPosition - WorldSpacePos );
+		CameraPos = CameraPosition - ToCameraDir * (Above / ToCameraDir.y);
+	}
+	float3 ToCamera = CameraPos - WorldSpacePos;
+	return length( ToCamera );
+}
+
+float3 DecompressWorldSpace( float3 WorldSpacePos, float Length )
+{
+	float3 ToCameraDir = normalize( CameraPosition - WorldSpacePos );
+		
+	float3 CameraPos = CameraPosition;
+	if ( CameraPos.y > MaxHeight )
+	{
+		float Above = CameraPos.y - MaxHeight;
+		CameraPos = CameraPosition - ToCameraDir * (Above / ToCameraDir.y);
+	}
+	
+	float3 RefractionWorldSpacePos = CameraPos - ToCameraDir * Length;
+	return RefractionWorldSpacePos;
+}
+
+void ApplyDither( in VS_OUTPUT_MAPOBJECT_SHADOW Input )
+{
+	float Opacity = UnpackAndGetMapObjectOpacity( Input.InstanceIndex24_Opacity8 );
+	PdxMeshApplyDitheredOpacity( Opacity, Input.Position.xy );
+}
+
+float3 CalculateSunLightingLowSpec( SMaterialProperties MaterialProps, SLightingProperties LightingProps )
+{
+	float3 DiffuseLight;
+	float3 SpecularLight;
+	CalculateLightingFromLight( MaterialProps, LightingProps, DiffuseLight, SpecularLight );
+	
+	const float minDiffuse = 0.007;
+	
+	DiffuseLight = float3(minDiffuse, minDiffuse, minDiffuse) + (1.0 - minDiffuse) * DiffuseLight;
+	return DiffuseLight + SpecularLight;
+}
+
+#ifndef WINTER_COMBINED_TEXTURE
+        float4 GetSnowDiffuseValue( in float2 Coordinate )
+        {
+            return PdxTex2D( SnowDiffuseMap, Coordinate );
+        }
+        float GetWinterSeverityValue( in float2 Coordinate )
+        {
+            return float4( PdxTex2D( WinterTexture, Coordinate ) ).r;
+        }
+#else
+        // The WinterTexture combines the two winter textures, to save one sampler (relevant on macOS with OpenGL):
+        // - the winter severity value is in blue, this is what WinterTexture is without this define
+        // - SnowDiffuseMap is in red, green, and alpha. We take its blue value from green, because we assume they are basically the same.
+        // The texture isn't marked as sRGB, so we undo the double gamma correction for the diffuse value.
+        float4 GetSnowDiffuseValue( in float2 Coordinate )
+        {
+            return ToLinear( PdxTex2D( WinterTexture, Coordinate ).rgga );
+        }
+        float GetWinterSeverityValue( in float2 Coordinate )
+        {
+            return PdxTex2D( WinterTexture, Coordinate ).b;
+        }
+#endif
+
+        float3 ApplySnowDiffuse( in float3 TerrainColor, in float3 Normal, in float2 Coordinate )
+        {
+            float SnowScale = 150;
+            float SnowScaleLarge = 0.0;
+            float SnowScaleMedium = SnowScale;
+            float SnowScaleSmall = SnowScale * 0.32345;
+
+            float2 MapDimensions = float2( 2, 1 );
+
+            float2 SnowUVLarge = Coordinate * MapDimensions * SnowScaleLarge;
+            float2 SnowUVMedium = Coordinate * MapDimensions * SnowScaleMedium;
+            float2 SnowUVSmall = Coordinate * MapDimensions *SnowScaleSmall;
+
+            float4 SnowDiffuseMedium = GetSnowDiffuseValue( SnowUVMedium );
+            float SnowDiffuseLarge = GetSnowDiffuseValue( SnowUVLarge ).a;
+            float SnowDiffuseSmall = GetSnowDiffuseValue( SnowUVSmall ).a;
+
+            float SnowMask = GetWinterSeverityValue( Coordinate ) * 0.6;
+
+            float SnowAlpha = 0;
+            SnowAlpha = Overlay( SnowDiffuseLarge, SnowDiffuseMedium.a );
+            SnowAlpha = Overlay( SnowAlpha, SnowDiffuseSmall );
+            SnowAlpha = ToLinear( SnowAlpha );
+
+            float GradientWidth = 0.3;
+            float GradientWidthHalf = GradientWidth * 0.5;
+
+            SnowAlpha = RemapClamped( SnowAlpha, 0, 1, GradientWidthHalf, 1 - GradientWidthHalf );
+            SnowAlpha = clamp( SnowAlpha, 0, 1 );
+
+            SnowMask = LevelsScan( SnowAlpha, 1 - SnowMask, GradientWidth );
+
+            SnowMask *= clamp( Normal.g * Normal.g, 0, 1 );
+            return lerp( TerrainColor, SnowDiffuseMedium.rgb, SnowMask );
+        }
+
+        float3 ApplySnowDiffuse( in float3 TerrainColor, in float3 Normal, in float2 Coordinate, out float SnowMask )
+        {
+            float SnowScale = 150;
+            float SnowScaleLarge = 0.0;
+            float SnowScaleMedium = SnowScale;
+            float SnowScaleSmall = SnowScale * 0.32345;
+
+            float2 MapDimensions = float2( 2, 1 );
+
+            float2 SnowUVLarge = Coordinate * MapDimensions * SnowScaleLarge;
+            float2 SnowUVMedium = Coordinate * MapDimensions * SnowScaleMedium;
+            float2 SnowUVSmall = Coordinate * MapDimensions * SnowScaleSmall;
+
+            float4 SnowDiffuseMedium = GetSnowDiffuseValue( SnowUVMedium );
+            float SnowDiffuseLarge = GetSnowDiffuseValue( SnowUVLarge ).a;
+            float SnowDiffuseSmall = GetSnowDiffuseValue( SnowUVSmall ).a;
+
+            SnowMask = GetWinterSeverityValue( Coordinate ) * 0.6;
+
+            float SnowAlpha = 0;
+            SnowAlpha = Overlay( SnowDiffuseLarge, SnowDiffuseMedium.a );
+            SnowAlpha = Overlay( SnowAlpha, SnowDiffuseSmall );
+            SnowAlpha = ToLinear( SnowAlpha );
+
+            float GradientWidth = 0.3;
+            float GradientWidthHalf = GradientWidth * 0.5;
+
+            SnowAlpha = RemapClamped( SnowAlpha, 0, 1, GradientWidthHalf, 1 - GradientWidthHalf );
+            SnowAlpha = clamp( SnowAlpha, 0, 1 );
+
+            SnowMask = LevelsScan( SnowAlpha, 1 - SnowMask, GradientWidth );
+
+            SnowMask *= clamp( Normal.g * Normal.g, 0, 1 );
+            return lerp( TerrainColor, SnowDiffuseMedium.rgb, SnowMask );
+        }
+
+        float3 ApplyDynamicMasksDiffuse( in float3 TerrainColor, in float3 Normal, in float2 Coordinate )
+        {
+            TerrainColor = ApplySnowDiffuse( TerrainColor, Normal, Coordinate );
+
+            return TerrainColor;
+        }
+        
+        float3 ApplyDynamicMasksDiffuse( in float3 TerrainColor, in float3 Normal, in float2 Coordinate, inout float Snow )
+        {
+            TerrainColor = ApplySnowDiffuse( TerrainColor, Normal, Coordinate, Snow );
+
+            return TerrainColor;
+        }
+    void DitheredOpacity( in float Opacity, in float2 NoiseCoordinate )
+{
+	const float4x4 ThresholdMatrix =
+	{
+		1.0 / 17.0,  9.0 / 17.0,  3.0 / 17.0, 11.0 / 17.0,
+		13.0 / 17.0,  5.0 / 17.0, 15.0 / 17.0,  7.0 / 17.0,
+		4.0 / 17.0, 12.0 / 17.0,  2.0 / 17.0, 10.0 / 17.0,
+		16.0 / 17.0,  8.0 / 17.0, 14.0 / 17.0,  6.0 / 17.0
+	};
+	float Factor = ThresholdMatrix[NoiseCoordinate.x % 4][NoiseCoordinate.y % 4];
+	clip( Opacity - Factor * sign( Opacity ) );
+}
+
+#if defined( COA ) || defined( USER_COLOR )
+	static const int USER_DATA_PRIMARY_COLOR = 0;
+	static const int USER_DATA_SECONDARY_COLOR = 1;
+	static const int USER_DATA_ATLAS_SLOT = 2;
+#endif
+	float4 GetUserData( uint InstanceIndex, int DataOffset )
+	{
+		return Data[ InstanceIndex + PDXMESH_USER_DATA_OFFSET + DataOffset ];
+	}
+	
+	float GetOpacity( uint InstanceIndex )
+	{
+		#ifdef JOMINI_MAP_OBJECT
+			return UnpackAndGetMapObjectOpacity( InstanceIndex );
+		#else
+			return PdxMeshGetOpacity( InstanceIndex );
+		#endif
+	}
+	
+	float2 MirrorOutsideUV(float2 UV)
+	{
+		if ( UV.x < 0.0 ) UV.x = -UV.x;
+		else if ( UV.x > 1.0 ) UV.x = 2.0 - UV.x;
+		if ( UV.y < 0.0 ) UV.y = -UV.y;
+		else if ( UV.y > 1.0 ) UV.y = 2.0 - UV.y;
+		return UV;
+	}
+	
+	float3 ApplyLightingDecal( in float3 Color, in float2 UV )
+	{
+		float LightingDecalValue = PdxTex2D( LightingMap, UV ).a;
+		return clamp( Color * ( LightingDecalValue * 2 ), 0, 1 );
+	}
+
+	float3 ApplyBakedLighting( in float3 Color, in float2 UV )
+	{
+		float3 BakedLightingValue = PdxTex2D( LightingMap, UV ).rgb;
+		return Color * BakedLightingValue;
+	}
+
+
+
+// === Main Code === 
+
+void DebugReturn( inout float3 Out, SMaterialProperties MaterialProps, SLightingProperties LightingProps, PdxTextureSamplerCube EnvironmentMap, float3 SssColor, float SssMask )
+{
+	#if defined(PDX_DEBUG_SSS_MASK)
+	Out = SssMask;
+	#elif defined(PDX_DEBUG_SSS_COLOR)
+	Out = SssColor;
+	#else
+	DebugReturn( Out, MaterialProps, LightingProps, EnvironmentMap );
+	#endif
+}
+
+#if defined( ATLAS )
+	#ifndef DIFFUSE_UV_SET
+		#define DIFFUSE_UV_SET Input.UV1
+	#endif
+	
+	#ifndef NORMAL_UV_SET
+		#define NORMAL_UV_SET Input.UV1
+	#endif
+	
+	#ifndef PROPERTIES_UV_SET
+		#define PROPERTIES_UV_SET Input.UV1
+	#endif
+	
+	#ifndef UNIQUE_UV_SET
+		#define UNIQUE_UV_SET Input.UV0
+	#endif
+#else
+	#ifndef DIFFUSE_UV_SET
+		#define DIFFUSE_UV_SET Input.UV0
+	#endif
+	
+	#ifndef NORMAL_UV_SET
+		#define NORMAL_UV_SET Input.UV0
+	#endif
+	
+	#ifndef PROPERTIES_UV_SET
+		#define PROPERTIES_UV_SET Input.UV0
+	#endif
+#endif
+#if defined( COA )
+	#ifndef UNIQUE_UV_SET
+		#define UNIQUE_UV_SET Input.UV1
+	#endif
+#endif
+
+float4 main( VS_OUTPUT Input, bool PDX_IsFrontFace : SV_IsFrontFace ) : PDX_COLOR
+{
+	float4 Diffuse = PdxTex2D( DiffuseMap, DIFFUSE_UV_SET );
+	
+	#if defined( PDX_MESH_UV1 ) && defined( TILING_AO )
+		Diffuse.rgb *= PdxTex2D( DiffuseMap, Input.UV1 ).a;
+		Diffuse.a = 1.0f;
+	#endif
+	
+	Diffuse.a = PdxMeshApplyOpacity( Diffuse.a, Input.Position.xy, GetOpacity( Input.InstanceIndex ) );
+	
+	#ifdef SCREENDOOR_DITHER
+		DitheredOpacity(Diffuse.a, Input.Position.xy);
+	#endif
+	
+	float4 Properties = PdxTex2D( PropertiesMap, PROPERTIES_UV_SET );
+	#if defined( LOW_SPEC_SHADERS )
+		float3 Normal = Input.Normal;
+	#else
+		float3 NormalSample = UnpackRRxGNormal( PdxTex2D( NormalMap, NORMAL_UV_SET ) );
+	
+		float3x3 TBN = Create3x3( normalize( Input.Tangent ), normalize( Input.Bitangent ), normalize( Input.Normal ) );
+		float3 Normal = normalize( mul( NormalSample, TBN ) );
+	#endif
+
+	#if defined( DETAIL_TILING ) && !defined( LOW_SPEC_SHADERS )
+		float DetailRoughness = PdxTex2D( DetailMap, ( PROPERTIES_UV_SET * DETAIL_TILING.xy ) + DETAIL_TILING.zw ).b;
+		DetailRoughness -= 0.5;
+		#if defined( DETAIL_ROUGHNESS_STRENGTH )
+			Properties.a = lerp( Properties.a , DetailRoughness < 0.0 ? 0.0 : 1.0, abs( DetailRoughness * DETAIL_ROUGHNESS_STRENGTH ) );
+		#else
+			Properties.a = lerp( Properties.a , DetailRoughness < 0.0 ? 0.0 : 1.0, abs( DetailRoughness ) );
+		#endif
+
+		float3 DetailNormalSample = UnpackRRxGNormal( PdxTex2D( DetailMap, ( NORMAL_UV_SET * DETAIL_TILING.xy ) + DETAIL_TILING.zw ) );
+		float3 DetailNormal = normalize( mul( DetailNormalSample, TBN ) );
+		#if defined( DETAIL_NORMAL_STRENGTH )
+			Normal = normalize( Normal + ( DetailNormal * DETAIL_NORMAL_STRENGTH ) );
+		#else
+			Normal = normalize( Normal + DetailNormal );
+		#endif
+	#endif
+
+	float3 UserColor = float3( 1.0f, 1.0f, 1.0f );
+	
+	#if defined( USER_COLOR )
+		float3 UserColor1 = GetUserData( Input.InstanceIndex, USER_DATA_PRIMARY_COLOR ).rgb;
+		float3 UserColor2 = GetUserData( Input.InstanceIndex, USER_DATA_SECONDARY_COLOR ).rgb;
+		
+		UserColor = lerp( UserColor, UserColor1, Properties.r );
+		UserColor = lerp( UserColor, UserColor2, PdxTex2D( NormalMap, NORMAL_UV_SET ).b );
+	#endif
+	#if defined( COA ) && !defined( LOW_SPEC_SHADERS )
+		float4 CoAAtlasSlot = GetUserData( Input.InstanceIndex, USER_DATA_ATLAS_SLOT );
+		float2 FlagCoords = CoAAtlasSlot.xy + ( MirrorOutsideUV( Input.UV1 ) * CoAAtlasSlot.zw );
+		UserColor = lerp( UserColor, PdxTex2D( FlagTexture, FlagCoords ).rgb, Properties.r );
+	#endif
+	Diffuse.rgb *= UserColor;
+	
+	#if defined( ATLAS )
+		float4 Unique = PdxTex2D( UniqueMap, UNIQUE_UV_SET );
+		
+		// blend normals, commented out now since we never use NormalSample after this point
+		// float3 UniqueNormalSample = UnpackRRxGNormal( Unique );
+		// NormalSample = ReorientNormal( UniqueNormalSample, NormalSample );
+		
+		// multiply AO
+		Diffuse.rgb *= Unique.bbb;
+	#endif
+
+	float2 ColorMapCoords =  Input.WorldSpacePos.xz *  WorldSpaceToTerrain0To1;
+	#if defined( APPLY_WINTER )
+		Diffuse.rgb = ApplyDynamicMasksDiffuse( Diffuse.rgb, Normal, ColorMapCoords );
+	#endif
+	
+	SMaterialProperties MaterialProps = GetMaterialProperties( Diffuse.rgb, Normal, Properties.a, Properties.g, Properties.b );
+	#if defined( LOW_SPEC_SHADERS )
+		SLightingProperties LightingProps = GetSunLightingProperties( Input.WorldSpacePos, 1.0 );
+		float3 Color = CalculateSunLightingLowSpec( MaterialProps, LightingProps );
+	#else
+		SLightingProperties LightingProps = GetSunLightingProperties( Input.WorldSpacePos, ShadowTexture );
+		float3 Color = CalculateSunLighting( MaterialProps, LightingProps, EnvironmentMap );
+	#endif
+	
+	float3 SssColor = vec3(0.0f);
+	float SssMask = Properties.r;
+	#ifdef FAKE_SSS_EMISSIVE
+		float3 HSVColor = RGBtoHSV( Diffuse.rgb );
+		HSVColor.z = 1.0f;
+		SssColor = HSVtoRGB(HSVColor) * SssMask * 0.5f * MaterialProps._DiffuseColor;
+		Color += SssColor;
+	#endif
+
+	#if !defined( UNDERWATER ) && !defined( NO_FOG )
+		Color = ApplyFogOfWar( Color, Input.WorldSpacePos, FogOfWarAlpha );
+		Color = ApplyDistanceFog( Color, Input.WorldSpacePos );
+	#endif
+
+	#if defined( BAKED_LIGHTING )
+		Color = ApplyBakedLighting( Color, Input.UV0 );
+	#endif
+
+	#if defined( LIGHTING_DECAL )
+		Color = ApplyLightingDecal( Color, Input.UV0 );
+	#endif
+	
+	float Alpha = Diffuse.a;
+	#ifdef UNDERWATER
+		clip( _WaterHeight - Input.WorldSpacePos.y + 0.1 ); // +0.1 to avoid gap between water and mesh
+	
+		Alpha = CompressWorldSpace( Input.WorldSpacePos );
+	#endif
+	
+	DebugReturn( Color, MaterialProps, LightingProps, EnvironmentMap, SssColor, SssMask );
+	
+	return float4( Color, Alpha );
+}
+

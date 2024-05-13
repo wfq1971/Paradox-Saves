@@ -1,0 +1,1054 @@
+
+
+// === Shader Info === 
+
+// Shader file: gfx/FX/jomini/restorescene.shader
+// Effect: RestoreAlpha
+
+
+
+// === Defines === 
+
+#define PDX_DIRECTX_11
+#define PIXEL_SHADER
+#define PDX_HLSL
+#define VENDOR_NVIDIA
+#define LUMA_AS_ALPHA
+#define EXPOSURE_FIXED
+#define TONEMAP_UNCHARTED
+#define LUT_ENABLED
+#define ADDITIONAL_LENS_FLARE_ENABLED
+#define MULTI_SAMPLED
+#define ALPHA
+#define PDX_MAX_HEIGHTMAP_COMPRESS_LEVELS 5
+#define JOMINI_REFRACTION_ENABLED
+#define PDX_WINDOWS
+
+
+// === HLSL Macros === 
+
+#define PDX_POSITION SV_Position
+#define PDX_COLOR SV_Target
+#define PDX_COLOR0 SV_Target0
+#define PDX_COLOR0_SRC1 SV_Target1 // Use this when doing dual source blending, currently only supports that for render target #0
+#define PDX_COLOR1 SV_Target1
+#define PDX_COLOR2 SV_Target2
+#define PDX_COLOR3 SV_Target3
+#define PDX_COLOR4 SV_Target4
+#define PDX_COLOR5 SV_Target5
+#define PDX_COLOR6 SV_Target6
+#define PDX_COLOR7 SV_Target7
+#define PDX_VertexID SV_VertexID
+#define PDX_InstanceID SV_InstanceID
+#define PDX_DispatchThreadID SV_DispatchThreadID
+#define PDX_GroupThreadID SV_GroupThreadID
+#define PDX_GroupID SV_GroupID
+#define PDX_GroupIndex SV_GroupIndex
+#define PDX_TessFactor SV_TessFactor
+#define PDX_InsideTessFactor SV_InsideTessFactor
+#define PDX_OutputControlPointID SV_OutputControlPointID
+#define PDX_DomainLocation SV_DomainLocation
+#define PDX_RenderTargetArrayIndex SV_RenderTargetArrayIndex
+#define PDX_ViewportArrayIndex SV_ViewportArrayIndex
+
+#define PdxDomainTypeTriangle "tri"
+#define PdxDomainTypeQuad "quad"
+#define PdxDomainTypeIsoline "isoline"
+
+#define PdxPartitioningModeInteger "integer"
+#define PdxPartitioningModeFractionalEven "fractional_even"
+#define PdxPartitioningModeFractionalOdd "fractional_odd"
+
+#define PdxPrimitiveTypePoint point
+#define PdxPrimitiveTypeLine line
+#define PdxPrimitiveTypeTriangle triangle
+#define PdxPrimitiveTypeLineAdjacency lineadj
+#define PdxPrimitiveTypeTriangleAdjacency triangleadj
+
+#define PdxTessellatorOutputTopologyPoint "point"
+#define PdxTessellatorOutputTopologyLine "line"
+#define PdxTessellatorOutputTopologyTriangleCw "triangle_cw"
+#define PdxTessellatorOutputTopologyTriangleCcw "triangle_ccw"
+
+#define PdxMeshShaderOutputTopologyLine "line"
+#define PdxMeshShaderOutputTopologyTriangle "triangle"
+
+#define mod( X, Y ) ( (X) % (Y) )
+
+float2x2 Create2x2( in float2 x, in float2 y )
+{
+	return transpose( float2x2( x, y ) );
+}
+// TODO, Create3x3 should be transposed in hlsl, and not in glsl, and then the mul() arguments should be reversed
+#define Create3x3 float3x3
+float4x4 Create4x4( in float4 x, in float4 y, in float4 z, in float4 w )
+{
+	return transpose( float4x4( x, y, z, w ) );
+}
+
+#define GetMatrixData( Matrix, row, col ) ( Matrix [ row ] [ col ] )
+
+float3x3 CastTo3x3( in float4x4 M )
+{
+	return (float3x3)M;
+}
+
+#define lessThan( a, b ) ( (a) < (b) )
+
+float2 vec2(float vValue) { return float2(vValue, vValue); }
+float3 vec3(float vValue) { return float3(vValue, vValue, vValue); }
+float4 vec4(float vValue) { return float4(vValue, vValue, vValue, vValue); }
+
+
+struct PdxTextureSampler2D
+{
+    Texture2D 		_Texture;
+    SamplerState 	_Sampler;
+};
+struct PdxTextureSampler2DMS
+{
+    Texture2DMS<float4>		_Texture;
+};
+
+struct PdxTextureSampler2DArray
+{
+    Texture2DArray	_Texture;
+    SamplerState 	_Sampler;
+};
+
+struct PdxTextureSampler3D
+{
+    Texture3D 		_Texture;
+    SamplerState 	_Sampler;
+};
+
+struct PdxTextureSamplerCube
+{
+    TextureCube 	_Texture;
+    SamplerState 	_Sampler;
+};
+
+struct PdxTextureSampler2DCmp
+{
+    Texture2D 				_Texture;
+    SamplerComparisonState 	_Sampler;
+};
+
+// These are for separate Texture/Sampler objects
+#define PdxSampleTex2D(tex,samp,uv) (tex).Sample( (samp), (uv) )
+#define PdxSampleTex2DLod(tex,samp,uv,lod) (tex).SampleLevel( (samp), (uv), (lod) )
+#define PdxSampleTex2DGrad(tex,samp,uv,ddx,ddy) (tex).SampleGrad( (samp), (uv), (ddx), (ddy) )
+#define PdxSampleTex2DGather(tex,samp,uv) (tex).Gather( (samp), (uv) )
+
+#define PdxSampleTex3D(tex,samp,uv) (tex).Sample( (samp), (uv) )
+#define PdxSampleTex3DLod(tex,samp,uv,lod) (tex).SampleLevel( (samp), (uv), (lod) )
+
+#define PdxTexture2DSize(tex,size) (tex).GetDimensions( (size).x, (size).y )
+#define PdxTexture2DLoad(tex,uv,lod) (tex).Load( int3((uv), (lod)) )
+
+#define PdxTexture2DArraySize(tex,size,elements) (tex).GetDimensions( (size).x, (size).y, elements )
+
+#define PdxTexture3DSize(tex,size) (tex).GetDimensions( (size).x, (size).y, (size).z )
+#define PdxTexture3DLoad(tex,uv,lod) (tex).Load( int4((uv), (lod)) )
+
+// These are for the combined TextureSampler objects
+#define PdxTex2DSize(samp,size) PdxTexture2DSize( (samp)._Texture, (size) )
+#define PdxTex2D(samp,uv) PdxSampleTex2D( (samp)._Texture, (samp)._Sampler, (uv) )
+#define PdxTex2DLod(samp,uv,lod) PdxSampleTex2DLod( (samp)._Texture, (samp)._Sampler, (uv), (lod) )
+#define PdxTex2DLodOffset(samp,uv,lod,offset) (samp)._Texture.SampleLevel( (samp)._Sampler, (uv), (lod), (offset) )
+#define PdxTex2DBias(samp,uv,bias) (samp)._Texture.SampleBias( (samp)._Sampler, (uv), (bias) )
+#define PdxTex2DGrad(samp,uv,ddx,ddy) PdxSampleTex2DGrad( (samp)._Texture, (samp)._Sampler, (uv), (ddx), (ddy) )
+#define PdxTex2DGather(samp,uv) PdxSampleTex2DGather( (samp)._Texture, (samp)._Sampler, (uv) )
+#define PdxTex2DLoad(samp,uv,lod) PdxTexture2DLoad( (samp)._Texture, (uv), (lod) )
+#define PdxTex2DMultiSampled(samp,texelcoord,sampleidx) (samp)._Texture.Load( (texelcoord), (sampleidx) )
+#define PdxTex2DMSSize(samp,size,samples) (samp)._Texture.GetDimensions( (size).x, (size).y, (samples) )
+
+#define PdxTex3D(samp,uv) PdxSampleTex3D( (samp)._Texture, (samp)._Sampler, (uv) )
+#define PdxTex3DLod(samp,uv,lod) PdxSampleTex3DLod( (samp)._Texture, (samp)._Sampler, (uv), (lod) )
+#define PdxTex3DLoad(samp,uv,lod) PdxTexture3DLoad( (samp)._Texture, (uv), (lod) )
+
+#define PdxTexCube(samp,uv) (samp)._Texture.Sample( (samp)._Sampler, (uv) )
+#define PdxTexCubeLod(samp,uv,lod) (samp)._Texture.SampleLevel( (samp)._Sampler, (uv), (lod) )
+#define PdxTexCubeBias(samp,uv,bias) (samp)._Texture.SampleBias( (samp)._Sampler, (uv), (bias) )
+
+#define PdxTex2DCmpLod0(samp,uv,value) (samp)._Texture.SampleCmpLevelZero( (samp)._Sampler, (uv), (value) )
+
+// Vulkan fails to compile shaders with this function call properly
+// Commenting it out until we can fix this issue
+//#define PdxCalculateLod(samp,uv) (samp)._Texture.CalculateLevelOfDetail( (samp)._Sampler, (uv) )
+
+float4x4 FixProjection( float4x4 ProjectionMatrix )
+{
+	// Enable for "debug" drawing to see if some objects is missing fix
+	#if 0
+	for ( int i = 0; i < 4; ++i )
+	{
+		GetMatrixData( ProjectionMatrix, 0, i ) *= 0.5;
+		GetMatrixData( ProjectionMatrix, 1, i ) *= 0.5;
+	}
+	#endif
+	
+	return ProjectionMatrix;
+}
+
+#define PdxBufferFloat  Buffer<float>
+#define PdxBufferFloat2	Buffer<float2>
+#define PdxBufferFloat3	Buffer<float3>
+#define PdxBufferFloat4	Buffer<float4>
+#define PdxBufferInt  	Buffer<int>
+#define PdxBufferInt2	Buffer<int2>
+#define PdxBufferInt3	Buffer<int3>
+#define PdxBufferInt4	Buffer<int4>
+#define PdxBufferUint   Buffer<uint>
+#define PdxBufferUint2	Buffer<uint2>
+#define PdxBufferUint3	Buffer<uint3>
+#define PdxBufferUint4	Buffer<uint4>
+
+#define PdxStructuredBuffer StructuredBuffer
+#define PdxRWStructuredBuffer RWStructuredBuffer
+#define PdxRasterizerOrderedBuffer RasterizerOrderedBuffer
+#define PdxRasterizerOrderedStructuredBuffer RasterizerOrderedStructuredBuffer
+
+float 	PdxReadBuffer( in PdxBufferFloat Buf, int Index )  		{ return Buf.Load( Index ); }
+float2	PdxReadBuffer2( in PdxBufferFloat2 Buf, int Index )		{ return Buf.Load( Index ); }
+float3	PdxReadBuffer3( in PdxBufferFloat3 Buf, int Index )		{ return Buf.Load( Index ); }
+float4	PdxReadBuffer4( in PdxBufferFloat4 Buf, int Index )		{ return Buf.Load( Index ); }
+
+int  	PdxReadBuffer( in PdxBufferInt Buf, int Index ) 		{ return Buf.Load( Index ); }
+int2 	PdxReadBuffer2( in PdxBufferInt2 Buf, int Index )		{ return Buf.Load( Index ); }
+int3 	PdxReadBuffer3( in PdxBufferInt3 Buf, int Index )    	{ return Buf.Load( Index ); }
+int4 	PdxReadBuffer4( in PdxBufferInt4 Buf, int Index )    	{ return Buf.Load( Index ); }
+
+uint  	PdxReadBuffer( in PdxBufferUint Buf, int Index )    	{ return Buf.Load( Index ); }
+uint2 	PdxReadBuffer2( in PdxBufferUint2 Buf, int Index )  	{ return Buf.Load( Index ); }
+uint3 	PdxReadBuffer3( in PdxBufferUint3 Buf, int Index )  	{ return Buf.Load( Index ); }
+uint4 	PdxReadBuffer4( in PdxBufferUint4 Buf, int Index )  	{ return Buf.Load( Index ); }
+
+#define PdxReadRWBuffer(buffer,index) (buffer)[(index)]
+#define PdxWriteRWBuffer(buffer,index,value) (buffer)[(index)] = (value)
+
+#define UINT16_MAX 0xffff
+#define PI 3.14159265359
+
+float2x2 Create2x2( float a, float b, float c, float d ) { return Create2x2( float2( a, b ), float2( c, d ) ); }
+
+#define PdxSampleTex2DLod0(tex,samp,uv) PdxSampleTex2DLod( (tex), (samp), (uv), 0 )
+
+#define PdxTexture2DLoad0(tex,uv) PdxTexture2DLoad( (tex), (uv), 0 )
+
+#define PdxTex2DProj(samp,uv_proj) PdxTex2DLod0( (samp), (uv_proj).xy / (uv_proj).w )
+#define PdxTex2DLod0(samp,uv) PdxTex2DLod( (samp), (uv), 0 )
+#define PdxTex2DLod0Offset(samp,uv,offset) PdxTex2DLodOffset( (samp), (uv), 0, (offset) )
+#define PdxTex2DLoad0(samp,uv) PdxTex2DLoad( (samp), (uv), 0 )
+
+#define PdxTex3DLod0(samp,uv) PdxTex3DLod( (samp), (uv), 0 )
+#define PdxTex3DLoad0(samp,uv) PdxTex3DLoad( (samp), (uv), 0 )
+
+float4 FixProjectionAndMul( float4x4 ProjectionMatrix, float4 Vector )
+{
+	return mul( FixProjection( ProjectionMatrix ), Vector );
+}
+
+
+
+// === Vertex Structs === 
+
+struct VS_OUTPUT_FULLSCREEN
+{
+	float4 position : PDX_POSITION;
+	float2 uv : TEXCOORD0;
+};
+
+
+// === Constant Buffers === 
+
+cbuffer pdx_hlsl_cb53
+{
+	float4x4 ViewProjectionMatrix;
+	float4x4 InvViewProjectionMatrix;
+	float4x4 ViewMatrix;
+	float4x4 InvViewMatrix;
+	float4x4 ProjectionMatrix;
+	float4x4 InvProjectionMatrix;
+	float4x4 ShadowMapTextureMatrix;
+	float3 CameraPosition;
+	float ZNear;
+	float3 CameraLookAtDir;
+	float ZFar;
+	float3 CameraUpDir;
+	float CameraFoV;
+	float3 CameraRightDir;
+	float _UpscaleLodBias;
+	float _UpscaleLodBiasNative;
+	float _UpscaleLodBiasMultiplier;
+	float _UpscaleLodBiasMultiplierNative;
+	float _UpscaleLodBiasEnabled;
+}
+cbuffer pdx_hlsl_cb37
+{
+	float2 InvDownSampleSize;
+	float2 ScreenResolution;
+	float2 InvScreenResolution;
+	float LumWhite2;
+	float FixedExposureValue;
+	float3 HSV;
+	float BrightThreshold;
+	float3 ColorBalance;
+	float EmissiveBloomStrength;
+	float3 LevelsMin;
+	float MiddleGrey;
+	float3 LevelsMax;
+	float TonemapShoulderStrength;
+	float TonemapLinearStrength;
+	float TonemapLinearAngle;
+	float TonemapToeStrength;
+	float TonemapToeNumerator;
+	float TonemapToeDenominator;
+	float TonemapLinearWhite;
+}
+cbuffer pdx_hlsl_cb20
+{
+	int _SampleCount;
+	float _BaseRadius;
+	float _BlurBlendMin;
+	float _BlurBlendMax;
+	float _BlurMin;
+	float _BlurMax;
+	float _BlurScale;
+	float _BlurExponent;
+	float _HeightMin;
+	float _HeightMax;
+	float2 _DownSampledResolution;
+	float2 _InvDownSampledResolution;
+	float _FocusDepth;
+}
+
+
+// === Samplers === 
+
+SamplerState _sampler_0_ : register(s0);
+SamplerState _sampler_1_ : register(s1);
+SamplerState _sampler_2_ : register(s2);
+SamplerState _sampler_3_ : register(s3);
+
+
+// === Textures === 
+
+Texture2D DepthBuffer_Texture;
+static PdxTextureSampler2D DepthBuffer = { DepthBuffer_Texture, _sampler_0_ };
+Texture2DMS<float4> DepthBufferMultiSampled_Texture;
+static PdxTextureSampler2DMS DepthBufferMultiSampled = { DepthBufferMultiSampled_Texture };
+Texture2D MainScene_Texture;
+static PdxTextureSampler2D MainScene = { MainScene_Texture, _sampler_0_ };
+Texture2D RestoreBloom_Texture;
+static PdxTextureSampler2D RestoreBloom = { RestoreBloom_Texture, _sampler_1_ };
+Texture2D ColorCube_Texture;
+static PdxTextureSampler2D ColorCube = { ColorCube_Texture, _sampler_2_ };
+Texture2D AverageLuminanceTexture_Texture;
+static PdxTextureSampler2D AverageLuminanceTexture = { AverageLuminanceTexture_Texture, _sampler_0_ };
+Texture2D DepthOfFieldTexture_Texture;
+static PdxTextureSampler2D DepthOfFieldTexture = { DepthOfFieldTexture_Texture, _sampler_3_ };
+Texture2D DepthOfFieldCocTexture_Texture;
+static PdxTextureSampler2D DepthOfFieldCocTexture = { DepthOfFieldCocTexture_Texture, _sampler_0_ };
+Texture2D LensFlareTexture_Texture;
+static PdxTextureSampler2D LensFlareTexture = { LensFlareTexture_Texture, _sampler_0_ };
+Texture2D LensDirtTexture_Texture;
+static PdxTextureSampler2D LensDirtTexture = { LensDirtTexture_Texture, _sampler_0_ };
+Texture2D AdditionalLensFlareTexture_Texture;
+static PdxTextureSampler2D AdditionalLensFlareTexture = { AdditionalLensFlareTexture_Texture, _sampler_0_ };
+
+
+// === RW Textures === 
+
+
+
+// === Buffer Textures === 
+
+
+
+// === RW Buffer Textures === 
+
+
+
+// === Shader Code === 
+
+// Gamma correction utility
+float ToGamma(float aLinear)
+{
+	return pow(aLinear, 1.0/2.2);
+}
+float3 ToGamma(float3 aLinear)
+{
+	return pow(aLinear, vec3(1.0/2.2));
+}
+float ToLinear(float aGamma)
+{
+	return pow(aGamma, 2.2);
+}
+float3 ToLinear(float3 aGamma)
+{
+	return pow(aGamma, vec3(2.2));
+}
+float4 ToLinear(float4 aGamma)
+{
+	return float4(pow(aGamma.rgb, vec3(2.2)), aGamma.a);
+}
+
+// Color value conversions
+float3 RGBtoHSV( float3 RGB )
+{
+	float4 K = float4(0.0, -1.0 / 3.0, 2.0 / 3.0, -1.0);
+	float4 p = RGB.g < RGB.b ? float4(RGB.bg, K.wz) : float4(RGB.gb, K.xy);
+	float4 q = RGB.r < p.x ? float4(p.xyw, RGB.r) : float4(RGB.r, p.yzx);
+
+	float d = q.x - min(q.w, q.y);
+	float e = 1.0e-10;
+	return float3( abs(q.z + (q.w - q.y) / (6.0 * d + e)), d / (q.x + e), q.x );
+}
+float3 HSVtoRGB( float3 HSV )
+{
+	float4 K = float4(1.0, 2.0 / 3.0, 1.0 / 3.0, 3.0);
+	float3 p = abs( frac(HSV.xxx + K.xyz) * 6.0 - K.www );
+	return HSV.z * lerp( K.xxx, clamp(p - K.xxx, 0.0, 1.0), HSV.y );
+}
+float3 HSVtoRGB( float H, float S, float V )
+{
+	return HSVtoRGB( float3( H, S, V ) );
+}
+float4 RGBtoHSV( float4 RGBa )
+{
+	return float4( RGBtoHSV( RGBa.rgb ), RGBa.a );
+}
+float4 HSVtoRGB( float4 HSVa )
+{
+	return float4( HSVtoRGB( HSVa.xyz ), HSVa.a );
+}
+float4 HSVtoRGB( float H, float S, float V, float a )
+{
+	return HSVtoRGB( float4( H, S, V, a ) );
+}
+
+// Below are multiple blend mode utilities (See: https://en.wikipedia.org/wiki/Blend_modes)
+// Most of these uses a typical implementation unless stated otherwise
+
+// Multiply blend mode
+float3 Multiply( float3 Base, float3 Blend, float Opacity )
+{
+	return Base * Blend * Opacity + Base * ( 1.0 - Opacity );
+}
+
+// Overlay blend mode
+float Overlay( float Base, float Blend )
+{
+	return (Base < 0.5) ? (2.0 * Base * Blend) : (1.0 - 2.0 * (1.0 - Base) * (1.0 - Blend));
+}
+float3 Overlay( float3 Base, float3 Blend )
+{
+	return float3( Overlay(Base.r, Blend.r), Overlay(Base.g, Blend.g), Overlay(Base.b, Blend.b) );
+}
+float Overlay( float Base, float Blend, float Opacity )
+{
+	return Overlay( Base, Blend ) * Opacity + Base * (1.0 - Opacity );
+}
+float3 Overlay( float3 Base, float3 Blend, float Opacity )
+{
+	return Overlay( Base, Blend ) * Opacity + Base * (1.0 - Opacity );
+}
+float3 GetOverlay( float3 Color, float3 OverlayColor, float OverlayPercent )
+{
+	// Flip OverlayColor/BaseColor since that was how it was before
+	return lerp( Color, Overlay( OverlayColor, Color ), OverlayPercent );
+}
+float GetOverlay( float Color, float OverlayColor, float OverlayPercent )
+{
+	// Flip OverlayColor/BaseColor since that was how it was before
+	return lerp( Color, Overlay( OverlayColor, Color ), OverlayPercent );
+}
+
+// Color dodge blend mode (Dodge and burn)
+float ColorDodge( float Base, float Blend )
+{
+	return (Blend == 1.0) ? Blend : min( Base / (1.0 - Blend), 1.0 );
+}
+float3 ColorDodge( float3 Base, float3 Blend )
+{
+	return float3( ColorDodge(Base.r, Blend.r), ColorDodge(Base.g, Blend.g), ColorDodge(Base.b, Blend.b) );
+}
+float3 ColorDodge( float3 Base, float3 Blend, float Opacity )
+{
+	return ColorDodge( Base, Blend ) * Opacity + Base * ( 1.0 - Opacity );
+}
+
+// Pegtop's SoftLight blend formula
+float SoftLight( float Base, float Blend )
+{
+	return ( 1 - 2 * Blend ) * Base * Base + 2 * Base * Blend;
+}
+float3 SoftLight( float3 Base, float3 Blend )
+{
+	return float3( SoftLight( Base.r, Blend.r ), SoftLight( Base.g, Blend.g ), SoftLight( Base.b, Blend.b ) );
+}
+float SoftLight( float Base, float Blend, float Opacity )
+{
+	return lerp( Base, SoftLight( Base, Blend ), Opacity );
+}
+float3 SoftLight( float3 Base, float3 Blend, float Opacity )
+{
+	return lerp( Base, SoftLight( Base, Blend ), Opacity );
+}
+
+// Hardlight blend mode
+float HardLight(float Base, float Blend)
+{
+	return Blend >= 0.5 ? 1.0 - 2 * ( 1.0 - Blend ) * ( 1.0 - Base ) : 2.0 * Base * Blend;
+}
+float3 HardLight( float3 Base, float3 Blend )
+{
+	return float3( HardLight( Base.r, Blend.r ), HardLight( Base.g, Blend.g ), HardLight( Base.b, Blend.b ) );
+}
+float HardLight( float Base, float Blend, float Opacity )
+{
+	return lerp( Base, HardLight( Base, Blend ), Opacity );
+}
+float3 HardLight( float3 Base, float3 Blend, float Opacity )
+{
+	return lerp( Base, HardLight( Base, Blend ), Opacity );
+}
+
+// Simple arithmetic blend modes (See: https://en.wikipedia.org/wiki/Blend_modes#Simple_arithmetic_blend_modes)
+// Lighten only blend mode
+float3 Add( float3 Base, float3 Blend, float Opacity )
+{
+	return ( Base + Blend ) * Opacity + Base * ( 1.0 - Opacity );
+}
+float Lighten( float Base, float Blend )
+{
+	return max( Base, Blend );
+}
+float3 Lighten( float3 Base, float3 Blend )
+{
+	return float3( Lighten(Base.r, Blend.r), Lighten(Base.g, Blend.g), Lighten(Base.b, Blend.b) );
+}
+float3 Lighten( float3 Base, float3 Blend, float Opacity )
+{
+	return Lighten( Base, Blend ) * Opacity + Base * ( 1.0 - Opacity );
+}
+
+// Darken only blend mode
+float Darken( float Base, float Blend )
+{
+	return min( Base, Blend );
+}
+float3 Darken( float3 Base, float3 Blend )
+{
+	return float3( Darken(Base.r, Blend.r), Darken(Base.g, Blend.g), Darken(Base.b, Blend.b) );
+}
+float3 Darken( float3 Base, float3 Blend, float Opacity )
+{
+	return Darken( Base, Blend ) * Opacity + Base * ( 1.0 - Opacity );
+}
+
+float3 Levels( float3 vInColor, float3 vMinInput, float3 vMaxInput )
+{
+	float3 vRet = saturate( vInColor - vMinInput );
+	vRet /= vMaxInput - vMinInput;
+	return saturate( vRet );
+}
+float Levels( float vInValue, float vMinValue, float vMaxValue )
+{
+	return saturate( ( vInValue - vMinValue ) / ( vMaxValue - vMinValue ) );
+}
+
+// Intuitive way to dynamically grow and shrink masks, similar to Histogram Scan in Substance Designer.
+// vInValue is typically a mask texture, vPosition is the value to be remapped to 0.5, vRange is the softness of that remap.
+float LevelsScan( float vInValue, float vPosition, float vRange )
+{
+	return Levels( vInValue, vPosition - ( vRange / 2 ), vPosition + ( vRange / 2 ) );
+}
+
+float3 UnpackNormal( float4 NormalMapSample )
+{
+	float3 vNormalSample = NormalMapSample.rgb - 0.5;
+	vNormalSample.g = -vNormalSample.g;
+	return vNormalSample;
+}
+
+float3 UnpackNormal( in PdxTextureSampler2D NormalTex, float2 uv )
+{
+	return UnpackNormal( PdxTex2D( NormalTex, uv ) );
+}
+
+float3 UnpackRRxGNormal( float4 NormalMapSample )
+{
+	float x = NormalMapSample.g * 2.0 - 1.0;
+	float y = NormalMapSample.a * 2.0 - 1.0;
+	y = -y;
+	float z = sqrt( saturate( 1.0 - x * x - y * y ) );
+	return float3( x, y, z );
+}
+
+float3 UnpackRRxGNormal( in PdxTextureSampler2D NormalTex, float2 uv )
+{
+	return UnpackRRxGNormal( PdxTex2D( NormalTex, uv ) );
+}
+
+float3 ReorientNormal( float3 BaseNormal, float3 DetailNormal )
+{
+	float3 t = BaseNormal + float3( 0.0, 0.0, 1.0 );
+	float3 u = DetailNormal * float3( -1.0, -1.0, 1.0 );
+	float3 Normal = normalize( t * dot( t, u ) - u * t.z );
+	return Normal;
+}
+
+float Fresnel( float NdotL, float FresnelBias, float FresnelPow )
+{
+	return saturate( FresnelBias + (1.0 - FresnelBias) * pow( 1.0 - NdotL, FresnelPow ) );
+}
+
+static const uint BITS_IN_BYTE = 8;
+static const uint UINT_8_MAX = 255;
+static const uint UINT_16_MAX = 65535;
+
+float Unpack16BitUnorm( in uint Value )
+{
+	return float( Value ) / UINT_16_MAX;
+}
+
+bool UnpackBitAt( in uint Byte, in uint BitIndex )
+{
+	return ( ( 1 << BitIndex ) & Byte ) != 0;
+}
+
+// Unpack the lower 16 bits into the high and low order byte vector
+uint2 Unpack16BitToBytes( in uint Value )
+{
+	return uint2( Value & UINT_8_MAX, ( Value >> 8 ) & UINT_8_MAX );
+}
+
+uint4 Unpack32BitToBytes( in uint Value )
+{
+	return uint4(
+		Value & UINT_8_MAX,
+		( Value >> 8 ) & UINT_8_MAX,
+		( Value >> 16 ) & UINT_8_MAX,
+		( Value >> 24 ) & UINT_8_MAX
+	);
+}
+
+#define REMAP_IMPL NewMin + ( NewMax - NewMin ) * ( (Value - OldMin) / (OldMax - OldMin) )
+float Remap( float Value, float OldMin, float OldMax, float NewMin, float NewMax ) { return REMAP_IMPL; }
+float2 Remap( float2 Value, float2 OldMin, float2 OldMax, float2 NewMin, float2 NewMax ) { return REMAP_IMPL; }
+float3 Remap( float3 Value, float3 OldMin, float3 OldMax, float3 NewMin, float3 NewMax ) { return REMAP_IMPL; }
+#undef REMAP_IMPL
+#define REMAP_IMPL NewMin + ( NewMax - NewMin ) * saturate( (Value - OldMin) / (OldMax - OldMin) )
+float RemapClamped( float Value, float OldMin, float OldMax, float NewMin, float NewMax ) { return REMAP_IMPL; }
+float2 RemapClamped( float2 Value, float2 OldMin, float2 OldMax, float2 NewMin, float2 NewMax ) { return REMAP_IMPL; }
+float3 RemapClamped( float3 Value, float3 OldMin, float3 OldMax, float3 NewMin, float3 NewMax ) { return REMAP_IMPL; }
+#undef REMAP_IMPL
+float CalcViewSpaceDepth( float Depth )
+{
+	Depth = 2.0 * Depth - 1.0;
+	float ZLinear = 2.0 * ZNear * ZFar / (ZFar + ZNear - Depth * (ZFar - ZNear));
+	return ZLinear;
+}
+
+float3 ViewSpacePosFromDepth( float Depth, float2 UV )
+{
+	float x = UV.x * 2.0 - 1.0;
+	float y = (1.0 - UV.y) * 2.0 - 1.0;
+	
+	float4 ProjectedPos = float4( x, y, Depth, 1.0 );
+	
+	float4 ViewSpacePos = mul( InvProjectionMatrix, ProjectedPos );
+	
+	return ViewSpacePos.xyz / ViewSpacePos.w;
+}
+
+float3 WorldSpacePositionFromDepth( float Depth, float2 UV )
+{
+	float3 WorldSpacePos = mul( InvViewMatrix, float4( ViewSpacePosFromDepth( Depth, UV ), 1.0 ) ).xyz;		
+	return WorldSpacePos;  
+}
+
+float SampleDepthBuffer( float2 UV, float2 Resolution )
+{
+#ifdef MULTI_SAMPLED
+	int2 PixelIndex = int2( UV * Resolution );
+	float Depth = PdxTex2DMultiSampled( DepthBufferMultiSampled, PixelIndex, 0 ).r;
+#else
+	float Depth = PdxTex2DLod0( DepthBuffer, UV ).r;
+#endif
+	return Depth;
+}
+float GetViewSpaceDepth( float2 UV, float2 Resolution )
+{
+	float Depth = SampleDepthBuffer( UV, Resolution );
+	return CalcViewSpaceDepth( Depth );
+}
+
+// Exposure 
+static const float3 LUMINANCE_VECTOR = float3( 0.2125, 0.7154, 0.0721 );
+static const float CubeSize = 32.0;
+float3 Exposure(float3 inColor)
+{
+#ifdef EXPOSURE_ADJUSTED
+	float AverageLuminance = PdxTex2DLod0(AverageLuminanceTexture, vec2(0.5)).r;
+	return inColor * (MiddleGrey / AverageLuminance);
+#endif
+
+#ifdef EXPOSURE_AUTO_KEY_ADJUSTED
+	float AverageLuminance = PdxTex2DLod0(AverageLuminanceTexture, vec2(0.5)).r;
+	float AutoKey = 1.13 - (2.0 / (2.0 + log10(AverageLuminance + 1.0)));
+	return inColor * (AutoKey / AverageLuminance);
+#endif
+
+#ifdef EXPOSURE_FIXED
+	return inColor * FixedExposureValue;
+#endif
+
+	return inColor;
+}
+
+
+// Tonemapping
+
+// Uncharted 2 - John Hable 2010
+float3 HableFunction(float3 color)
+{
+	float a = TonemapShoulderStrength;
+	float b = TonemapLinearStrength;
+	float c = TonemapLinearAngle;
+	float d = TonemapToeStrength;
+	float e = TonemapToeNumerator;
+	float f = TonemapToeDenominator;
+	
+	return color =  ( ( color * ( a * color + c * b ) + d * e ) / ( color * ( a * color + b ) + d * f ) ) - e / f;
+}
+float3 ToneMapUncharted2(float3 color)
+{
+	float ExposureBias = 2.0;
+	float3 curr = HableFunction( ExposureBias * color );
+
+	float W = TonemapLinearWhite;
+	float3 whiteScale = 1.0 / HableFunction( vec3 ( W ) );
+	return saturate( curr * whiteScale );
+}
+
+// Filmic - John Hable
+float3 ToneMapFilmic_Hable(float3 color)
+{
+	color = max( vec3( 0 ), color - 0.004f );
+	color = saturate( ( color * (6.2 * color + 0.5) ) / ( color * (6.2 * color + 1.7 ) + 0.06 ) );
+	return color;
+}
+
+// Aces filmic - Krzysztof Narkowicz
+float3 ToneMapAcesFilmic_Narkowicz(float3 color)
+{
+	float a = 2.51f;
+	float b = 0.03f;
+	float c = 2.43f;
+	float d = 0.89f;
+	float e = 0.14f;
+
+	color = saturate( ( color * ( a * color + b ) ) / ( color * ( c * color + d ) + e ) );
+	return color;
+}
+
+
+// Aces filmic - Stephen Hill
+float3x3 SHInputMat()
+{
+	return Create3x3(
+		float3( 0.59719, 0.35458, 0.04823 ),
+		float3( 0.07600, 0.90834, 0.01566 ),
+		float3( 0.02840, 0.13383, 0.83777 ) );
+}
+float3x3 SHOutputMat()
+{
+	return Create3x3(
+		float3( 1.60475, -0.53108, -0.07367 ),
+		float3( -0.10208,  1.10813, -0.00605 ),
+		float3( -0.00327, -0.07276,  1.07602 ) );
+}
+float3 RRTAndODTFit( float3 v )
+{
+	float3 a = v * ( v + 0.0245786f ) - 0.000090537f;
+	float3 b = v * ( 0.983729f * v + 0.4329510f ) + 0.238081f;
+	return a / b;
+}
+float3 ToneMapAcesFilmic_Hill( float3 color )
+{
+	float ExposureBias = 1.8;
+	color = color * ExposureBias;
+
+	color = mul( SHInputMat(), color);
+	color = RRTAndODTFit( color );
+	color = mul( SHOutputMat(), color);
+
+	return saturate( color );
+}
+
+
+float3 ToneMap(float3 inColor)
+{
+#ifdef TONEMAP_REINHARD
+	float3 retColor = inColor / (1.0 + inColor);
+	return ToGamma( saturate( retColor ) );
+#endif
+
+#ifdef TONEMAP_REINHARD_MODIFIED
+	float Luminance = dot( inColor, LUMINANCE_VECTOR );
+	float LDRLuminance = ( Luminance * (1.0 + ( Luminance / LumWhite2 ) ) ) / ( 1.0 + Luminance );
+	float vScale = LDRLuminance / Luminance;
+	return ToGamma( saturate( inColor * vScale ) );
+#endif
+
+#ifdef TONEMAP_FILMIC_HABLE
+	return ToneMapFilmic_Hable( inColor );
+#endif
+
+#ifdef TONEMAP_FILMICACES_NARKOWICZ
+	return ToGamma( ToneMapAcesFilmic_Narkowicz( inColor ) );
+#endif
+
+#ifdef TONEMAP_FILMICACES_HILL
+	return ToGamma( ToneMapAcesFilmic_Hill( inColor ) );
+#endif
+
+#ifdef TONEMAP_UNCHARTED
+	return ToGamma( ToneMapUncharted2( inColor ) );
+#endif
+
+	return ToGamma( inColor );
+}
+
+
+// Implements https://blog.tuxedolabs.com/2018/05/04/bokeh-depth-of-field-in-single-pass.html
+// Simulates a camera with depth of field to blur unfocused areas of an image
+
+static const float GOLDEN_ANGLE = 2.39996323; 
+
+// Caluclate pixel Coc
+// FocusDepth is the depth-distance to keep in focus (usually middle of what the camera sees). 
+// BlurScale can be used to modify the size of the blurred area.
+float GetCoc( float Depth, float FocusDepth, float BlurScale )
+{
+	float Coc = clamp( ( 1.0f / FocusDepth - 1.0f / Depth ) * BlurScale, -1.0f, 1.0f );
+	return abs( Coc ) * _SampleCount;
+}
+
+// Calculate average Coc
+float GetAverageCoc( float2 UV, float2 PixelSize, float2 ScreenRes, float FocusDepth, float BlurScale )
+{
+	float CenterDepth = GetViewSpaceDepth( UV, ScreenRes );
+	float CenterSize = GetCoc( CenterDepth, FocusDepth, BlurScale );
+	float CocAverage = CenterSize;
+
+	float Total = 1.0f;
+	float Radius = _BaseRadius;
+	float Angle = 0.0f;
+	for ( int Sample = 0; Sample < _SampleCount; Sample++ )
+	{
+		float2 SampleUV = UV + float2( cos( Angle ), sin( Angle ) ) * PixelSize * Radius;
+		float SampleDepth = GetViewSpaceDepth( SampleUV, ScreenRes );
+		float SampleCoc = GetCoc( SampleDepth, FocusDepth, BlurScale );
+
+		if ( SampleDepth > CenterDepth )
+		{
+			SampleCoc = clamp( SampleCoc, 0.0f, CenterSize * 2.0f );
+		}
+
+		float Contribution = smoothstep( Radius - 0.5f, Radius + 0.5f, SampleCoc );
+		CocAverage += lerp( CocAverage / Total, SampleCoc, Contribution );
+		Total += 1.0f;   
+		Radius += _BaseRadius / Radius;
+		Angle += GOLDEN_ANGLE;
+	}
+			
+	return CocAverage /= Total;
+}
+
+// Dof - Full calculation
+// Can be used without additional renderpasses
+float3 DepthOfField( float2 UV, float2 PixelSize, float2 ScreenRes, float FocusDepth, float BlurScale, PdxTextureSampler2D MainScene )
+{
+	float CenterDepth = GetViewSpaceDepth( UV, ScreenRes );
+	float CenterCoc = GetCoc( CenterDepth, FocusDepth, BlurScale );
+	float3 Color = PdxTex2DLod0( MainScene, UV ).rgb;
+
+	float Total = 1.0f;
+	float Radius = _BaseRadius;
+	float Angle = 0.0f;
+	for ( int Sample = 0; Sample < _SampleCount; Sample++ )
+	{
+		float2 SampleUV = UV + float2( cos( Angle ), sin( Angle ) ) * PixelSize * Radius;
+		float3 SampleColor = PdxTex2DLod0( MainScene, SampleUV ).rgb;
+		float SampleDepth = GetViewSpaceDepth( SampleUV, ScreenRes );
+		float SampleCoc = GetCoc( SampleDepth, FocusDepth, BlurScale );
+
+		if ( SampleDepth > CenterDepth )
+		{
+			SampleCoc = clamp( SampleCoc, 0.0f, CenterCoc * 2.0f );
+		}
+
+		float Contribution = smoothstep( Radius - 0.5f, Radius + 0.5f, SampleCoc );
+		Color += lerp( Color / Total, SampleColor, Contribution );
+		Total += 1.0f;   
+		Radius += _BaseRadius / Radius;
+		Angle += GOLDEN_ANGLE;
+	}
+
+	return Color /= Total;
+}
+
+// Dof - Sampled Coc, prepass required with coc data in the alpha channel
+float3 DepthOfField( float2 UV, float2 PixelSize, float2 ScreenRes, PdxTextureSampler2D MainScene )
+{
+	float CenterDepth = GetViewSpaceDepth( UV, ScreenRes );
+	float CenterCoc = PdxTex2DLod0( MainScene, UV ).a;
+	float3 Color = PdxTex2DLod0( MainScene, UV ).rgb;
+
+	float Total = 1.0f;
+	float Radius = _BaseRadius;
+	float Angle = 0.0f;
+	for ( int Sample = 0; Sample < _SampleCount; Sample++ )
+	{
+		float2 SampleUV = UV + float2( cos( Angle ), sin( Angle ) ) * PixelSize * Radius;
+		float3 SampleColor = PdxTex2DLod0( MainScene, SampleUV ).rgb;
+		float SampleCoc = PdxTex2DLod0( MainScene, SampleUV ).a;
+
+		float SampleDepth = GetViewSpaceDepth( SampleUV, ScreenRes );
+		if ( SampleDepth > CenterDepth )
+		{
+			SampleCoc = clamp( SampleCoc, 0.0f, CenterCoc * 2.0f );
+		}
+		
+		float Contribution = smoothstep( Radius - 0.5f, Radius + 0.5f, SampleCoc );	
+		Color += lerp( Color / Total, SampleColor, Contribution );
+		Total += 1.0f;   
+		Radius += _BaseRadius / Radius;
+		Angle += GOLDEN_ANGLE;
+	}
+
+	return Color /= Total;
+}
+
+
+
+
+// === Main Code === 
+
+
+float3 SampleColorCube(float3 aColor)
+{
+	float scale = (CubeSize - 1.0) / CubeSize;
+	float offset = 0.5 / CubeSize;
+
+	float x = ((scale * aColor.r + offset) / CubeSize);
+	float y = scale * aColor.g + offset;
+
+	float zFloor = floor((scale * aColor.b + offset) * CubeSize);
+	float xOffset1 = zFloor / CubeSize;
+	float xOffset2 = min(CubeSize - 1.0, zFloor + 1.0) / CubeSize;
+
+	float3 color1 = PdxTex2D( ColorCube, float2(x + xOffset1, y) ).rgb;
+	float3 color2 = PdxTex2D( ColorCube, float2(x + xOffset2, y) ).rgb;
+
+	float3 color = lerp(color1, color2, scale * aColor.b * CubeSize - zFloor );
+
+	return color;
+}
+
+float4 RestoreScene( float3 inColor )
+{
+	float3 color = inColor;
+#ifdef LUT_ENABLED
+	color = SampleColorCube( color );
+#endif
+
+	float3 HSV_ = RGBtoHSV( color.rgb );
+	HSV_.yz *= HSV.yz;
+	HSV_.x += HSV.x;
+	color = HSVtoRGB( HSV_ );
+
+	color = saturate( color * ColorBalance );
+	color = Levels( color, LevelsMin, LevelsMax );
+
+	return float4( color, 1.0 );
+}
+
+
+float4 main( VS_OUTPUT_FULLSCREEN Input, bool PDX_IsFrontFace : SV_IsFrontFace ) : PDX_COLOR
+{
+	float4 color = PdxTex2DLod0( MainScene, Input.uv );
+	
+#ifdef DOF_ENABLED
+	float4 DofColor = PdxTex2DLod0( DepthOfFieldTexture, Input.uv );
+	float DofCoc = PdxTex2DLod0( DepthOfFieldCocTexture, Input.uv ).r;
+	DofCoc = smoothstep( _BlurBlendMin, _BlurBlendMax, DofCoc );	// Tweak to avoid using the low resolution image at small blur values
+	color.rgb = lerp( color.rgb, DofColor.rgb, DofCoc );
+#endif			
+
+#ifdef PDX_DEBUG_NO_HDR
+	return float4( ToGamma( saturate(color.rgb) ), 1 );
+#endif
+	
+#ifdef BLOOM_ENABLED
+	float3 bloom = PdxTex2DLod0( RestoreBloom, Input.uv ).rgb;
+	color.rgb = bloom.rgb + color.rgb; // todo * bloomscale?
+
+	#ifdef LENS_FLARE_ENABLED
+		float3 LensFlare = PdxTex2DLod0( LensFlareTexture, Input.uv ).rgb;
+		float3 LensDirt = PdxTex2DLod0( LensDirtTexture, Input.uv ).rgb;
+		color.rgb = ( LensFlare.rgb * LensDirt ) + color.rgb;
+	#endif
+
+	#ifdef ADDITIONAL_LENS_FLARE_ENABLED
+		float3 AdditionalLensFlare = PdxTex2DLod0( AdditionalLensFlareTexture, Input.uv ).rgb;
+		#ifndef LENS_FLARE_ENABLED
+			float3 LensDirt = PdxTex2DLod0( LensDirtTexture, Input.uv ).rgb;
+		#endif
+		color.rgb = ( ( AdditionalLensFlare.rgb ) * LensDirt ) + color.rgb;
+	#endif
+
+#endif
+
+	// Tonemapping
+	color.rgb = Exposure(color.rgb);
+	color.rgb = ToneMap(color.rgb);
+
+#ifdef ALPHA
+	color.rgb = RestoreScene( saturate(color).rgb ).rgb;
+#else
+	color = RestoreScene( saturate(color.rgb) );
+#endif
+
+#ifdef PDX_DEBUG_TONEMAP_CURVE
+	float2 uvScale = float2( ddx(Input.uv.x), ddy(Input.uv.y) );
+	const float2 AREA_START = float2( 0.8, 0.25 );
+	const float2 AREA_EXTENT = float2( 1.0f - AREA_START.x - 0.001, 0.2 );
+	//const float NormalScale = vec2(1.0f) / float2(1920,1080);
+	//const float2 AREA_EXTENT = float2( 150, 150 ) * lerp( NormalScale, uvScale, 0.7f );
+	//const float2 AREA_START = float2( 1.0, 0.66f ) - AREA_EXTENT;
+	const float CURVE_ALPHA = 1.0f;
+	float2 Coord = ( Input.uv - AREA_START ) / AREA_EXTENT;
+	if( Coord.x >= 0 && Coord.x <= 1.0 && Coord.y >= 0 && Coord.y <= 1 )
+	{
+		float3 v = vec3( Coord.x );
+		v = Exposure( v );
+		v = ToneMap( v );
+		Coord.y = 1.0f - Coord.y;
+		color = lerp( color, float4( step( Coord.y, ToLinear(v) ), 1.0f ), CURVE_ALPHA );
+	}
+#endif
+
+#if defined( LUMA_AS_ALPHA ) && !defined( ALPHA )
+	float lumaM = dot(LUMINANCE_VECTOR, color.rgb);
+	
+	return float4(color.rgb, lumaM);
+#else 
+	return color;
+#endif			
+}
+
