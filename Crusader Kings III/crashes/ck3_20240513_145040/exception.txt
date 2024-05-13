@@ -1,0 +1,35 @@
+Application: Crusader Kings III 
+Version: 1.12.5 
+Date/Time: 2024-05-13 14:50:41
+
+Unhandled Exception C0000005 (EXCEPTION_ACCESS_VIOLATION) at address 0x00007FF7F296A12A
+
+Stack Trace: 
+  1    ck3.exe                  (function-name not available) (+ 0)
+  2    ck3.exe                  (function-name not available) (+ 0)
+  3    ck3.exe                  (function-name not available) (+ 0)
+  4    ck3.exe                  (function-name not available) (+ 0)
+  5    ck3.exe                  (function-name not available) (+ 0)
+  6    ck3.exe                  (function-name not available) (+ 0)
+  7    ck3.exe                  (function-name not available) (+ 0)
+  8    ck3.exe                  (function-name not available) (+ 0)
+  9    ck3.exe                  (function-name not available) (+ 0)
+  10   ck3.exe                  (function-name not available) (+ 0)
+  11   ck3.exe                  (function-name not available) (+ 0)
+  12   ck3.exe                  (function-name not available) (+ 0)
+  13   ck3.exe                  (function-name not available) (+ 0)
+  14   ck3.exe                  (function-name not available) (+ 0)
+  15   ck3.exe                  (function-name not available) (+ 0)
+  16   ck3.exe                  (function-name not available) (+ 0)
+  17   ck3.exe                  (function-name not available) (+ 0)
+  18   ck3.exe                  (function-name not available) (+ 0)
+  19   ck3.exe                  (function-name not available) (+ 0)
+  20   ck3.exe                  (function-name not available) (+ 0)
+  21   ck3.exe                  (function-name not available) (+ 0)
+  22   ck3.exe                  (function-name not available) (+ 0)
+  23   ck3.exe                  (function-name not available) (+ 0)
+  24   ck3.exe                  (function-name not available) (+ 0)
+  25   ck3.exe                  (function-name not available) (+ 0)
+  26   KERNEL32.DLL             BaseThreadInitThunk (+ 20)
+  27   ntdll.dll                RtlUserThreadStart (+ 33)
+  28   ntdll.dll                RtlUserThreadStart (+ 33)

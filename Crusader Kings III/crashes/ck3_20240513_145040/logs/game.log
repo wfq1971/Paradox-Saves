@@ -1,0 +1,887 @@
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'accolade' is set to #1000000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'birth' is set to #1010000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'bookmark' is set to #1020000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'bp1_yearly' is set to #1030000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'blackmail' is set to #1040000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'board_games' is set to #1050000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/accolade_events.txt' #13
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/chad_debug_events.txt' #0
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'court_maintenance' is set to #1060000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'easteregg_event' is set to #1070000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/easteregg_events.txt' #2
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'error_suppression' is set to #1080000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/court_maintenance_events.txt' #6
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/error_suppression_events.txt' #4
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'game_rule' is set to #1090000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'global_culture' is set to #1100000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/blackmail_events.txt' #3
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'global_religion' is set to #1110000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/game_rule_events.txt' #8
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/global_religion_events.txt' #1
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'harm' is set to #1120000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/bookmark_events.txt' #13
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/global_culture_events.txt' #14
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'health' is set to #1130000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'marriage_effect' is set to #1140000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'jester' is set to #1150000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/birth_events.txt' #33
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'pregnancy' is set to #1160000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'realm_maintenance' is set to #1170000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/marriage_effect_events.txt' #10
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/realm_maintenance_events.txt' #6
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'secret_faith' is set to #1180000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'siege' is set to #1190000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/jester_stress_relief_events.txt' #12
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/secret_faith_events.txt' #3
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'title_event' is set to #1200000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'single_combat' is set to #1210000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'tutorial' is set to #1220000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/bp1_dan_events.txt' #18
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/title_events.txt' #7
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/pregnancy_events.txt' #29
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/tutorial_events.txt' #2
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'varangian' is set to #1230000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'activity_system' is set to #1240000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'witch' is set to #1250000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'feast' is set to #1260000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/siege_events.txt' #14
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'feast_events_ewan' is set to #1270000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'feast_default' is set to #1280000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/activities/activity_system_events.txt' #16
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/varangian_events.txt' #20
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'feast_lifestyle' is set to #1290000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/activities/feast_activity/feast_events_ewan.txt' #5
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/activities/feast_activity/feast_events.txt' #24
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/activities/feast_activity/murder_feast_events.txt' #9
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'feast_main_befriend' is set to #1300000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'feast_main_live_fowl' is set to #1310000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'feast_main_stable_breakin' is set to #1320000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/activities/feast_activity/main_events/feast_lifestyle_events.txt' #9
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/board_game_events.txt' #8
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'feast_main_stew_flood' is set to #1330000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/activities/feast_activity/main_events/feast_main_live_fowl_events.txt' #13
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'funeral' is set to #1340000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/activities/feast_activity/main_events/feast_main_befriend_events.txt' #11
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/activities/feast_activity/main_events/feast_main_stable_breakin_events.txt' #12
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/witch_events.txt' #34
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/activities/feast_activity/main_events/feast_main_stew_flood_events.txt' #11
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'hunt' is set to #1350000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'petition_liege' is set to #1360000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/harm_events.txt' #68
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'hajj' is set to #1370000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'hold_court' is set to #1380000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'pilgrimage' is set to #1390000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/activities/pilgrimage_activity/hajj_events.txt' #9
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'pilgrimage_intent' is set to #1400000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/activities/funeral_activity/funeral_events.txt' #22
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'playdate' is set to #1410000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/activities/hunt_activity/jb_hunt_events.txt' #22
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'tour_grounds_events' is set to #1420000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/activities/pilgrimage_activity/pilgrimage_intent_events.txt' #15
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'tour_general' is set to #1430000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/activities/petition_liege_activity/petition_liege_events.txt' #12
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/activities/tour_activity/claudia_tour_grounds_events.txt' #2
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/health_events.txt' #100
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/activities/tour_activity/tour_general_events_james.txt' #7
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'cultural_festival' is set to #1440000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/single_combat_events.txt' #9
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/activities/tour_activity/tour_grounds_events_chad.txt' #9
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/activities/tour_activity/tour_general_events.txt' #13
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'tour_travel' is set to #1450000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'host_dinner_events' is set to #1460000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/activities/tour_activity/filippa_tour_general_events.txt' #13
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/activities/feast_activity/main_events/feast_default_events.txt' #60
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/activities/tour_activity/tour_phase_cultural_festival_james.txt' #13
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'contest_events' is set to #1470000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/activities/tour_activity/tour_travel_events_james.txt' #4
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'ep2_locale_events' is set to #1480000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/activities/playdate_activity/playdate_events.txt' #37
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'tournament_events' is set to #1490000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/activities/tour_activity/tour_travel_events.txt' #14
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/activities/tournaments/james_tournament_events.txt' #1
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'jason_first_race_event' is set to #1500000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'jason_locale_events' is set to #1510000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/activities/tour_activity/tour_travel_events_dan.txt' #12
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'jason_race_events' is set to #1520000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/activities/tournaments/jason_first_race_event.txt' #1
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/activities/tournaments/jb_recital_contest_events.txt' #4
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/activities/tournaments/jason_race_events.txt' #2
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/activities/tournaments/veronica_local_events_2.txt' #8
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/activities/tournaments/passive_tournament_events_oltner.txt' #9
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/activities/tour_activity/tour_phase_cultural_festival.txt' #46
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/activities/pilgrimage_activity/pilgrimage_events.txt' #96
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'artifact' is set to #1530000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'historical_artifacts' is set to #1540000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'chancellor_task' is set to #1550000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/activities/tour_activity/tour_phase_tour_grounds.txt' #47
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/artifacts/historical_artifacts_events.txt' #2
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'councillor_spouse_background' is set to #1560000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'court_chaplain_task' is set to #1570000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/councillor_task_events/councillor_spouse_background_events.txt' #1
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/activities/tournaments/jason_locale_events.txt' #5
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'marshal_task' is set to #1580000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'spymaster_task' is set to #1590000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/councillor_task_events/chancellor_task_events.txt' #21
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'steward_task' is set to #1600000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/activities/tournaments/veronica_locale_events.txt' #11
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/councillor_task_events/court_chaplain_task_events.txt' #21
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'councillor_spouse_diplomacy' is set to #1610000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'councillor_spouse_intrigue' is set to #1620000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/activities/tour_activity/tour_phase_host_a_dinner.txt' #70
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/activities/tournaments/ep2_locale_events.txt' #43
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/artifacts/artifact_events.txt' #31
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'councillor_spouse_learning' is set to #1630000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'councillor_spouse_martial' is set to #1640000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'councillor_spouse_stewardship' is set to #1650000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/councillor_task_events/spymaster_task_events.txt' #45
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/councillor_task_events/marshal_task_events.txt' #28
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/councillor_task_events/councillor_spouse_events/councillor_spouse_intrigue_events.txt' #13
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'court_amenities_interactions' is set to #1660000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'court' is set to #1670000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/councillor_task_events/councillor_spouse_events/councillor_spouse_diplomacy_events.txt' #13
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/court_events/sumptuary_debate_events.txt' #4
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/councillor_task_events/steward_task_events.txt' #33
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'courtier_guest_management' is set to #1680000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/councillor_task_events/councillor_spouse_events/councillor_spouse_martial_events.txt' #14
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/court_events/introduce_court_fashion_events.txt' #4
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'culture_emergence_events' is set to #1690000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'culture_notification' is set to #1700000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'culture_tradition_events' is set to #1710000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'language_events' is set to #1720000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/culture_events/culture_notification_events.txt' #6
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/culture_events/language_events.txt' #3
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'death_management' is set to #1730000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'british_isles' is set to #1740000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/councillor_task_events/councillor_spouse_events/councillor_spouse_stewardship_events.txt' #16
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'ce1_decision_events' is set to #1750000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/courtier_guest_management_events/courtier_guest_management_events.txt' #9
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/councillor_task_events/councillor_spouse_events/councillor_spouse_learning_events.txt' #16
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/culture_events/culture_emergence_events.txt' #4
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'central_asia' is set to #1760000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'culture_conversion' is set to #1770000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'east_europe' is set to #1780000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/decisions_events/culture_conversion_events.txt' #1
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/decisions_events/ce1_decision_events.txt' #5
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/decisions_events/central_asia_events.txt' #6
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'ep2_decision_events' is set to #1790000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/decisions_events/british_isles_events.txt' #23
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'iberia_north_africa' is set to #1800000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/decisions_events/ep2_decision_events.txt' #1
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'major_decisions' is set to #1810000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'middle_east_decisions' is set to #1820000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'middle_europe_decisions' is set to #1830000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/activities/tournaments/contest_events.txt' #71
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'minor_decisions' is set to #1840000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/culture_events/culture_tradition_events.txt' #12
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'pay_homage' is set to #1850000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/decisions_events/major_decisions_events.txt' #22
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/decisions_events/middle_europe_decisions_events.txt' #16
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/decisions_events/minor_decision_events.txt' #3
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/decisions_events/middle_east_decisions_events.txt' #17
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'roman_restoration' is set to #1860000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'south_asia' is set to #1870000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'diarchy' is set to #1880000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'vizierate' is set to #1890000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/decisions_events/east_europe_events.txt' #35
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/decisions_events/pay_homage_events.txt' #6
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/diarchy_events/vizierate_events.txt' #6
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/decisions_events/south_asia_events.txt' #21
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'bp1_house_feud' is set to #1900000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/bp1/bp1_henrik_events.txt' #8
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/decisions_events/iberia_north_africa_events.txt' #24
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/bp1/bp1_yearly_develop.txt' #4
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/death_events/death_management_events.txt' #44
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/decisions_events/roman_restoration_events.txt' #55
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/activities/tournaments/tournament_events.txt' #76
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/activities/hunt_activity/hunt_events.txt' #107
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'bp2_adult_education' is set to #1910000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/bp1/bp1_filippa_yearly_events.txt' #9
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'bp2_character_interaction' is set to #1920000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'destiny_child' is set to #1930000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/bp2/bp2_character_interaction_events.txt' #2
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/bp1/bp1_yearly_events_nick.txt' #20
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/bp1/bp1_yearly_oltner.txt' #6
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/bp2/bp2_adult_education_activity_events_oltner.txt' #5
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'bp2_decision' is set to #1940000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'bp2_hostage_system' is set to #1950000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'bp2_yearly' is set to #1960000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/bp1/bp1_yearly_events_chad.txt' #15
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/bp1/bp1_house_feud.txt' #43
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/bp1/bp1_yearly_events_claudia.txt' #14
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/bp2/bp2_decision_events.txt' #2
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/bp2/bp2_child_of_destiny_events.txt' #10
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/bp2/bp2_yearly_3.txt' #3
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/bp2/bp2_adult_education_activity_events.txt' #15
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/bp2/bp2_yearly_4.txt' #15
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'bp2_yearly_extra' is set to #1970000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/bp2/bp2_hostage_system.txt' #22
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/bp2/bp2_yearly_extra.txt' #1
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'pet_rock' is set to #1980000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'epidemic_events' is set to #1990000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/bp2/bp2_yearly_0_5.txt' #7
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/bp2/story_cycles/story_cycle_pet_rock_events.txt' #11
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/bp2/bp2_yearly.txt' #34
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/bp2/bp2_yearly_2.txt' #29
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'story_event_legends' is set to #2000000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'legend_events' is set to #2010000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/ce1/legend_ending_events.txt' #3
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'legend_spread_events' is set to #2020000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/ce1/epidemic_events_2.txt' #6
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/bp2/bp2_yearly_5.txt' #26
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'legend_debug' is set to #2030000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'legitimacy_events' is set to #2040000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/ce1/legend_events.txt' #4
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/ce1/legitimacy_events.txt' #1
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'physician_epidemic_events' is set to #2050000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'ep1_character_interaction' is set to #2060000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/ep1/ep1_character_interaction_events.txt' #1
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'court_position' is set to #2070000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/diarchy_events/diarchy_events.txt' #54
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/ce1/physician_epidemic_events.txt' #13
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/bp2/bp2_yearly_7.txt' #24
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/ep1/ep1_court_position_events.txt' #6
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'ep1_decision' is set to #2080000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'ep1_flavor' is set to #2090000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'fund_inspiration' is set to #2100000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/ce1/legend_spread_events_veronica.txt' #13
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'inspiration_system' is set to #2110000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/ep1/ep1_decision_events.txt' #3
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/ep1/ep1_inspiration_system_events.txt' #3
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/ep1/ep1_fund_inspiration_events_oltner.txt' #2
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'ep2_accolade_events' is set to #2120000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'ep2_wedding' is set to #2130000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'ep2_tournament_events' is set to #2140000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/ce1/legend_spread_events_8.txt' #36
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/bp1/bp1_yearly.txt' #66
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/bp2/bp2_yearly_1_events.txt' #20
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'fp1_jomsvikings' is set to #2150000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/ep2/ep2_accolade_events.txt' #3
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/ep2/wedding_events/ep2_bloody_wedding_events.txt' #11
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'ep2_wedding_ewan' is set to #2160000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'fp1_major_decisions' is set to #2170000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'fp1_scandinavian_adventurers' is set to #2180000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/activities/hold_court_activity/hold_court_events_general.txt' #123
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/fp1/fp1_major_decision_events.txt' #16
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'fp1_other_decisions' is set to #2190000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/ce1/epidemic_events.txt' #50
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'fp1_shieldmaiden' is set to #2200000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'fp1_tbc' is set to #2210000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'fp1_trade_events' is set to #2220000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/fp1/fp1_jomsvikings_events.txt' #9
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/ce1/legend_spread_events_nick.txt' #44
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/fp1/fp1_scandinavian_adventurer_events.txt' #8
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'fp1_varangian_adventures' is set to #2230000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/fp1/fp1_varangian_adventure_events.txt' #1
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/fp1/fp1_trial_by_combat_events.txt' #10
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'fp1_yearly' is set to #2240000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'fp2_struggle' is set to #2250000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/fp1/fp1_shieldmaiden_events.txt' #7
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/fp2/fp2_el_cid_events.txt' #3
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'fp2_lyonese_monk' is set to #2260000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'fp2_other_decisions' is set to #2270000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/ep1/ep1_flavor_events.txt' #14
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/fp1/fp1_trade_events.txt' #11
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/fp1/fp1_other_decision_events.txt' #15
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'fp2_yearly' is set to #2280000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'neutral_struggle' is set to #2290000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/fp2/neutral_struggle_events.txt' #1
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'clan_event' is set to #2300000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'fp3_clan' is set to #2310000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/fp3/fp3_clan_events_hugo.txt' #1
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/fp1/fp1_yearly_events_oltner.txt' #17
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/ep2/wedding_events/ep2_wedding_events_ewan.txt' #10
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'fp3_dynasty_decision' is set to #2320000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/bp2/bp2_yearly_events_6.txt' #55
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/fp3/fp3_clan_events_2000.txt' #5
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/fp3/fp3_clan_events_persia_specific_ola.txt' #3
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'fp3_yearly' is set to #2330000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/court_events/court_events_general.txt' #112
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'fp3_frontier_story_cycle' is set to #2340000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/fp2/fp2_other_decision_events.txt' #10
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/fp3/fp3_dynasty_decision_events.txt' #5
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'fp3_misc_decisions' is set to #2350000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'fp3_decision' is set to #2360000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'fp3_scholarship' is set to #2370000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/fp2/fp2_lyonese_monk_events.txt' #27
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/fp3/fp3_clan_events_ola.txt' #8
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'fp3_story_cycle_zanj_rebellion_events' is set to #2380000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'fp3_struggle' is set to #2390000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'fp3_story_cycle_seljuks_invasion_events' is set to #2400000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/fp3/fp3_story_cycle_seljuks_invasion_events.txt' #2
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/fp3/fp3_story_cycle_zanj_rebellion_events.txt' #8
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/fp3/fp3_frontier_story_cycle.txt' #8
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/fp3/fp3_religious_decision_events.txt' #9
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/fp3/fp3_scholarship_events.txt' #16
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/fp3/fp3_struggle_events.txt' #23
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'fp3_h_yearly' is set to #2410000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/fp3/fp3_extra_flavor_events.txt' #16
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/fp3/fp3_yearly_events_hugo.txt' #1
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/fp3/fp3_tax_collector_events_ola.txt' #6
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/fp3/fp3_heritage_events.txt' #18
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'child_personality' is set to #2420000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/fp3/fp3_tax_collector_flavor_events.txt' #5
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'childhood_education' is set to #2430000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/fp3/fp3_misc_decision_events.txt' #21
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'childhood' is set to #2440000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'coming_of_age' is set to #2450000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/fp2/fp2_yearly_events.txt' #36
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/fp3/fp3_yearly_frontier_chains.txt' #3
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'faction_demand' is set to #2460000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'faction_invitation' is set to #2470000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/education_and_childhood/childhood_education_events.txt' #16
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/factions/faction_invitations.txt' #3
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'clan' is set to #2480000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'tribal' is set to #2490000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/ep2/ep2_tournament_events.txt' #64
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'adoption' is set to #2500000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/interaction_events/adoption_events.txt' #1
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/education_and_childhood/childhood_events_oltner.txt' #8
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/government_events/clan_events.txt' #5
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/fp3/fp3_yearly_events_eren.txt' #16
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'call_ally' is set to #2510000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'bastard_interaction' is set to #2520000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'char_interaction' is set to #2530000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/interaction_events/alliance_interaction_events.txt' #3
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/factions/faction_demands.txt' #27
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'council_interaction' is set to #2540000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'marriage_interaction' is set to #2550000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/interaction_events/bastard_interaction_events.txt' #10
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/interaction_events/council_interaction_events.txt' #5
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/fp3/fp3_yearly_events_ola_batch_1.txt' #18
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'perk_interaction' is set to #2560000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/interaction_events/perk_interaction_events.txt' #5
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'vassal_interaction' is set to #2570000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'dynasty_legacy' is set to #2580000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/legacy_events/dynasty_legacy_events.txt' #1
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'commission_epic' is set to #2590000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/education_and_childhood/coming_of_age_events.txt' #13
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'mystic_lifestyle' is set to #2600000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'sell_titles' is set to #2610000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'subject_extortion' is set to #2620000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/government_events/tribal_events.txt' #25
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/lifestyles/mystic_lifestyle_events.txt' #10
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/lifestyles/subject_extortion_events.txt' #7
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'stewardship_duty' is set to #2630000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'stewardship_domain' is set to #2640000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/interaction_events/vassal_interaction_events.txt' #18
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/interaction_events/marriage_interaction_events.txt' #17
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/lifestyles/sell_titles_events.txt' #13
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'stewardship_general' is set to #2650000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'stewardship_wealth' is set to #2660000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/interaction_events/character_interaction_events.txt' #70
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'intrigue_dread' is set to #2670000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'intrigue_dread_special' is set to #2680000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'intrigue_scheming' is set to #2690000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'intrigue_scheming_special' is set to #2700000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'intrigue_temptation' is set to #2710000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'intrigue_temptation_special' is set to #2720000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/education_and_childhood/child_personality_events_2.txt' #28
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'learning_medicine' is set to #2730000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'learning_medicine_special' is set to #2740000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/fp2/fp2_struggle_events.txt' #39
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'stewardship_general_special' is set to #2750000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/lifestyles/governance_lifestyle/stewardship_general_events.txt' #7
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/education_and_childhood/childhood_events.txt' #43
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'learning_scholarship' is set to #2760000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'learning_theology' is set to #2770000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/lifestyles/commission_epic_events.txt' #31
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'learning_scholarship_special' is set to #2780000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'learning_theology_special' is set to #2790000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'stewardship_domain_special' is set to #2800000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'diplomacy_family' is set to #2810000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'diplomacy_foreign' is set to #2820000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/fp1/fp1_yearly_events.txt' #56
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'stewardship_wealth_special' is set to #2830000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/lifestyles/governance_lifestyle/stewardship_wealth_events.txt' #13
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'diplomacy_generic' is set to #2840000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'diplomacy_majesty' is set to #2850000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'diplomacy_foreign_special' is set to #2860000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/lifestyles/intrigue_lifestyle/intrigue_temptation_events.txt' #18
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'historical_commander_trait' is set to #2870000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'diplomacy_family_special' is set to #2880000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/lifestyles/statecraft_lifestyle/diplomacy_generic_events.txt' #4
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'learn_commander_trait' is set to #2890000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/education_and_childhood/child_personality_events.txt' #110
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/ep1/ep1_fund_inspiration_events.txt' #117
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/lifestyles/warfare_lifestyle/historical_commander_trait_events.txt' #5
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'stewardship_duty_special' is set to #2900000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'martial_authority' is set to #2910000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'martial_chivalry' is set to #2920000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'diplomacy_majesty_special' is set to #2930000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/lifestyles/scholarship_lifestyle/learning_theology_events.txt' #28
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/lifestyles/intrigue_lifestyle/intrigue_temptation_events_2.txt' #8
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/lifestyles/scholarship_lifestyle/learning_medicine_events.txt' #26
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/lifestyles/scholarship_lifestyle/learning_scholarship_events.txt' #33
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/lifestyles/intrigue_lifestyle/intrigue_dread_events.txt' #32
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'martial_strategy' is set to #2940000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'martial_authority_special' is set to #2950000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/lifestyles/warfare_lifestyle/martial_authority_events_2.txt' #3
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'warhorse' is set to #2960000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'ep1_notifications' is set to #2970000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'lifestyle_nicknames' is set to #2980000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'dungeon_ongoing' is set to #2990000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/lifestyles/warfare_lifestyle/learn_commander_trait_events.txt' #60
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/notification_events/ep1_notification_events.txt' #4
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/lifestyles/statecraft_lifestyle/diplomacy_family_events.txt' #30
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'house_arrest_ongoing' is set to #3000000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/dlc/ep2/wedding_events/ep2_wedding_events.txt' #77
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'prison' is set to #3010000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/lifestyles/warfare_lifestyle/martial_strategy_events_2.txt' #3
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/prison_events/house_arrest_ongoing_events.txt' #5
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'prison_notification' is set to #3020000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/lifestyles/statecraft_lifestyle/diplomacy_majesty_events.txt' #22
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'adultery' is set to #3030000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/lifestyles/warfare_lifestyle/warhorse_events.txt' #15
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/prison_events/dungeon_ongoing_events.txt' #19
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'bishop' is set to #3040000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'friendship' is set to #3050000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/prison_events/prison_notification_events.txt' #8
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/lifestyles/warfare_lifestyle/martial_authority_events.txt' #26
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'mentor_student' is set to #3060000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'lover' is set to #3070000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/lifestyles/governance_lifestyle/stewardship_duty_events.txt' #74
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'parent' is set to #3080000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'martial_strategy_special' is set to #3090000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/relations_events/mentor_student_events.txt' #3
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/nickname_events/nickname_events.txt' #12
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'relation_upgrade' is set to #3100000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'martial_chivalry_special' is set to #3110000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/lifestyles/statecraft_lifestyle/diplomacy_foreign_events.txt' #34
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'rivalry' is set to #3120000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'sibling' is set to #3130000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/prison_events/prison_events.txt' #21
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'spouse' is set to #3140000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'vassal' is set to #3150000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'faith_conversion' is set to #3160000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'faith_creation' is set to #3170000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/lifestyles/intrigue_lifestyle/intrigue_scheming_events.txt' #62
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/lifestyles/warfare_lifestyle/martial_chivalry_events.txt' #38
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'false_conversion' is set to #3180000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/religion_events/faith_conversion_events.txt' #8
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/religion_events/faith_creation_events.txt' #9
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/relations_events/parent_events.txt' #14
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'fervor' is set to #3190000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/relations_events/bishop_events.txt' #7
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/lifestyles/warfare_lifestyle/martial_strategy_events.txt' #27
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'head_of_faith' is set to #3200000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'great_holy_war' is set to #3210000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'heresy' is set to #3220000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'holy_order' is set to #3230000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'human_sacrifice' is set to #3240000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/lifestyles/governance_lifestyle/stewardship_domain_events.txt' #87
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/religion_events/human_sacrifice_events.txt' #2
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'jewish_events' is set to #3250000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/religion_events/head_of_faith_events.txt' #5
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'religious_decision' is set to #3260000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/relations_events/sibling_events.txt' #17
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/religion_events/jewish_events.txt' #1
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/relations_events/friendship_events.txt' #36
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'religious_interaction' is set to #3270000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'diplomatic_scheme_lifestyle' is set to #3280000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'hostile_scheme_discovery' is set to #3290000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'intrigue_scheme_lifestyle' is set to #3300000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/religion_events/heresy_events.txt' #4
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/relations_events/adultery_events.txt' #24
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/relations_events/rivalry_events.txt' #36
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/scheme_events/diplomatic_scheme_lifestyle_events.txt' #4
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/religion_events/false_conversion_events.txt' #11
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/relations_events/spouse_events.txt' #41
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'intrigue_scheme_ongoing' is set to #3310000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'personal_scheme_ongoing' is set to #3320000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'befriend_ongoing_dislike' is set to #3330000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/scheme_events/personal_scheme_ongoing_events.txt' #1
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'befriend_ongoing_rival' is set to #3340000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'abduct_outcome' is set to #3350000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'befriend_ongoing' is set to #3360000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/religion_events/holy_order_events.txt' #17
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/scheme_events/hostile_scheme_discovery_events.txt' #8
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/scheme_events/intrigue_scheme_lifestyle_events.txt' #9
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'befriend_outcome' is set to #3370000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'claim_throne_ongoing' is set to #3380000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'claim_throne_outcome' is set to #3390000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'court_ongoing' is set to #3400000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/scheme_events/befriend_scheme/befriend_ongoing_rival_events.txt' #9
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/religion_events/fervor_events.txt' #4
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/scheme_events/adbuct_scheme/abduct_outcome_events.txt' #12
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'court_outcome' is set to #3410000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/scheme_events/befriend_scheme/befriend_ongoing_dislike_events.txt' #12
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'elope' is set to #3420000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/scheme_events/claim_throne_scheme/claim_throne_ongoing_events.txt' #9
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/scheme_events/claim_throne_scheme/claim_throne_outcome_events.txt' #14
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'fabricate_hook_ongoing' is set to #3430000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/relations_events/relation_upgrade_events.txt' #13
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'fabricate_hook_outcome' is set to #3440000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/relations_events/vassal_events.txt' #33
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'learn_language_ongoing' is set to #3450000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/religion_events/religious_interaction_events.txt' #34
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'learn_language_outcome' is set to #3460000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'assassination_ongoing' is set to #3470000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'murder_ongoing' is set to #3480000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'murder_outcome' is set to #3490000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/scheme_events/fabricate_hook_scheme/fabricate_hook_ongoing_events.txt' #5
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/scheme_events/fabricate_hook_scheme/fabricate_hook_outcome_events.txt' #8
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/scheme_events/murder_scheme/murder_ongoing_events.txt' #3
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/scheme_events/court_scheme/court_scheme_outcome_events.txt' #11
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/scheme_events/elope_scheme/elope_scheme_events.txt' #9
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'murder_scheme_maintenance' is set to #3500000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'murder_save' is set to #3510000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'seduce_ongoing' is set to #3520000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/scheme_events/learn_language_scheme/learn_language_outcome_events.txt' #4
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/scheme_events/murder_scheme/murder_scheme_maintenance_events.txt' #1
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/scheme_events/murder_scheme/assassination_ongoing_events.txt' #7
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/religion_events/religious_decision_events.txt' #20
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/religion_events/great_holy_war_events.txt' #45
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'steal_back_artifact_ongoing' is set to #3530000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'seduce_outcome' is set to #3540000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'steal_back_artifact_outcome' is set to #3550000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'sway_outcome' is set to #3560000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'sway_ongoing' is set to #3570000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'secret_bastard' is set to #3580000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/scheme_events/steal_back_artifact_scheme/steal_back_artifact_outcome_events.txt' #3
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/scheme_events/befriend_scheme/befriend_scheme_outcome_events.txt' #37
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/scheme_events/steal_back_artifact_scheme/steal_back_artifact_ongoing_events.txt' #2
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/relations_events/lover_events.txt' #74
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'bell_special_yearly' is set to #3590000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'secrets' is set to #3600000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'almohad' is set to #3610000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'hunt_mystical_animal' is set to #3620000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/scheme_events/sway_scheme/sway_outcome_events.txt' #8
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/story_cycles/story_cycle_almohad_events.txt' #8
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/story_cycles/fp2_story_cycle_bell_of_huesca.txt' #7
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'infidelity_confrontation' is set to #3630000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/secret_events/secret_bastard_events.txt' #18
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'mongol_invasion' is set to #3640000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/scheme_events/learn_language_scheme/learn_language_ongoing_events.txt' #21
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/story_cycles/story_cycle_hunt_mystical_animal_events.txt' #11
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'party_baron' is set to #3650000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'pet_animal' is set to #3660000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/scheme_events/intrigue_scheme_ongoing_events.txt' #44
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'tax_rivalry' is set to #3670000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'murders_at_court' is set to #3680000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/story_cycles/story_cycle_mongol_invasion_events.txt' #15
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'peasant_affair' is set to #3690000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'stress_threshold' is set to #3700000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/scheme_events/murder_scheme/murder_saves/murder_save_events.txt' #31
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'stress_threshold_prison' is set to #3710000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/scheme_events/sway_scheme/sway_ongoing_events.txt' #21
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/scheme_events/court_scheme/court_scheme_ongoing_events.txt' #43
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'stress_threshold_special' is set to #3720000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/story_cycles/story_cycle_infidelity_confrontation_events.txt' #9
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'stress_trait_coping_decisions' is set to #3730000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'stress_trait_ongoing' is set to #3740000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/story_cycles/story_cycle_party_baron_events.txt' #21
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/scheme_events/murder_scheme/murder_outcome_events.txt' #70
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'debug' is set to #3750000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/scheme_events/befriend_scheme/befriend_ongoing_events.txt' #89
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'debug_portraits' is set to #3760000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'insult_poetry' is set to #3770000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/secret_events/secrets_events.txt' #48
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/stress_events/stress_trait_ongoing_events.txt' #8
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'poetry' is set to #3780000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/test_events/poetry_events.txt' #3
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'test_activity_events' is set to #3790000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'test_court_events' is set to #3800000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/test_events/test_activity_events.txt' #6
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/test_events/test_court_events.txt' #3
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'trait_specific' is set to #3810000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'trait_specific_interactions' is set to #3820000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/trait_specific_events/trait_specific_interaction_events.txt' #11
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/trait_specific_events/trait_specific_events.txt' #21
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'trait_specific_ongoing' is set to #3830000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/stress_events/stress_threshold_prison_events.txt' #12
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'travel_completion_event' is set to #3840000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/travel_events/travel_completion_events.txt' #1
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/travel_events/travel_completion_events_filippa.txt' #0
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'travel_danger_events' is set to #3850000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/story_cycles/peasant_affair/story_cycle_peasant_affair_events.txt' #10
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/travel_events/travel_danger_events_arky.txt' #3
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/travel_events/travel_danger_events.txt' #9
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/travel_events/travel_danger_events_chad.txt' #2
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/scheme_events/seduce_scheme/seduce_scheme_outcome_events.txt' #47
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/travel_events/travel_danger_events_dan.txt' #2
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/trait_specific_events/trait_specific_ongoing_events.txt' #42
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'travel_events' is set to #3860000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/travel_events/travel_danger_events_oltner.txt' #3
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/travel_events/travel_danger_events_filippa.txt' #2
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'travel_events_cities' is set to #3870000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/travel_events/travel_danger_events_klank.txt' #6
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/travel_events/travel_events_cultural_traditions.txt' #17
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'travel_events_fp3' is set to #3880000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/travel_events/travel_events_cities.txt' #2
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/travel_events/travel_events.txt' #14
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/travel_events/travel_danger_events_joe.txt' #8
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/story_cycles/story_cycle_pet_animal_events.txt' #56
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'travel_start_event' is set to #3890000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/test_events/insult_poetry.txt' #1
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'combat_event' is set to #3900000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/stress_events/stress_trait_coping_decisions_events.txt' #24
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'raiding' is set to #3910000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/scheme_events/seduce_scheme/seduce_ongoing_events.txt' #160
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'war_event' is set to #3920000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/test_events/debug.txt' #82
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/test_events/debug_portraits.txt' #3
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/war_events/war_events.txt' #10
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'court_yearly' is set to #3930000
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'yearly' is set to #3940000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/war_events/raid_events.txt' #11
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/travel_events/travel_events_fp3.txt' #9
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/war_events/combat_events.txt' #18
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/yearly_events/bp1_yearly_jason.txt' #3
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/yearly_events/yearly_events.txt' #4
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/travel_events/travel_start_events.txt' #11
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/story_cycles/story_cycle_tax_rivalry_events.txt' #18
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/stress_events/stress_threshold_events.txt' #35
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/yearly_events/yearly_events_6.txt' #3
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'yearly_persian' is set to #3950000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/yearly_events/yearly_events_4.txt' #13
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/travel_events/travel_events_veronica.txt' #23
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/yearly_events/yearly_events_3.txt' #16
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/yearly_events/yearly_events_persia.txt' #3
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/stress_events/stress_threshold_special_events.txt' #2
+[13:14:01][jomini_eventmanager.cpp:629]: >=== NAMESPACE > 'yearly_saharan' is set to #3960000
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/travel_events/travel_events_james.txt' #41
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/story_cycles/murders_at_court/story_cycle_murders_at_court_events.txt' #20
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/yearly_events/yearly_events_7.txt' #26
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/yearly_events/yearly_events_sahara.txt' #8
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/yearly_events/court_yearly_events.txt' #26
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/yearly_events/bp1_yearly_james.txt' #50
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/yearly_events/yearly_events_2.txt' #31
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/yearly_events/yearly_events_5.txt' #33
+[13:14:01][jomini_eventmanager.cpp:582]: Events loaded events/travel_events/travel_events_filippa.txt' #52
+[13:14:47][characterlocationdata.cpp:149]: Removing travel plan from the character Speaidna 瓦拉盖尔 of  (Internal ID 16845659) owner when the travel plan is not ending normally.
+[13:15:03][activity_utilities.cpp:1002]: Trying to trigger activity event 'feast_main_live_fowl.1001' for character Mehrzad 瓦兹万  of  (Internal ID 16818496), but the activity is invalid - skipping.
+[13:15:18][decision_custom_widget.cpp:367]: cancel_holy_order_lease_decision: new_holy_order scope not set after effect
+[13:15:23][character_window.cpp:942]: Open character 'A_edA_n 布里安 of k_ireland (Internal ID 16824642)'
+[13:16:42][character_window.cpp:942]: Open character 'CrI_stina 卡锡 of c_desmond (Internal ID 33577648)'
+[13:18:05][character_window.cpp:942]: Open character 'Flannchad   韦德拉菲尤尔 of c_ormond (Internal ID 50370564)'
+[13:19:29][character_window.cpp:942]: Open character 'Flannchad   韦德拉菲尤尔 of c_ormond (Internal ID 50370564)'
+[13:20:13][counciltaskmanager.cpp:1007]: Councillor (Cyndeyrn 迪内弗尔 of d_deheubarth (Internal ID 16832032)) has active task 'task_spouse_default' but the manager believes it has 'task_accept_culture'
+[13:20:13][counciltaskmanager.cpp:1007]: Councillor (Cyndeyrn 迪内弗尔 of d_deheubarth (Internal ID 16832032)) has active task 'task_spouse_default' but the manager believes it has 'task_accept_culture'
+[13:20:19][counciltaskmanager.cpp:1007]: Councillor (Cyndeyrn 迪内弗尔 of d_deheubarth (Internal ID 16832032)) has active task '' but the manager believes it has 'task_spouse_default'
+[13:20:19][counciltaskmanager.cpp:1007]: Councillor (Cyndeyrn 迪内弗尔 of d_deheubarth (Internal ID 16832032)) has active task '' but the manager believes it has 'task_spouse_default'
+[13:21:23][character_window.cpp:942]: Open character 'A_edA_n 布里安 of k_ireland (Internal ID 16824642)'
+[13:22:21][character_window.cpp:942]: Open character 'A_edA_n 布里安 of k_ireland (Internal ID 16824642)'
+[13:22:22][character_window.cpp:942]: Open character 'A_edA_n 布里安 of k_ireland (Internal ID 16824642)'
+[13:22:22][character_window.cpp:942]: Open character 'A_edA_n 布里安 of k_ireland (Internal ID 16824642)'
+[13:22:22][character_window.cpp:942]: Open character 'A_edA_n 布里安 of k_ireland (Internal ID 16824642)'
+[13:22:23][character_window.cpp:942]: Open character 'A_edA_n 布里安 of k_ireland (Internal ID 16824642)'
+[13:22:23][character_window.cpp:942]: Open character 'A_edA_n 布里安 of k_ireland (Internal ID 16824642)'
+[13:23:32][characterlocationdata.cpp:149]: Removing travel plan from the character Sanyukta 旃提罗 of  (Internal ID 33602212) owner when the travel plan is not ending normally.
+[13:24:35][character_window.cpp:942]: Open character 'A_edA_n 布里安 of k_ireland (Internal ID 16824642)'
+[13:24:36][character_window.cpp:942]: Open character 'A_edA_n 布里安 of k_ireland (Internal ID 16824642)'
+[13:24:36][character_window.cpp:942]: Open character 'A_edA_n 布里安 of k_ireland (Internal ID 16824642)'
+[13:24:53][characterlocationdata.cpp:149]: Removing travel plan from the character Fangde 咩迷 of  (Internal ID 67155546) owner when the travel plan is not ending normally.
+[13:25:06][activity_utilities.cpp:1002]: Trying to trigger activity event 'feast_main_live_fowl.1001' for character Malado 出身卑微 of  (Internal ID 77666), but the activity is invalid - skipping.
+[13:25:07][ai_council.cpp:67]: Trying to set council task 'task_support_schemes' on councillor (Jutta 冯· 菲尔斯滕贝格 of  (Internal ID 33590661)) but somehow they do not know that they have the position of 'councillor_spymaster'
+[13:25:07][ai_council.cpp:67]: Trying to set council task 'task_find_secrets' on councillor (Jutta 冯· 菲尔斯滕贝格 of  (Internal ID 33590661)) but somehow they do not know that they have the position of 'councillor_spymaster'
+[13:25:11][counciltaskmanager.cpp:1007]: Councillor (Jutta 冯· 菲尔斯滕贝格 of  (Internal ID 33590661)) has active task 'task_spouse_default' but the manager believes it has 'task_disrupt_schemes'
+[13:25:11][counciltaskmanager.cpp:1007]: Councillor (Jutta 冯· 菲尔斯滕贝格 of  (Internal ID 33590661)) has active task 'task_spouse_default' but the manager believes it has 'task_disrupt_schemes'
+[13:25:50][counciltaskmanager.cpp:1007]: Councillor (Jutta 冯· 菲尔斯滕贝格 of  (Internal ID 33590661)) has active task '' but the manager believes it has 'task_spouse_default'
+[13:25:50][counciltaskmanager.cpp:1007]: Councillor (Jutta 冯· 菲尔斯滕贝格 of  (Internal ID 33590661)) has active task '' but the manager believes it has 'task_spouse_default'
+[13:26:33][characterlocationdata.cpp:149]: Removing travel plan from the character Canh_a 穆拉比特 of  (Internal ID 33611389) owner when the travel plan is not ending normally.
+[13:28:56][character_window.cpp:942]: Open character 'A_edA_n 布里安 of k_ireland (Internal ID 16824642)'
+[13:30:26][character_window.cpp:942]: Open character 'AibilI_n 乌· 卡锡 of b_clonmel (Internal ID 16810258)'
+[13:32:25][jomini_effect_impl.cpp:461]: file: common/scripted_effects; had_sex_with_effect line: 28: had_sex_with_effect：主对象和一个本不应该发生关系的同伴大干了一场
+偷吃人：ONCLICK:CHARACTER,16831816 TOOLTIP:CHARACTER,16831816 L high 伯爵!high 巴泰勒米!!!!
+同伴：ONCLICK:CHARACTER,80410 TOOLTIP:CHARACTER,80410 L high 布戈涅!!!!
+[13:33:25][character_window.cpp:942]: Open character 'Fiachnae 巴里 of c_ennis (Internal ID 16831454)'
+[13:35:38][character_window.cpp:942]: Open character 'E_lgifu  惠切 of d_hereford (Internal ID 16807415)'
+[13:36:13][characterlocationdata.cpp:149]: Removing travel plan from the character Yahaff 左农 of  (Internal ID 80013) owner when the travel plan is not ending normally.
+[13:36:20][character_window.cpp:942]: Open character 'A_edA_n 布里安 of k_ireland (Internal ID 16824642)'
+[13:36:22][character_window.cpp:942]: Open character 'A_edA_n 布里安 of k_ireland (Internal ID 16824642)'
+[13:36:39][character_window.cpp:942]: Open character 'Uargalach 布里安 of  (Internal ID 16830823)'
+[13:36:58][characterlocationdata.cpp:149]: Removing travel plan from the character Jenec 普热米斯尔 of  (Internal ID 16814312) owner when the travel plan is not ending normally.
+[13:37:13][counciltaskmanager.cpp:1007]: Councillor (Jungney 岭 of  (Internal ID 50357587)) has active task '' but the manager believes it has 'task_spouse_default'
+[13:37:13][counciltaskmanager.cpp:1007]: Councillor (Jungney 岭 of  (Internal ID 50357587)) has active task '' but the manager believes it has 'task_spouse_default'
+[13:37:51][characterlocationdata.cpp:149]: Removing travel plan from the character Akal 部摩波罗  of  (Internal ID 50371338) owner when the travel plan is not ending normally.
+[13:38:08][character_window.cpp:942]: Open character 'A_rpA_d 阿帕德-大塞本 of k_hungary (Internal ID 33591268)'
+[13:38:10][character_window.cpp:942]: Open character 'MA_ria 阿帕德-大塞本 of  (Internal ID 50354821)'
+[13:39:03][character_window.cpp:942]: Open character 'Skjalm 布里安 of b_kincora (Internal ID 16808713)'
+[13:39:10][characterlocationdata.cpp:149]: Removing travel plan from the character Uzur 索坦  of  (Internal ID 33595898) owner when the travel plan is not ending normally.
+[13:39:34][character_window.cpp:942]: Open character 'SiobA_n 吉勒-帕特里克 of c_ossory (Internal ID 16801164)'
+[13:41:24][characterlocationdata.cpp:149]: Removing travel plan from the character Yahaff 左农 of  (Internal ID 80013) owner when the travel plan is not ending normally.
+[13:42:29][counciltaskmanager.cpp:1007]: Councillor (Markia 巴格拉图尼 of  (Internal ID 33602258)) has active task 'task_spouse_default' but the manager believes it has 'task_disrupt_schemes'
+[13:42:29][counciltaskmanager.cpp:1007]: Councillor (Markia 巴格拉图尼 of  (Internal ID 33602258)) has active task 'task_spouse_default' but the manager believes it has 'task_disrupt_schemes'
+[13:43:02][counciltaskmanager.cpp:1007]: Councillor (Markia 巴格拉图尼 of  (Internal ID 33602258)) has active task '' but the manager believes it has 'task_spouse_default'
+[13:43:02][counciltaskmanager.cpp:1007]: Councillor (Markia 巴格拉图尼 of  (Internal ID 33602258)) has active task '' but the manager believes it has 'task_spouse_default'
+[13:45:54][character_window.cpp:942]: Open character 'Julia 阿巴思诺特 of  (Internal ID 50355876)'
+[13:46:08][character_window.cpp:942]: Open character 'Sophie 德·伊夫雷亚 of  (Internal ID 16847317)'
+[13:46:22][character_window.cpp:942]: Open character 'Antoinette 德· 吕松 of  (Internal ID 16837203)'
+[13:46:32][character_window.cpp:942]: Open character 'Lann 阿· 基里缪尔 of  (Internal ID 50380782)'
+[13:48:33][characterlocationdata.cpp:149]: Removing travel plan from the character Yahaff 左农 of  (Internal ID 80013) owner when the travel plan is not ending normally.
+[13:49:26][counciltaskmanager.cpp:1007]: Councillor (Isabel 德· 比瓦尔 of c_navarra (Internal ID 16808563)) has active task 'task_spouse_default' but the manager believes it has 'task_organize_levies'
+[13:49:26][counciltaskmanager.cpp:1007]: Councillor (Isabel 德· 比瓦尔 of c_navarra (Internal ID 16808563)) has active task 'task_spouse_default' but the manager believes it has 'task_organize_levies'
+[13:49:31][character_window.cpp:942]: Open character 'Toke 布里安 of c_argyll (Internal ID 16807249)'
+[13:49:31][counciltaskmanager.cpp:1007]: Councillor (Isabel 德· 比瓦尔 of c_navarra (Internal ID 16808563)) has active task '' but the manager believes it has 'task_spouse_default'
+[13:49:32][counciltaskmanager.cpp:1007]: Councillor (Isabel 德· 比瓦尔 of c_navarra (Internal ID 16808563)) has active task '' but the manager believes it has 'task_spouse_default'
+[13:50:05][characterlocationdata.cpp:149]: Removing travel plan from the character Birgitta 萨利安 of  (Internal ID 33612927) owner when the travel plan is not ending normally.
+[13:50:05][travel_plan.cpp:3554]: Activity participant Birgitta 萨利安 of  (Internal ID 33612927) is aborting current travel plan while still participating in activity high 公爵!high 胡贝特!的会见同辈. Use `remove_from_activity` to gracefully exit the activity before aborting.
+[13:50:22][counciltaskmanager.cpp:1007]: Councillor (SiobA_n 吉勒-帕特里克 of c_ossory (Internal ID 16801164)) has active task 'task_spouse_default' but the manager believes it has 'task_foreign_affairs'
+[13:50:22][counciltaskmanager.cpp:1007]: Councillor (SiobA_n 吉勒-帕特里克 of c_ossory (Internal ID 16801164)) has active task 'task_spouse_default' but the manager believes it has 'task_foreign_affairs'
+[13:50:24][character_window.cpp:942]: Open character 'Aileann 乌· 内尔-莫尔 of b_fahan (Internal ID 16833710)'
+[13:50:27][counciltaskmanager.cpp:1007]: Councillor (SiobA_n 吉勒-帕特里克 of c_ossory (Internal ID 16801164)) has active task '' but the manager believes it has 'task_spouse_default'
+[13:50:27][counciltaskmanager.cpp:1007]: Councillor (SiobA_n 吉勒-帕特里克 of c_ossory (Internal ID 16801164)) has active task '' but the manager believes it has 'task_spouse_default'
+[13:51:17][characterlocationdata.cpp:149]: Removing travel plan from the character Vergava 卡齐姆 of  (Internal ID 67137803) owner when the travel plan is not ending normally.
+[13:51:36][characterlocationdata.cpp:149]: Removing travel plan from the character Munis 里亚赫 of  (Internal ID 33609988) owner when the travel plan is not ending normally.
+[13:51:50][character_window.cpp:942]: Open character 'CrI_stina 卡锡 of c_desmond (Internal ID 33577648)'
+[13:53:00][counciltaskmanager.cpp:1007]: Councillor (Wa 咩迷 of  (Internal ID 33604242)) has active task 'task_spouse_default' but the manager believes it has 'task_disrupt_schemes'
+[13:53:00][counciltaskmanager.cpp:1007]: Councillor (Wa 咩迷 of  (Internal ID 33604242)) has active task 'task_spouse_default' but the manager believes it has 'task_disrupt_schemes'
+[13:53:00][counciltaskmanager.cpp:1007]: Councillor (Wa 咩迷 of  (Internal ID 33604242)) has active task '' but the manager believes it has 'task_spouse_default'
+[13:53:00][counciltaskmanager.cpp:1007]: Councillor (Wa 咩迷 of  (Internal ID 33604242)) has active task '' but the manager believes it has 'task_spouse_default'
+[13:53:21][character_window.cpp:942]: Open character 'Owain 迪内弗尔 of k_wales (Internal ID 78064)'
+[13:53:27][character_window.cpp:942]: Open character 'Madog 迈利埃尼德 of c_breifne (Internal ID 73331)'
+[13:53:29][character_window.cpp:942]: Open character 'Cadeyrn 阿斯隆 of c_athlone (Internal ID 16807053)'
+[13:54:41][characterlocationdata.cpp:149]: Removing travel plan from the character Bair 不剌合臣 of  (Internal ID 16838565) owner when the travel plan is not ending normally.
+[13:55:05][characterlocationdata.cpp:149]: Removing travel plan from the character Beejpala 陀耶利 of  (Internal ID 16847949) owner when the travel plan is not ending normally.
+[13:55:13][characterlocationdata.cpp:149]: Removing travel plan from the character Chindyayka 卡齐姆 of  (Internal ID 75806) owner when the travel plan is not ending normally.
+[13:55:35][counciltaskmanager.cpp:1007]: Councillor (Adila 呼德 of  (Internal ID 16797972)) has active task 'task_spouse_default' but the manager believes it has 'task_disrupt_schemes'
+[13:55:35][counciltaskmanager.cpp:1007]: Councillor (Adila 呼德 of  (Internal ID 16797972)) has active task 'task_spouse_default' but the manager believes it has 'task_disrupt_schemes'
+[13:55:50][characterlocationdata.cpp:149]: Removing travel plan from the character Djemi 出身卑微 of  (Internal ID 50367450) owner when the travel plan is not ending normally.
+[13:55:53][counciltaskmanager.cpp:1007]: Councillor (Adila 呼德 of  (Internal ID 16797972)) has active task '' but the manager believes it has 'task_spouse_default'
+[13:55:53][counciltaskmanager.cpp:1007]: Councillor (Adila 呼德 of  (Internal ID 16797972)) has active task '' but the manager believes it has 'task_spouse_default'
+[13:57:42][counciltaskmanager.cpp:1007]: Councillor (Thawka 苏般若 of  (Internal ID 51836)) has active task 'task_spouse_default' but the manager believes it has 'task_disrupt_schemes'
+[13:57:42][counciltaskmanager.cpp:1007]: Councillor (Thawka 苏般若 of  (Internal ID 51836)) has active task 'task_spouse_default' but the manager believes it has 'task_disrupt_schemes'
+[13:57:43][character_window.cpp:942]: Open character 'Cadeyrn 阿斯隆 of c_athlone (Internal ID 16807053)'
+[13:57:59][counciltaskmanager.cpp:1007]: Councillor (Thawka 苏般若 of  (Internal ID 51836)) has active task '' but the manager believes it has 'task_spouse_default'
+[13:57:59][counciltaskmanager.cpp:1007]: Councillor (Thawka 苏般若 of  (Internal ID 51836)) has active task '' but the manager believes it has 'task_spouse_default'
+[14:01:03][character_window.cpp:942]: Open character 'A_edA_n 布里安 of k_ireland (Internal ID 16824642)'
+[14:01:24][characterlocationdata.cpp:149]: Removing travel plan from the character Kitzes 鞑靼 of  (Internal ID 78276) owner when the travel plan is not ending normally.
+[14:01:51][counciltaskmanager.cpp:1007]: Councillor (Samlo 孙波 of c_ngoring (Internal ID 16828462)) has active task '' but the manager believes it has 'task_spouse_default'
+[14:01:51][counciltaskmanager.cpp:1007]: Councillor (Samlo 孙波 of c_ngoring (Internal ID 16828462)) has active task '' but the manager believes it has 'task_spouse_default'
+[14:03:23][counciltaskmanager.cpp:1007]: Councillor (Sibel 库里亚 of  (Internal ID 63761)) has active task 'task_spouse_default' but the manager believes it has 'task_disrupt_schemes'
+[14:03:23][counciltaskmanager.cpp:1007]: Councillor (Sibel 库里亚 of  (Internal ID 63761)) has active task 'task_spouse_default' but the manager believes it has 'task_disrupt_schemes'
+[14:03:24][counciltaskmanager.cpp:1007]: Councillor (Sibel 库里亚 of  (Internal ID 63761)) has active task '' but the manager believes it has 'task_spouse_default'
+[14:03:24][counciltaskmanager.cpp:1007]: Councillor (Sibel 库里亚 of  (Internal ID 63761)) has active task '' but the manager believes it has 'task_spouse_default'
+[14:04:50][characterlocationdata.cpp:149]: Removing travel plan from the character Hanifa 坎兹 of  (Internal ID 50350858) owner when the travel plan is not ending normally.
+[14:05:05][characterlocationdata.cpp:149]: Removing travel plan from the character Gulay 科泽尔  of  (Internal ID 50356502) owner when the travel plan is not ending normally.
+[14:05:28][characterlocationdata.cpp:149]: Removing travel plan from the character Zahida 左农 of  (Internal ID 33607697) owner when the travel plan is not ending normally.
+[14:05:54][characterlocationdata.cpp:149]: Removing travel plan from the character Kifle 克贝德 of  (Internal ID 33577430) owner when the travel plan is not ending normally.
+[14:06:06][counciltaskmanager.cpp:1007]: Councillor (Ipek 哈桑 of  (Internal ID 16823186)) has active task 'task_spouse_default' but the manager believes it has 'task_disrupt_schemes'
+[14:06:06][counciltaskmanager.cpp:1007]: Councillor (Ipek 哈桑 of  (Internal ID 16823186)) has active task 'task_spouse_default' but the manager believes it has 'task_disrupt_schemes'
+[14:06:12][counciltaskmanager.cpp:1007]: Councillor (Ipek 哈桑 of  (Internal ID 16823186)) has active task '' but the manager believes it has 'task_spouse_default'
+[14:06:12][counciltaskmanager.cpp:1007]: Councillor (Ipek 哈桑 of  (Internal ID 16823186)) has active task '' but the manager believes it has 'task_spouse_default'
+[14:06:36][character_window.cpp:942]: Open character 'A_edA_n 布里安 of k_ireland (Internal ID 16824642)'
+[14:06:42][counciltaskmanager.cpp:1007]: Councillor (Nyima 索沃 of  (Internal ID 16847886)) has active task '' but the manager believes it has 'task_spouse_default'
+[14:06:42][counciltaskmanager.cpp:1007]: Councillor (Nyima 索沃 of  (Internal ID 16847886)) has active task '' but the manager believes it has 'task_spouse_default'
+[14:07:20][characterlocationdata.cpp:149]: Removing travel plan from the character Ajdir 拉丹 of  (Internal ID 33594828) owner when the travel plan is not ending normally.
+[14:07:23][decision_custom_widget.cpp:367]: cancel_holy_order_lease_decision: new_holy_order scope not set after effect
+[14:07:39][characterlocationdata.cpp:149]: Removing travel plan from the character Rasul 阿拔斯 of  (Internal ID 33615296) owner when the travel plan is not ending normally.
+[14:09:21][counciltaskmanager.cpp:1007]: Councillor (Nunzia 迪· 卡诺萨 of c_arezzo (Internal ID 33573606)) has active task 'task_spouse_default' but the manager believes it has 'task_develop_county'
+[14:09:21][counciltaskmanager.cpp:1007]: Councillor (Nunzia 迪· 卡诺萨 of c_arezzo (Internal ID 33573606)) has active task 'task_spouse_default' but the manager believes it has 'task_develop_county'
+[14:09:27][counciltaskmanager.cpp:1007]: Councillor (Nunzia 迪· 卡诺萨 of c_arezzo (Internal ID 33573606)) has active task 'task_develop_county' but the manager believes it has 'task_spouse_default'
+[14:09:27][counciltaskmanager.cpp:1007]: Councillor (Nunzia 迪· 卡诺萨 of c_arezzo (Internal ID 33573606)) has active task 'task_develop_county' but the manager believes it has 'task_spouse_default'
+[14:09:40][counciltaskmanager.cpp:1007]: Councillor (Nunzia 迪· 卡诺萨 of c_arezzo (Internal ID 33573606)) has active task 'task_spouse_default' but the manager believes it has 'task_develop_county'
+[14:09:40][counciltaskmanager.cpp:1007]: Councillor (Nunzia 迪· 卡诺萨 of c_arezzo (Internal ID 33573606)) has active task 'task_spouse_default' but the manager believes it has 'task_develop_county'
+[14:09:46][counciltaskmanager.cpp:1007]: Councillor (Nunzia 迪· 卡诺萨 of c_arezzo (Internal ID 33573606)) has active task '' but the manager believes it has 'task_spouse_default'
+[14:09:46][counciltaskmanager.cpp:1007]: Councillor (Nunzia 迪· 卡诺萨 of c_arezzo (Internal ID 33573606)) has active task '' but the manager believes it has 'task_spouse_default'
+[14:11:25][characterlocationdata.cpp:149]: Removing travel plan from the character Geleg 伯颜歹 of  (Internal ID 80784) owner when the travel plan is not ending normally.
+[14:11:29][characterlocationdata.cpp:149]: Removing travel plan from the character Doltza 阿巴德 of  (Internal ID 16852307) owner when the travel plan is not ending normally.
+[14:11:36][characterlocationdata.cpp:149]: Removing travel plan from the character Yakut 塞尔柱 of  (Internal ID 16853653) owner when the travel plan is not ending normally.
+[14:11:49][characterlocationdata.cpp:149]: Removing travel plan from the character Rasul 阿拔斯 of  (Internal ID 33615296) owner when the travel plan is not ending normally.
+[14:12:57][characterlocationdata.cpp:149]: Removing travel plan from the character Aghlab 哈希姆 of  (Internal ID 33591002) owner when the travel plan is not ending normally.
+[14:14:19][character_window.cpp:942]: Open character 'Toke 布里安 of c_argyll (Internal ID 16807249)'
+[14:15:04][characterlocationdata.cpp:149]: Removing travel plan from the character BiergA_ 基塔尔 of  (Internal ID 81269) owner when the travel plan is not ending normally.
+[14:15:36][characterlocationdata.cpp:149]: Removing travel plan from the character Doltza 阿巴德 of  (Internal ID 16852307) owner when the travel plan is not ending normally.
+[14:16:57][counciltaskmanager.cpp:1007]: Councillor (SealggA_ 科拉达特 of  (Internal ID 16817523)) has active task '' but the manager believes it has 'task_spouse_default'
+[14:16:57][counciltaskmanager.cpp:1007]: Councillor (SealggA_ 科拉达特 of  (Internal ID 16817523)) has active task '' but the manager believes it has 'task_spouse_default'
+[14:16:57][counciltaskmanager.cpp:1007]: Councillor (Iftiin 盖斯特罗 of c_ganale (Internal ID 63653)) has active task 'task_patronage' but the manager believes it has 'task_accept_culture'
+[14:16:57][counciltaskmanager.cpp:1007]: Councillor (Iftiin 盖斯特罗 of c_ganale (Internal ID 63653)) has active task 'task_patronage' but the manager believes it has 'task_accept_culture'
+[14:17:12][counciltaskmanager.cpp:1007]: Councillor (Iftiin 盖斯特罗 of c_ganale (Internal ID 63653)) has active task '' but the manager believes it has 'task_patronage'
+[14:17:12][counciltaskmanager.cpp:1007]: Councillor (Iftiin 盖斯特罗 of c_ganale (Internal ID 63653)) has active task '' but the manager believes it has 'task_patronage'
+[14:17:17][characterlocationdata.cpp:149]: Removing travel plan from the character Aghlab 哈希姆 of  (Internal ID 33591002) owner when the travel plan is not ending normally.
+[14:18:30][character_window.cpp:942]: Open character 'Lodin 哈格林 of c_halland (Internal ID 16837204)'
+[14:19:07][characterlocationdata.cpp:149]: Removing travel plan from the character Kilia 杜尔巴瓦 of  (Internal ID 81447) owner when the travel plan is not ending normally.
+[14:19:35][counciltaskmanager.cpp:1007]: Councillor (Albina 德尔· 瓦斯托 of  (Internal ID 67137244)) has active task 'task_spouse_default' but the manager believes it has 'task_disrupt_schemes'
+[14:19:35][counciltaskmanager.cpp:1007]: Councillor (Albina 德尔· 瓦斯托 of  (Internal ID 67137244)) has active task 'task_spouse_default' but the manager believes it has 'task_disrupt_schemes'
+[14:19:35][characterlocationdata.cpp:149]: Removing travel plan from the character Gottschalk 出身卑微 of  (Internal ID 33589516) owner when the travel plan is not ending normally.
+[14:19:44][counciltaskmanager.cpp:1007]: Councillor (Shararah 苏莱姆 of  (Internal ID 33582512)) has active task 'task_spouse_default' but the manager believes it has 'task_disrupt_schemes'
+[14:19:44][counciltaskmanager.cpp:1007]: Councillor (Shararah 苏莱姆 of  (Internal ID 33582512)) has active task 'task_spouse_default' but the manager believes it has 'task_disrupt_schemes'
+[14:19:46][counciltaskmanager.cpp:1007]: Councillor (Albina 德尔· 瓦斯托 of  (Internal ID 67137244)) has active task '' but the manager believes it has 'task_spouse_default'
+[14:19:46][counciltaskmanager.cpp:1007]: Councillor (Albina 德尔· 瓦斯托 of  (Internal ID 67137244)) has active task '' but the manager believes it has 'task_spouse_default'
+[14:20:00][counciltaskmanager.cpp:1007]: Councillor (Shararah 苏莱姆 of  (Internal ID 33582512)) has active task 'task_disrupt_schemes' but the manager believes it has 'task_spouse_default'
+[14:20:00][counciltaskmanager.cpp:1007]: Councillor (Shararah 苏莱姆 of  (Internal ID 33582512)) has active task 'task_disrupt_schemes' but the manager believes it has 'task_spouse_default'
+[14:20:02][counciltaskmanager.cpp:1007]: Councillor (Shararah 苏莱姆 of  (Internal ID 33582512)) has active task 'task_spouse_default' but the manager believes it has 'task_disrupt_schemes'
+[14:20:02][counciltaskmanager.cpp:1007]: Councillor (Shararah 苏莱姆 of  (Internal ID 33582512)) has active task 'task_spouse_default' but the manager believes it has 'task_disrupt_schemes'
+[14:20:18][counciltaskmanager.cpp:1007]: Councillor (Shararah 苏莱姆 of  (Internal ID 33582512)) has active task '' but the manager believes it has 'task_spouse_default'
+[14:20:18][counciltaskmanager.cpp:1007]: Councillor (Shararah 苏莱姆 of  (Internal ID 33582512)) has active task '' but the manager believes it has 'task_spouse_default'
+[14:20:27][decision_custom_widget.cpp:367]: cancel_holy_order_lease_decision: new_holy_order scope not set after effect
+[14:20:56][counciltaskmanager.cpp:1007]: Councillor (Dakmo 噶尔 of  (Internal ID 69707)) has active task '' but the manager believes it has 'task_spouse_default'
+[14:20:56][counciltaskmanager.cpp:1007]: Councillor (Dakmo 噶尔 of  (Internal ID 69707)) has active task '' but the manager believes it has 'task_spouse_default'
+[14:21:03][characterlocationdata.cpp:149]: Removing travel plan from the character Ermengarde 加洛林-兰斯 of  (Internal ID 16851553) owner when the travel plan is not ending normally.
+[14:21:03][travel_plan.cpp:3554]: Activity participant Ermengarde 加洛林-兰斯 of  (Internal ID 16851553) is aborting current travel plan while still participating in activity high 女伯爵!high 玛格丽特!的会见同辈. Use `remove_from_activity` to gracefully exit the activity before aborting.
+[14:21:24][characterlocationdata.cpp:149]: Removing travel plan from the character Aghlab 哈希姆 of  (Internal ID 33591002) owner when the travel plan is not ending normally.
+[14:21:28][characterlocationdata.cpp:149]: Removing travel plan from the character Abraam 法蒂玛 of  (Internal ID 16853369) owner when the travel plan is not ending normally.
+[14:21:47][counciltaskmanager.cpp:1007]: Councillor (Timmi 非斯  of  (Internal ID 83922364)) has active task 'task_spouse_default' but the manager believes it has 'task_disrupt_schemes'
+[14:21:48][counciltaskmanager.cpp:1007]: Councillor (Timmi 非斯  of  (Internal ID 83922364)) has active task 'task_spouse_default' but the manager believes it has 'task_disrupt_schemes'
+[14:21:56][counciltaskmanager.cpp:1007]: Councillor (Gyitsame 孙波 of  (Internal ID 76970)) has active task 'task_manage_domain' but the manager believes it has 'task_collect_taxes'
+[14:21:56][characterlocationdata.cpp:149]: Removing travel plan from the character GisE_le 德·伊夫雷亚 of  (Internal ID 33593639) owner when the travel plan is not ending normally.
+[14:21:56][counciltaskmanager.cpp:1007]: Councillor (Gyitsame 孙波 of  (Internal ID 76970)) has active task 'task_manage_domain' but the manager believes it has 'task_collect_taxes'
+[14:22:00][counciltaskmanager.cpp:1007]: Councillor (Gyitsame 孙波 of  (Internal ID 76970)) has active task '' but the manager believes it has 'task_manage_domain'
+[14:22:00][counciltaskmanager.cpp:1007]: Councillor (Gyitsame 孙波 of  (Internal ID 76970)) has active task '' but the manager believes it has 'task_manage_domain'
+[14:22:06][counciltaskmanager.cpp:1007]: Councillor (Timmi 非斯  of  (Internal ID 83922364)) has active task '' but the manager believes it has 'task_spouse_default'
+[14:22:06][counciltaskmanager.cpp:1007]: Councillor (Timmi 非斯  of  (Internal ID 83922364)) has active task '' but the manager believes it has 'task_spouse_default'
+[14:22:19][characterlocationdata.cpp:149]: Removing travel plan from the character Alajos 德伦切尼 of  (Internal ID 33596585) owner when the travel plan is not ending normally.
+[14:22:26][character_window.cpp:942]: Open character 'A_edA_n 布里安 of k_ireland (Internal ID 16824642)'
+[14:22:56][character_window.cpp:942]: Open character 'A_edA_n 布里安 of k_ireland (Internal ID 16824642)'
+[14:23:06][characterlocationdata.cpp:149]: Removing travel plan from the character Fronilde 希梅纳 of  (Internal ID 33619029) owner when the travel plan is not ending normally.
+[14:25:26][character_window.cpp:942]: Open character 'A_edA_n 布里安 of k_ireland (Internal ID 16824642)'
+[14:25:42][character_window.cpp:942]: Open character 'A_edA_n 布里安 of k_ireland (Internal ID 16824642)'
+[14:27:08][characterlocationdata.cpp:149]: Removing travel plan from the character Kilia 杜尔巴瓦 of  (Internal ID 81447) owner when the travel plan is not ending normally.
+[14:27:41][characterlocationdata.cpp:149]: Removing travel plan from the character Gottschalk 出身卑微 of  (Internal ID 33589516) owner when the travel plan is not ending normally.
+[14:29:21][character_window.cpp:942]: Open character 'Mats 斯塔德勒 of  (Internal ID 50360022)'
+[14:29:57][counciltaskmanager.cpp:1007]: Councillor (Shararah 苏莱姆 of  (Internal ID 33582512)) has active task 'task_spouse_default' but the manager believes it has 'task_disrupt_schemes'
+[14:29:57][counciltaskmanager.cpp:1007]: Councillor (Shararah 苏莱姆 of  (Internal ID 33582512)) has active task 'task_spouse_default' but the manager believes it has 'task_disrupt_schemes'
+[14:30:17][decision_custom_widget.cpp:367]: cancel_holy_order_lease_decision: new_holy_order scope not set after effect
+[14:30:22][character_window.cpp:942]: Open character 'Elinion 克罗万 of  (Internal ID 100688081)'
+[14:31:05][counciltaskmanager.cpp:1007]: Councillor (Shararah 苏莱姆 of  (Internal ID 33582512)) has active task 'task_disrupt_schemes' but the manager believes it has 'task_spouse_default'
+[14:31:05][counciltaskmanager.cpp:1007]: Councillor (Shararah 苏莱姆 of  (Internal ID 33582512)) has active task 'task_disrupt_schemes' but the manager believes it has 'task_spouse_default'
+[14:31:19][counciltaskmanager.cpp:1007]: Councillor (Shararah 苏莱姆 of  (Internal ID 33582512)) has active task 'task_spouse_default' but the manager believes it has 'task_disrupt_schemes'
+[14:31:19][counciltaskmanager.cpp:1007]: Councillor (Shararah 苏莱姆 of  (Internal ID 33582512)) has active task 'task_spouse_default' but the manager believes it has 'task_disrupt_schemes'
+[14:31:57][character_window.cpp:942]: Open character 'Cicely 肯利比尤格 of c_oriel (Internal ID 33596123)'
+[14:32:19][character_window.cpp:942]: Open character 'Cicely 肯利比尤格 of c_oriel (Internal ID 33596123)'
+[14:33:24][character_window.cpp:942]: Open character 'Enfidaig 塔哈姆 of b_llandudno (Internal ID 67134607)'
+[14:33:54][counciltaskmanager.cpp:1007]: Councillor (Shararah 苏莱姆 of  (Internal ID 33582512)) has active task '' but the manager believes it has 'task_spouse_default'
+[14:33:54][counciltaskmanager.cpp:1007]: Councillor (Shararah 苏莱姆 of  (Internal ID 33582512)) has active task '' but the manager believes it has 'task_spouse_default'
+[14:33:58][character_window.cpp:942]: Open character 'Ragnell 克罗万 of  (Internal ID 100688467)'
+[14:34:21][characterlocationdata.cpp:149]: Removing travel plan from the character Ermengarde 加洛林-兰斯 of  (Internal ID 16851553) owner when the travel plan is not ending normally.
+[14:34:21][travel_plan.cpp:3554]: Activity participant Ermengarde 加洛林-兰斯 of  (Internal ID 16851553) is aborting current travel plan while still participating in activity high 女伯爵!high 玛格丽特!的会见同辈. Use `remove_from_activity` to gracefully exit the activity before aborting.
+[14:34:25][counciltaskmanager.cpp:1007]: Councillor (Tsymzidma 阿布吉 of  (Internal ID 16820614)) has active task 'task_spouse_default' but the manager believes it has 'task_disrupt_schemes'
+[14:34:25][counciltaskmanager.cpp:1007]: Councillor (Tsymzidma 阿布吉 of  (Internal ID 16820614)) has active task 'task_spouse_default' but the manager believes it has 'task_disrupt_schemes'
+[14:34:35][counciltaskmanager.cpp:1007]: Councillor (Tsymzidma 阿布吉 of  (Internal ID 16820614)) has active task '' but the manager believes it has 'task_spouse_default'
+[14:34:35][counciltaskmanager.cpp:1007]: Councillor (Tsymzidma 阿布吉 of  (Internal ID 16820614)) has active task '' but the manager believes it has 'task_spouse_default'
+[14:34:41][characterlocationdata.cpp:149]: Removing travel plan from the character Aghlab 哈希姆 of  (Internal ID 33591002) owner when the travel plan is not ending normally.
+[14:34:47][characterlocationdata.cpp:149]: Removing travel plan from the character Abraam 法蒂玛 of  (Internal ID 16853369) owner when the travel plan is not ending normally.
+[14:36:15][character_window.cpp:942]: Open character 'Cicely 肯利比尤格 of c_oriel (Internal ID 33596123)'
+[14:37:24][characterlocationdata.cpp:149]: Removing travel plan from the character Alajos 德伦切尼 of  (Internal ID 33596585) owner when the travel plan is not ending normally.
+[14:37:35][character_window.cpp:942]: Open character 'Affiath 布里安 of  (Internal ID 16835388)'
+[14:37:48][characterlocationdata.cpp:149]: Removing travel plan from the character Fronilde 希梅纳 of  (Internal ID 33619029) owner when the travel plan is not ending normally.
+[14:38:02][character_window.cpp:942]: Open character 'A_edA_n 布里安 of k_ireland (Internal ID 16824642)'
+[14:39:04][character_window.cpp:942]: Open character 'Toke 布里安 of c_argyll (Internal ID 16807249)'
+[14:39:53][activity_utilities.cpp:1002]: Trying to trigger activity event 'feast_main_live_fowl.1001' for character Hermann 迪· 科西嘉 of d_verona (Internal ID 16832215), but the activity is invalid - skipping.
+[14:40:11][characterlocationdata.cpp:149]: Removing travel plan from the character Waris 古尔马 of  (Internal ID 84421) owner when the travel plan is not ending normally.
+[14:40:33][character_window.cpp:942]: Open character 'Toke 布里安 of c_argyll (Internal ID 16807249)'
+[14:40:54][characterlocationdata.cpp:149]: Removing travel plan from the character Aghlab 哈希姆 of  (Internal ID 33591002) owner when the travel plan is not ending normally.
+[14:41:10][character_window.cpp:942]: Open character 'A_edA_n 布里安 of k_ireland (Internal ID 16824642)'
+[14:41:54][counciltaskmanager.cpp:1007]: Councillor (Dakmo 噶尔 of  (Internal ID 69707)) has active task '' but the manager believes it has 'task_spouse_default'
+[14:41:54][counciltaskmanager.cpp:1007]: Councillor (Dakmo 噶尔 of  (Internal ID 69707)) has active task '' but the manager believes it has 'task_spouse_default'
+[14:42:42][counciltaskmanager.cpp:1007]: Councillor (Liutswind 比隆 of  (Internal ID 72365)) has active task 'task_spouse_default' but the manager believes it has 'task_disrupt_schemes'
+[14:42:43][counciltaskmanager.cpp:1007]: Councillor (Liutswind 比隆 of  (Internal ID 72365)) has active task 'task_spouse_default' but the manager believes it has 'task_disrupt_schemes'
+[14:42:50][counciltaskmanager.cpp:1007]: Councillor (Liutswind 比隆 of  (Internal ID 72365)) has active task '' but the manager believes it has 'task_spouse_default'
+[14:42:50][counciltaskmanager.cpp:1007]: Councillor (Liutswind 比隆 of  (Internal ID 72365)) has active task '' but the manager believes it has 'task_spouse_default'
+[14:43:23][counciltaskmanager.cpp:1007]: Councillor (Timmi 非斯  of  (Internal ID 83922364)) has active task 'task_spouse_default' but the manager believes it has 'task_disrupt_schemes'
+[14:43:23][counciltaskmanager.cpp:1007]: Councillor (Timmi 非斯  of  (Internal ID 83922364)) has active task 'task_spouse_default' but the manager believes it has 'task_disrupt_schemes'
+[14:43:27][counciltaskmanager.cpp:1007]: Councillor (Albina 德尔· 瓦斯托 of  (Internal ID 67137244)) has active task 'task_spouse_default' but the manager believes it has 'task_disrupt_schemes'
+[14:43:27][counciltaskmanager.cpp:1007]: Councillor (Albina 德尔· 瓦斯托 of  (Internal ID 67137244)) has active task 'task_spouse_default' but the manager believes it has 'task_disrupt_schemes'
+[14:43:27][counciltaskmanager.cpp:1007]: Councillor (Albina 德尔· 瓦斯托 of  (Internal ID 67137244)) has active task '' but the manager believes it has 'task_spouse_default'
+[14:43:27][counciltaskmanager.cpp:1007]: Councillor (Albina 德尔· 瓦斯托 of  (Internal ID 67137244)) has active task '' but the manager believes it has 'task_spouse_default'
+[14:43:49][counciltaskmanager.cpp:1007]: Councillor (Pelgyimo 嘎波 of  (Internal ID 50380790)) has active task 'task_spouse_default' but the manager believes it has 'task_increase_control'
+[14:43:49][counciltaskmanager.cpp:1007]: Councillor (Pelgyimo 嘎波 of  (Internal ID 50380790)) has active task 'task_spouse_default' but the manager believes it has 'task_increase_control'
+[14:43:49][counciltaskmanager.cpp:1007]: Councillor (Pelgyimo 嘎波 of  (Internal ID 50380790)) has active task '' but the manager believes it has 'task_spouse_default'
+[14:43:49][counciltaskmanager.cpp:1007]: Councillor (Pelgyimo 嘎波 of  (Internal ID 50380790)) has active task '' but the manager believes it has 'task_spouse_default'
+[14:43:55][counciltaskmanager.cpp:1007]: Councillor (Timmi 非斯  of  (Internal ID 83922364)) has active task '' but the manager believes it has 'task_spouse_default'
+[14:43:55][counciltaskmanager.cpp:1007]: Councillor (Timmi 非斯  of  (Internal ID 83922364)) has active task '' but the manager believes it has 'task_spouse_default'
+[14:44:03][characterlocationdata.cpp:149]: Removing travel plan from the character Doregene 只儿斤 of  (Internal ID 81231) owner when the travel plan is not ending normally.
+[14:47:09][characterlocationdata.cpp:149]: Removing travel plan from the character Gottschalk 出身卑微 of  (Internal ID 33589516) owner when the travel plan is not ending normally.
+[14:48:23][character_window.cpp:942]: Open character 'Rhys 塔尔加斯 of  (Internal ID 16820112)'
+[14:48:48][character_window.cpp:942]: Open character 'Ragnell 克罗万 of  (Internal ID 100688467)'
+[14:49:27][character_window.cpp:942]: Open character 'A_edA_n 布里安 of k_ireland (Internal ID 16824642)'
