@@ -4,7 +4,7 @@
 	},
 	"Graphics":	{
 		"buildings_cutoff":	true,
-		"shader_quality":	"low",
+		"shader_quality":	"high",
 		"portrait_render_scale":	"none",
 		"mapobject_quality":	"off",
 		"animated_portraits":	false,
@@ -58,7 +58,7 @@
 		"audio_device_profile":	"Speakers",
 		"disabled_categories":	"",
 		"disabled_tracks":	"",
-		"volume.vca:/MUSIC":	1,
+		"volume.vca:/MUSIC":	0.600000,
 		"volume.vca:/AMBIENT":	1,
 		"volume.vca:/MUSIC_STINGERS":	1,
 		"volume.vca:/SOUNDTRACK":	1,
