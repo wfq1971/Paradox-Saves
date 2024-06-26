@@ -1,0 +1,1983 @@
+
+
+// === Shader Info === 
+
+// Shader file: gfx/FX/jomini/portrait.shader
+// Effect: portrait_attachment_pattern
+// ===ShaderInfo End===
+
+
+
+// === Defines === 
+
+#define PDX_DIRECTX_11
+#define PIXEL_SHADER
+#define PDX_HLSL
+#define PDX_MESH_UV1
+#define JOMINI_DISABLE_FOG_OF_WAR
+#define VARIATIONS_ENABLED
+#define PDX_MESH_BLENDSHAPES
+#define PDX_MAX_HEIGHTMAP_COMPRESS_LEVELS 5
+#define HIGH_QUALITY_SHADERS
+
+
+// === HLSL Macros === 
+
+#define PDX_POSITION SV_Position
+#define PDX_COLOR SV_Target
+#define PDX_COLOR0 SV_Target0
+#define PDX_COLOR0_SRC1 SV_Target1 // Use this when doing dual source blending, currently only supports that for render target #0
+#define PDX_COLOR1 SV_Target1
+#define PDX_COLOR2 SV_Target2
+#define PDX_COLOR3 SV_Target3
+#define PDX_COLOR4 SV_Target4
+#define PDX_COLOR5 SV_Target5
+#define PDX_COLOR6 SV_Target6
+#define PDX_COLOR7 SV_Target7
+#define PDX_VertexID SV_VertexID
+#define PDX_InstanceID SV_InstanceID
+#define PDX_DispatchThreadID SV_DispatchThreadID
+#define PDX_GroupThreadID SV_GroupThreadID
+#define PDX_GroupID SV_GroupID
+#define PDX_GroupIndex SV_GroupIndex
+#define PDX_TessFactor SV_TessFactor
+#define PDX_InsideTessFactor SV_InsideTessFactor
+#define PDX_OutputControlPointID SV_OutputControlPointID
+#define PDX_DomainLocation SV_DomainLocation
+#define PDX_RenderTargetArrayIndex SV_RenderTargetArrayIndex
+#define PDX_ViewportArrayIndex SV_ViewportArrayIndex
+#define PDX_Depth SV_Depth
+
+#define PdxDomainTypeTriangle "tri"
+#define PdxDomainTypeQuad "quad"
+#define PdxDomainTypeIsoline "isoline"
+
+#define PdxPartitioningModeInteger "integer"
+#define PdxPartitioningModeFractionalEven "fractional_even"
+#define PdxPartitioningModeFractionalOdd "fractional_odd"
+
+#define PdxPrimitiveTypePoint point
+#define PdxPrimitiveTypeLine line
+#define PdxPrimitiveTypeTriangle triangle
+#define PdxPrimitiveTypeLineAdjacency lineadj
+#define PdxPrimitiveTypeTriangleAdjacency triangleadj
+
+#define PdxTessellatorOutputTopologyPoint "point"
+#define PdxTessellatorOutputTopologyLine "line"
+#define PdxTessellatorOutputTopologyTriangleCw "triangle_cw"
+#define PdxTessellatorOutputTopologyTriangleCcw "triangle_ccw"
+
+#define PdxMeshShaderOutputTopologyLine "line"
+#define PdxMeshShaderOutputTopologyTriangle "triangle"
+
+#define mod( X, Y ) ( (X) % (Y) )
+
+float2x2 Create2x2( in float2 x, in float2 y )
+{
+	return transpose( float2x2( x, y ) );
+}
+// TODO, Create3x3 should be transposed in hlsl, and not in glsl, and then the mul() arguments should be reversed
+#define Create3x3 float3x3
+float4x4 Create4x4( in float4 x, in float4 y, in float4 z, in float4 w )
+{
+	return transpose( float4x4( x, y, z, w ) );
+}
+
+#define GetMatrixData( Matrix, row, col ) ( Matrix [ row ] [ col ] )
+
+float3x3 CastTo3x3( in float4x4 M )
+{
+	return (float3x3)M;
+}
+
+#define lessThan( a, b ) ( (a) < (b) )
+
+float2 vec2(float vValue) { return float2(vValue, vValue); }
+float3 vec3(float vValue) { return float3(vValue, vValue, vValue); }
+float4 vec4(float vValue) { return float4(vValue, vValue, vValue, vValue); }
+
+
+struct PdxTextureSampler2D
+{
+    Texture2D 		_Texture;
+    SamplerState 	_Sampler;
+};
+struct PdxTextureSampler2DMS
+{
+    Texture2DMS<float4>		_Texture;
+};
+
+struct PdxTextureSampler2DArray
+{
+    Texture2DArray	_Texture;
+    SamplerState 	_Sampler;
+};
+
+struct PdxTextureSampler3D
+{
+    Texture3D 		_Texture;
+    SamplerState 	_Sampler;
+};
+
+struct PdxTextureSamplerCube
+{
+    TextureCube 	_Texture;
+    SamplerState 	_Sampler;
+};
+
+struct PdxTextureSampler2DCmp
+{
+    Texture2D 				_Texture;
+    SamplerComparisonState 	_Sampler;
+};
+
+// These are for separate Texture/Sampler objects
+#define PdxSampleTex2D(tex,samp,uv) (tex).Sample( (samp), (uv) )
+#define PdxSampleTex2DLod(tex,samp,uv,lod) (tex).SampleLevel( (samp), (uv), (lod) )
+#define PdxSampleTex2DGrad(tex,samp,uv,ddx,ddy) (tex).SampleGrad( (samp), (uv), (ddx), (ddy) )
+#define PdxSampleTex2DGather(tex,samp,uv) (tex).Gather( (samp), (uv) )
+
+#define PdxSampleTex3D(tex,samp,uv) (tex).Sample( (samp), (uv) )
+#define PdxSampleTex3DLod(tex,samp,uv,lod) (tex).SampleLevel( (samp), (uv), (lod) )
+
+#define PdxTexture2DSize(tex,size) (tex).GetDimensions( (size).x, (size).y )
+#define PdxTexture2DLoad(tex,uv,lod) (tex).Load( int3((uv), (lod)) )
+
+#define PdxTexture2DArraySize(tex,size,elements) (tex).GetDimensions( (size).x, (size).y, elements )
+#define PdxTexture2DArrayLoad(tex,uv,arrayindex,lod) (tex).Load( int4((uv), (arrayindex), (lod)) )
+
+#define PdxTexture3DSize(tex,size) (tex).GetDimensions( (size).x, (size).y, (size).z )
+#define PdxTexture3DLoad(tex,uv,lod) (tex).Load( int4((uv), (lod)) )
+
+// These are for the combined TextureSampler objects
+#define PdxTex2DSize(samp,size) PdxTexture2DSize( (samp)._Texture, (size) )
+#define PdxTex2D(samp,uv) PdxSampleTex2D( (samp)._Texture, (samp)._Sampler, (uv) )
+#define PdxTex2DLod(samp,uv,lod) PdxSampleTex2DLod( (samp)._Texture, (samp)._Sampler, (uv), (lod) )
+#define PdxTex2DLodOffset(samp,uv,lod,offset) (samp)._Texture.SampleLevel( (samp)._Sampler, (uv), (lod), (offset) )
+#define PdxTex2DBias(samp,uv,bias) (samp)._Texture.SampleBias( (samp)._Sampler, (uv), (bias) )
+#define PdxTex2DGrad(samp,uv,ddx,ddy) PdxSampleTex2DGrad( (samp)._Texture, (samp)._Sampler, (uv), (ddx), (ddy) )
+#define PdxTex2DGather(samp,uv) PdxSampleTex2DGather( (samp)._Texture, (samp)._Sampler, (uv) )
+#define PdxTex2DLoad(samp,uv,lod) PdxTexture2DLoad( (samp)._Texture, (uv), (lod) )
+#define PdxTex2DMultiSampled(samp,texelcoord,sampleidx) (samp)._Texture.Load( (texelcoord), (sampleidx) )
+#define PdxTex2DMSSize(samp,size,samples) (samp)._Texture.GetDimensions( (size).x, (size).y, (samples) )
+
+#define PdxTex3D(samp,uv) PdxSampleTex3D( (samp)._Texture, (samp)._Sampler, (uv) )
+#define PdxTex3DLod(samp,uv,lod) PdxSampleTex3DLod( (samp)._Texture, (samp)._Sampler, (uv), (lod) )
+#define PdxTex3DLoad(samp,uv,lod) PdxTexture3DLoad( (samp)._Texture, (uv), (lod) )
+
+#define PdxTexCube(samp,uv) (samp)._Texture.Sample( (samp)._Sampler, (uv) )
+#define PdxTexCubeLod(samp,uv,lod) (samp)._Texture.SampleLevel( (samp)._Sampler, (uv), (lod) )
+#define PdxTexCubeBias(samp,uv,bias) (samp)._Texture.SampleBias( (samp)._Sampler, (uv), (bias) )
+
+#define PdxTex2DCmpLod0(samp,uv,value) (samp)._Texture.SampleCmpLevelZero( (samp)._Sampler, (uv), (value) )
+
+// Vulkan fails to compile shaders with this function call properly
+// Commenting it out until we can fix this issue
+//#define PdxCalculateLod(samp,uv) (samp)._Texture.CalculateLevelOfDetail( (samp)._Sampler, (uv) )
+
+float4x4 FixProjection( float4x4 ProjectionMatrix )
+{
+	// Enable for "debug" drawing to see if some objects is missing fix
+	#if 0
+	for ( int i = 0; i < 4; ++i )
+	{
+		GetMatrixData( ProjectionMatrix, 0, i ) *= 0.5;
+		GetMatrixData( ProjectionMatrix, 1, i ) *= 0.5;
+	}
+	#endif
+	
+	return ProjectionMatrix;
+}
+
+#define PdxBufferFloat  Buffer<float>
+#define PdxBufferFloat2	Buffer<float2>
+#define PdxBufferFloat3	Buffer<float3>
+#define PdxBufferFloat4	Buffer<float4>
+#define PdxBufferInt  	Buffer<int>
+#define PdxBufferInt2	Buffer<int2>
+#define PdxBufferInt3	Buffer<int3>
+#define PdxBufferInt4	Buffer<int4>
+#define PdxBufferUint   Buffer<uint>
+#define PdxBufferUint2	Buffer<uint2>
+#define PdxBufferUint3	Buffer<uint3>
+#define PdxBufferUint4	Buffer<uint4>
+
+#define PdxStructuredBuffer StructuredBuffer
+#define PdxRWStructuredBuffer RWStructuredBuffer
+#define PdxRasterizerOrderedBuffer RasterizerOrderedBuffer
+#define PdxRasterizerOrderedStructuredBuffer RasterizerOrderedStructuredBuffer
+
+float 	PdxReadBuffer( in PdxBufferFloat Buf, int Index )  		{ return Buf.Load( Index ); }
+float2	PdxReadBuffer2( in PdxBufferFloat2 Buf, int Index )		{ return Buf.Load( Index ); }
+float3	PdxReadBuffer3( in PdxBufferFloat3 Buf, int Index )		{ return Buf.Load( Index ); }
+float4	PdxReadBuffer4( in PdxBufferFloat4 Buf, int Index )		{ return Buf.Load( Index ); }
+
+int  	PdxReadBuffer( in PdxBufferInt Buf, int Index ) 		{ return Buf.Load( Index ); }
+int2 	PdxReadBuffer2( in PdxBufferInt2 Buf, int Index )		{ return Buf.Load( Index ); }
+int3 	PdxReadBuffer3( in PdxBufferInt3 Buf, int Index )    	{ return Buf.Load( Index ); }
+int4 	PdxReadBuffer4( in PdxBufferInt4 Buf, int Index )    	{ return Buf.Load( Index ); }
+
+uint  	PdxReadBuffer( in PdxBufferUint Buf, int Index )    	{ return Buf.Load( Index ); }
+uint2 	PdxReadBuffer2( in PdxBufferUint2 Buf, int Index )  	{ return Buf.Load( Index ); }
+uint3 	PdxReadBuffer3( in PdxBufferUint3 Buf, int Index )  	{ return Buf.Load( Index ); }
+uint4 	PdxReadBuffer4( in PdxBufferUint4 Buf, int Index )  	{ return Buf.Load( Index ); }
+
+#define PdxReadRWBuffer(buffer,index) (buffer)[(index)]
+#define PdxWriteRWBuffer(buffer,index,value) (buffer)[(index)] = (value)
+
+#define Quaternion float4
+
+#define UINT8_MAX 0xff
+#define UINT16_MAX 0xffff
+#define UINT32_MAX 0xffffffff
+#define PI 3.14159265359
+
+float2x2 Create2x2( float a, float b, float c, float d ) { return Create2x2( float2( a, b ), float2( c, d ) ); }
+
+#define PdxSampleTex2DLod0(tex,samp,uv) PdxSampleTex2DLod( (tex), (samp), (uv), 0 )
+
+#define PdxTexture2DLoad0(tex,uv) PdxTexture2DLoad( (tex), (uv), 0 )
+
+#define PdxTexture2DArrayLoad0(tex,uv,arrayindex) PdxTexture2DArrayLoad( (tex), (uv), (arrayindex), 0)
+
+#define PdxTex2DProj(samp,uv_proj) PdxTex2DLod0( (samp), (uv_proj).xy / (uv_proj).w )
+#define PdxTex2DLod0(samp,uv) PdxTex2DLod( (samp), (uv), 0 )
+#define PdxTex2DLod0Offset(samp,uv,offset) PdxTex2DLodOffset( (samp), (uv), 0, (offset) )
+#define PdxTex2DLoad0(samp,uv) PdxTex2DLoad( (samp), (uv), 0 )
+
+#define PdxTex3DLod0(samp,uv) PdxTex3DLod( (samp), (uv), 0 )
+#define PdxTex3DLoad0(samp,uv) PdxTex3DLoad( (samp), (uv), 0 )
+
+float4 FixProjectionAndMul( float4x4 ProjectionMatrix, float4 Vector )
+{
+	return mul( FixProjection( ProjectionMatrix ), Vector );
+}
+
+
+
+// === Vertex Structs === 
+
+struct VS_INPUT_PDXMESHSTANDARD
+{
+	float3 Position : POSITION;
+	float3 Normal : TEXCOORD0;
+	float4 Tangent : TEXCOORD1;
+	float2 UV0 : TEXCOORD2;
+#ifdef PDX_MESH_UV1
+	float2 UV1 : TEXCOORD3;
+#endif
+#ifdef PDX_MESH_UV2
+	float2 UV2 : TEXCOORD4;
+#endif
+	uint4 InstanceIndices : TEXCOORD5;
+#ifdef PDX_MESH_SKINNED
+	uint4 BoneIndex : TEXCOORD6;
+	float3 BoneWeight : TEXCOORD7;
+#endif
+	uint VertexID : PDX_VertexID;
+};
+struct VS_OUTPUT_PDXMESHSHADOW
+{
+	float4 Position : PDX_POSITION;
+	float2 UV : TEXCOORD0;
+};
+struct VS_OUTPUT_PDXMESHSHADOWSTANDARD
+{
+	float4 Position : PDX_POSITION;
+	float3 UV_InstanceIndex : TEXCOORD0;
+};
+struct VS_INPUT_DEBUGNORMAL
+{
+	float3 Position : POSITION;
+	float3 Normal : TEXCOORD0;
+#ifdef PDX_MESH_SKINNED
+	uint4 BoneIndex : TEXCOORD1;
+	float3 BoneWeight : TEXCOORD2;
+#endif
+	uint2 InstanceIndices : TEXCOORD4;
+	uint VertexID : PDX_VertexID;
+};
+struct VS_OUTPUT_DEBUGNORMAL
+{
+	float4 Position : PDX_POSITION;
+};
+struct VS_OUTPUT_PDXMESHPORTRAIT
+{
+	float4 Position : PDX_POSITION;
+	float3 Normal : TEXCOORD0;
+	float3 Tangent : TEXCOORD1;
+	float3 Bitangent : TEXCOORD2;
+	float2 UV0 : TEXCOORD3;
+	float2 UV1 : TEXCOORD4;
+	float2 UV2 : TEXCOORD5;
+	float3 WorldSpacePos : TEXCOORD6;
+	uint InstanceIndex : TEXCOORD7;
+};
+struct VS_INPUT_PDXMESHSTANDARD_ID
+{
+	float3 Position : POSITION;
+	float3 Normal : TEXCOORD0;
+	float4 Tangent : TEXCOORD1;
+	float2 UV0 : TEXCOORD2;
+#ifdef PDX_MESH_UV1
+	float2 UV1 : TEXCOORD3;
+#endif
+#ifdef PDX_MESH_UV2
+	float2 UV2 : TEXCOORD4;
+#endif
+	uint2 InstanceIndices : TEXCOORD5;
+#ifdef PDX_MESH_SKINNED
+	uint4 BoneIndex : TEXCOORD6;
+	float3 BoneWeight : TEXCOORD7;
+#endif
+	uint VertexID : PDX_VertexID;
+};
+struct LightDirT
+{
+	float3 vDirection : COMMENT;
+	uint Type : COMMENT;
+};
+struct PS_COLOR_SSAO
+{
+	float4 Color : PDX_COLOR0;
+	float4 SSAOColor : PDX_COLOR1;
+};
+
+
+// === Constant Buffers === 
+
+cbuffer pdx_hlsl_cbPdxMeshInstanceData
+{
+	float4 Data[2];
+}
+cbuffer pdx_hlsl_cbPdxMeshJointVertexInstanceData
+{
+	float4 JointVertexMatrices[3];
+}
+cbuffer pdx_hlsl_cbPdxMeshBlendShapeInstanceData
+{
+	float4 BlendShapeDataInstanced[2];
+}
+cbuffer pdx_hlsl_cbPdxMeshBlendShapeConstants
+{
+	uint BlendShapeVertexCount;
+	uint BlendShapesVertexOffset;
+}
+cbuffer pdx_hlsl_cbPdxCamera
+{
+	float4x4 ViewProjectionMatrix;
+	float4x4 InvViewProjectionMatrix;
+	float4x4 ViewMatrix;
+	float4x4 InvViewMatrix;
+	float4x4 ProjectionMatrix;
+	float4x4 InvProjectionMatrix;
+	float4x4 ShadowMapTextureMatrix;
+	float3 CameraPosition;
+	float ZNear;
+	float3 CameraLookAtDir;
+	float ZFar;
+	float3 CameraUpDir;
+	float CameraFoV;
+	float3 CameraRightDir;
+	float _UpscaleLodBias;
+	float _UpscaleLodBiasNative;
+	float _UpscaleLodBiasMultiplier;
+	float _UpscaleLodBiasMultiplierNative;
+	float _UpscaleLodBiasEnabled;
+}
+cbuffer pdx_hlsl_cbPdxShadowmap
+{
+	float ShadowFadeFactor;
+	float Bias;
+	float KernelScale;
+	float ShadowScreenSpaceScale;
+	int NumSamples;
+	float4 DiscSamples[8];
+}
+cbuffer pdx_hlsl_cbJominiEnvironment
+{
+	float3 AmbientPosX;
+	float CubemapIntensity;
+	float3 AmbientNegX;
+	float3 AmbientPosY;
+	float3 AmbientNegY;
+	float3 AmbientPosZ;
+	float3 AmbientNegZ;
+	float3 ShadowAmbientPosX;
+	float3 ShadowAmbientNegX;
+	float3 ShadowAmbientPosY;
+	float3 ShadowAmbientNegY;
+	float3 ShadowAmbientPosZ;
+	float3 ShadowAmbientNegZ;
+	float FogMax;
+	float3 SunDiffuse;
+	float SunIntensity;
+	float3 ToSunDir;
+	float FogBegin2;
+	float3 FogColor;
+	float FogEnd2;
+	float4x4 CubemapYRotation;
+	float TreeSwayLoopSpeed;
+	float TreeSwayWindStrengthSpatialModifier;
+	float TreeSwaySpeed;
+	float TreeSwayWindClusterSizeModifier;
+	float3 TreeSwayWorldDirection;
+	float TreeHeightImpactOnSway;
+	float TreeSwayScale;
+}
+cbuffer pdx_hlsl_cbPdxConstantBuffer05
+{
+	float4 vPaletteColorSkin;
+	float4 vPaletteColorEyes;
+	float4 vPaletteColorHair;
+	float4 vSkinPropertyMult;
+	float4 vEyesPropertyMult;
+	float4 vHairPropertyMult;
+	float4 Light_Color_Falloff[3];
+	float4 Light_Position_Radius[3];
+	LightDirT Light_Direction_Type[3];
+	float4 Light_InnerCone_OuterCone_AffectedByShadows[3];
+	int DecalCount;
+	int PreSkinColorDecalCount;
+	int TotalDecalCount;
+	int _;
+	float4 PatternColorOverrides[16];
+	float HasDiffuseMapOverride;
+	float HasNormalMapOverride;
+	float HasPropertiesMapOverride;
+}
+
+
+// === Samplers === 
+
+SamplerState _sampler_0_ : register(s0);
+SamplerState _sampler_1_ : register(s1);
+SamplerState _sampler_2_ : register(s2);
+SamplerComparisonState _sampler_3_ : register(s3);
+
+
+// === Textures === 
+
+Texture2D PatternMask_Texture;
+static PdxTextureSampler2D PatternMask = { PatternMask_Texture, _sampler_0_ };
+Texture2D PatternColorPalette_Texture;
+static PdxTextureSampler2D PatternColorPalette = { PatternColorPalette_Texture, _sampler_1_ };
+Texture2DArray PatternColorMasks_Texture;
+static PdxTextureSampler2DArray PatternColorMasks = { PatternColorMasks_Texture, _sampler_2_ };
+Texture2DArray PatternNormalMaps_Texture;
+static PdxTextureSampler2DArray PatternNormalMaps = { PatternNormalMaps_Texture, _sampler_2_ };
+Texture2DArray PatternPropertyMaps_Texture;
+static PdxTextureSampler2DArray PatternPropertyMaps = { PatternPropertyMaps_Texture, _sampler_2_ };
+Texture2DArray DecalDiffuseArray_Texture;
+static PdxTextureSampler2DArray DecalDiffuseArray = { DecalDiffuseArray_Texture, _sampler_0_ };
+Texture2DArray DecalNormalArray_Texture;
+static PdxTextureSampler2DArray DecalNormalArray = { DecalNormalArray_Texture, _sampler_0_ };
+Texture2DArray DecalPropertiesArray_Texture;
+static PdxTextureSampler2DArray DecalPropertiesArray = { DecalPropertiesArray_Texture, _sampler_0_ };
+Texture2D DiffuseMap_Texture;
+static PdxTextureSampler2D DiffuseMap = { DiffuseMap_Texture, _sampler_2_ };
+Texture2D PropertiesMap_Texture;
+static PdxTextureSampler2D PropertiesMap = { PropertiesMap_Texture, _sampler_2_ };
+Texture2D NormalMap_Texture;
+static PdxTextureSampler2D NormalMap = { NormalMap_Texture, _sampler_2_ };
+Texture2D SSAOColorMap_Texture;
+static PdxTextureSampler2D SSAOColorMap = { SSAOColorMap_Texture, _sampler_2_ };
+TextureCube EnvironmentMap_Texture;
+static PdxTextureSamplerCube EnvironmentMap = { EnvironmentMap_Texture, _sampler_0_ };
+Texture2D DiffuseMapOverride_Texture;
+static PdxTextureSampler2D DiffuseMapOverride = { DiffuseMapOverride_Texture, _sampler_2_ };
+Texture2D NormalMapOverride_Texture;
+static PdxTextureSampler2D NormalMapOverride = { NormalMapOverride_Texture, _sampler_2_ };
+Texture2D PropertiesMapOverride_Texture;
+static PdxTextureSampler2D PropertiesMapOverride = { PropertiesMapOverride_Texture, _sampler_2_ };
+Texture2D ShadowTexture_Texture;
+static PdxTextureSampler2DCmp ShadowTexture = { ShadowTexture_Texture, _sampler_3_ };
+
+
+// === RW Textures === 
+
+
+
+// === Buffer Textures === 
+
+PdxBufferUint DecalDataBuffer;
+
+
+// === RW Buffer Textures === 
+
+
+
+// === Bindless === 
+
+
+
+// === Shader Code === 
+
+static const int PDXMESH_MAX_INFLUENCE = 4;
+static const int PDXMESH_WORLD_MATRIX_OFFSET = 0;
+static const int PDXMESH_CONSTANTS_OFFSET = 4;
+static const int PDXMESH_USER_DATA_OFFSET = 5;
+
+float4x4 PdxMeshGetWorldMatrix( uint nIndex )
+{
+	return Create4x4( 
+		Data[nIndex + PDXMESH_WORLD_MATRIX_OFFSET + 0], 
+		Data[nIndex + PDXMESH_WORLD_MATRIX_OFFSET + 1], 
+		Data[nIndex + PDXMESH_WORLD_MATRIX_OFFSET + 2], 
+		Data[nIndex + PDXMESH_WORLD_MATRIX_OFFSET + 3] );
+}
+
+// OffsetJointIndex -> JointsInstanceIndex + JointIndex
+float4x4 PdxMeshGetJointVertexMatrix( uint OffsetJointIndex )
+{
+	uint BeginIndex = OffsetJointIndex * 3;
+
+	float4 XAxis = float4( JointVertexMatrices[ BeginIndex ].x, JointVertexMatrices[ BeginIndex ].y, JointVertexMatrices[ BeginIndex ].z, 0.0f );
+	float4 YAxis = float4( JointVertexMatrices[ BeginIndex ].w, JointVertexMatrices[ BeginIndex + 1 ].x, JointVertexMatrices[ BeginIndex + 1 ].y, 0.0f );
+	float4 ZAxis = float4( JointVertexMatrices[ BeginIndex + 1 ].z, JointVertexMatrices[ BeginIndex + 1 ].w, JointVertexMatrices[ BeginIndex + 2 ].x, 0.0f );
+	float4 Translation = float4( JointVertexMatrices[ BeginIndex + 2 ].y, JointVertexMatrices[ BeginIndex + 2 ].z, JointVertexMatrices[ BeginIndex + 2 ].w, 1.0f );
+
+	return Create4x4( XAxis, YAxis, ZAxis, Translation );
+}
+
+float PdxMeshGetOpacity( uint ObjectInstanceIndex )
+{
+	return Data[ ObjectInstanceIndex + PDXMESH_CONSTANTS_OFFSET ].x;
+} 
+
+uint GetActiveBlendShapes( uint ObjectInstanceIndex )
+{
+	return uint( Data[ ObjectInstanceIndex + PDXMESH_CONSTANTS_OFFSET ].y );
+}
+
+uint GetActiveDecals( uint ObjectInstanceIndex ) 
+{
+	return uint( Data[ ObjectInstanceIndex + PDXMESH_CONSTANTS_OFFSET ].z );
+}
+
+float PdxMeshGetMeshDummyValue( uint ObjectInstanceIndex ) 
+{
+	return Data[ ObjectInstanceIndex + PDXMESH_CONSTANTS_OFFSET ].w;
+}
+float CalcViewSpaceDepth( float Depth )
+{
+	Depth = 2.0 * Depth - 1.0;
+	float ZLinear = 2.0 * ZNear * ZFar / (ZFar + ZNear - Depth * (ZFar - ZNear));
+	return ZLinear;
+}
+
+float3 ViewSpacePosFromDepth( float Depth, float2 UV )
+{
+	float x = UV.x * 2.0 - 1.0;
+	float y = (1.0 - UV.y) * 2.0 - 1.0;
+
+	float4 ProjectedPos = float4( x, y, Depth, 1.0 );
+
+	float4 ViewSpacePos = mul( InvProjectionMatrix, ProjectedPos );
+
+	return ViewSpacePos.xyz / ViewSpacePos.w;
+}
+
+float3 WorldSpacePositionFromDepth( float Depth, float2 UV )
+{
+	float3 WorldSpacePos = mul( InvViewMatrix, float4( ViewSpacePosFromDepth( Depth, UV ), 1.0 ) ).xyz;
+	return WorldSpacePos;
+}
+float CalcRandom( float Seed )
+{
+	float DotProduct = float( Seed ) * 12.9898;
+	return frac( sin( DotProduct ) * 43758.5453 );
+}
+
+float CalcRandom( float2 Seed )
+{
+	float DotProduct = dot( Seed, float2( 12.9898, 78.233 ) );
+	return frac( sin( DotProduct ) * 43758.5453 );
+}
+
+float CalcRandom( float3 Seed )
+{
+	float DotProduct = dot( Seed, float3( 12.9898,78.233,144.7272 ) );
+	return frac( sin( DotProduct ) * 43758.5453 );
+}
+
+float CalcNoise( float2 Pos ) 
+{
+	int2 i = int2( floor( Pos ) );
+	float2 f = frac( Pos );
+
+	float a = CalcRandom( i );
+	float b = CalcRandom( i + int2( 1, 0 ) );
+	float c = CalcRandom( i + int2( 0, 1 ) );
+	float d = CalcRandom( i + int2( 1, 1 ) );
+	
+	float2 u = f*f*(3.0-2.0*f);
+	return lerp(a, b, u.x) + 
+			(c - a)* u.y * (1.0 - u.x) + 
+			(d - b) * u.x * u.y;
+}
+// Gamma correction utility
+float ToGamma(float aLinear)
+{
+	return pow(aLinear, 1.0/2.2);
+}
+float3 ToGamma(float3 aLinear)
+{
+	return pow(aLinear, vec3(1.0/2.2));
+}
+float ToLinear(float aGamma)
+{
+	return pow(aGamma, 2.2);
+}
+float3 ToLinear(float3 aGamma)
+{
+	return pow(aGamma, vec3(2.2));
+}
+float4 ToLinear(float4 aGamma)
+{
+	return float4(pow(aGamma.rgb, vec3(2.2)), aGamma.a);
+}
+
+// Color value conversions
+float3 RGBtoHSV( float3 RGB )
+{
+	float4 K = float4(0.0, -1.0 / 3.0, 2.0 / 3.0, -1.0);
+	float4 p = RGB.g < RGB.b ? float4(RGB.bg, K.wz) : float4(RGB.gb, K.xy);
+	float4 q = RGB.r < p.x ? float4(p.xyw, RGB.r) : float4(RGB.r, p.yzx);
+
+	float d = q.x - min(q.w, q.y);
+	float e = 1.0e-10;
+	return float3( abs(q.z + (q.w - q.y) / (6.0 * d + e)), d / (q.x + e), q.x );
+}
+float3 HSVtoRGB( float3 HSV )
+{
+	float4 K = float4(1.0, 2.0 / 3.0, 1.0 / 3.0, 3.0);
+	float3 p = abs( frac(HSV.xxx + K.xyz) * 6.0 - K.www );
+	return HSV.z * lerp( K.xxx, clamp(p - K.xxx, 0.0, 1.0), HSV.y );
+}
+float3 HSVtoRGB( float H, float S, float V )
+{
+	return HSVtoRGB( float3( H, S, V ) );
+}
+float4 RGBtoHSV( float4 RGBa )
+{
+	return float4( RGBtoHSV( RGBa.rgb ), RGBa.a );
+}
+float4 HSVtoRGB( float4 HSVa )
+{
+	return float4( HSVtoRGB( HSVa.xyz ), HSVa.a );
+}
+float4 HSVtoRGB( float H, float S, float V, float a )
+{
+	return HSVtoRGB( float4( H, S, V, a ) );
+}
+
+// Below are multiple blend mode utilities (See: https://en.wikipedia.org/wiki/Blend_modes)
+// Most of these uses a typical implementation unless stated otherwise
+
+// Multiply blend mode
+float3 Multiply( float3 Base, float3 Blend, float Opacity )
+{
+	return Base * Blend * Opacity + Base * ( 1.0 - Opacity );
+}
+
+// Screen blend mode
+float3 Screen( float3 Base, float3 Blend )
+{
+	return 1.0 - ( ( 1.0 - Base ) * ( 1.0 - Blend ) );
+}
+
+// Overlay blend mode
+float Overlay( float Base, float Blend )
+{
+	return (Base < 0.5) ? (2.0 * Base * Blend) : (1.0 - 2.0 * (1.0 - Base) * (1.0 - Blend));
+}
+float3 Overlay( float3 Base, float3 Blend )
+{
+	return float3( Overlay(Base.r, Blend.r), Overlay(Base.g, Blend.g), Overlay(Base.b, Blend.b) );
+}
+float Overlay( float Base, float Blend, float Opacity )
+{
+	return Overlay( Base, Blend ) * Opacity + Base * (1.0 - Opacity );
+}
+float3 Overlay( float3 Base, float3 Blend, float Opacity )
+{
+	return Overlay( Base, Blend ) * Opacity + Base * (1.0 - Opacity );
+}
+float3 GetOverlay( float3 Color, float3 OverlayColor, float OverlayPercent )
+{
+	// Flip OverlayColor/BaseColor since that was how it was before
+	return lerp( Color, Overlay( OverlayColor, Color ), OverlayPercent );
+}
+float GetOverlay( float Color, float OverlayColor, float OverlayPercent )
+{
+	// Flip OverlayColor/BaseColor since that was how it was before
+	return lerp( Color, Overlay( OverlayColor, Color ), OverlayPercent );
+}
+
+// Color dodge blend mode (Dodge and burn)
+float ColorDodge( float Base, float Blend )
+{
+	return (Blend == 1.0) ? Blend : min( Base / (1.0 - Blend), 1.0 );
+}
+float3 ColorDodge( float3 Base, float3 Blend )
+{
+	return float3( ColorDodge(Base.r, Blend.r), ColorDodge(Base.g, Blend.g), ColorDodge(Base.b, Blend.b) );
+}
+float3 ColorDodge( float3 Base, float3 Blend, float Opacity )
+{
+	return ColorDodge( Base, Blend ) * Opacity + Base * ( 1.0 - Opacity );
+}
+
+// Pegtop's SoftLight blend formula
+float SoftLight( float Base, float Blend )
+{
+	return ( 1 - 2 * Blend ) * Base * Base + 2 * Base * Blend;
+}
+float3 SoftLight( float3 Base, float3 Blend )
+{
+	return float3( SoftLight( Base.r, Blend.r ), SoftLight( Base.g, Blend.g ), SoftLight( Base.b, Blend.b ) );
+}
+float SoftLight( float Base, float Blend, float Opacity )
+{
+	return lerp( Base, SoftLight( Base, Blend ), Opacity );
+}
+float3 SoftLight( float3 Base, float3 Blend, float Opacity )
+{
+	return lerp( Base, SoftLight( Base, Blend ), Opacity );
+}
+
+// Hardlight blend mode
+float HardLight(float Base, float Blend)
+{
+	return Blend >= 0.5 ? 1.0 - 2 * ( 1.0 - Blend ) * ( 1.0 - Base ) : 2.0 * Base * Blend;
+}
+float3 HardLight( float3 Base, float3 Blend )
+{
+	return float3( HardLight( Base.r, Blend.r ), HardLight( Base.g, Blend.g ), HardLight( Base.b, Blend.b ) );
+}
+float HardLight( float Base, float Blend, float Opacity )
+{
+	return lerp( Base, HardLight( Base, Blend ), Opacity );
+}
+float3 HardLight( float3 Base, float3 Blend, float Opacity )
+{
+	return lerp( Base, HardLight( Base, Blend ), Opacity );
+}
+
+// Simple arithmetic blend modes (See: https://en.wikipedia.org/wiki/Blend_modes#Simple_arithmetic_blend_modes)
+// Lighten only blend mode
+float3 Add( float3 Base, float3 Blend, float Opacity )
+{
+	return ( Base + Blend ) * Opacity + Base * ( 1.0 - Opacity );
+}
+float Lighten( float Base, float Blend )
+{
+	return max( Base, Blend );
+}
+float3 Lighten( float3 Base, float3 Blend )
+{
+	return float3( Lighten(Base.r, Blend.r), Lighten(Base.g, Blend.g), Lighten(Base.b, Blend.b) );
+}
+float3 Lighten( float3 Base, float3 Blend, float Opacity )
+{
+	return Lighten( Base, Blend ) * Opacity + Base * ( 1.0 - Opacity );
+}
+
+// Darken only blend mode
+float Darken( float Base, float Blend )
+{
+	return min( Base, Blend );
+}
+float3 Darken( float3 Base, float3 Blend )
+{
+	return float3( Darken(Base.r, Blend.r), Darken(Base.g, Blend.g), Darken(Base.b, Blend.b) );
+}
+float3 Darken( float3 Base, float3 Blend, float Opacity )
+{
+	return Darken( Base, Blend ) * Opacity + Base * ( 1.0 - Opacity );
+}
+
+float3 Levels( float3 vInColor, float3 vMinInput, float3 vMaxInput )
+{
+	float3 vRet = saturate( vInColor - vMinInput );
+	vRet /= vMaxInput - vMinInput;
+	return saturate( vRet );
+}
+float Levels( float vInValue, float vMinValue, float vMaxValue )
+{
+	return saturate( ( vInValue - vMinValue ) / ( vMaxValue - vMinValue ) );
+}
+
+// Intuitive way to dynamically grow and shrink masks, similar to Histogram Scan in Substance Designer.
+// vInValue is typically a mask texture, vPosition is the value to be remapped to 0.5, vRange is the softness of that remap.
+float LevelsScan( float vInValue, float vPosition, float vRange )
+{
+	return Levels( vInValue, vPosition - ( vRange / 2 ), vPosition + ( vRange / 2 ) );
+}
+
+float3 UnpackNormal( float4 NormalMapSample )
+{
+	float3 vNormalSample = NormalMapSample.rgb - 0.5;
+	vNormalSample.g = -vNormalSample.g;
+	return vNormalSample;
+}
+
+float3 UnpackNormal( in PdxTextureSampler2D NormalTex, float2 uv )
+{
+	return UnpackNormal( PdxTex2D( NormalTex, uv ) );
+}
+
+float3 IntToNiceColor( int TheInt )
+{
+	const int HueDivision = 6; // As in how many times the color wheel is divided
+	const int SatDivision = 5;
+
+	float Hue = mod( TheInt / (float)HueDivision, 1.0 );
+	float Saturation = 1.0 - ( 1.0 / (float)SatDivision ) * ( TheInt / HueDivision );
+	float Value = Saturation;
+	return HSVtoRGB( Hue, Saturation, Value );
+}
+
+float3 UnpackRRxGNormal( float4 NormalMapSample )
+{
+	float x = NormalMapSample.g * 2.0 - 1.0;
+	float y = NormalMapSample.a * 2.0 - 1.0;
+	y = -y;
+	float z = sqrt( saturate( 1.0 - x * x - y * y ) );
+	return float3( x, y, z );
+}
+
+float3 UnpackRRxGNormal( in PdxTextureSampler2D NormalTex, float2 uv )
+{
+	return UnpackRRxGNormal( PdxTex2D( NormalTex, uv ) );
+}
+
+float3 ReorientNormal( float3 BaseNormal, float3 DetailNormal )
+{
+	float3 t = BaseNormal + float3( 0.0, 0.0, 1.0 );
+	float3 u = DetailNormal * float3( -1.0, -1.0, 1.0 );
+	float3 Normal = normalize( t * dot( t, u ) - u * t.z );
+	return Normal;
+}
+
+float Fresnel( float NdotL, float FresnelBias, float FresnelPow )
+{
+	return saturate( FresnelBias + (1.0 - FresnelBias) * pow( 1.0 - NdotL, FresnelPow ) );
+}
+
+#define REMAP_IMPL NewMin + ( NewMax - NewMin ) * ( (Value - OldMin) / (OldMax - OldMin) )
+float Remap( float Value, float OldMin, float OldMax, float NewMin, float NewMax ) { return REMAP_IMPL; }
+float2 Remap( float2 Value, float2 OldMin, float2 OldMax, float2 NewMin, float2 NewMax ) { return REMAP_IMPL; }
+float3 Remap( float3 Value, float3 OldMin, float3 OldMax, float3 NewMin, float3 NewMax ) { return REMAP_IMPL; }
+#undef REMAP_IMPL
+#define REMAP_IMPL NewMin + ( NewMax - NewMin ) * saturate( (Value - OldMin) / (OldMax - OldMin) )
+float RemapClamped( float Value, float OldMin, float OldMax, float NewMin, float NewMax ) { return REMAP_IMPL; }
+float2 RemapClamped( float2 Value, float2 OldMin, float2 OldMax, float2 NewMin, float2 NewMax ) { return REMAP_IMPL; }
+float3 RemapClamped( float3 Value, float3 OldMin, float3 OldMax, float3 NewMin, float3 NewMax ) { return REMAP_IMPL; }
+#undef REMAP_IMPL
+float2 RotateDisc( float2 Disc, float2 Rotate )
+{
+	return float2( Disc.x * Rotate.x - Disc.y * Rotate.y, Disc.x * Rotate.y + Disc.y * Rotate.x );
+}
+
+float CalculateShadow( float4 ShadowProj, PdxTextureSampler2DCmp ShadowMap )
+{
+	ShadowProj.xyz = ShadowProj.xyz / ShadowProj.w;
+	
+	float RandomAngle = CalcRandom( round( ShadowScreenSpaceScale * ShadowProj.xy ) ) * 3.14159 * 2.0;
+	float2 Rotate = float2( cos( RandomAngle ), sin( RandomAngle ) );
+
+	// Sample each of them checking whether the pixel under test is shadowed or not
+	float ShadowTerm = 0.0;
+	for( int i = 0; i < NumSamples; i++ )
+	{
+		float4 Samples = DiscSamples[i] * KernelScale;
+		ShadowTerm += PdxTex2DCmpLod0( ShadowMap, ShadowProj.xy + RotateDisc( Samples.xy, Rotate ), ShadowProj.z - Bias );
+		ShadowTerm += PdxTex2DCmpLod0( ShadowMap, ShadowProj.xy + RotateDisc( Samples.zw, Rotate ), ShadowProj.z - Bias );
+	}
+	
+	// Get the average
+	ShadowTerm *= 0.5; // We have 2 samples per "sample"
+	ShadowTerm = ShadowTerm / float(NumSamples);
+	
+	float3 FadeFactor = saturate( float3( 1.0 - abs( 0.5 - ShadowProj.xy ) * 2.0, 1.0 - ShadowProj.z ) * 32.0 ); // 32 is just a random strength on the fade
+	ShadowTerm = lerp( 1.0, ShadowTerm, min( min( FadeFactor.x, FadeFactor.y ), FadeFactor.z ) );
+	
+	return lerp( 1.0, ShadowTerm, ShadowFadeFactor );
+}
+static const float TWO_PI = 6.28318530718f;
+
+static const float SHADOW_AMBIENT_MIN_FACTOR = 0.0;
+static const float SHADOW_AMBIENT_MAX_FACTOR = 0.3;
+float CalculateDistanceFogFactor( float3 WorldSpacePos )
+{
+	float3 Diff = CameraPosition - WorldSpacePos;
+	float vFogFactor = 1.0 - abs( normalize( Diff ).y ); // abs b/c of reflections
+	float vSqDistance = dot( Diff, Diff );
+
+	float vMin = min( ( vSqDistance - FogBegin2 ) / ( FogEnd2 - FogBegin2 ), FogMax );
+	return saturate( vMin * vFogFactor );
+}
+
+float3 ApplyDistanceFog( float3 Color, float vFogFactor )
+{
+	return lerp( Color, FogColor, vFogFactor );
+}
+
+float3 ApplyDistanceFog( float3 Color, float3 WorldSpacePos )
+{
+	return ApplyDistanceFog( Color, CalculateDistanceFogFactor( WorldSpacePos ) );
+}
+float3 UnpackDecalNormal( float4 NormalSample, float DecalStrength )
+{
+	float3 Normal;
+	//Sample format is RRxG
+	Normal.xy = NormalSample.ga * 2.0 - vec2( 1.0 );
+	Normal.y = -Normal.y;
+
+	//Filter out "weak" normals. Compression/precision errors will scale with the number of decals used, so try to remove errors where artists intended the normals to be neutral
+	float NormalXYSquared = dot( Normal.xy, Normal.xy );
+	const float FilterMin = 0.0004f;
+	const float FilterWidth = 0.05f;
+	float Filter = smoothstep( FilterMin, FilterMin + FilterWidth * FilterWidth, NormalXYSquared );
+
+	Normal.xy *= DecalStrength * Filter;
+	Normal.z = sqrt( saturate( 1.0 - dot( Normal.xy, Normal.xy ) ) );
+	return Normal;
+}
+
+float3 OverlayNormal( in float3 Base, in float3 Overlay )
+{
+	float3 Normal = Base;
+	Normal.xy += Overlay.xy;
+	Normal.z *= Overlay.z;
+	return Normal;
+}
+// The C++ layout is SVariationRenderConstants followed by CDecalEntityData::SMeshData followed by SColorMaskRemapInterval
+//	struct SVariationRenderConstants
+//	{
+//		struct STransform
+//		{
+//			float		_Scale = 1.0f;
+//			float		_Rotation = 0.0f;
+//			CVector2f	_Offset = CVector2f::Zero();
+//		};
+//		STransform	_Transforms[4];
+//		CVector4f	_ColorMaskIndices;
+//		CVector4f	_NormalMapIndices;
+//		CVector4f	_PropertyIndices;
+//		float		_RandomNumber;
+//		float		_UseColorOverrides; // Used as bool
+//	};
+//	struct SColorMaskRemapInterval
+//	{
+//		CVector2f _Interval = CVector2f{ 0.0f, 1.0f };
+//	};
+//	struct SMeshData
+//	{
+//		float _BodyPartIndex = 0.0f;
+//	};
+
+// Also, note thata the Data[] array is of type float4.
+
+struct SPatternDesc
+{
+	float 	_Scale;
+	float	_Rotation;
+	float2	_Offset;
+	float	_ColorMaskIndex;
+	float	_NormalMapIndex;
+	float	_PropertyMapIndex;
+	bool	_UseColorOverrides;
+	bool	_UseOpacity;
+};
+
+SPatternDesc GetPatternDesc( uint InstanceIndex, uint PatternIndex )
+{
+	SPatternDesc Desc;
+	uint Offset = InstanceIndex + PDXMESH_USER_DATA_OFFSET;
+	Desc._Scale = Data[Offset + PatternIndex].r;
+	Desc._Rotation = Data[Offset + PatternIndex].g;
+	Desc._Offset = Data[Offset + PatternIndex].ba;
+	Desc._ColorMaskIndex = Data[Offset + 4][PatternIndex];
+	Desc._NormalMapIndex = Data[Offset + 5][PatternIndex];
+	Desc._PropertyMapIndex = Data[Offset + 6][PatternIndex];
+	Desc._UseOpacity = Data[Offset + 7][PatternIndex] > 0.0f;
+	Desc._UseColorOverrides = Data[Offset + 8].g > 0.0f;
+	return Desc;
+}
+
+float GetRandomNumber( uint InstanceIndex )
+{
+	uint Offset = InstanceIndex + PDXMESH_USER_DATA_OFFSET + 8;
+	return Data[Offset].r;
+}
+
+float2 GetColorMaskRemapInterval( uint InstanceIndex )
+{
+	uint Offset = InstanceIndex + PDXMESH_USER_DATA_OFFSET + 8;
+	return Data[Offset].ba;
+}
+
+uint GetBodyPartIndex( uint InstanceIndex )
+{
+	uint Offset = InstanceIndex + PDXMESH_USER_DATA_OFFSET + 9;
+	return uint( Data[Offset].r );
+}
+#define LIGHT_COUNT 3
+#define LIGHT_TYPE_NONE 0
+#define LIGHT_TYPE_DIRECTIONAL 1
+#define LIGHT_TYPE_SPOTLIGHT 2
+#define LIGHT_TYPE_POINTLIGHT 3
+
+#ifndef PDXMESH_AlphaBlendShadowMap
+	#define PDXMESH_AlphaBlendShadowMap DiffuseMap
+#endif
+
+#ifndef PDXMESH_DISABLE_DITHERED_OPACITY
+	#define PDXMESH_USE_DITHERED_OPACITY
+#endif
+
+void PdxMeshApplyDitheredOpacity( in float Opacity, in float2 NoiseCoordinate )
+{
+	#ifdef PDXMESH_SCREENDOOR_DITHER				
+		const float4x4 ThresholdMatrix =
+		{
+			1.0 / 17.0,  9.0 / 17.0,  3.0 / 17.0, 11.0 / 17.0,
+			13.0 / 17.0,  5.0 / 17.0, 15.0 / 17.0,  7.0 / 17.0,
+			4.0 / 17.0, 12.0 / 17.0,  2.0 / 17.0, 10.0 / 17.0,
+			16.0 / 17.0,  8.0 / 17.0, 14.0 / 17.0,  6.0 / 17.0
+		};
+		float Factor = ThresholdMatrix[NoiseCoordinate.x % 4][NoiseCoordinate.y % 4];
+	#else
+		float Factor = CalcRandom( NoiseCoordinate );
+	#endif
+	
+	clip( Opacity - Factor * sign( Opacity ) );
+}
+
+float PdxMeshApplyOpacity( in float Alpha, in float2 NoiseCoordinate, in float Opacity )
+{
+	#ifdef PDXMESH_USE_DITHERED_OPACITY
+		if( Opacity < 1.0f )
+		{
+			PdxMeshApplyDitheredOpacity( Opacity, NoiseCoordinate );
+		}
+	#endif
+	return Alpha;
+}
+
+// Implements https://medium.com/@bgolus/anti-aliased-alpha-test-the-esoteric-alpha-to-coverage-8b177335ae4f
+
+float CalcMipLevel(float2 texture_coord)
+{
+	float2 dx = ddx(texture_coord);
+	float2 dy = ddy(texture_coord);
+	float delta_max_sqr = max(dot(dx, dx), dot(dy, dy));
+	return max(0.0, 0.5 * log2(delta_max_sqr));
+}
+
+float RescaleAlphaByMipLevel( float Alpha, float2 UV, PdxTextureSampler2D Sampler )
+{
+	// 0.25 approximates the loss of density from mip mapping
+	const float MIP_SCALE = 0.25f;
+	float2 TextureSize;
+	PdxTex2DSize( Sampler, TextureSize );
+	float2 Scaled_UV = UV * TextureSize;
+	return Alpha * ( 1.0f + ( CalcMipLevel( Scaled_UV ) * MIP_SCALE ) );
+}
+
+// This `Cutoff` value (between [0.0, 1.0]) can be tweaked to change the "thickness"
+// of the edges where the transparency is, lower value -> thicker edge
+float SharpenAlpha( float Alpha, float Cutoff )
+{
+	float Result = ( ( Alpha - Cutoff ) / max( fwidth( Alpha ), 0.0001f ) ) + 0.5f;
+	return saturate( Result );
+}
+
+float CalcLightFalloff( float LightRadius, float Distance, float Falloff )
+{
+	// TODO other, square, falloff?
+	return saturate( (LightRadius - Distance) / Falloff );
+}
+
+float CalcLightFalloff( float LightRadius, float Distance )
+{
+	// This is basically the unreal method, square distance falloff but capped at "LightRadius" distance and capped at intensity 1 at distance 0.
+	return pow( saturate( 1.0 - pow( Distance / LightRadius, 4.0 ) ), 2.0 ) / ( Distance * Distance + 1.0 );
+}
+
+
+float3 MetalnessToDiffuse( float Metalness, float3 Diffuse )
+{
+	return lerp( Diffuse, vec3(0.0), Metalness );
+}
+
+float3 MetalnessToSpec( float Metalness, float3 Diffuse, float Spec )
+{
+	return lerp( vec3(Spec), Diffuse, Metalness );
+}
+
+
+#ifndef PDX_NumMips
+	#define PDX_NumMips 10.0
+#endif
+
+#ifndef PDX_MipOffset
+	#define PDX_MipOffset 2.0
+#endif
+
+#define PDX_SimpleLighting
+
+
+struct SMaterialProperties
+{
+	float 	_PerceptualRoughness;
+	float 	_Roughness;
+	float	_Metalness;
+	
+	float3	_DiffuseColor;
+	float3	_SpecularColor;
+	float3	_Normal;
+};
+
+struct SLightingProperties
+{
+	float3		_ToCameraDir;
+	float3		_ToLightDir;
+	float3		_LightIntensity;
+	float		_ShadowTerm;
+	float		_CubemapIntensity;
+	// this rotation matrix is used to rotate cubemap sampling vectors, thus "faking" a rotation of the cubemap
+	float4x4	_CubemapYRotation;
+};
+
+float RemapSpec( float SampledSpec )
+{
+	return 0.25 * SampledSpec;
+}
+	
+float RoughnessFromPerceptualRoughness( float PerceptualRoughness )
+{
+	return PerceptualRoughness * PerceptualRoughness;
+}
+
+float BurleyToMipSimple( float PerceptualRoughness )
+{
+   float Scale = PerceptualRoughness * (1.7 - 0.7 * PerceptualRoughness);
+   return Scale * ( PDX_NumMips - 1 - PDX_MipOffset );
+}
+
+float3 GetSpecularDominantDir( float3 Normal, float3 Reflection, float Roughness )
+{
+	float Smoothness = saturate( 1.0 - Roughness );
+	float LerpFactor = Smoothness * ( sqrt( Smoothness ) + Roughness );
+	return normalize( lerp( Normal, Reflection, LerpFactor ) );
+}
+
+float GetReductionInMicrofacets( float Roughness )
+{
+	return 1.0 / (Roughness*Roughness + 1.0);
+}
+
+float F_Schlick( float f0, float f90, float CosAngle )
+{
+	return f0 + ( f90 - f0 ) * pow( 1.0 - CosAngle, 5.0 );
+}
+
+float3 F_Schlick( float3 f0, float3 f90, float CosAngle )
+{
+	return f0 + ( f90 - f0 ) * pow( 1.0 - CosAngle, 5.0 );
+}
+        
+
+float DisneyDiffuse( float NdotV, float NdotL, float LdotH, float LinearRoughness )
+{
+	float EnergyBias = lerp( 0.0, 0.5, LinearRoughness );
+	float EnergyFactor = lerp( 1.0, 1.0 / 1.51, LinearRoughness );
+	float f90 = EnergyBias + 2.0 * LdotH * LdotH * LinearRoughness;
+	float LightScatter = F_Schlick( 1.0, f90, NdotL );
+	float ViewScatter = F_Schlick( 1.0, f90, NdotV );
+	
+	return LightScatter * ViewScatter * EnergyFactor;
+}
+
+float CalcDiffuseBRDF( float NdotV, float NdotL, float LdotH, float PerceptualRoughness )
+{
+#ifdef PDX_SimpleLighting
+	return 1.0 / PI;
+#else
+	return DisneyDiffuse( NdotV, NdotL, LdotH, PerceptualRoughness ) / PI;
+#endif
+}
+
+
+float D_GGX( float NdotH, float Alpha )
+{
+	float Alpha2 = Alpha * Alpha;
+	float f = ( NdotH * Alpha2 - NdotH ) * NdotH + 1.0;
+	return Alpha2 / (PI * f * f);
+}
+
+float G1( float CosAngle, float k )
+{
+	return 1.0 / ( CosAngle * ( 1.0 - k ) + k );
+}
+
+float V_Schlick( float NdotL, float NdotV, float Alpha )
+{
+	float k = Alpha * 0.5;
+	return G1( NdotL, k ) * G1( NdotV, k ) * 0.25;
+}
+
+float V_Optimized( float LdotH, float Alpha )
+{
+	float k = Alpha * 0.5;
+	float k2 = k*k;
+	float invk2 = 1.0 - k2;
+	return 0.25 / ( LdotH * LdotH * invk2 + k2 );
+}
+        
+float3 CalcSpecularBRDF( float3 SpecularColor, float LdotH, float NdotH, float NdotL, float NdotV, float Roughness )
+{
+	float3 F = F_Schlick( SpecularColor, vec3(1.0), LdotH );
+	float D = D_GGX( NdotH, lerp( 0.03, 1.0, Roughness ) ); // Remap to avoid super small and super bright highlights
+#ifdef PDX_SimpleLighting
+	float Vis = V_Optimized( LdotH, Roughness );
+#else
+	float Vis = V_Schlick( NdotL, NdotV, Roughness );
+#endif
+	return D * F * Vis;
+}
+
+void CalculateLightingFromLight( SMaterialProperties MaterialProps, float3 ToCameraDir, float3 ToLightDir, float3 LightIntensity, out float3 DiffuseOut, out float3 SpecularOut )
+{
+	float3 H = normalize( ToCameraDir + ToLightDir );
+	float NdotV = saturate( dot( MaterialProps._Normal, ToCameraDir ) ) + 1e-5;
+	float NdotL = saturate( dot( MaterialProps._Normal, ToLightDir ) ) + 1e-5;
+	float NdotH = saturate( dot( MaterialProps._Normal, H ) );
+	float LdotH = saturate( dot( ToLightDir, H ) );
+	
+	float DiffuseBRDF = CalcDiffuseBRDF( NdotV, NdotL, LdotH, MaterialProps._PerceptualRoughness );
+	DiffuseOut = DiffuseBRDF * MaterialProps._DiffuseColor * LightIntensity * NdotL;
+	
+#ifdef PDX_HACK_ToSpecularLightDir
+	float3 H_Spec = normalize( ToCameraDir + PDX_HACK_ToSpecularLightDir );
+	float NdotL_Spec = saturate( dot( MaterialProps._Normal, PDX_HACK_ToSpecularLightDir ) ) + 1e-5;
+	float NdotH_Spec = saturate( dot( MaterialProps._Normal, H_Spec ) );
+	float LdotH_Spec = saturate( dot( PDX_HACK_ToSpecularLightDir, H_Spec ) );
+	float3 SpecularBRDF = CalcSpecularBRDF( MaterialProps._SpecularColor, LdotH_Spec, NdotH_Spec, NdotL_Spec, NdotV, MaterialProps._Roughness );
+	SpecularOut = SpecularBRDF * LightIntensity * NdotL;
+#else
+	float3 SpecularBRDF = CalcSpecularBRDF( MaterialProps._SpecularColor, LdotH, NdotH, NdotL, NdotV, MaterialProps._Roughness );
+	SpecularOut = SpecularBRDF * LightIntensity * NdotL;
+#endif
+}
+
+void CalculateLightingFromLight( SMaterialProperties MaterialProps, SLightingProperties LightingProps, out float3 DiffuseOut, out float3 SpecularOut )
+{
+	CalculateLightingFromLight( MaterialProps, LightingProps._ToCameraDir, LightingProps._ToLightDir, LightingProps._LightIntensity * LightingProps._ShadowTerm, DiffuseOut, SpecularOut );
+}
+
+void CalculateLightingFromIBL( SMaterialProperties MaterialProps, SLightingProperties LightingProps, PdxTextureSamplerCube EnvironmentMap, out float3 DiffuseIBLOut, out float3 SpecularIBLOut )
+{
+	float3 RotatedDiffuseCubemapUV = mul( CastTo3x3( LightingProps._CubemapYRotation ), MaterialProps._Normal );
+	float3 DiffuseRad = PdxTexCubeLod( EnvironmentMap, RotatedDiffuseCubemapUV, ( PDX_NumMips - 1 - PDX_MipOffset ) ).rgb * LightingProps._CubemapIntensity; // TODO, maybe we should split diffuse and spec intensity?
+	DiffuseIBLOut = DiffuseRad * MaterialProps._DiffuseColor;
+	
+	float3 ReflectionVector = reflect( -LightingProps._ToCameraDir, MaterialProps._Normal );
+	float3 DominantReflectionVector = GetSpecularDominantDir( MaterialProps._Normal, ReflectionVector, MaterialProps._Roughness );
+
+	float NdotR = saturate( dot( MaterialProps._Normal, DominantReflectionVector ) );
+	float3 SpecularReflection = F_Schlick( MaterialProps._SpecularColor, vec3(1.0), NdotR );
+	float SpecularFade = GetReductionInMicrofacets( MaterialProps._Roughness );
+
+	float MipLevel = BurleyToMipSimple( MaterialProps._PerceptualRoughness );
+	float3 RotatedSpecularCubemapUV = mul( CastTo3x3( LightingProps._CubemapYRotation ), DominantReflectionVector );
+	float3 SpecularRad = PdxTexCubeLod( EnvironmentMap, RotatedSpecularCubemapUV, MipLevel ).rgb * LightingProps._CubemapIntensity; // TODO, maybe we should split diffuse and spec intensity?
+	SpecularIBLOut = SpecularRad * SpecularFade * SpecularReflection;
+}
+
+float4x4 Float4x4Identity()
+{
+	return float4x4( 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0 );
+}
+
+SMaterialProperties GetMaterialProperties( float3 SampledDiffuse, float3 Normal, float SampledRoughness, float SampledSpec, float SampledMetalness )
+{
+	SMaterialProperties MaterialProps;
+	
+	MaterialProps._PerceptualRoughness = SampledRoughness;
+	MaterialProps._Roughness = RoughnessFromPerceptualRoughness( MaterialProps._PerceptualRoughness );
+
+	float SpecRemapped = RemapSpec( SampledSpec );
+	MaterialProps._Metalness = SampledMetalness;
+
+	MaterialProps._DiffuseColor = MetalnessToDiffuse( MaterialProps._Metalness, SampledDiffuse );
+	MaterialProps._SpecularColor = MetalnessToSpec( MaterialProps._Metalness, SampledDiffuse, SpecRemapped );
+	
+	MaterialProps._Normal = Normal;
+	
+	return MaterialProps;
+}
+
+//-------------------------------
+// Common lighting functions ----
+//-------------------------------
+SLightingProperties GetSunLightingProperties( float3 WorldSpacePos, float ShadowTerm )
+{
+	SLightingProperties LightingProps;
+	LightingProps._ToCameraDir = normalize( CameraPosition - WorldSpacePos );
+	LightingProps._ToLightDir = ToSunDir;
+	LightingProps._LightIntensity = SunDiffuse * SunIntensity;
+	LightingProps._ShadowTerm = ShadowTerm;
+	LightingProps._CubemapIntensity = CubemapIntensity;
+	LightingProps._CubemapYRotation = CubemapYRotation;
+	
+	return LightingProps;
+}
+
+SLightingProperties GetSunLightingProperties( float3 WorldSpacePos, PdxTextureSampler2DCmp ShadowMap )
+{
+	float4 ShadowProj = mul( ShadowMapTextureMatrix, float4( WorldSpacePos, 1.0 ) );
+	float ShadowTerm = CalculateShadow( ShadowProj, ShadowMap );
+	
+	return GetSunLightingProperties( WorldSpacePos, ShadowTerm );
+}
+
+float3 CalculateSunLighting( SMaterialProperties MaterialProps, SLightingProperties LightingProps, PdxTextureSamplerCube EnvironmentMap )
+{
+	float3 DiffuseLight;
+	float3 SpecularLight;
+	CalculateLightingFromLight( MaterialProps, LightingProps, DiffuseLight, SpecularLight );
+	
+	float3 DiffuseIBL;
+	float3 SpecularIBL;
+	CalculateLightingFromIBL( MaterialProps, LightingProps, EnvironmentMap, DiffuseIBL, SpecularIBL );
+	
+	return DiffuseLight + SpecularLight + DiffuseIBL + SpecularIBL;
+}
+
+
+//-------------------------------
+// Debugging --------------------
+//-------------------------------
+//#define PDX_DEBUG_NORMAL
+//#define PDX_DEBUG_DIFFUSE
+//#define PDX_DEBUG_SPEC
+//#define PDX_DEBUG_SPEC_RANGES
+//#define PDX_DEBUG_ROUGHNESS
+//#define PDX_DEBUG_METALNESS
+//#define PDX_DEBUG_SHADOW
+//#define PDX_DEBUG_SUN_LIGHT_SIMPLE_DIFFUSE // AKA Daniel mode
+//#define PDX_DEBUG_SUN_LIGHT_ONLY_SPECULAR
+//#define PDX_DEBUG_SUN_LIGHT
+//#define PDX_DEBUG_SUN_LIGHT_WITH_SHADOW
+//#define PDX_DEBUG_IBL_SIMPLE_DIFFUSE
+//#define PDX_DEBUG_IBL_DIFFUSE
+//#define PDX_DEBUG_IBL_SPECULAR
+//#define PDX_DEBUG_IBL
+
+void DebugReturn( inout float3 Out, SMaterialProperties MaterialProps, SLightingProperties LightingProps )
+{
+#ifdef PDX_DEBUG_NORMAL
+	Out = saturate( MaterialProps._Normal );
+#endif
+
+#ifdef PDX_DEBUG_DIFFUSE
+	Out = MaterialProps._DiffuseColor;
+#endif
+
+#ifdef PDX_DEBUG_SPEC
+	Out = MaterialProps._SpecularColor;
+#endif
+
+#ifdef PDX_DEBUG_ROUGHNESS
+	Out = vec3( MaterialProps._PerceptualRoughness );
+#endif
+
+#ifdef PDX_DEBUG_METALNESS
+	Out = vec3( MaterialProps._Metalness );
+#endif
+
+#ifdef PDX_DEBUG_SPEC_RANGES
+	// Shows extremely low specular values in red
+	// Shows common material values in green (2-6%)
+	// Shows gemstone material values in yellow (8-17%)
+	// Shows metalness in blue
+	// Shows everything else in gray scale	
+	// Values based on page 14-15 in http://renderwonk.com/publications/s2010-shading-course/hoffman/s2010_physically_based_shading_hoffman_a_notes.pdf
+	float Spec = MaterialProps._SpecularColor.r;
+	
+	float e = 0.002f;
+	float ErrorThreshold = 0.01f;
+	float DielectricLow = 0.02f;
+	float DielectricHigh = 0.06f;
+	float GemstoneLow = 0.08f;
+	float GemstoneHigh = 0.17f;
+	
+	float Error = smoothstep( ErrorThreshold, 0.0, Spec );
+	float CommonMask = smoothstep( DielectricLow-e, DielectricLow, Spec ) * smoothstep( DielectricHigh+e, DielectricHigh, Spec);
+	float GemstoneMask = smoothstep( GemstoneLow-e, GemstoneLow, Spec ) * smoothstep( GemstoneHigh+e, GemstoneHigh, Spec);
+	float ScaledSpec = ( Spec / RemapSpec(1.0f) );
+	float3 DebugSpecColor = float3( GemstoneMask, CommonMask + GemstoneMask, 0.0 ) * ScaledSpec;
+	Out = lerp( vec3(ScaledSpec), DebugSpecColor, CommonMask + GemstoneMask );
+	Out = lerp( Out, float3(1.0,0.0,0.0), Error );
+	Out = lerp( Out, float3(0.0,0.0,1.0), MaterialProps._Metalness );
+#endif
+
+#ifdef PDX_DEBUG_SHADOW
+	Out = vec3( LightingProps._ShadowTerm );
+#endif
+
+#ifdef PDX_DEBUG_SUN_LIGHT_SIMPLE_DIFFUSE
+	SMaterialProperties MaterialPropsCopy = MaterialProps;
+	MaterialPropsCopy._DiffuseColor = vec3( 1.0 );
+	MaterialPropsCopy._SpecularColor = vec3( 0.0 );
+	
+	float3 SpecularLight;
+	CalculateLightingFromLight( MaterialPropsCopy, LightingProps, Out, SpecularLight );
+#endif
+
+#ifdef PDX_DEBUG_SUN_LIGHT_ONLY_SPECULAR			
+	float3 DiffuseLight;			
+	CalculateLightingFromLight( MaterialProps, LightingProps, DiffuseLight, Out );
+#endif
+
+#if defined( PDX_DEBUG_SUN_LIGHT ) || defined( PDX_DEBUG_SUN_LIGHT_WITH_SHADOW )
+	float3 DiffuseLight;
+	float3 SpecularLight;
+
+	#ifdef PDX_DEBUG_SUN_LIGHT_WITH_SHADOW
+		CalculateLightingFromLight( MaterialProps, LightingProps, DiffuseLight, SpecularLight );
+	#else
+		SLightingProperties LightingPropsNoShadow = LightingProps;
+		LightingPropsNoShadow._ShadowTerm = 1.0;
+		CalculateLightingFromLight( MaterialProps, LightingPropsNoShadow, DiffuseLight, SpecularLight );
+	#endif
+	
+	Out = DiffuseLight + SpecularLight;
+#endif
+}
+
+void DebugReturn( inout float3 Out, SMaterialProperties MaterialProps, SLightingProperties LightingProps, PdxTextureSamplerCube EnvironmentMap )
+{
+	DebugReturn( Out, MaterialProps, LightingProps );
+
+#if defined( PDX_DEBUG_IBL ) || defined( PDX_DEBUG_IBL_DIFFUSE ) || defined( PDX_DEBUG_IBL_SPECULAR ) || defined( PDX_DEBUG_IBL_SIMPLE_DIFFUSE )
+	float3 DiffuseIBL;
+	float3 SpecularIBL;
+	
+	SMaterialProperties MaterialPropsCopy = MaterialProps;
+	#ifdef PDX_DEBUG_IBL_SIMPLE_DIFFUSE
+		MaterialPropsCopy._DiffuseColor = vec3( 1.0 );
+	#endif
+	
+	CalculateLightingFromIBL( MaterialPropsCopy, LightingProps, EnvironmentMap, DiffuseIBL, SpecularIBL );
+	
+	#if defined( PDX_DEBUG_IBL_DIFFUSE ) || defined( PDX_DEBUG_IBL_SIMPLE_DIFFUSE )
+		Out = DiffuseIBL;
+	#endif
+	#ifdef PDX_DEBUG_IBL_SPECULAR
+		Out = SpecularIBL;
+	#endif
+	#ifdef PDX_DEBUG_IBL
+		Out = DiffuseIBL + SpecularIBL;
+	#endif
+#endif
+}
+
+		
+#define BLEND_MODE_OVERLAY 0
+#define BLEND_MODE_REPLACE 1
+#define BLEND_MODE_HARD_LIGHT 2
+#define BLEND_MODE_MULTIPLY 3
+#define BLEND_MODE_OVERLAY_SRGB 4
+#define BLEND_MODE_HARD_LIGHT_SRGB 5
+// Special handling of normal Overlay blend mode (in shader only)
+#define BLEND_MODE_OVERLAY_NORMAL 6
+
+		float OverlayDecal( float Target, float Blend ) {
+			return float( Target > 0.5f ) * ( 1.0f - ( 2.0f * ( 1.0f - Target ) * ( 1.0f - Blend ) ) ) + float( Target <= 0.5f ) * ( 2.0f * Target * Blend );
+		}
+		
+		float OverlayDecalSrgb( float Base, float Blend )
+		{
+			float MidPoint = ToLinear( 0.5 );
+			
+			if( Base < MidPoint ) 
+			{
+				//Multiply
+				return Remap( Base, 0.0, MidPoint, 0.0, 1.0 ) * Blend;				
+			}
+			else
+			{
+				//Screen
+				float InvBase = 1.0 - pow( Remap( Base, MidPoint, 1.0, 0.0, 1.0 ), RemapClamped(Blend, 0.0, MidPoint, 2.0, 1.0 ) );				
+				return 1.0f - InvBase * ( 1.0f - Blend );
+			}
+		}
+		
+		float HardLightDecal( float Target, float Blend )
+		{
+			return float( Blend > 0.5f ) * ( 1.0f - ( 2.0f * ( 1.0f - Target ) * ( 1.0f - Blend ) ) ) + float( Blend <= 0.5f ) * ( 2.0f * Target * Blend );
+		}
+		
+		float HardLightDecalSrgb( float Base, float Blend )
+		{
+			float MidPoint = ToLinear( 0.5 );
+			if( Blend < MidPoint ) 
+			{
+				//Multiply
+				return Base * Remap( Blend, 0.0, MidPoint, 0.0, 1.0 );
+			}
+			else
+			{
+				//Screen
+				return 1.0f - (1.0f - Base) * Remap( Blend, MidPoint, 1.0, 1.0, 0.0 );
+			}
+		}
+		
+		float4 BlendDecal( uint BlendMode, float4 Target, float4 Blend, float Weight )
+		{
+			float4 Result = vec4( 0.0f );
+		
+			if ( BlendMode == BLEND_MODE_OVERLAY )
+			{
+				Result = float4( OverlayDecal( Target.r, Blend.r ), OverlayDecal( Target.g, Blend.g ), OverlayDecal( Target.b, Blend.b ), OverlayDecal( Target.a, Blend.a ) );
+			}
+			else if ( BlendMode == BLEND_MODE_OVERLAY_SRGB )
+			{			
+				Result = float4( OverlayDecalSrgb( Target.r, Blend.r ), OverlayDecalSrgb( Target.g, Blend.g ), OverlayDecalSrgb( Target.b, Blend.b ), OverlayDecalSrgb( Target.a, Blend.a ) );
+			}
+			else if ( BlendMode == BLEND_MODE_REPLACE )
+			{
+				Result = Blend;
+			}
+			else if ( BlendMode == BLEND_MODE_HARD_LIGHT )
+			{
+				Result = float4( HardLightDecal( Target.r, Blend.r ), HardLightDecal( Target.g, Blend.g ), HardLightDecal( Target.b, Blend.b ), HardLightDecal( Target.a, Blend.a ) );
+			}
+			else if ( BlendMode == BLEND_MODE_HARD_LIGHT_SRGB )
+			{
+				Result = float4( HardLightDecalSrgb( Target.r, Blend.r ), HardLightDecalSrgb( Target.g, Blend.g ), HardLightDecalSrgb( Target.b, Blend.b ), HardLightDecalSrgb( Target.a, Blend.a ) );
+			}
+			else if ( BlendMode == BLEND_MODE_MULTIPLY )
+			{
+				Result = Target * Blend;
+			}
+			else if ( BlendMode == BLEND_MODE_OVERLAY_NORMAL )
+			{
+				Result = float4( OverlayNormal( Target.xyz, Blend.xyz ), Target.a );
+			}
+		
+			return lerp( Target, Result, Weight );
+		}
+	#ifdef VARIATIONS_ENABLED
+	struct SPatternOutput
+	{
+		float4	_Diffuse;
+		float4	_Properties;
+		float3	_Normal;
+	};
+
+	SPatternOutput ApplyPattern( float2 UV, SPatternDesc Desc, float RandomNumber, int MaskIndex )
+	{
+		// Rotate and scale around (0.5,0.5)
+		float2 Rotate = float2( cos( Desc._Rotation ), sin( Desc._Rotation ) );
+		UV -= vec2( 0.5f);
+		UV = float2( UV.x * Rotate.x - UV.y * Rotate.y, UV.x * Rotate.y + UV.y * Rotate.x );
+		UV /= Desc._Scale;
+		UV += vec2( 0.5f );
+		UV += Desc._Offset;
+
+		float4 ColorMask = PdxTex2D( PatternColorMasks, float3( UV, Desc._ColorMaskIndex ) );
+
+		float4 PatternColor = float4( 1.0f, 1.0f, 1.0f, 0 );
+		float4 PatternProperties = PdxTex2D( PatternPropertyMaps, float3( UV, Desc._PropertyMapIndex ) );
+		float4 PatternNormalSample = PdxTex2D( PatternNormalMaps, float3( UV, Desc._NormalMapIndex ) );
+
+		//Sample the color palette once for each channel in the mask
+		for ( int i = 0; i < 4; ++i )
+		{
+			if ( ColorMask[i] > 0.0f )
+			{
+				// Select from 16-width color palette
+				float3 Sample;
+				if ( Desc._UseColorOverrides )
+				{
+					Sample = PatternColorOverrides[MaskIndex + i].rgb;
+				}
+				else
+				{
+					float HorizontalSample = ( MaskIndex * 4.0f ) + i;
+					HorizontalSample = ( HorizontalSample + 0.5f ) / 16.0f;
+					Sample = PdxTex2D( PatternColorPalette, float2( HorizontalSample, RandomNumber ) ).rgb;
+				}
+				PatternColor.rgb = lerp( PatternColor.rgb, Sample, ColorMask[i] );
+				PatternColor.a = max( PatternColor.a, ColorMask[i] );
+			}
+		}
+
+		SPatternOutput PatternOutput;
+		PatternOutput._Diffuse = PatternColor;
+		PatternOutput._Diffuse.a = Desc._UseOpacity ? PatternNormalSample.b : 1.0f; // Set alpha (normalmap blue channel)
+		PatternOutput._Normal = UnpackDecalNormal( PatternNormalSample, PatternColor.a );
+		PatternOutput._Properties = PatternProperties;
+
+		return PatternOutput;
+	}
+
+	void ApplyVariationPatterns( in VS_OUTPUT_PDXMESHPORTRAIT Input, inout float4 Diffuse, inout float4 Properties, inout float3 NormalSample )
+	{
+		float4 Mask = PdxTex2D( PatternMask, Input.UV0 );
+		float4 PatternDiffuse = float4( 1.0f, 1.0f, 1.0f, 1.0f );
+		float3 PatternNormal = float3( 0.0f, 0.0f, 1.0f );
+		float4 PatternProperties = Properties;
+
+		float RandomNumber = GetRandomNumber( Input.InstanceIndex );
+		for( int i = 0; i < 4; ++i )
+		{
+			if( Mask[i] > 0.0f )
+			{
+				SPatternOutput PatternOutput = ApplyPattern( Input.UV1, GetPatternDesc( Input.InstanceIndex, i ), RandomNumber, i );
+
+				PatternDiffuse = lerp( PatternDiffuse, PatternOutput._Diffuse, Mask[i] );
+				PatternNormal = lerp( PatternNormal, PatternOutput._Normal.rgb, Mask[i] );
+				PatternProperties = lerp( PatternProperties, PatternOutput._Properties, Mask[i] );
+			}
+		}
+
+		Diffuse *= PatternDiffuse;
+		Diffuse.rgb *= PatternProperties.rrr; // pattern AO
+
+		NormalSample = normalize( OverlayNormal( NormalSample, PatternNormal ) );
+		Properties = PatternProperties;
+	}
+#endif
+
+struct DecalData
+{
+	uint _DiffuseIndex;
+	uint _NormalIndex;
+	uint _PropertiesIndex;
+	uint _BodyPartIndex;
+
+	uint _DiffuseBlendMode;
+	uint _NormalBlendMode;
+	uint _PropertiesBlendMode;
+	float _Weight;
+
+	uint2 _AtlasPos;
+	float2 _UVOffset;
+
+	uint _AtlasSize;
+};
+
+DecalData GetDecalData( int Index, uint MaxValue )
+{
+	// Data for each decal is stored in multiple texels as specified by DecalData
+
+	DecalData Data;
+
+	Data._DiffuseIndex = PdxReadBuffer( DecalDataBuffer, Index );
+	Data._NormalIndex = PdxReadBuffer( DecalDataBuffer, Index + 1 );
+	Data._PropertiesIndex = PdxReadBuffer( DecalDataBuffer, Index + 2 );
+	Data._BodyPartIndex = PdxReadBuffer( DecalDataBuffer, Index + 3 );
+
+	Data._DiffuseBlendMode = PdxReadBuffer( DecalDataBuffer, Index + 4 );
+	Data._NormalBlendMode = PdxReadBuffer( DecalDataBuffer, Index + 5 );
+	if ( Data._NormalBlendMode == BLEND_MODE_OVERLAY )
+	{
+		Data._NormalBlendMode = BLEND_MODE_OVERLAY_NORMAL;
+	}
+	Data._PropertiesBlendMode = PdxReadBuffer( DecalDataBuffer, Index + 6 );
+	Data._Weight = float( PdxReadBuffer( DecalDataBuffer, Index + 7 ) ) / MaxValue;
+
+	Data._AtlasPos = uint2( PdxReadBuffer( DecalDataBuffer, Index + 8 ), PdxReadBuffer( DecalDataBuffer, Index + 9 ) );
+	Data._UVOffset = float2( PdxReadBuffer( DecalDataBuffer, Index + 10 ), PdxReadBuffer( DecalDataBuffer, Index + 11 ) );
+	Data._UVOffset /= MaxValue;
+
+	Data._AtlasSize = PdxReadBuffer( DecalDataBuffer, Index + 12 );
+
+	return Data;
+}
+
+void AddDecals( inout float3 Diffuse, inout float3 Normals, inout float4 Properties, float2 UV, uint InstanceIndex, int From, int To )
+{
+	// Body part index is scripted on the mesh asset and should match ECharacterPortraitPart
+	uint BodyPartIndex = GetBodyPartIndex( InstanceIndex );
+
+	const int TEXEL_COUNT_PER_DECAL = 13;
+	int FromDataTexel = From * TEXEL_COUNT_PER_DECAL;
+	int ToDataTexel = To * TEXEL_COUNT_PER_DECAL;
+
+	const uint MAX_VALUE = 65535;
+
+	// Sorted after priority
+	for ( int i = FromDataTexel; i <= ToDataTexel; i += TEXEL_COUNT_PER_DECAL )
+	{
+		DecalData Data = GetDecalData( i, MAX_VALUE );
+
+		// Max index => unused
+		if ( Data._BodyPartIndex == BodyPartIndex )
+		{
+			float Weight = Data._Weight;
+
+			// Assumes that the cropped area size corresponds to the atlas factor
+			float AtlasFactor = 1.0f / Data._AtlasSize;
+			if ( ( ( UV.x >= Data._UVOffset.x ) && ( UV.x < ( Data._UVOffset.x + AtlasFactor ) ) ) &&
+				 ( ( UV.y >= Data._UVOffset.y ) && ( UV.y < ( Data._UVOffset.y + AtlasFactor ) ) ) )
+			{
+				float2 DecalUV = ( UV - Data._UVOffset ) + ( Data._AtlasPos * AtlasFactor );
+
+				if ( Data._DiffuseIndex < MAX_VALUE )
+				{
+					float4 DiffuseSample = PdxTex2D( DecalDiffuseArray, float3( DecalUV, Data._DiffuseIndex ) );
+					Weight = DiffuseSample.a * Weight;
+					Diffuse = BlendDecal( Data._DiffuseBlendMode, float4( Diffuse, 0.0f ), DiffuseSample, Weight ).rgb;
+				}
+
+				if ( Data._NormalIndex < MAX_VALUE )
+				{
+					float3 NormalSample = UnpackDecalNormal( PdxTex2D( DecalNormalArray, float3( DecalUV, Data._NormalIndex ) ), Weight );
+					Normals = BlendDecal( Data._NormalBlendMode, float4( Normals, 0.0f ), float4( NormalSample, 0.0f ), Weight ).xyz;
+				}
+
+				if ( Data._PropertiesIndex < MAX_VALUE )
+				{
+					float4 PropertiesSample = PdxTex2D( DecalPropertiesArray, float3( DecalUV, Data._PropertiesIndex ) );
+					Properties = BlendDecal( Data._PropertiesBlendMode, Properties, PropertiesSample, Weight );
+				}
+			}
+		}
+	}
+
+	Normals = normalize( Normals );
+}
+
+struct SPortraitPointLight
+{
+	float3 _Position;
+	float _Radius;
+	float3 _Color;
+	float _Falloff;
+};
+struct SPortraitSpotLight
+{
+	SPortraitPointLight	_PointLight;
+	float3 _ConeDirection;
+	float _ConeInnerCosAngle;
+	float _ConeOuterCosAngle;
+};
+
+SPortraitPointLight GetPortraitPointLight( float4 PositionAndRadius, float4 ColorAndFalloff )
+{
+	SPortraitPointLight PointLight;
+	PointLight._Position = PositionAndRadius.xyz;
+	PointLight._Radius = PositionAndRadius.w;
+	PointLight._Color = ColorAndFalloff.xyz;
+	PointLight._Falloff = ColorAndFalloff.w;
+	return PointLight;
+}
+
+SPortraitSpotLight GetPortraitSpotLight( float4 PositionAndRadius, float4 ColorAndFalloff, float3 Direction, float InnerCosAngle, float OuterCosAngle )
+{
+	SPortraitSpotLight Ret;
+	Ret._PointLight = GetPortraitPointLight( PositionAndRadius, ColorAndFalloff );
+	Ret._ConeDirection = Direction;
+	Ret._ConeInnerCosAngle = InnerCosAngle;
+	Ret._ConeOuterCosAngle = OuterCosAngle;
+	return Ret;
+}
+
+void GGXPointLight( SPortraitPointLight Pointlight, float3 WorldSpacePos, float ShadowTerm, SMaterialProperties MaterialProps, inout float3 DiffuseLightOut, inout float3 SpecularLightOut )
+{
+	float3 PosToLight = Pointlight._Position - WorldSpacePos;
+	float DistanceToLight = length( PosToLight );
+
+	float LightIntensity = CalcLightFalloff( Pointlight._Radius, DistanceToLight, Pointlight._Falloff );
+	if ( LightIntensity > 0.0 )
+	{
+		SLightingProperties LightingProps;
+		LightingProps._ToCameraDir = normalize( CameraPosition - WorldSpacePos );
+		LightingProps._ToLightDir = PosToLight / DistanceToLight;
+		LightingProps._LightIntensity = Pointlight._Color * LightIntensity;
+		LightingProps._ShadowTerm = ShadowTerm;
+		LightingProps._CubemapIntensity = 0.0;
+		LightingProps._CubemapYRotation = Float4x4Identity();
+		
+		float3 DiffuseLight;
+		float3 SpecularLight;
+		CalculateLightingFromLight( MaterialProps, LightingProps, DiffuseLight, SpecularLight );
+		DiffuseLightOut += DiffuseLight;
+		SpecularLightOut += SpecularLight;
+	}
+}
+
+void GGXSpotLight( SPortraitSpotLight Spot, float3 WorldSpacePos, float ShadowTerm, SMaterialProperties MaterialProps, inout float3 DiffuseLightOut, inout float3 SpecularLightOut )
+{
+	float3 	PosToLight = Spot._PointLight._Position - WorldSpacePos;
+	float 	DistanceToLight = length(PosToLight);
+	float3	ToLightDir = PosToLight / DistanceToLight;
+	
+	float LightIntensity = CalcLightFalloff( Spot._PointLight._Radius, DistanceToLight, Spot._PointLight._Falloff );
+	float PdotL = dot( -ToLightDir, Spot._ConeDirection );
+	LightIntensity *= smoothstep( Spot._ConeOuterCosAngle, Spot._ConeInnerCosAngle, PdotL );
+	if ( LightIntensity > 0.0 )
+	{
+		SLightingProperties LightingProps;
+		LightingProps._ToCameraDir = normalize( CameraPosition - WorldSpacePos );
+		LightingProps._ToLightDir = ToLightDir;
+		LightingProps._LightIntensity = Spot._PointLight._Color * LightIntensity;
+		LightingProps._ShadowTerm = ShadowTerm;
+		LightingProps._CubemapIntensity = 0.0;
+		LightingProps._CubemapYRotation = Float4x4Identity();
+		
+		float3 DiffuseLight;
+		float3 SpecularLight;
+		CalculateLightingFromLight( MaterialProps, LightingProps, DiffuseLight, SpecularLight );
+		DiffuseLightOut += DiffuseLight;
+		SpecularLightOut += SpecularLight;
+	}
+}
+
+void CalculatePortraitLights( float3 WorldSpacePos, float ShadowTerm, SMaterialProperties MaterialProps, inout float3 DiffuseLightOut, inout float3 SpecularLightOut )
+{
+	for( int i = 0; i < LIGHT_COUNT; ++i )
+	{
+		float3 DiffuseLight = vec3(0);
+		float3 SpecularLight = vec3(0);
+		
+		//Scale color by ShadowTerm
+		float4 Color_Fallof = Light_Color_Falloff[i];
+		float LightShadowTerm = Light_InnerCone_OuterCone_AffectedByShadows[i].z > 0.5 ? ShadowTerm : 1.0;
+		
+		if( Light_Direction_Type[i].Type == LIGHT_TYPE_SPOTLIGHT )
+		{
+			float InnerAngle = Light_InnerCone_OuterCone_AffectedByShadows[i].x;
+			float OuterAngle = Light_InnerCone_OuterCone_AffectedByShadows[i].y;
+			SPortraitSpotLight Spot = GetPortraitSpotLight( Light_Position_Radius[i], Color_Fallof, Light_Direction_Type[i].vDirection, InnerAngle, OuterAngle );
+			GGXSpotLight( Spot, WorldSpacePos, LightShadowTerm, MaterialProps, DiffuseLight, SpecularLight );
+		}
+		else if( Light_Direction_Type[i].Type == LIGHT_TYPE_POINTLIGHT )
+		{
+			SPortraitPointLight Light = GetPortraitPointLight( Light_Position_Radius[i], Color_Fallof );
+			GGXPointLight( Light, WorldSpacePos, LightShadowTerm, MaterialProps, DiffuseLight, SpecularLight );
+		}
+		else if( Light_Direction_Type[i].Type == LIGHT_TYPE_DIRECTIONAL )
+		{
+			SLightingProperties LightingProps;
+			LightingProps._ToCameraDir = normalize( CameraPosition - WorldSpacePos );
+			LightingProps._ToLightDir = -Light_Direction_Type[i].vDirection;
+			LightingProps._LightIntensity = Color_Fallof.rgb;
+			LightingProps._ShadowTerm = LightShadowTerm;
+			LightingProps._CubemapIntensity = 0.0;
+			LightingProps._CubemapYRotation = Float4x4Identity();
+
+			CalculateLightingFromLight( MaterialProps, LightingProps, DiffuseLight, SpecularLight );
+		}
+		
+		DiffuseLightOut += DiffuseLight;
+		SpecularLightOut += SpecularLight;
+	}
+}
+
+void DebugReturn( inout float3 Out, SMaterialProperties MaterialProps, SLightingProperties LightingProps, PdxTextureSamplerCube EnvironmentMap, float3 SssColor, float SssMask )
+{
+	#if defined(PDX_DEBUG_PORTRAIT_SSS_MASK)
+	Out = SssMask;
+	#elif defined(PDX_DEBUG_PORTRAIT_SSS_COLOR)
+	Out = SssColor;
+	#else
+	DebugReturn( Out, MaterialProps, LightingProps, EnvironmentMap );
+	#endif
+}
+
+float3 CommonPixelShader( float4 Diffuse, float4 Properties, float3 NormalSample, in VS_OUTPUT_PDXMESHPORTRAIT Input )
+{
+	float3x3 TBN = Create3x3( normalize( Input.Tangent ), normalize( Input.Bitangent ), normalize( Input.Normal ) );
+	float3 Normal = normalize( mul( NormalSample, TBN ) );
+	
+	SMaterialProperties MaterialProps = GetMaterialProperties( Diffuse.rgb, Normal, saturate( Properties.a ), Properties.g, Properties.b );
+	SLightingProperties LightingProps = GetSunLightingProperties( Input.WorldSpacePos, ShadowTexture );
+	
+	float3 DiffuseIBL;
+	float3 SpecularIBL;
+	CalculateLightingFromIBL( MaterialProps, LightingProps, EnvironmentMap, DiffuseIBL, SpecularIBL );
+	
+	float3 DiffuseLight = vec3(0.0);
+	float3 SpecularLight = vec3(0.0);
+	CalculatePortraitLights( Input.WorldSpacePos, LightingProps._ShadowTerm, MaterialProps, DiffuseLight, SpecularLight );
+	
+	float3 Color = DiffuseIBL + SpecularIBL + DiffuseLight + SpecularLight;
+	
+	float3 SssColor = vec3(0.0f);
+	float SssMask = Properties.r;
+	#ifdef FAKE_SSS_EMISSIVE
+		float3 SkinColor = RGBtoHSV( Diffuse.rgb );
+		SkinColor.z = 1.0f;
+		SssColor = HSVtoRGB(SkinColor) * SssMask * 0.5f * MaterialProps._DiffuseColor;
+		Color += SssColor;
+	#endif
+	
+	Color = ApplyDistanceFog( Color, Input.WorldSpacePos );
+	
+	DebugReturn( Color, MaterialProps, LightingProps, EnvironmentMap, SssColor, SssMask );			
+	return Color;
+}
+
+// Remaps Value to [IntervalStart, IntervalEnd]
+// Assumes Value is in [0,1] and that 0 <= IntervalStart < IntervalEnd <= 1
+float RemapToInterval( float Value, float IntervalStart, float IntervalEnd )
+{
+	return IntervalStart + Value * ( IntervalEnd - IntervalStart );
+}
+
+// The skin, eye and hair assets come with a special texture  (the "Color Mask", typically packed into 
+// another texture) that determines the Diffuse-PaletteColor blend. Artists also supply a remap interval 
+// used to bias this texture's values; essentially allowing the texture's full range of values to be 
+// mapped into a small interval of the diffuse lerp (e.g. [0.8, 1]).
+// If the texture value is 0.0, that is a special case indicating there shouldn't be any palette color, 
+// (it is used for non-hair things such as hair bands, earrings etc)
+float3 GetColorMaskColorBLend( float3 DiffuseColor, float3 PaletteColor, uint InstanceIndex, float ColorMaskStrength )
+{
+	if ( ColorMaskStrength == 0.0 )
+	{
+		return DiffuseColor;
+	}
+	else
+	{
+		float2 Interval = GetColorMaskRemapInterval( InstanceIndex );
+		float LerpTarget = RemapToInterval( ColorMaskStrength, Interval.x, Interval.y );
+		return lerp( DiffuseColor.rgb, DiffuseColor.rgb * PaletteColor, LerpTarget );
+	}
+}
+
+
+
+// === Main Code === 
+
+PS_COLOR_SSAO main( VS_OUTPUT_PDXMESHPORTRAIT Input, bool PDX_IsFrontFace : SV_IsFrontFace )
+{
+	PS_COLOR_SSAO Out;
+
+	float2 UV0 = Input.UV0;
+	float4 Diffuse = PdxTex2D( DiffuseMap, UV0 );								
+	float4 Properties = PdxTex2D( PropertiesMap, UV0 );
+	float3 NormalSample = UnpackRRxGNormal( PdxTex2D( NormalMap, UV0 ) );		
+	Properties.r = 1.0; // wipe this clean now, ready to be modified later
+
+	#ifdef VARIATIONS_ENABLED
+		ApplyVariationPatterns( Input, Diffuse, Properties, NormalSample );
+	#endif
+	
+	float3 Color = CommonPixelShader( Diffuse, Properties, NormalSample, Input );
+
+	Out.Color = float4( Color, Diffuse.a );
+	Out.SSAOColor = float4( vec3( 0.0f ), 1.0f );
+
+	return Out;
+}
+

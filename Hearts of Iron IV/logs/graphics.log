@@ -1,0 +1,3 @@
+[13:06:04][1936.01.01.12][pdxmapgeneration.cpp:402]: Too small river found at 4437.000, 929.000
+[13:06:06][1936.01.01.12][pdxmap.cpp:2974]: mapobject_21 failed to load
+[13:06:06][1936.01.01.12][pdxmap.cpp:2974]: mapobject_32 failed to load

@@ -1,0 +1,36 @@
+[13:05:03][no_game_date][defines.cpp:249]: 3837 defines loaded
+[13:05:46][no_game_date][gamestate.cpp:2815]: Loaded 13363 provinces.
+[13:05:52][no_game_date][gameapplication.cpp:2751]: Resetting game
+[13:05:57][1936.01.01.12][history.cpp:163]: Executing History from -1.1.1.1 to  2.1.1.1
+[13:05:58][1936.01.01.12][history.cpp:163]: Executing History from 2.1.1.1 to  1936.1.1.12
+[13:08:32][1936.01.01.12][frontend.cpp:670]: 
+
+		[[ Launching SINGLEPLAYER-game ]]
+	Start-date: 1936.1.1.12
+
+[13:08:40][1936.01.01.12][ingameidler.cpp:5039]: Start RestoreDeviceObjects
+[13:08:53][1936.01.01.12][ingameidler.cpp:5189]: End RestoreDeviceObjects
+[13:08:53][1936.01.01.12][effectbase.cpp:1691]: Something went wrong with the Conflict Risk stuff
+[14:04:47][1936.01.12.05][effectbase.cpp:1691]: planes triggered
+[14:08:41][1936.01.20.06][ingameidler.cpp:6195]: Resetting gamestate
+[14:08:41][1936.01.20.06][gameapplication.cpp:2751]: Resetting game
+[14:08:44][no_game_date][ingameidler.cpp:6218]: Gamestate successfully resetted
+[14:08:44][no_game_date][gameapplication.cpp:2751]: Resetting game
+[14:08:47][1936.01.01.12][history.cpp:163]: Executing History from -1.1.1.1 to  2.1.1.1
+[14:08:48][1936.01.01.12][history.cpp:163]: Executing History from 2.1.1.1 to  1936.1.1.12
+[14:08:59][1936.01.01.12][frontend.cpp:670]: 
+
+		[[ Launching SINGLEPLAYER-game ]]
+	Start-date: 1936.1.1.12
+
+[14:09:01][1936.01.01.12][ingameidler.cpp:5039]: Start RestoreDeviceObjects
+[14:09:03][1936.01.01.12][ingameidler.cpp:5189]: End RestoreDeviceObjects
+[14:09:03][1936.01.01.12][effectbase.cpp:1691]: Something went wrong with the Conflict Risk stuff
+[14:18:04][1936.02.04.01][effectbase.cpp:1691]: Fully cantons activated
+[14:18:19][1936.02.17.09][effectbase.cpp:1691]: random event 1
+[14:20:58][1936.07.17.16][effectbase.cpp:1691]: 西班牙国 is declaring war on 西班牙
+[14:21:35][1936.08.19.20][effectbase.cpp:1691]: random event 1
+[14:25:05][1937.02.24.03][effectbase.cpp:1691]: random event 1
+[14:25:34][1937.03.21.12][effectbase.cpp:1691]: 阿拉贡地区防御委员会 is declaring war on 西班牙国
+[14:25:34][1937.03.21.12][effectbase.cpp:1691]: 阿拉贡地区防御委员会 is declaring war on 西班牙
+[14:32:38][1936.02.04.01][effectbase.cpp:1691]: Fully cantons activated

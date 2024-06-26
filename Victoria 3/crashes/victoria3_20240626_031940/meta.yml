@@ -1,0 +1,54 @@
+# Crash Information
+AppName: Victoria 3 
+AppVersion: 1.6.2 
+SCMBranch: release/1.6.x 
+SCMCommit: b2faeaa94fbeb90013678b6f09d194f69717462a 
+SCMTimeStamp: "2024-03-13 11:41:45 +0000" 
+DateTime: "2024-06-26 03:19:40 +0800" 
+BuildType: ReleaseLto 
+Platform: Windows 
+Store: steam 
+Architecture: 64-bit 
+OperatingSystem: Windows 10 x86_64 
+SystemLanguage: zh 
+CPUModel:       Intel(R) Xeon(R) CPU E5-2670 v2 @ 2.50GHz 
+CPUSpeed: 2494 
+CPUPhysicalCores: 10 
+CPULogicalCores: 20 
+SystemMemory: 32688 
+GPUName: NVIDIA GeForce GTX 1080 
+GPUVendor: nVidia 
+GPUId: 7040 
+GPUDedicatedMemory: 8059 
+LaunchArguments: --continuelastsave --gdprcompliant --paradoxaccountuserid="" --pdxlaunchersessiontoken="" --pdxllauncherinvokedtimestamp="" 
+DLC_1: Voice of the People Preorder 
+DLC_2: Region Pack 1 
+DLC_3: Free Trains Pack 
+DLC_4: Sphere of Influence 
+DLC_5: Dawn of Wonder 
+DLC_6: Voice of the People 
+DLC_7: Victoria 2 Remastered Soundtrack 
+DLC_8: American Buildings Pack 
+DLC_9: Melodies for the Masses 
+Mod_1: Chinese Super League 
+Mod_2: Infinite Resources Buildings with Investment Pool 
+Mod_3: Luxury Goods Factories 
+Mod_4: Daoyu Cheat - Achievement Available Cheat Tool 
+Mod_5: No local product 
+Mod_6: transportation not local 
+Mod_7: Enhanced Autonomous Investment 
+Mod_8: Service Expanded - Government Administration & Education 
+Mod_9: Chinese lanuague for Advanced Cheat Menu 
+Mod_10: Treasury to Investment Pool 
+Mod_11: Cheat Buildings 
+Mod_12: Military Logistics and Stockpiles 
+Mod_13: 300 Construction Max per week 
+Mod_14: Make My Railway Profitable Again! 
+Mod_15: [on-off] Autonomous Investment Pool 
+Mod_16: Upgrade All Units 
+Mod_17: 污染处理设施 
+Mod_18: Give all Achievements 
+Mod_19: 种植园运输方式新增 
+Mod_20: Doodles War Flags & Flag Tweaks 
+Mod_21: Land development 
+Mod_22: Trade electricity 

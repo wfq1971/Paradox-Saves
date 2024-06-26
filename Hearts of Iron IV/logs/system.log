@@ -1,0 +1,129 @@
+[13:04:59][no_game_date][systemsettings.cpp:162]: OS: Windows 10 x86_64
+[13:04:59][no_game_date][systemsettings.cpp:163]: OS Lang: zh
+[13:04:59][no_game_date][systemsettings.cpp:164]: CPU Model:       Intel(R) Xeon(R) CPU E5-2670 v2 @ 2.50GHz
+[13:04:59][no_game_date][systemsettings.cpp:165]: Number of cores: 10 (20)
+[13:04:59][no_game_date][systemsettings.cpp:167]: Estimated CPU speed: 0MHz
+[13:04:59][no_game_date][systemsettings.cpp:168]: System memory: 32688MB
+[13:04:59][no_game_date][gfx_dx11.cpp:3497]: GetGraphicsSettings for Adapter: 0
+[13:04:59][no_game_date][gfx_dx11.cpp:3530]: Found Adapter: NVIDIA GeForce GTX 1080
+[13:04:59][no_game_date][gfx_dx11.cpp:3553]: Using Adapter [0] to check for multi-sampling support:
+[13:05:00][no_game_date][gfx_dx11.cpp:3591]: Found available multisampling mode: 2 at Quality: 0
+[13:05:00][no_game_date][gfx_dx11.cpp:3591]: Found available multisampling mode: 4 at Quality: 0
+[13:05:00][no_game_date][gfx_dx11.cpp:3591]: Found available multisampling mode: 8 at Quality: 0
+[13:05:00][no_game_date][graphicssettings.cpp:201]: 	2 samples supported.
+[13:05:00][no_game_date][graphicssettings.cpp:201]: 	4 samples supported.
+[13:05:00][no_game_date][graphicssettings.cpp:201]: 	8 samples supported.
+[13:05:00][no_game_date][graphicssettings.cpp:239]: Video adapter: NVIDIA GeForce GTX 1080
+[13:05:00][no_game_date][graphicssettings.cpp:240]: Video driver: DirectX 11
+[13:05:00][no_game_date][graphicssettings.cpp:241]: Video driver version: 0.0.0.0
+[13:05:00][no_game_date][graphicssettings.cpp:242]: Video memory: 8059
+[13:05:00][no_game_date][graphicssettings.cpp:243]: Support for Anisotropic filtering found.
+[13:05:00][no_game_date][graphicssettings.cpp:247]: 	Max Anisotropic filtering supported: 16
+[13:05:00][no_game_date][graphicssettings.cpp:248]: 	Anisotropic filtering set to: 4
+[13:05:03][no_game_date][main.cpp:1913]: Creating application...
+[13:05:03][no_game_date][pdx_speech_stt_winsapi.cpp:42]: PdxSpeechToTextWinSAPI::Initialize: microphone was not found![13:05:03][no_game_date][gameapplication.cpp:1182]: Initializing application...
+[13:05:04][no_game_date][gameapplication.cpp:1188]: Done initializing application
+[13:05:04][no_game_date][gameapplication.cpp:1191]: Loading cursor...
+[13:05:04][no_game_date][graphicssettings.cpp:780]: Using multisampling: 4
+[13:05:04][no_game_date][graphics.cpp:982]: Creating device with: HARDWARE_VERTEXPROCESSING
+	Fullscreen=no
+	Resolution=2560x1080
+	Renderer=DirectX 11
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 640 480 60
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 640 480 75
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 640 480 59
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 720 480 60
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 720 480 59
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 720 576 50
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 800 600 75
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 800 600 60
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 1024 768 60
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 1024 768 75
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 1152 864 75
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 1176 664 50
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 1176 664 50
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 1176 664 60
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 1176 664 60
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 1176 664 59
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 1176 664 59
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 1280 720 50
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 1280 720 60
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 1280 720 59
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 1280 768 60
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 1280 768 60
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 1280 768 75
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 1280 768 75
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 1280 800 60
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 1280 800 60
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 1280 800 75
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 1280 800 75
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 1280 960 60
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 1280 960 60
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 1280 960 75
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 1280 960 75
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 1280 1024 60
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 1280 1024 75
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 1360 768 60
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 1360 768 60
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 1366 768 60
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 1366 768 60
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 1440 1080 50
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 1440 1080 50
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 1440 1080 60
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 1440 1080 60
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 1440 1080 59
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 1440 1080 59
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 1600 900 60
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 1600 1024 59
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 1600 1024 59
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 1680 1050 59
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 1920 1080 50
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 1920 1080 60
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 1920 1080 59
+[13:05:04][no_game_date][graphicssettings.cpp:748]: Usable res: 2560 1080 60
+[13:05:04][no_game_date][graphics.cpp:1017]: Done creating device.
+[13:05:54][no_game_date][gameapplication.cpp:1437]: Version: Bolivar v1.14.5.0917 (d40a) build time: Apr 19 2024 15:20:47
+[13:05:54][no_game_date][gameapplication.cpp:1442]: Active DLC Count: 35
+[13:05:54][no_game_date][gameapplication.cpp:1443]: Active Mod Count: 0
+[13:05:54][no_game_date][gameapplication.cpp:1447]: Active DLC: Allied Armor Pack
+[13:05:54][no_game_date][gameapplication.cpp:1447]: Active DLC: Allied Radio Music Pack
+[13:05:54][no_game_date][gameapplication.cpp:1447]: Active DLC: Allied Speeches Pack
+[13:05:54][no_game_date][gameapplication.cpp:1447]: Active DLC: Anniversary Pack
+[13:05:54][no_game_date][gameapplication.cpp:1447]: Active DLC: Arms Against Tyranny
+[13:05:54][no_game_date][gameapplication.cpp:1447]: Active DLC: Arms Against Tyranny Preorder Bonus
+[13:05:54][no_game_date][gameapplication.cpp:1447]: Active DLC: Axis Armor Pack
+[13:05:54][no_game_date][gameapplication.cpp:1447]: Active DLC: Battle for the Bosporus
+[13:05:54][no_game_date][gameapplication.cpp:1447]: Active DLC: British Tanks Unit Pack
+[13:05:54][no_game_date][gameapplication.cpp:1447]: Active DLC: By Blood Alone
+[13:05:54][no_game_date][gameapplication.cpp:1447]: Active DLC: By Blood Alone Preorder Bonus
+[13:05:54][no_game_date][gameapplication.cpp:1447]: Active DLC: Death or Dishonor
+[13:05:54][no_game_date][gameapplication.cpp:1447]: Active DLC: Eastern Front Planes Pack
+[13:05:54][no_game_date][gameapplication.cpp:1447]: Active DLC: French Tanks Unit Pack
+[13:05:54][no_game_date][gameapplication.cpp:1447]: Active DLC: German March Order Music Pack
+[13:05:54][no_game_date][gameapplication.cpp:1447]: Active DLC: German Tanks Unit Pack
+[13:05:54][no_game_date][gameapplication.cpp:1447]: Active DLC: Heavy Cruisers Unit Pack
+[13:05:54][no_game_date][gameapplication.cpp:1447]: Active DLC: Historical German Portraits
+[13:05:54][no_game_date][gameapplication.cpp:1447]: Active DLC: La Resistance
+[13:05:54][no_game_date][gameapplication.cpp:1447]: Active DLC: La Resistance Preorder Bonus
+[13:05:54][no_game_date][gameapplication.cpp:1447]: Active DLC: Man the Guns
+[13:05:54][no_game_date][gameapplication.cpp:1447]: Active DLC: No Step Back
+[13:05:54][no_game_date][gameapplication.cpp:1447]: Active DLC: No Step Back Preorder Bonus
+[13:05:54][no_game_date][gameapplication.cpp:1447]: Active DLC: Poland: United and Ready
+[13:05:54][no_game_date][gameapplication.cpp:1447]: Active DLC: Radio Pack
+[13:05:54][no_game_date][gameapplication.cpp:1447]: Active DLC: Rocket Launcher Unit Pack
+[13:05:54][no_game_date][gameapplication.cpp:1447]: Active DLC: Sabaton Soundtrack
+[13:05:54][no_game_date][gameapplication.cpp:1447]: Active DLC: Sabaton Soundtrack Vol.2
+[13:05:54][no_game_date][gameapplication.cpp:1447]: Active DLC: Songs of the Eastern Front
+[13:05:54][no_game_date][gameapplication.cpp:1447]: Active DLC: Soviet Tanks Unit Pack
+[13:05:54][no_game_date][gameapplication.cpp:1447]: Active DLC: Together for Victory
+[13:05:54][no_game_date][gameapplication.cpp:1447]: Active DLC: Trial of Allegiance
+[13:05:54][no_game_date][gameapplication.cpp:1447]: Active DLC: Trial of Allegiance Preorder Bonus
+[13:05:54][no_game_date][gameapplication.cpp:1447]: Active DLC: US Tanks Unit Pack
+[13:05:54][no_game_date][gameapplication.cpp:1447]: Active DLC: Waking the Tiger
+[13:06:51][1936.01.01.12][graphicssettings.cpp:780]: Using multisampling: 4
+[14:10:13][1936.01.01.12][graphicssettings.cpp:780]: Using multisampling: 4
+[14:10:22][1936.01.01.12][graphicssettings.cpp:780]: Using multisampling: 4
+[14:10:25][1936.01.01.12][graphicssettings.cpp:780]: Using multisampling: 4
+[14:10:30][1936.01.01.12][graphicssettings.cpp:780]: Using multisampling: 4
+[14:30:12][1936.01.20.06][graphicssettings.cpp:780]: Using multisampling: 4
+[14:30:12][1936.01.20.06][graphicssettings.cpp:780]: Using multisampling: 4

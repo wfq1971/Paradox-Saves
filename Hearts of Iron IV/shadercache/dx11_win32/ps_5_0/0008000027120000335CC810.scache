@@ -1,0 +1,281 @@
+#define PIXEL_SHADER
+#define ANIMATED
+#define NUM_ANIMATIONS_1
+#define PDX_DIRECTX_11
+
+#define PDX_POSITION SV_POSITION
+#define PDX_COLOR SV_TARGET
+
+#define mod( X, Y ) ( X % Y )
+
+#define FIX_FLIPPED_UV( X ) ( X )
+#define FLIP_TEXTURE_V( vCoordinate ) ( vCoordinate )
+
+float3x3 CastTo3x3( in float4x4 M )
+{
+	return (float3x3)M;
+}
+#define Create3x3 float3x3
+#define GetMatrixData( Matrix, row, col ) ( Matrix [ row ] [ col ] )
+
+float2 vec2(float vValue) { return float2(vValue, vValue); }
+float3 vec3(float vValue) { return float3(vValue, vValue, vValue); }
+float4 vec4(float vValue) { return float4(vValue, vValue, vValue, vValue); }
+
+
+struct STextureSampler2D
+{
+    Texture2D 		_Texture;
+    SamplerState 	_Sampler;
+};
+STextureSampler2D CreateSampler2D( Texture2D Texture, SamplerState Sampler )
+{
+    STextureSampler2D ret = { Texture, Sampler };
+    return ret;
+}
+
+struct STextureSamplerCube
+{
+    TextureCube 	_Texture;
+    SamplerState 	_Sampler;
+};
+STextureSamplerCube CreateSamplerCube( TextureCube Texture, SamplerState Sampler )
+{
+    STextureSamplerCube ret = { Texture, Sampler };
+    return ret;
+}
+
+#define TextureSampler2D STextureSampler2D
+
+#define sampler2DShadow STextureSampler2D
+#define sampler2D STextureSampler2D
+
+#define tex2D(samp,uv) samp._Texture.Sample(samp._Sampler, uv)
+#define tex2Dlod(samp,uv_lod) samp._Texture.SampleLevel(samp._Sampler, (uv_lod).xy, (uv_lod).w)
+#define tex2Dlod0(samp,uv_lod) samp._Texture.SampleLevel(samp._Sampler, (uv_lod).xy, 0)
+#define tex2Dbias(samp,uv_bias) samp._Texture.SampleBias(samp._Sampler, (uv_bias).xy, (uv_bias).w)
+#define tex2Dproj(samp,uv_proj) samp._Texture.SampleLevel(samp._Sampler, (uv_proj).xy / (uv_proj).w, 0)
+#define tex2Dgrad(samp,uv,ddx,ddy) samp._Texture.SampleGrad(samp._Sampler, uv, ddx, ddy)
+
+#define texCUBE(samp,uv) samp._Texture.Sample(samp._Sampler, uv)
+#define texCUBElod(samp,uv_lod) samp._Texture.SampleLevel(samp._Sampler, (uv_lod).xyz, (uv_lod).w)
+#define texCUBEbias(samp,uv_bias) samp._Texture.SampleBias(samp._Sampler, (uv_bias).xyz, (uv_bias).w)
+
+float fmod_loop( float x, float y )
+{
+  return x - y * floor( x / y );
+}
+
+Texture2D MapTexture_Texture : register(t0);
+SamplerState MapTexture_Sampler : register(s0);
+#define MapTexture CreateSampler2D(MapTexture_Texture, MapTexture_Sampler)
+Texture2D MaskTexture_Texture : register(t1);
+SamplerState MaskTexture_Sampler : register(s1);
+#define MaskTexture CreateSampler2D(MaskTexture_Texture, MaskTexture_Sampler)
+Texture2D AnimatedTexture_Texture : register(t2);
+SamplerState AnimatedTexture_Sampler : register(s2);
+#define AnimatedTexture CreateSampler2D(AnimatedTexture_Texture, AnimatedTexture_Sampler)
+Texture2D MaskTexture2_Texture : register(t3);
+SamplerState MaskTexture2_Sampler : register(s3);
+#define MaskTexture2 CreateSampler2D(MaskTexture2_Texture, MaskTexture2_Sampler)
+Texture2D AnimatedTexture2_Texture : register(t4);
+SamplerState AnimatedTexture2_Sampler : register(s4);
+#define AnimatedTexture2 CreateSampler2D(AnimatedTexture2_Texture, AnimatedTexture2_Sampler)
+Texture2D MaskingTexture_Texture : register(t5);
+SamplerState MaskingTexture_Sampler : register(s5);
+#define MaskingTexture CreateSampler2D(MaskingTexture_Texture, MaskingTexture_Sampler)
+cbuffer dx11_cb0 : register(b0)
+{
+	float4x4 WorldViewProjectionMatrix;
+	float4 Color;
+	float2 Offset;
+	float2 NextOffset;
+	float Time;
+	float AnimationTime;
+}
+cbuffer dx11_cb1 : register(b1)
+{
+	float4 ConstantData[10];
+}
+struct VS_INPUT
+{
+	float3 vPosition : POSITION;
+	float2 vTexCoord : TEXCOORD0;
+};
+struct VS_OUTPUT
+{
+	float4 vPosition : PDX_POSITION;
+	float2 vTexCoord : TEXCOORD0;
+#ifdef ANIMATED
+	float4 vAnimatedTexCoord : TEXCOORD1;
+#endif
+#ifdef MASKING
+	float2 vMaskingTexCoord : TEXCOORD2;
+#endif
+};
+struct AnimationData
+{
+	float4 Rotation;
+	float4 UVScale;
+	float2 RotationOffset;
+	float2 TextureStretch;
+	float AnimationOffset;
+	float BlendFactor;
+	float Type; // 1 = Scrolling, 2 = Rotating, 3 = Pulse
+	float BlendMode; // 0 = Add, 1 = Multiply, 2 = Overlay
+	float ClampAnimation;
+};
+
+AnimationData GetAnimationData(int nIndex)
+{
+	AnimationData data;
+	
+	data.Rotation = ConstantData[nIndex * 5];
+	data.UVScale = ConstantData[nIndex * 5 + 1];
+	data.RotationOffset = ConstantData[nIndex * 5 + 2].xy;
+	data.TextureStretch = ConstantData[nIndex * 5 + 2].zw;
+	data.AnimationOffset = ConstantData[nIndex * 5 + 3].x;
+	data.BlendFactor = ConstantData[nIndex * 5 + 3].y;
+	data.Type = ConstantData[nIndex * 5 + 3].z;
+	data.BlendMode = ConstantData[nIndex * 5 + 3].w;
+	data.ClampAnimation = ConstantData[nIndex * 5 + 4].x;
+
+	return data;
+}
+
+float2 GetAnimatedTexcoord(float2 Texcoord, AnimationData Data)
+{
+	float2 AnimatedTexcoord = vec2(0.0);
+	float2 OffsetAndScaledTexcoord = (Data.RotationOffset + Texcoord - vec2(0.5)) * Data.UVScale.xy * Data.TextureStretch;
+	
+	if (Data.Type == 1) // Scrolling
+	{
+		AnimatedTexcoord = float2(dot(OffsetAndScaledTexcoord, Data.Rotation.xy), dot(OffsetAndScaledTexcoord, Data.Rotation.zw));
+		
+		AnimatedTexcoord /= Data.UVScale.xy;
+		AnimatedTexcoord *= Data.UVScale.zw;
+		AnimatedTexcoord.y += Data.AnimationOffset;
+
+		AnimatedTexcoord += float2(0.5, 0.5 * Data.UVScale.w);
+	}
+	else if (Data.Type == 2) // Scrolling
+	{
+		AnimatedTexcoord = float2(dot(OffsetAndScaledTexcoord, Data.Rotation.xy), dot(OffsetAndScaledTexcoord, Data.Rotation.zw));
+		
+		AnimatedTexcoord /= Data.UVScale.xy;
+		AnimatedTexcoord *= Data.UVScale.zw;
+		
+		AnimatedTexcoord += float2(0.5, 0.5);
+	}
+	
+	return AnimatedTexcoord;
+}
+
+float4 Blend(float4 Dest, float4 Source, AnimationData Data)
+{
+	float4 Result = float4(1.0, 0.0, 1.0, 1.0);
+	
+	if (Data.BlendMode == 0) // Add
+	{
+		Result.rgb = lerp(Dest.rgb, Dest.rgb + Source.rgb, Source.a);
+		Result.a = max(Dest.a, Source.a);
+	}
+
+	if (Data.BlendMode == 1) // Multiply
+	{
+		Result = Dest * Source;
+	}
+
+	if (Data.BlendMode == 2) // Overlay
+	{
+		// no idea what this is doing
+		Result.rgb = lerp(Dest.rgb * Source.rgb * 2.0, 1.0 - (2.0 * (1.0 - Dest.rgb) * (1.0 - Source.rgb)), step(0.5, Dest.rgb));
+		Result.a = Source.a;
+	}
+
+	if (Data.BlendMode == 3) // Normal (classic alpha blending with support for transparent destination)
+	{
+		Result.rgb = lerp(Dest.rgb * Dest.a, Source.rgb, Source.a);
+		Result.a = max(Source.a, Dest.a);
+	}
+
+	return Result;
+}
+
+float4 GetAnimatedTexcoord(float2 Texcoord)
+{
+	float4 AnimatedTexcoord = vec4(0.0);
+	
+	AnimationData data = GetAnimationData(0);
+	AnimatedTexcoord.xy = GetAnimatedTexcoord(Texcoord, data);
+	
+#ifdef NUM_ANIMATIONS_2
+	data = GetAnimationData(1);
+	AnimatedTexcoord.zw = GetAnimatedTexcoord(Texcoord, data);
+#endif	
+	
+	return AnimatedTexcoord;
+}
+float4 Animate(float4 BaseColor, in sampler2D MaskTextureSampler, float2 MaskTexcoord, in sampler2D AnimatedTextureSampler, float2 AnimatedTexcoord, AnimationData Data)
+{
+    float4 Mask = tex2D( MaskTextureSampler, MaskTexcoord );
+	float4 Anim = vec4(0.0);
+			
+	if (Data.Type == 3) // Pulse
+	{
+		Anim = vec4(Data.AnimationOffset);
+	}
+	else
+	{
+		Anim = tex2D( AnimatedTextureSampler, AnimatedTexcoord );
+		
+		if ((Data.ClampAnimation > 0.0f) && (AnimatedTexcoord.y < 0.0 || AnimatedTexcoord.y > 1.0))
+			Mask.a = 0.0;
+	}
+
+	float4 Masked = Anim * Mask;
+	Masked.a *= Data.BlendFactor;
+	float4 Blended = Blend(BaseColor, Masked, Data);
+	return Blended;
+}
+
+float4 Animate(float4 BaseColor, float2 MaskTexcoord, float4 AnimatedTexcoord, in sampler2D MaskTextureSampler, in sampler2D AnimatedTextureSampler,
+				 in sampler2D MaskTexture2Sampler, in sampler2D AnimatedTexture2Sampler)
+{
+	AnimationData data = GetAnimationData(0);
+	
+	float4 color = BaseColor;
+	color = Animate(color, MaskTextureSampler, MaskTexcoord, AnimatedTextureSampler, AnimatedTexcoord.xy, data);
+	
+#ifdef NUM_ANIMATIONS_2
+	data = GetAnimationData(1);
+	color = Animate(color, MaskTexture2Sampler, MaskTexcoord, AnimatedTexture2Sampler, AnimatedTexcoord.zw, data);
+#endif	
+	
+	return color;
+}
+
+float4 main( VS_OUTPUT v ) : PDX_COLOR
+		{
+		    float4 OutColor = tex2D( MapTexture, v.vTexCoord );
+				
+		#ifdef ANIMATED
+			OutColor = Animate(OutColor, v.vTexCoord, v.vAnimatedTexCoord, MaskTexture, AnimatedTexture, MaskTexture2, AnimatedTexture2);
+		#endif
+
+		#ifdef MASKING
+			float4 MaskColor = tex2D( MaskingTexture, v.vTexCoord );
+			OutColor.a *= MaskColor.a;
+		#endif
+
+			OutColor *= Color;
+			
+			float vTime = 0.9 - saturate( (Time - AnimationTime) * 4 );
+			vTime *= vTime;
+			vTime = 0.9*0.9 - vTime;
+		    float4 MixColor = float4( 0.15, 0.15, 0.15, 0 ) * vTime;
+		    OutColor.rgb += ( 0.5 + OutColor.rgb ) * MixColor.rgb;
+			
+			return OutColor;
+		}
+	
