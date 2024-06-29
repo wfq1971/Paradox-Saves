@@ -1,5 +1,0 @@
-﻿outliner=no
-pinned_character=no
-players=yes
-unit=yes
-holding=yes
