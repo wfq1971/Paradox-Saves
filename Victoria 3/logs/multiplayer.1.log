@@ -1,1 +1,23 @@
-[02:08:33][session.cpp:798]: Init session
+[12:43:51][session.cpp:798]: Init session
+[12:43:51][session.cpp:2476]: SSessionDlcCache: Voice of the People Preorder
+[12:43:51][session.cpp:2476]: SSessionDlcCache: Region Pack 1
+[12:43:51][session.cpp:2476]: SSessionDlcCache: Sphere of Influence
+[12:43:51][session.cpp:2476]: SSessionDlcCache: Voice of the People
+[12:43:51][session.cpp:2476]: SSessionDlcCache: American Buildings Pack
+[12:50:33][jominigamestate.cpp:208]: Creating gamestate
+[12:50:41][session.h:473]: Setting execute commands: yes
+[12:50:41][session.h:485]: Enabling recorded command replaying
+[12:50:41][multiplayer.cpp:183]: Adding local player
+[12:50:41][session.cpp:1245]: Replaying recorded commands: 0
+[12:50:41][session.h:479]: Setting record commands: no
+[12:50:41][session.cpp:1252]: Notifying callbacks with DoneReplayingCommands
+[12:50:41][multiplayer_helper.h:50]: Handling session notification: done replaying commands for machine ID: 1
+[12:50:42][controlcommands.cpp:52]: CAddPlayer local player: UNKNOWN with machine ID: 1 sender: 1
+[12:50:42][controlcommands.cpp:1075]: Setting "done replaying commands" for machine ID: 1
+[12:50:42][controlcommands.cpp:399]: Setting playable: 169 for machine ID: 1
+[12:50:42][controlcommands.cpp:415]: Setting character controller
+[12:50:42][controlcommands.cpp:1032]: Setting "player here" for machine ID: 1
+[12:50:42][controlcommands.cpp:1075]: Setting "done replaying commands" for machine ID: 1
+[12:50:42][controlcommands.cpp:399]: Setting playable: 169 for machine ID: 1
+[13:03:24][session_state_transfer_handler.cpp:84]: Clearing pending save transfers
+[13:03:25][jominigamestate.cpp:215]: Destroying gamestate

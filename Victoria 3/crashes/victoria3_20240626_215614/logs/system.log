@@ -1,0 +1,14 @@
+[21:53:05][game_setup.cpp:209]: Exe Git Version: release/1.7.day0 : 1cc643970
+[21:53:05][game_setup.cpp:210]: Build Timestamp: 2024-06-14 15:41:33 +0000 long hash: 1cc643970a8110675d729e02b6f05ed09431f7c2
+[21:53:05][systemsettings.cpp:207]: CPU Model:       Intel(R) Xeon(R) CPU E5-2670 v2 @ 2.50GHz
+[21:53:05][systemsettings.cpp:208]: CPU Speed: 2494MHz
+[21:53:05][systemsettings.cpp:209]: CPU Physical Cores: 10
+[21:53:05][systemsettings.cpp:210]: CPU Logical Cores: 20
+[21:53:05][systemsettings.cpp:211]: System Memory: 32688
+[21:53:05][systemsettings.cpp:212]: OS: Windows 10 x86_64
+[21:53:05][systemsettings.cpp:213]: OS Language: zh
+[21:53:06][contextowner.cpp:841]: GPU Name: NVIDIA GeForce GTX 1080
+[21:53:06][contextowner.cpp:842]: GPU Vendor: nVidia
+[21:53:06][contextowner.cpp:843]: GPU Id: 7040
+[21:53:06][contextowner.cpp:844]: GPU Dedicated Memory: 8059
+[21:53:15][gameapplication.cpp:1148]: Loading cursors...

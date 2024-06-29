@@ -1,0 +1,8 @@
+decree_daoyu_target_state = {
+	texture = "gfx/interface/icons/decree/decree_daoyu_target.dds"
+	cost = 0
+	valid = {
+		has_global_variable = daoyu_on
+		owner = { is_ai = no }
+	}
+}

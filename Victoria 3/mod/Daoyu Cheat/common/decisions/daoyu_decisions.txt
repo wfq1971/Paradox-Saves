@@ -1,0 +1,171 @@
+daoyu_on = {
+	is_shown = {
+		is_ai = no
+		not = { has_global_variable = daoyu_on }
+		not = { has_global_variable = daoyu_off }
+	}
+	when_taken = {
+		trigger_event = { id = daoyu.1 popup = yes }
+		set_global_variable = daoyu_off
+	}
+}
+daoyu_cheat = {
+	is_shown = {
+		is_ai = no
+		has_global_variable = daoyu_on
+		not = { has_global_variable = daoyu_off }
+		not = { has_global_variable = daoyu_cheat }
+	}
+	when_taken = {
+		trigger_event = { id = daoyu.10 popup = yes }
+		set_global_variable = daoyu_cheat
+	}
+}
+daoyu_cheat_missing = {
+	is_shown = {
+		is_ai = no
+		has_global_variable = daoyu_on
+		not = { has_global_variable = daoyu_off }
+		has_global_variable = daoyu_cheat
+	}
+	when_taken = {
+		remove_global_variable = daoyu_cheat
+	}
+}
+daoyu_remove_obsession_opium = {
+	is_shown = {
+		has_global_variable = daoyu_solve_lag
+		not = { this = c:CHI }
+		any_scope_state = { any_primary_culture = { has_cultural_obsession = opium } }
+	}
+	possible = {
+	}
+	when_taken = {
+		every_scope_state = { every_primary_culture = { remove_cultural_obsession = opium } }
+	}
+	ai_chance = { base = 100 }
+}
+daoyu_territorial_integrity = {
+	is_shown = {
+		is_ai = no
+		not = { has_global_variable = daoyu_off }
+		game_date = 1836.1.1
+		any_state_region = {
+			or = {
+				and = { any_scope_state = { owner = root is_incorporated = yes is_treaty_port = no } not = { any_scope_state = { owner = { is_country_type = decentralized } } } }
+				any_scope_state = { owner = root is_homeland_of_country_cultures = root }
+			}
+			any_scope_state = { not = { owner = root } }
+		}
+	}
+	possible = {
+		any_state_region = {
+			save_temporary_scope_as = imperfect_region
+			or = {
+				and = { any_scope_state = { owner = root is_incorporated = yes is_treaty_port = no } not = { any_scope_state = { owner = { is_country_type = decentralized } } } }
+				any_scope_state = { owner = root is_homeland_of_country_cultures = root }
+			}
+			any_scope_state = { not = { owner = root } }
+		}
+		game_date = 1836.1.1
+	}
+	when_taken = {
+		every_state_region = {
+			limit = {
+				or = {
+					and = { any_scope_state = { owner = root is_capital = no is_treaty_port = no } not = { any_scope_state = { owner = { is_country_type = decentralized } } } }
+					any_scope_state = { owner = root is_capital = yes }
+				}
+				any_scope_state = { not = { owner = root } }
+			}
+			every_scope_state = {
+				limit = { not = { owner = root } }
+				set_state_owner = root
+			}
+		}
+	}
+}
+#Ambition_of_the_Jan_Mayen = {
+#	is_shown = { is_ai = no game_date = 1836.1.1 not = { exists = c:JAN } }
+#	possible = { not = { this = c:NOR } }
+#	when_taken = {
+#		s:STATE_NORTHERN_NORWAY = { set_owner_of_provinces = { country = root provinces = { x31968A } } } random_scope_state = { limit = { state_region = s:STATE_NORTHERN_NORWAY } save_scope_as = Jan_Mayen_capital }
+#		create_country = { tag = JAN origin = c:NOR state = scope:Jan_Mayen_capital } play_as = c:JAN set_global_variable = daoyu_off
+#	}
+#}
+daoyu_text_2 = {
+	is_shown = {
+		is_ai = no
+		is_ai = yes
+	}
+	possible = {
+		#can_create_diplomatic_pact = { target = C:BEL type = invite_to_power_bloc }
+	}
+	when_taken = {
+		#power_bloc = { add_cohesion_percent = 1 }
+		#power_bloc = { add_principle = principle_defensive_cooperation_3 }
+		#power_bloc = { remove_principle = principle_colonial_offices_2 }
+		power_bloc = { add_modifier = { name = diplomatic_mitigation months = -1 multiplier = -100 } }
+			root.power_bloc = {
+				add_leverage = { target = c:CIR value = 250 }
+			}
+	}
+}
+
+daoyu_text_3 = {
+	is_shown = {
+		is_ai = no
+		is_ai = yes
+	}
+	possible = {
+		#any_interest_group = { has_ideology = ideology:ideology_communist leader = { is_historical = yes } }
+	}
+	when_taken = {
+		every_scope_state = {
+			state_region = {
+				add_state_trait = building_food_industry
+				add_state_trait = building_textile_mills
+				add_state_trait = building_furniture_manufacturies
+				add_state_trait = building_glassworks
+				add_state_trait = building_tooling_workshops
+				add_state_trait = building_paper_mills
+				add_state_trait = building_chemical_plants
+				add_state_trait = building_synthetics_plants
+				add_state_trait = building_steel_mills
+				add_state_trait = building_motor_industry
+				add_state_trait = building_shipyards
+				add_state_trait = building_war_machine_industry
+				add_state_trait = building_electrics_industry
+				add_state_trait = building_arms_industry
+				add_state_trait = building_munition_plants
+				add_state_trait = building_rye_farm
+				add_state_trait = building_wheat_farm
+				add_state_trait = building_rice_farm
+				add_state_trait = building_maize_farm
+				add_state_trait = building_millet_farm
+				add_state_trait = building_livestock_ranch
+				add_state_trait = building_coal_mine
+				add_state_trait = building_iron_mine
+				add_state_trait = building_lead_mine
+				add_state_trait = building_sulfur_mine
+				add_state_trait = building_gold_mine
+				add_state_trait = building_gold_fields
+				add_state_trait = building_coffee_plantation
+				add_state_trait = building_cotton_plantation
+				add_state_trait = building_dye_plantation
+				add_state_trait = building_opium_plantation
+				add_state_trait = building_tea_plantation
+				add_state_trait = building_tobacco_plantation
+				add_state_trait = building_sugar_plantation
+				add_state_trait = building_banana_plantation
+				add_state_trait = building_silk_plantation
+				add_state_trait = building_logging_camp
+				add_state_trait = building_rubber_plantation
+				add_state_trait = building_fishing_wharf
+				add_state_trait = building_whaling_station
+				add_state_trait = building_oil_rig
+				add_state_trait = building_power_plant
+			}
+		}
+	}
+}

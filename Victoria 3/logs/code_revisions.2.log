@@ -1,20 +1,20 @@
-[14:05:57][jomini_game_setup.cpp:148]: game_hash_long: b2faeaa94fbeb90013678b6f09d194f69717462a
-[14:05:57][jomini_game_setup.cpp:149]: game_hash_short: b2faeaa9
-[14:05:57][jomini_game_setup.cpp:150]: game_branch: release/1.6.x
-[14:05:57][jomini_game_setup.cpp:151]: game_timestamp: 2024-03-13 11:41:45 +0000
+[10:34:31][jomini_game_setup.cpp:149]: game_hash_long: 1f4e843e4f0e6fe9a671cb0feeaf9876f411b0f0
+[10:34:31][jomini_game_setup.cpp:150]: game_hash_short: 1f4e843e4
+[10:34:31][jomini_game_setup.cpp:151]: game_branch: release/1.7.1
+[10:34:31][jomini_game_setup.cpp:152]: game_timestamp: 2024-06-26 17:56:53 +0000
 
-[14:05:57][jomini_game_setup.cpp:148]: jomini_hash_long: bbe3710704d3386f78672b1403ba375dfce88b76
-[14:05:57][jomini_game_setup.cpp:149]: jomini_hash_short: bbe3710704
-[14:05:57][jomini_game_setup.cpp:150]: jomini_branch: caligula/release/1.6.x
-[14:05:57][jomini_game_setup.cpp:151]: jomini_timestamp: 2024-02-22 15:50:26 +0000
+[10:34:31][jomini_game_setup.cpp:149]: jomini_hash_long: 2581deeba74cfe89409b6cac702ea0872e9c4085
+[10:34:31][jomini_game_setup.cpp:150]: jomini_hash_short: 2581deeba7
+[10:34:31][jomini_game_setup.cpp:151]: jomini_branch: caligula/release/1.7.1
+[10:34:31][jomini_game_setup.cpp:152]: jomini_timestamp: 2024-06-26 12:23:22 +0000
 
-[14:05:57][jomini_game_setup.cpp:148]: clausewitz_hash_long: bbe3710704d3386f78672b1403ba375dfce88b76
-[14:05:57][jomini_game_setup.cpp:149]: clausewitz_hash_short: bbe3710704
-[14:05:57][jomini_game_setup.cpp:150]: clausewitz_branch: caligula/release/1.6.x
-[14:05:57][jomini_game_setup.cpp:151]: clausewitz_timestamp: 2024-02-22 15:50:26 +0000
+[10:34:31][jomini_game_setup.cpp:149]: clausewitz_hash_long: 2581deeba74cfe89409b6cac702ea0872e9c4085
+[10:34:31][jomini_game_setup.cpp:150]: clausewitz_hash_short: 2581deeba7
+[10:34:31][jomini_game_setup.cpp:151]: clausewitz_branch: caligula/release/1.7.1
+[10:34:31][jomini_game_setup.cpp:152]: clausewitz_timestamp: 2024-06-26 12:23:22 +0000
 
-[14:05:57][jomini_game_setup.cpp:148]: external_libs_hash_long: df8a9aeb3b4a085d0ed7ddea7f23a35c3bd67db3
-[14:05:57][jomini_game_setup.cpp:149]: external_libs_hash_short: df8a9aeb3b
-[14:05:57][jomini_game_setup.cpp:150]: external_libs_branch: develop
-[14:05:57][jomini_game_setup.cpp:151]: external_libs_timestamp: 2024-02-28 10:10:05 +0000
+[10:34:31][jomini_game_setup.cpp:149]: EXTERNAL_LIBS_hash_long: 
+[10:34:31][jomini_game_setup.cpp:150]: EXTERNAL_LIBS_hash_short: 
+[10:34:31][jomini_game_setup.cpp:151]: EXTERNAL_LIBS_branch: Conan
+[10:34:31][jomini_game_setup.cpp:152]: EXTERNAL_LIBS_timestamp: 
 

@@ -1,0 +1,32 @@
+﻿daoyu_potential_target = {
+	type = condition
+	texture = "gfx/interface/icons/character_trait_icons/alcoholic.dds"
+	possible = { age > 999 }
+}
+daoyu_potential_target_character = {
+	type = condition
+	texture = "gfx/interface/icons/character_trait_icons/alcoholic.dds"
+	possible = { age > 999 }
+}
+daoyu_target_character = {
+	type = condition
+	texture = "gfx/interface/icons/character_trait_icons/alcoholic.dds"
+	possible = { age > 999 }
+}
+daoyu_tool_man = {
+	type = condition
+	texture = "gfx/interface/icons/character_trait_icons/alcoholic.dds"
+	possible = { age > 999 }
+}
+daoyu_betrayal_will_die = {
+	type = condition
+	texture = "gfx/interface/icons/character_trait_icons/expensive_tastes.dds"
+	character_modifier = {
+		character_health_add = 1
+	}
+	command_modifier = {
+		#unit_offense_add = 20
+		#unit_defense_add = 20
+	}
+	possible = { age > 999 }
+}

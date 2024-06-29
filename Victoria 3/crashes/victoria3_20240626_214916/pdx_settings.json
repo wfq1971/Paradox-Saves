@@ -1,0 +1,78 @@
+{
+	"game":	{
+		"save_on_exit":	false
+	},
+	"Graphics":	{
+		"buildings_cutoff":	true,
+		"portrait_render_scale":	"none",
+		"mapobject_quality":	"off",
+		"animated_portraits":	false,
+		"portraits_ssao":	false,
+		"refraction_quality":	"disabled",
+		"texture_streaming":	false,
+		"shadowmap_resolution":	"disabled",
+		"mesh_lod_bias":	"low",
+		"mesh_lod_fade":	false,
+		"texture_quality":	"low",
+		"fullscreen_resolution":	"2560x1080",
+		"windowed_resolution":	"1920x1080",
+		"device":	"NVIDIA GeForce GTX 1080",
+		"upscale":	"DISABLED",
+		"upscale_quality":	"off",
+		"anti_aliasing":	"DISABLED",
+		"portrait_multi_sampling":	"x2",
+		"anisotropic_filtering":	"DISABLED",
+		"quality":	"custom",
+		"bloom_enabled":	false
+	},
+	"interface":	{
+},
+	"map_modes":	{
+},
+	"System":	{
+		"user_bindings":	"user_bindings/user.bindings",
+		"language":	"l_simp_chinese"
+	},
+	"Theme":	{
+		"ui_skin_theme":	"gui_skin_base",
+		"seen_ui_skin_theme":	"gui_skin_base",
+		"papermap_theme":	"papermap_base",
+		"seen_papermap_theme":	"papermap_base",
+		"table_top_theme":	"table_base",
+		"seen_table_top_theme":	"table_base",
+		"table_asset_1_theme":	"papermap_object_divider",
+		"seen_table_asset_1_theme":	"papermap_object_divider",
+		"table_asset_2_theme":	"papermap_object_compass",
+		"seen_table_asset_2_theme":	"papermap_object_compass",
+		"table_asset_3_theme":	"papermap_cigarbox",
+		"seen_table_asset_3_theme":	"papermap_cigarbox",
+		"table_asset_4_theme":	"papermap_letter",
+		"seen_table_asset_4_theme":	"papermap_letter"
+	},
+	"daynight_cycle":	{
+},
+	"Tools":	{
+},
+	"Audio":	{
+		"audio_device_profile":	"Speakers",
+		"disabled_categories":	"",
+		"disabled_tracks":	"",
+		"volume.vca:/MUSIC":	0.600000,
+		"volume.vca:/AMBIENT":	1,
+		"volume.vca:/MUSIC_STINGERS":	1,
+		"volume.vca:/SOUNDTRACK":	1,
+		"volume.vca:/UI":	1,
+		"volume.vca:/SFX":	1,
+		"volume.bus:/":	1
+	},
+	"Account":	{
+},
+	"notifications":	{
+},
+	"GUI":	{
+		"scale":	"1",
+		"tools_gui_scale":	"1"
+	},
+	"accessibility":	{
+}
+}

@@ -1,14 +1,12 @@
 {
 	"game":	{
-		"save_on_exit":	false
-	},
+},
 	"Graphics":	{
 		"buildings_cutoff":	true,
 		"portrait_render_scale":	"none",
 		"mapobject_quality":	"off",
 		"animated_portraits":	false,
 		"portraits_ssao":	false,
-		"bloom_enabled":	false,
 		"refraction_quality":	"disabled",
 		"texture_streaming":	false,
 		"shadowmap_resolution":	"disabled",
@@ -23,7 +21,8 @@
 		"anti_aliasing":	"DISABLED",
 		"portrait_multi_sampling":	"x2",
 		"anisotropic_filtering":	"DISABLED",
-		"quality":	"custom"
+		"quality":	"custom",
+		"bloom_enabled":	false
 	},
 	"interface":	{
 },
@@ -70,7 +69,8 @@
 	"notifications":	{
 },
 	"GUI":	{
-		"scale":	"1"
+		"scale":	"1",
+		"tools_gui_scale":	"1"
 	},
 	"accessibility":	{
 }

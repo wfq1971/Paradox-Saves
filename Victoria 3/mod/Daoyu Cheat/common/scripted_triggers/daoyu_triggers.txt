@@ -1,0 +1,2336 @@
+daoyu_activate_law_trigger = {
+	not = {
+		has_global_variable = lawgroup_governance_principles
+		has_global_variable = lawgroup_distribution_of_power
+		has_global_variable = lawgroup_citizenship
+		has_global_variable = lawgroup_church_and_state
+		has_global_variable = lawgroup_bureaucracy
+		has_global_variable = lawgroup_army_model
+		has_global_variable = lawgroup_internal_security
+		has_global_variable = lawgroup_economic_system
+		has_global_variable = lawgroup_trade_policy
+		has_global_variable = lawgroup_taxation
+		has_global_variable = lawgroup_land_reform
+		has_global_variable = lawgroup_colonization
+		has_global_variable = lawgroup_policing
+		has_global_variable = lawgroup_education_system
+		has_global_variable = lawgroup_health_system
+		has_global_variable = lawgroup_free_speech
+		has_global_variable = lawgroup_labor_rights
+		has_global_variable = lawgroup_childrens_rights
+		has_global_variable = lawgroup_rights_of_women
+		has_global_variable = lawgroup_welfare
+		has_global_variable = lawgroup_migration
+		has_global_variable = lawgroup_slavery
+	}
+}
+daoyu_modifier_remove_global_variable_trigger = {
+	not = {
+		has_global_variable = daoyu_country_diplomatic_play_maneuvers_add
+		has_global_variable = daoyu_country_gold_reserve_limit_mult
+		has_global_variable = daoyu_country_tech_spread_mult
+		has_global_variable = daoyu_state_tax_capacity_add
+		has_global_variable = daoyu_country_bureaucracy_add
+		has_global_variable = daoyu_country_authority_add
+		has_global_variable = daoyu_country_influence_add
+		has_global_variable = daoyu_country_prestige_add
+		has_global_variable = daoyu_country_prestige_sub
+		has_global_variable = daoyu_country_construction_add
+		has_global_variable = daoyu_character_health_add
+		has_global_variable = daoyu_mobilization_cost_mult
+		has_global_variable = daoyu_military_drill
+		has_global_variable = daoyu_companies_add
+		has_global_variable = daoyu_tariff_import_add
+		has_global_variable = daoyu_tariff_export_add
+		has_global_variable = daoyu_country_convoys_capacity_add
+	}
+}
+daoyu_all_culture_trigger = {
+	or = {
+		daoyu_single_culture_trigger = { CULTURE = "north_german" }
+		daoyu_single_culture_trigger = { CULTURE = "south_german" }
+		daoyu_single_culture_trigger = { CULTURE = "ashkenazi" }
+		daoyu_single_culture_trigger = { CULTURE = "dutch" }
+		daoyu_single_culture_trigger = { CULTURE = "flemish" }
+		daoyu_single_culture_trigger = { CULTURE = "wallonian" }
+		daoyu_single_culture_trigger = { CULTURE = "boer" }
+		daoyu_single_culture_trigger = { CULTURE = "alemannic" }
+		daoyu_single_culture_trigger = { CULTURE = "swedish" }
+		daoyu_single_culture_trigger = { CULTURE = "danish" }
+		daoyu_single_culture_trigger = { CULTURE = "norwegian" }
+		daoyu_single_culture_trigger = { CULTURE = "icelandic" }
+		daoyu_single_culture_trigger = { CULTURE = "finnish" }
+		daoyu_single_culture_trigger = { CULTURE = "sami" }
+		daoyu_single_culture_trigger = { CULTURE = "british" }
+		daoyu_single_culture_trigger = { CULTURE = "irish" }
+		daoyu_single_culture_trigger = { CULTURE = "australian" }
+		daoyu_single_culture_trigger = { CULTURE = "north_italian" }
+		daoyu_single_culture_trigger = { CULTURE = "south_italian" }
+		daoyu_single_culture_trigger = { CULTURE = "maltese" }
+		daoyu_single_culture_trigger = { CULTURE = "basque" }
+		daoyu_single_culture_trigger = { CULTURE = "spanish" }
+		daoyu_single_culture_trigger = { CULTURE = "catalan" }
+		daoyu_single_culture_trigger = { CULTURE = "portuguese" }
+		daoyu_single_culture_trigger = { CULTURE = "french" }
+		daoyu_single_culture_trigger = { CULTURE = "occitan" }
+		daoyu_single_culture_trigger = { CULTURE = "breton" }
+		daoyu_single_culture_trigger = { CULTURE = "croat" }
+		daoyu_single_culture_trigger = { CULTURE = "serb" }
+		daoyu_single_culture_trigger = { CULTURE = "bulgarian" }
+		daoyu_single_culture_trigger = { CULTURE = "albanian" }
+		daoyu_single_culture_trigger = { CULTURE = "slovene" }
+		daoyu_single_culture_trigger = { CULTURE = "bosniak" }
+		daoyu_single_culture_trigger = { CULTURE = "romanian" }
+		daoyu_single_culture_trigger = { CULTURE = "hungarian" }
+		daoyu_single_culture_trigger = { CULTURE = "polish" }
+		daoyu_single_culture_trigger = { CULTURE = "lithuanian" }
+		daoyu_single_culture_trigger = { CULTURE = "czech" }
+		daoyu_single_culture_trigger = { CULTURE = "slovak" }
+		daoyu_single_culture_trigger = { CULTURE = "russian" }
+		daoyu_single_culture_trigger = { CULTURE = "byelorussian" }
+		daoyu_single_culture_trigger = { CULTURE = "ukrainian" }
+		daoyu_single_culture_trigger = { CULTURE = "ugrian" }
+		daoyu_single_culture_trigger = { CULTURE = "latvian" }
+		daoyu_single_culture_trigger = { CULTURE = "estonian" }
+		daoyu_single_culture_trigger = { CULTURE = "greek" }
+		daoyu_single_culture_trigger = { CULTURE = "georgian" }
+		daoyu_single_culture_trigger = { CULTURE = "armenian" }
+		daoyu_single_culture_trigger = { CULTURE = "sephardic" }
+		daoyu_single_culture_trigger = { CULTURE = "turkish" }
+		daoyu_single_culture_trigger = { CULTURE = "azerbaijani" }
+		daoyu_single_culture_trigger = { CULTURE = "north_caucasian" }
+		daoyu_single_culture_trigger = { CULTURE = "maghrebi" }
+		daoyu_single_culture_trigger = { CULTURE = "misri" }
+		daoyu_single_culture_trigger = { CULTURE = "mashriqi" }
+		daoyu_single_culture_trigger = { CULTURE = "bedouin" }
+		daoyu_single_culture_trigger = { CULTURE = "berber" }
+		daoyu_single_culture_trigger = { CULTURE = "persian" }
+		daoyu_single_culture_trigger = { CULTURE = "uzbek" }
+		daoyu_single_culture_trigger = { CULTURE = "kazak" }
+		daoyu_single_culture_trigger = { CULTURE = "kirgiz" }
+		daoyu_single_culture_trigger = { CULTURE = "tajik" }
+		daoyu_single_culture_trigger = { CULTURE = "uighur" }
+		daoyu_single_culture_trigger = { CULTURE = "pashtun" }
+		daoyu_single_culture_trigger = { CULTURE = "baluchi" }
+		daoyu_single_culture_trigger = { CULTURE = "hazara" }
+		daoyu_single_culture_trigger = { CULTURE = "turkmen" }
+		daoyu_single_culture_trigger = { CULTURE = "kurdish" }
+		daoyu_single_culture_trigger = { CULTURE = "tatar" }
+		daoyu_single_culture_trigger = { CULTURE = "mongol" }
+		daoyu_single_culture_trigger = { CULTURE = "kalmyk" }
+		daoyu_single_culture_trigger = { CULTURE = "siberian" }
+		daoyu_single_culture_trigger = { CULTURE = "yakut" }
+		daoyu_single_culture_trigger = { CULTURE = "tibetan" }
+		daoyu_single_culture_trigger = { CULTURE = "assamese" }
+		daoyu_single_culture_trigger = { CULTURE = "bengali" }
+		daoyu_single_culture_trigger = { CULTURE = "bihari" }
+		daoyu_single_culture_trigger = { CULTURE = "manipuri" }
+		daoyu_single_culture_trigger = { CULTURE = "nepali" }
+		daoyu_single_culture_trigger = { CULTURE = "oriya" }
+		daoyu_single_culture_trigger = { CULTURE = "sinhala" }
+		daoyu_single_culture_trigger = { CULTURE = "avadhi" }
+		daoyu_single_culture_trigger = { CULTURE = "kanauji" }
+		daoyu_single_culture_trigger = { CULTURE = "panjabi" }
+		daoyu_single_culture_trigger = { CULTURE = "kashmiri" }
+		daoyu_single_culture_trigger = { CULTURE = "gujarati" }
+		daoyu_single_culture_trigger = { CULTURE = "marathi" }
+		daoyu_single_culture_trigger = { CULTURE = "sindi" }
+		daoyu_single_culture_trigger = { CULTURE = "rajput" }
+		daoyu_single_culture_trigger = { CULTURE = "kannada" }
+		daoyu_single_culture_trigger = { CULTURE = "malayalam" }
+		daoyu_single_culture_trigger = { CULTURE = "tamil" }
+		daoyu_single_culture_trigger = { CULTURE = "telegu" }
+		daoyu_single_culture_trigger = { CULTURE = "vietnamese" }
+		daoyu_single_culture_trigger = { CULTURE = "khmer" }
+		daoyu_single_culture_trigger = { CULTURE = "batak" }
+		daoyu_single_culture_trigger = { CULTURE = "dayak" }
+		daoyu_single_culture_trigger = { CULTURE = "malagasy" }
+		daoyu_single_culture_trigger = { CULTURE = "filipino" }
+		daoyu_single_culture_trigger = { CULTURE = "moro" }
+		daoyu_single_culture_trigger = { CULTURE = "javan" }
+		daoyu_single_culture_trigger = { CULTURE = "moluccan" }
+		daoyu_single_culture_trigger = { CULTURE = "thai" }
+		daoyu_single_culture_trigger = { CULTURE = "mon" }
+		daoyu_single_culture_trigger = { CULTURE = "khmu" }
+		daoyu_single_culture_trigger = { CULTURE = "lao" }
+		daoyu_single_culture_trigger = { CULTURE = "shan" }
+		daoyu_single_culture_trigger = { CULTURE = "burmese" }
+		daoyu_single_culture_trigger = { CULTURE = "kachin" }
+		daoyu_single_culture_trigger = { CULTURE = "karen" }
+		daoyu_single_culture_trigger = { CULTURE = "japanese" }
+		daoyu_single_culture_trigger = { CULTURE = "manchu" }
+		daoyu_single_culture_trigger = { CULTURE = "han" }
+		daoyu_single_culture_trigger = { CULTURE = "korean" }
+		daoyu_single_culture_trigger = { CULTURE = "ainu" }
+		daoyu_single_culture_trigger = { CULTURE = "hakka" }
+		daoyu_single_culture_trigger = { CULTURE = "miao" }
+		daoyu_single_culture_trigger = { CULTURE = "min" }
+		daoyu_single_culture_trigger = { CULTURE = "zhuang" }
+		daoyu_single_culture_trigger = { CULTURE = "yi" }
+		daoyu_single_culture_trigger = { CULTURE = "yue" }
+		daoyu_single_culture_trigger = { CULTURE = "polynesian" }
+		daoyu_single_culture_trigger = { CULTURE = "hawaiian" }
+		daoyu_single_culture_trigger = { CULTURE = "melanesian" }
+		daoyu_single_culture_trigger = { CULTURE = "micronesian" }
+		daoyu_single_culture_trigger = { CULTURE = "maori" }
+		daoyu_single_culture_trigger = { CULTURE = "yuanzhumin" }
+		daoyu_single_culture_trigger = { CULTURE = "aborigine" }
+		daoyu_single_culture_trigger = { CULTURE = "zapotec" }
+		daoyu_single_culture_trigger = { CULTURE = "mayan" }
+		daoyu_single_culture_trigger = { CULTURE = "nahua" }
+		daoyu_single_culture_trigger = { CULTURE = "tarascan" }
+		daoyu_single_culture_trigger = { CULTURE = "quechua" }
+		daoyu_single_culture_trigger = { CULTURE = "guarani" }
+		daoyu_single_culture_trigger = { CULTURE = "aimara" }
+		daoyu_single_culture_trigger = { CULTURE = "amazonian" }
+		daoyu_single_culture_trigger = { CULTURE = "patagonian" }
+		daoyu_single_culture_trigger = { CULTURE = "guajiro" }
+		daoyu_single_culture_trigger = { CULTURE = "tupinamba" }
+		daoyu_single_culture_trigger = { CULTURE = "metis" }
+		daoyu_single_culture_trigger = { CULTURE = "dakota" }
+		daoyu_single_culture_trigger = { CULTURE = "cherokee" }
+		daoyu_single_culture_trigger = { CULTURE = "muskogean" }
+		daoyu_single_culture_trigger = { CULTURE = "pueblo" }
+		daoyu_single_culture_trigger = { CULTURE = "inuit" }
+		daoyu_single_culture_trigger = { CULTURE = "cree" }
+		daoyu_single_culture_trigger = { CULTURE = "navajo" }
+		daoyu_single_culture_trigger = { CULTURE = "athabaskan" }
+		daoyu_single_culture_trigger = { CULTURE = "salish" }
+		daoyu_single_culture_trigger = { CULTURE = "nez_perce" }
+		daoyu_single_culture_trigger = { CULTURE = "siouan" }
+		daoyu_single_culture_trigger = { CULTURE = "comanche" }
+		daoyu_single_culture_trigger = { CULTURE = "algonquian" }
+		daoyu_single_culture_trigger = { CULTURE = "iroquoian" }
+		daoyu_single_culture_trigger = { CULTURE = "caddoan" }
+		daoyu_single_culture_trigger = { CULTURE = "paiute" }
+		daoyu_single_culture_trigger = { CULTURE = "hokan" }
+		daoyu_single_culture_trigger = { CULTURE = "apache" }
+		daoyu_single_culture_trigger = { CULTURE = "oodham" }
+		daoyu_single_culture_trigger = { CULTURE = "mixtec" }
+		daoyu_single_culture_trigger = { CULTURE = "muisca" }
+		daoyu_single_culture_trigger = { CULTURE = "miskito" }
+		daoyu_single_culture_trigger = { CULTURE = "cariban" }
+		daoyu_single_culture_trigger = { CULTURE = "yankee" }
+		daoyu_single_culture_trigger = { CULTURE = "dixie" }
+		daoyu_single_culture_trigger = { CULTURE = "mexican" }
+		daoyu_single_culture_trigger = { CULTURE = "central_american" }
+		daoyu_single_culture_trigger = { CULTURE = "caribeno" }
+		daoyu_single_culture_trigger = { CULTURE = "north_andean" }
+		daoyu_single_culture_trigger = { CULTURE = "south_andean" }
+		daoyu_single_culture_trigger = { CULTURE = "platinean" }
+		daoyu_single_culture_trigger = { CULTURE = "brazilian" }
+		daoyu_single_culture_trigger = { CULTURE = "afro_american" }
+		daoyu_single_culture_trigger = { CULTURE = "afro_caribbean" }
+		daoyu_single_culture_trigger = { CULTURE = "afro_caribeno" }
+		daoyu_single_culture_trigger = { CULTURE = "afro_brazilian" }
+		daoyu_single_culture_trigger = { CULTURE = "afro_antillean" }
+		daoyu_single_culture_trigger = { CULTURE = "akan" }
+		daoyu_single_culture_trigger = { CULTURE = "bambara" }
+		daoyu_single_culture_trigger = { CULTURE = "bassa" }
+		daoyu_single_culture_trigger = { CULTURE = "dyula" }
+		daoyu_single_culture_trigger = { CULTURE = "edo" }
+		daoyu_single_culture_trigger = { CULTURE = "ewe" }
+		daoyu_single_culture_trigger = { CULTURE = "fon" }
+		daoyu_single_culture_trigger = { CULTURE = "fulbe" }
+		daoyu_single_culture_trigger = { CULTURE = "haratin" }
+		daoyu_single_culture_trigger = { CULTURE = "hausa" }
+		daoyu_single_culture_trigger = { CULTURE = "ibibio" }
+		daoyu_single_culture_trigger = { CULTURE = "ibo" }
+		daoyu_single_culture_trigger = { CULTURE = "kissi" }
+		daoyu_single_culture_trigger = { CULTURE = "kru" }
+		daoyu_single_culture_trigger = { CULTURE = "mande" }
+		daoyu_single_culture_trigger = { CULTURE = "bidan" }
+		daoyu_single_culture_trigger = { CULTURE = "mossi" }
+		daoyu_single_culture_trigger = { CULTURE = "senufo" }
+		daoyu_single_culture_trigger = { CULTURE = "songhai" }
+		daoyu_single_culture_trigger = { CULTURE = "tiv" }
+		daoyu_single_culture_trigger = { CULTURE = "tuareg" }
+		daoyu_single_culture_trigger = { CULTURE = "wolof" }
+		daoyu_single_culture_trigger = { CULTURE = "yoruba" }
+		daoyu_single_culture_trigger = { CULTURE = "bakongo" }
+		daoyu_single_culture_trigger = { CULTURE = "baguirmi" }
+		daoyu_single_culture_trigger = { CULTURE = "fang" }
+		daoyu_single_culture_trigger = { CULTURE = "kanuri" }
+		daoyu_single_culture_trigger = { CULTURE = "luba" }
+		daoyu_single_culture_trigger = { CULTURE = "lunda" }
+		daoyu_single_culture_trigger = { CULTURE = "mongo" }
+		daoyu_single_culture_trigger = { CULTURE = "sara" }
+		daoyu_single_culture_trigger = { CULTURE = "teda" }
+		daoyu_single_culture_trigger = { CULTURE = "equatorial_bantu" }
+		daoyu_single_culture_trigger = { CULTURE = "fluvian_bantu" }
+		daoyu_single_culture_trigger = { CULTURE = "nilotic" }
+		daoyu_single_culture_trigger = { CULTURE = "amhara" }
+		daoyu_single_culture_trigger = { CULTURE = "afar" }
+		daoyu_single_culture_trigger = { CULTURE = "azande" }
+		daoyu_single_culture_trigger = { CULTURE = "baganda" }
+		daoyu_single_culture_trigger = { CULTURE = "beja" }
+		daoyu_single_culture_trigger = { CULTURE = "dinka" }
+		daoyu_single_culture_trigger = { CULTURE = "fur" }
+		daoyu_single_culture_trigger = { CULTURE = "kikuyu" }
+		daoyu_single_culture_trigger = { CULTURE = "luo" }
+		daoyu_single_culture_trigger = { CULTURE = "maasai" }
+		daoyu_single_culture_trigger = { CULTURE = "nuer" }
+		daoyu_single_culture_trigger = { CULTURE = "nuba" }
+		daoyu_single_culture_trigger = { CULTURE = "oromo" }
+		daoyu_single_culture_trigger = { CULTURE = "ruanda" }
+		daoyu_single_culture_trigger = { CULTURE = "rundi" }
+		daoyu_single_culture_trigger = { CULTURE = "sidama" }
+		daoyu_single_culture_trigger = { CULTURE = "somali" }
+		daoyu_single_culture_trigger = { CULTURE = "sudanese" }
+		daoyu_single_culture_trigger = { CULTURE = "sukuma" }
+		daoyu_single_culture_trigger = { CULTURE = "swahili" }
+		daoyu_single_culture_trigger = { CULTURE = "tigray" }
+		daoyu_single_culture_trigger = { CULTURE = "unyamwezi" }
+		daoyu_single_culture_trigger = { CULTURE = "lacustrine_bantu" }
+		daoyu_single_culture_trigger = { CULTURE = "chewa" }
+		daoyu_single_culture_trigger = { CULTURE = "herero" }
+		daoyu_single_culture_trigger = { CULTURE = "khoisan" }
+		daoyu_single_culture_trigger = { CULTURE = "lomwe" }
+		daoyu_single_culture_trigger = { CULTURE = "makua" }
+		daoyu_single_culture_trigger = { CULTURE = "nguni" }
+		daoyu_single_culture_trigger = { CULTURE = "ovimbundu" }
+		daoyu_single_culture_trigger = { CULTURE = "sena" }
+		daoyu_single_culture_trigger = { CULTURE = "shona" }
+		daoyu_single_culture_trigger = { CULTURE = "sotho" }
+		daoyu_single_culture_trigger = { CULTURE = "tonga" }
+		daoyu_single_culture_trigger = { CULTURE = "tswana" }
+		daoyu_single_culture_trigger = { CULTURE = "xhosa" }
+		daoyu_single_culture_trigger = { CULTURE = "yao" }
+		daoyu_single_culture_trigger = { CULTURE = "zulu" }
+		daoyu_single_culture_trigger = { CULTURE = "kavango_bantu" }
+		daoyu_single_culture_trigger = { CULTURE = "anglo_canadian" }
+		daoyu_single_culture_trigger = { CULTURE = "franco_canadian" }
+		daoyu_single_culture_trigger = { CULTURE = "sorb" }
+		daoyu_single_culture_trigger = { CULTURE = "tuvan" }
+		daoyu_single_culture_trigger = { CULTURE = "corsican" }
+		daoyu_single_culture_trigger = { CULTURE = "yemenite" }
+		daoyu_single_culture_trigger = { CULTURE = "welsh" }
+		daoyu_single_culture_trigger = { CULTURE = "scottish" }
+		daoyu_single_culture_trigger = { CULTURE = "galician" }
+		daoyu_single_culture_trigger = { CULTURE = "malay" }
+		daoyu_single_culture_trigger = { CULTURE = "bornean" }
+		daoyu_single_culture_trigger = { CULTURE = "sumatran" }
+		daoyu_single_culture_trigger = { CULTURE = "balinese" }
+		daoyu_single_culture_trigger = { CULTURE = "cajun" }
+		daoyu_single_culture_trigger = { CULTURE = "assyrian" }
+		daoyu_single_culture_trigger = { CULTURE = "circassian" }
+		daoyu_single_culture_trigger = { CULTURE = "francoprovencal" }
+		daoyu_single_culture_trigger = { CULTURE = "sulista" }
+		daoyu_single_culture_trigger = { CULTURE = "nordestino" }
+		daoyu_single_culture_trigger = { CULTURE = "amazonic" }
+		daoyu_single_culture_trigger = { CULTURE = "paulista" }
+		daoyu_single_culture_trigger = { CULTURE = "peruvian" }
+		daoyu_single_culture_trigger = { CULTURE = "bolivian" }
+		daoyu_single_culture_trigger = { CULTURE = "ecuadorian" }
+		daoyu_single_culture_trigger = { CULTURE = "chilean" }
+		daoyu_single_culture_trigger = { CULTURE = "argentine" }
+		daoyu_single_culture_trigger = { CULTURE = "uruguayan" }
+		daoyu_single_culture_trigger = { CULTURE = "venezuelan" }
+		daoyu_single_culture_trigger = { CULTURE = "paraguayan" }
+		daoyu_single_culture_trigger = { CULTURE = "colombian" }
+	}
+}
+daoyu_single_culture_trigger = {
+	or = {
+		and = {
+			has_global_variable = daoyu_add_homeland_for_mark_target_culture_trigger
+			has_global_variable = dculo_$CULTURE$
+			any_state = {
+				has_variable = daoyu_target_state
+				state_region = { not = { is_homeland = cu:$CULTURE$ } }
+			}
+		}
+		and = {
+			has_global_variable = daoyu_homeland_of_non_primary_culture_trigger
+			any_scope_state = {
+				has_decree = decree_daoyu_target_state
+				root = { not = { country_has_primary_culture = cu:$CULTURE$ } }
+				state_region = { is_homeland = cu:$CULTURE$ }
+			}
+		}
+	}
+}
+daoyu_cultural_obsession_trigger = {
+	or = {
+		and = {
+			has_global_variable = daoyu_add_cultural_obsession
+			any_country = { leading_producer_of = g:$GOODS$ }
+			scope:daoyu_target_country = { any_scope_culture = { is_primary_culture_of = scope:daoyu_target_country not = { has_cultural_obsession = $GOODS$ } } }
+		}
+		and = {
+			has_global_variable = daoyu_remove_cultural_obsession
+			scope:daoyu_target_country = { any_scope_culture = { is_primary_culture_of = scope:daoyu_target_country has_cultural_obsession = $GOODS$ } }
+		}
+		and = {
+			has_global_variable = daoyu_add_banned_goods
+			any_country = { leading_producer_of = g:$GOODS$ }
+			scope:daoyu_target_country = { not = { is_banning_goods = g:$GOODS$ } }
+		}
+		and = {
+			has_global_variable = daoyu_remove_banned_goods
+			scope:daoyu_target_country = { is_banning_goods = g:$GOODS$ }
+		}
+	}
+}
+
+daoyu_r_a_c_cu_trigger = {
+	scope:daoyu_target_country = {
+		or = {
+			and = { has_global_variable = daoyu_r_cu country_has_primary_culture = cu:$CULTURE$ var:daoyu_primary_culture_count > 1 }
+			and = { or = { has_global_variable = daoyu_a_cu has_global_variable = daoyu_c_cu } any_scope_state = { any_scope_pop = { pop_has_primary_culture = no has_pop_culture = $CULTURE$ } } }
+		}
+	}
+}
+daoyu_can_create_trade_route_trigger = {
+	owner = {
+		any_market = { owner = prev }
+		has_diplomatic_relevance = root
+		has_technology_researched = international_trade
+		not = { has_law = law_type:law_isolationism }
+		not = { is_country_type = decentralized }
+		or = {
+			any_scope_state = { any_neighbouring_state = { owner = root } }
+			and = { has_port = yes root = { has_port = yes } }
+		}
+	}
+}
+daoyu_ideology_orleanist = {
+	scope:daoyu_target_character = {
+		not = { has_role = agitator }
+		owner = {
+			and = {
+				exists = c:FRA
+				or = {
+					c:FRA = this
+					civil_war_origin_country = c:FRA
+				}
+			}
+			nor = {
+				any_interest_group = {
+					has_ideology = ideology:ideology_republican_paternalistic
+				}
+				has_variable = monarchy_stamped_out_var
+				and = {
+					or = {
+						has_variable = legitimist_restoration_var
+						has_variable = bonapartist_restoration_var
+					}
+					has_variable = one_true_french_dynasty
+				}
+			}
+		}
+		interest_group = {
+			or = {
+				is_interest_group_type = ig_industrialists
+				is_interest_group_type = ig_petty_bourgeoisie
+				is_interest_group_type = ig_intelligentsia
+				is_interest_group_type = ig_armed_forces
+			}
+		}
+		interest_group = {
+			nor = {
+				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
+				has_variable = chose_fascism
+				has_variable = chose_conservatism
+				has_variable = chose_ethno_nationalism
+			}
+		}
+	}
+}
+daoyu_ideology_legitimist = {
+	scope:daoyu_target_character = {
+		not = { has_role = agitator }
+		owner = {
+			and = {
+				exists = c:FRA
+				or = {
+					c:FRA = this
+					civil_war_origin_country = c:FRA
+				}
+			}
+			nor = {
+				any_interest_group = {
+					has_ideology = ideology:ideology_republican_paternalistic
+				}
+				has_variable = monarchy_stamped_out_var
+				and = {
+					or = {
+						has_variable = orleanist_restoration_var
+						has_variable = bonapartist_restoration_var
+					}
+					has_variable = one_true_french_dynasty
+				}
+			}
+		}
+		interest_group = {
+			or = {
+				is_interest_group_type = ig_devout
+				is_interest_group_type = ig_rural_folk
+				is_interest_group_type = ig_petty_bourgeoisie
+				is_interest_group_type = ig_landowners
+			}
+		}
+		interest_group = {
+			nor = {
+				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
+				has_variable = chose_fascism
+				has_variable = chose_conservatism
+				has_variable = chose_ethno_nationalism
+			}
+		}
+	}
+}
+daoyu_ideology_bonapartist = {
+	scope:daoyu_target_character = {
+		not = { has_role = agitator }
+		owner = {
+			and = {
+				exists = c:FRA
+				or = {
+					c:FRA = this
+					civil_war_origin_country = c:FRA
+				}
+			}
+			nor = {
+				any_interest_group = {
+					has_ideology = ideology:ideology_republican_paternalistic
+				}
+				has_variable = monarchy_stamped_out_var
+				and = {
+					or = {
+						has_variable = orleanist_restoration_var
+						has_variable = legitimist_restoration_var
+					}
+					has_variable = one_true_french_dynasty
+				}
+			}
+		}
+		interest_group = {
+			or = {
+				is_interest_group_type = ig_rural_folk
+				is_interest_group_type = ig_petty_bourgeoisie
+				is_interest_group_type = ig_industrialists
+				is_interest_group_type = ig_armed_forces
+			}
+		}
+		interest_group = {
+			nor = {
+				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
+				has_variable = chose_fascism
+				has_variable = chose_conservatism
+				has_variable = chose_ethno_nationalism
+			}
+		}
+	}
+}
+﻿daoyu_ideology_moderate = {
+	scope:daoyu_target_character = {
+		always = yes
+		not = { has_role = agitator }
+		interest_group = {
+			nor = {
+				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
+				has_variable = chose_fascism
+				has_variable = chose_conservatism
+				has_variable = chose_ethno_nationalism
+			}
+		}
+	}
+}
+daoyu_ideology_traditionalist = {
+	scope:daoyu_target_character = {
+		nand = {
+			has_role = agitator
+			owner = {
+				has_law = law_type:law_no_womens_rights
+				has_law = law_type:law_state_religion
+			}
+		}
+		not = {
+			exists = c:FRA
+			c:FRA = this
+		}
+		interest_group = {
+			or = {
+				is_interest_group_type = ig_rural_folk
+				is_interest_group_type = ig_trade_unions
+				is_interest_group_type = ig_armed_forces
+				is_interest_group_type = ig_petty_bourgeoisie
+				is_interest_group_type = ig_landowners
+				is_interest_group_type = ig_devout
+			}
+		}
+		interest_group = {
+			nor = {
+				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
+				has_variable = chose_fascism
+				has_variable = chose_ethno_nationalism
+			}
+		}
+	}
+}
+daoyu_ideology_atheist = {
+	scope:daoyu_target_character = {
+		nand = {
+			has_role = agitator
+			owner = {
+				or = {
+					has_law = law_type:law_presidential_republic
+					has_law = law_type:law_parliamentary_republic
+					has_law = law_type:law_council_republic
+				}
+				has_law = law_type:law_state_atheism
+			}
+		}
+		nand = {
+			owner = {
+				has_law = law_type:law_monarchy
+			}
+			or = {
+				is_ruler = yes
+				is_heir = yes
+			}
+		}
+		owner = {
+			has_technology_researched = realism
+		}
+		interest_group = {
+			or = {
+				is_interest_group_type = ig_trade_unions
+				is_interest_group_type = ig_armed_forces
+				is_interest_group_type = ig_petty_bourgeoisie
+				is_interest_group_type = ig_intelligentsia
+			}
+		}
+		interest_group = {
+			nor = {
+				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
+				has_variable = chose_fascism
+				has_variable = chose_conservatism
+				has_variable = chose_ethno_nationalism
+			}
+		}
+	}
+}
+daoyu_ideology_republican_leader = {
+	scope:daoyu_target_character = {
+		nand = {
+			has_role = agitator
+			owner = {
+				or = {
+					has_law = law_type:law_presidential_republic
+					has_law = law_type:law_parliamentary_republic
+				}
+				has_law = law_type:law_elected_bureaucrats
+			}
+		}
+		nand = {
+			owner = {
+				has_law = law_type:law_monarchy
+			}
+			or = {
+				is_ruler = yes
+				is_heir = yes
+			}
+		}
+		interest_group = {
+			or = {
+				is_interest_group_type = ig_trade_unions
+				is_interest_group_type = ig_armed_forces
+				is_interest_group_type = ig_petty_bourgeoisie
+				is_interest_group_type = ig_industrialists
+			}
+		}
+		interest_group = {
+			nor = {
+				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
+				has_variable = chose_fascism
+				has_variable = chose_conservatism
+				has_variable = chose_ethno_nationalism
+			}
+		}
+	}
+}
+daoyu_ideology_radical = {
+	scope:daoyu_target_character = {
+		owner = { has_technology_researched = egalitarianism }
+		nand = {
+			has_role = agitator
+			owner = {
+				or = {
+					has_law = law_type:law_presidential_republic
+					has_law = law_type:law_parliamentary_republic
+				}
+				has_law = law_type:law_universal_suffrage
+				has_law = law_type:law_protected_speech
+				has_law = law_type:law_guaranteed_liberties
+			}
+		}
+		not = {
+			owner = {
+				and = {
+					exists = c:USA
+					or = {
+						c:USA = this
+						civil_war_origin_country = c:USA
+					}
+				}
+				has_journal_entry = je_acw_countdown
+			}
+		}
+		not = {
+			owner = {
+				has_law = law_type:law_monarchy
+			}
+			or = {
+				is_ruler = yes
+				is_heir = yes
+			}
+		}
+		interest_group = {
+			or = {
+				is_interest_group_type = ig_rural_folk
+				is_interest_group_type = ig_intelligentsia
+				is_interest_group_type = ig_trade_unions
+				is_interest_group_type = ig_petty_bourgeoisie
+				is_interest_group_type = ig_industrialists
+			}
+		}
+		interest_group = {
+			nor = {
+				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
+				has_variable = chose_fascism
+				has_variable = chose_conservatism
+				has_variable = chose_ethno_nationalism
+			}
+		}
+	}
+}
+daoyu_ideology_reformer = {
+	scope:daoyu_target_character = {
+		owner = {
+			has_technology_researched = egalitarianism
+			not = { has_technology_researched = feminism }
+		}
+		nand = {
+			has_role = agitator
+			owner = {
+				has_law = law_type:law_cultural_exclusion
+				has_law = law_type:law_compulsory_primary_school
+			}
+		}
+		interest_group = {
+			nor = {
+				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
+				has_variable = chose_fascism
+				has_variable = chose_conservatism
+				has_variable = chose_ethno_nationalism
+			}
+		}
+	}
+}
+daoyu_ideology_feminist = {
+	scope:daoyu_target_character = {
+		owner = {
+			has_technology_researched = feminism
+			not = { has_law = law_type:law_womens_suffrage }
+		}
+		nand = {
+			has_role = agitator
+			owner = {
+				has_law = law_type:law_womens_suffrage
+			}
+		}
+		interest_group = {
+			or = {
+				is_interest_group_type = ig_rural_folk
+				is_interest_group_type = ig_intelligentsia
+				is_interest_group_type = ig_trade_unions
+				is_interest_group_type = ig_petty_bourgeoisie
+				is_interest_group_type = ig_industrialists
+			}
+		}
+		interest_group = {
+			nor = {
+				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
+				has_variable = chose_fascism
+				has_variable = chose_conservatism
+				has_variable = chose_ethno_nationalism
+			}
+		}
+	}
+}
+daoyu_ideology_abolitionist = {
+	scope:daoyu_target_character = {
+		owner = {
+			or = {
+				not = { has_law = law_type:law_slavery_banned }
+				has_law = law_type:law_serfdom
+			}
+		}
+		interest_group = {
+			or = {
+				is_interest_group_type = ig_trade_unions
+				is_interest_group_type = ig_intelligentsia
+				is_interest_group_type = ig_petty_bourgeoisie
+				is_interest_group_type = ig_industrialists
+				is_interest_group_type = ig_devout
+			}
+		}
+		interest_group = {
+			nor = {
+				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
+				has_variable = chose_fascism
+				has_variable = chose_conservatism
+				has_variable = chose_ethno_nationalism
+			}
+		}
+	}
+}
+daoyu_ideology_slaver = {
+	scope:daoyu_target_character = {
+		owner = {
+			not = {
+				has_law = law_type:law_slavery_banned
+			}
+		}
+		interest_group = {
+			or = {
+				is_interest_group_type = ig_landowners
+				is_interest_group_type = ig_devout
+				is_interest_group_type = ig_rural_folk
+			}
+		}
+		interest_group = {
+			nor = {
+				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
+				has_variable = chose_fascism
+				has_variable = chose_conservatism
+				has_variable = chose_ethno_nationalism
+			}
+		}
+	}
+}
+daoyu_ideology_pacifist = {
+	scope:daoyu_target_character = {
+		nand = {
+			has_role = agitator
+			owner = {
+				has_law = law_type:law_national_militia
+				has_law = law_type:law_no_colonial_affairs
+			}
+		}
+		interest_group = {
+			nor = {
+				is_interest_group_type = ig_armed_forces
+				is_interest_group_type = ig_armed_forces
+			}
+		}
+		interest_group = {
+			nor = {
+				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
+				has_variable = chose_fascism
+				has_variable = chose_conservatism
+				has_variable = chose_ethno_nationalism
+			}
+		}
+	}
+}
+daoyu_ideology_jingoist_leader = {
+	scope:daoyu_target_character = {
+		nand = {
+			has_role = agitator
+			owner = {
+				has_law = law_type:law_mass_conscription
+				has_law = law_type:law_colonial_exploitation
+			}
+		}
+		interest_group = {
+			nor = {
+				is_interest_group_type = ig_armed_forces
+				is_interest_group_type = ig_rural_folk
+			}
+		}
+		interest_group = {
+			nor = {
+				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
+				has_variable = chose_fascism
+				has_variable = chose_conservatism
+				has_variable = chose_ethno_nationalism
+			}
+		}
+	}
+}
+daoyu_ideology_royalist = {
+	scope:daoyu_target_character = {
+		nand = {
+			has_role = agitator
+			owner = {
+				has_law = law_type:law_monarchy
+			}
+		}
+		owner = {
+			nor = {
+				and = {
+					exists = c:FRA
+					c:FRA = this
+				}
+				any_interest_group = {
+					has_ideology = ideology:ideology_republican_paternalistic
+				}
+				has_variable = monarchy_stamped_out_var
+			}
+		}
+		interest_group = {
+			or = {
+				is_interest_group_type = ig_devout
+				is_interest_group_type = ig_rural_folk
+				is_interest_group_type = ig_petty_bourgeoisie
+				is_interest_group_type = ig_armed_forces
+			}
+		}
+		interest_group = {
+			nor = {
+				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
+				has_variable = chose_fascism
+				has_variable = chose_conservatism
+				has_variable = chose_ethno_nationalism
+			}
+		}
+	}
+}
+daoyu_ideology_social_democrat = {
+	scope:daoyu_target_character = {
+		owner = { has_technology_researched = socialism }
+		nand = {
+			has_role = agitator
+			owner = {
+				has_law = law_type:law_universal_suffrage
+				has_law = law_type:law_graduated_taxation
+				has_law = law_type:law_old_age_pension
+				has_law = law_type:law_worker_protections
+			}
+		}
+		interest_group = {
+			or = {
+				is_interest_group_type = ig_devout
+				is_interest_group_type = ig_rural_folk
+				is_interest_group_type = ig_intelligentsia
+				is_interest_group_type = ig_trade_unions
+				is_interest_group_type = ig_armed_forces
+			}
+		}
+		interest_group = {
+			nor = {
+				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
+				has_variable = chose_fascism
+				has_variable = chose_conservatism
+				has_variable = chose_ethno_nationalism
+			}
+		}
+	}
+}
+daoyu_ideology_communist = {
+	scope:daoyu_target_character = {
+		nand = {
+			has_role = agitator
+			owner = {
+				has_law = law_type:law_collectivized_agriculture
+				has_law = law_type:law_state_atheism
+				has_law = law_type:law_council_republic
+				has_law = law_type:law_worker_protections
+			}
+		}
+		nand = {
+			owner = {
+				has_law = law_type:law_monarchy
+			}
+			or = {
+				is_ruler = yes
+				is_heir = yes
+			}
+		}
+		owner = { has_technology_researched = socialism }
+		interest_group = {
+			or = {
+				is_interest_group_type = ig_rural_folk
+				is_interest_group_type = ig_intelligentsia
+				is_interest_group_type = ig_trade_unions
+				is_interest_group_type = ig_armed_forces
+			}
+		}
+		interest_group = {
+			nor = {
+				has_variable = chose_anarchism
+				has_variable = chose_vanguardism
+				has_variable = chose_fascism
+				has_variable = chose_conservatism
+				has_variable = chose_ethno_nationalism
+			}
+		}
+	}
+}
+daoyu_ideology_vanguardist = {
+	scope:daoyu_target_character = {
+		owner = { has_technology_researched = socialism }
+		nand = {
+			has_role = agitator
+			owner = {
+				has_law = law_type:law_collectivized_agriculture
+				has_law = law_type:law_council_republic
+				has_law = law_type:law_command_economy
+				has_law = law_type:law_protectionism
+				has_law = law_type:law_single_party_state
+			}
+		}
+		nand = {
+			owner = {
+				has_law = law_type:law_monarchy
+			}
+			or = {
+				is_ruler = yes
+				is_heir = yes
+			}
+		}
+		interest_group = {
+			or = {
+				is_interest_group_type = ig_rural_folk
+				is_interest_group_type = ig_intelligentsia
+				is_interest_group_type = ig_trade_unions
+				is_interest_group_type = ig_armed_forces
+			}
+		}
+		interest_group = {
+			nor = {
+				has_variable = chose_anarchism
+				has_variable = chose_communism
+				has_variable = chose_fascism
+				has_variable = chose_conservatism
+				has_variable = chose_ethno_nationalism
+			}
+		}
+	}
+}
+daoyu_ideology_fascist = {
+	scope:daoyu_target_character = {
+		owner = { has_technology_researched = mass_propaganda }
+		nand = {
+			has_role = agitator
+			owner = {
+				has_law = law_type:law_autocracy
+				has_law = law_type:law_ethnostate
+				has_law = law_type:law_outlawed_dissent
+				has_law = law_type:law_militarized_police
+			}
+		}
+		interest_group = {
+			nor = {
+				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
+				has_variable = chose_ethno_nationalism
+			}
+		}
+	}
+}
+daoyu_ideology_anarchist = {
+	scope:daoyu_target_character = {
+		owner = { has_technology_researched = anarchism }
+		nand = {
+			has_role = agitator
+			owner = {
+				has_law = law_type:law_anarchy
+				has_law = law_type:law_national_militia
+				has_law = law_type:law_protected_speech
+				has_law = law_type:law_no_police
+				has_law = law_type:law_council_republic
+			}
+		}
+		nand = {
+			owner = {
+				has_law = law_type:law_monarchy
+			}
+			or = {
+				is_ruler = yes
+				is_heir = yes
+			}
+		}
+		interest_group = {
+			or = {
+				is_interest_group_type = ig_rural_folk
+				is_interest_group_type = ig_intelligentsia
+				is_interest_group_type = ig_trade_unions
+			}
+		}
+		interest_group = {
+			nor = {
+				has_variable = chose_vanguardism
+				has_variable = chose_communism
+				has_variable = chose_fascism
+				has_variable = chose_conservatism
+				has_variable = chose_ethno_nationalism
+			}
+		}
+	}
+}
+daoyu_ideology_ethno_nationalist = {
+	scope:daoyu_target_character = {
+		owner = {
+			has_technology_researched = political_agitation
+		}
+		nand = {
+			has_role = agitator
+			owner = {
+				has_law = law_type:law_ethnostate
+				has_law = law_type:law_migration_controls
+			}
+		}
+		interest_group = {
+			nor = {
+				has_variable = chose_vanguardism
+				has_variable = communist_ig_var
+				has_variable = chose_fascism
+			}
+		}
+	}
+}
+daoyu_ideology_theocrat = {
+	scope:daoyu_target_character = {
+		nand = {
+			has_role = agitator
+			owner = {
+				has_law = law_type:law_theocracy
+				has_law = law_type:law_state_religion
+			}
+		}
+		or = {
+			owner = {
+				has_law = law_type:law_theocracy
+			}
+			interest_group = {
+				is_interest_group_type = ig_devout
+			}
+		}
+		interest_group = {
+			or = {
+				is_interest_group_type = ig_rural_folk
+				is_interest_group_type = ig_trade_unions
+				is_interest_group_type = ig_armed_forces
+				is_interest_group_type = ig_petty_bourgeoisie
+				is_interest_group_type = ig_landowners
+				is_interest_group_type = ig_devout
+			}
+		}
+		interest_group = {
+			nor = {
+				has_variable = chose_vanguardism
+				has_variable = communist_ig_var
+				has_variable = chose_fascism
+				has_variable = chose_conservatism
+				has_variable = chose_ethno_nationalism
+			}
+		}
+	}
+}
+daoyu_ideology_market_liberal = {
+	scope:daoyu_target_character = {
+		owner = {
+			has_technology_researched = stock_exchange
+			exists = ig:ig_industrialists
+			ig:ig_industrialists = {
+				is_marginal = no
+			}
+		}
+		nand = {
+			has_role = agitator
+			owner = {
+				has_law = law_type:law_laissez_faire
+				has_law = law_type:law_child_labor_allowed
+				has_law = law_type:law_free_trade
+				has_law = law_type:law_commercialized_agriculture
+			}
+		}
+		interest_group = {
+			or = {
+				is_interest_group_type = ig_petty_bourgeoisie
+				is_interest_group_type = ig_landowners
+				is_interest_group_type = ig_intelligentsia
+				is_interest_group_type = ig_industrialists
+			}
+		}
+		interest_group = {
+			nor = {
+				has_variable = chose_vanguardism
+				has_variable = communist_ig_var
+				has_variable = chose_fascism
+				has_variable = chose_conservatism
+				has_variable = chose_ethno_nationalism
+			}
+		}
+	}
+}
+daoyu_ideology_luddite = {
+	scope:daoyu_target_character = {
+		owner = {
+			has_technology_researched = romanticism
+			or = {
+				has_law = law_type:law_command_economy
+				has_law = law_type:law_laissez_faire
+				has_law = law_type:law_interventionism
+			}
+		}
+		nand = {
+			has_role = agitator
+			owner = {
+				has_law = law_type:law_isolationism
+				has_law = law_type:law_industry_banned
+			}
+		}
+		interest_group = {
+			or = {
+				is_interest_group_type = ig_rural_folk
+				is_interest_group_type = ig_devout
+			}
+		}
+		interest_group = {
+			nor = {
+				has_variable = chose_vanguardism
+				has_variable = communist_ig_var
+				has_variable = chose_fascism
+				has_variable = chose_conservatism
+				has_variable = chose_ethno_nationalism
+			}
+		}
+	}
+}
+daoyu_ideology_authoritarian = {
+	scope:daoyu_target_character = {
+		nand = {
+			has_role = agitator
+			owner = {
+				has_law = law_type:law_outlawed_dissent
+				has_law = law_type:law_secret_police
+				or = {
+					has_law = law_type:law_oligarchy
+					has_law = law_type:law_autocracy
+				}
+			}
+		}
+		interest_group = {
+			nand = {
+				owner = { has_technology_researched = socialism }
+				is_interest_group_type = ig_trade_unions
+			}
+			nand = {
+				is_interest_group_type = ig_petty_bourgeoisie
+				owner = { has_technology_researched = mass_propaganda }
+			}
+			nor = {
+				has_variable = chose_vanguardism
+				has_variable = communist_ig_var
+				has_variable = chose_fascism
+				has_variable = chose_conservatism
+				has_variable = chose_ethno_nationalism
+			}
+		}
+	}
+}
+daoyu_ideology_protectionist = {
+	scope:daoyu_target_character = {
+		owner = {
+			has_technology_researched = international_trade
+			exists = ig:ig_industrialists
+			ig:ig_industrialists = {
+				is_marginal = no
+			}
+		}
+		nand = {
+			has_role = agitator
+			owner = {
+				has_law = law_type:law_protectionism
+				has_law = law_type:law_interventionism
+			}
+		}
+		interest_group = {
+			not = {
+				is_interest_group_type = ig_devout
+			}
+		}
+		interest_group = {
+			nor = {
+				has_variable = chose_vanguardism
+				has_variable = communist_ig_var
+				has_variable = chose_fascism
+				has_variable = chose_conservatism
+				has_variable = chose_ethno_nationalism
+			}
+		}
+	}
+}
+daoyu_ideology_humanitarian = {
+	scope:daoyu_target_character = {
+		owner = {
+			has_technology_researched = feminism
+		}
+		nand = {
+			has_role = agitator
+			owner = {
+				has_law = law_type:law_multicultural
+				has_law = law_type:law_guaranteed_liberties
+				has_law = law_type:law_protected_speech
+				has_law = law_type:law_womens_suffrage
+				has_law = law_type:law_compulsory_primary_school
+			}
+		}
+		interest_group = {
+			or = {
+				is_interest_group_type = ig_intelligentsia
+				is_interest_group_type = ig_trade_unions
+			}
+		}
+		interest_group = {
+			nor = {
+				has_variable = chose_vanguardism
+				has_variable = communist_ig_var
+				has_variable = chose_fascism
+				has_variable = chose_conservatism
+				has_variable = chose_ethno_nationalism
+			}
+		}
+	}
+}
+daoyu_ideology_jacksonian_democrat = {
+	scope:daoyu_target_character = {
+		owner = {
+			and = {
+				exists = c:USA
+				or = {
+					c:USA = this
+					civil_war_origin_country = c:USA
+				}
+			}
+			any_scope_character = {
+				has_variable = is_andrew_jackson
+			}
+		}
+		interest_group = {
+			nor = {
+				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
+				has_variable = chose_fascism
+				has_variable = chose_conservatism
+				has_variable = chose_ethno_nationalism
+			}
+		}
+	}
+}
+daoyu_ideology_positivist = {
+	scope:daoyu_target_character = {
+		nand = {
+			has_role = agitator
+			owner = {
+				has_law = law_type:law_appointed_bureaucrats
+				has_law = law_type:law_technocracy
+				has_law = law_type:law_state_atheism
+				has_law = law_type:law_presidential_republic
+			}
+		}
+		nand = {
+			owner = {
+				has_law = law_type:law_monarchy
+			}
+			or = {
+				is_ruler = yes
+				is_heir = yes
+			}
+		}
+		owner = {
+			has_technology_researched = empiricism
+		}
+		interest_group = {
+			or = {
+				is_interest_group_type = ig_armed_forces
+				is_interest_group_type = ig_industrialists
+				is_interest_group_type = ig_intelligentsia
+			}
+		}
+		interest_group = {
+			nor = {
+				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
+				has_variable = chose_fascism
+				has_variable = chose_conservatism
+				has_variable = chose_ethno_nationalism
+			}
+		}
+	}
+}
+daoyu_ideology_land_reformer = {
+	scope:daoyu_target_character = {
+		nand = {
+			has_role = agitator
+			owner = {
+				not = {
+					has_law = law_type:law_land_based_taxation
+				}
+				or = {
+					has_law = law_type:law_homesteading
+					has_law = law_type:law_collectivized_agriculture
+				}
+			}
+		}
+		interest_group = {
+			or = {
+				is_interest_group_type = ig_rural_folk
+				is_interest_group_type = ig_intelligentsia
+				is_interest_group_type = ig_trade_unions
+				is_interest_group_type = ig_petty_bourgeoisie
+			}
+		}
+		interest_group = {
+			nor = {
+				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
+				has_variable = chose_fascism
+				has_variable = chose_conservatism
+				has_variable = chose_ethno_nationalism
+			}
+		}
+	}
+}
+daoyu_ideology_integralist = {
+	scope:daoyu_target_character = {
+		owner = {
+			has_technology_researched = corporatism
+			any_primary_culture = { 
+				or = { 
+					has_discrimination_trait = lusophone 
+					has_discrimination_trait = hispanophone 
+					has_discrimination_trait = francophone 
+				} 
+			} 
+		}
+		nand = {
+			has_role = agitator
+			owner = {
+				has_law = law_type:law_autocracy
+				has_law = law_type:law_cultural_exclusion
+				has_law = law_type:law_state_religion
+				has_law = law_type:law_militarized_police
+			}
+		}
+		interest_group = {
+			or = {
+				is_interest_group_type = ig_rural_folk
+				is_interest_group_type = ig_landowners
+				is_interest_group_type = ig_devout
+				is_interest_group_type = ig_petty_bourgeoisie
+				is_interest_group_type = ig_armed_forces
+			}
+		}
+		interest_group = {
+			nor = {
+				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
+				has_variable = chose_conservatism
+				has_variable = chose_ethno_nationalism
+			}
+		}
+	}
+}
+daoyu_ideology_despotic_utopian = {
+	scope:daoyu_target_character = {
+		not = { has_role = agitator }
+		owner = {
+			or = {
+				and = {
+					exists = c:PRG
+					or = {
+						c:PRG = this
+						civil_war_origin_country = c:PRG
+					}
+					or = {
+						has_variable = patino_paraguay_var
+						has_variable = francocracia_paraguay_var
+					}
+				}
+				and = {
+					exists = c:PRG
+					is_subject_of = c:PRG
+					c:PRG = {
+						or = {
+							has_variable = patino_paraguay_var
+							has_variable = francocracia_paraguay_var
+						}
+					}
+				}
+			}
+		}
+		nand = {
+			owner = { has_technology_researched = socialism }
+			is_interest_group_type = ig_trade_unions
+		}
+		nand = {
+			is_interest_group_type = ig_petty_bourgeoisie
+			owner = { has_technology_researched = mass_propaganda }
+		}
+		interest_group = { 
+			or = {
+				is_interest_group_type = ig_trade_unions
+				is_interest_group_type = ig_petty_bourgeoisie
+				is_interest_group_type = ig_intelligentsia
+			}
+		}
+		interest_group = {
+			nor = {
+				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
+				has_variable = chose_fascism
+				has_variable = chose_conservatism
+				has_variable = chose_ethno_nationalism
+			}
+		}
+	}
+}
+daoyu_ideology_liberal_leader = {
+	scope:daoyu_target_character = {
+		nand = {
+			has_role = agitator
+			owner = {
+				or = {
+					has_law = law_type:law_universal_suffrage
+					has_law = law_type:law_census_voting
+					has_law = law_type:law_wealth_voting
+					has_law = law_type:law_landed_voting
+				}
+				has_law = law_type:law_elected_bureaucrats
+			}
+		}
+		interest_group = {
+			nor = {
+				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
+				has_variable = chose_fascism
+				has_variable = chose_conservatism
+				has_variable = chose_ethno_nationalism
+			}
+		}
+	}
+}
+daoyu_ideology_corporatist_leader = {
+	scope:daoyu_target_character = {
+		nand = {
+			has_role = agitator
+			owner = {
+				not = {
+					has_law = law_type:law_council_republic
+				}
+				has_law = law_type:law_religious_schools
+				has_law = law_type:law_regulatory_bodies
+				has_law = law_type:law_wage_subsidies
+			}
+		}
+		interest_group = {
+			nor = {
+				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
+				has_variable = chose_fascism
+				has_variable = chose_ethno_nationalism
+			}
+		}
+		interest_group = {
+			or = {
+				is_interest_group_type = ig_landowners
+				is_interest_group_type = ig_devout
+				is_interest_group_type = ig_petty_bourgeoisie
+				is_interest_group_type = ig_rural_folk
+				is_interest_group_type = ig_trade_unions
+			}
+		}
+	}
+}
+daoyu_ideology_humanitarian_royalist = {
+	scope:daoyu_target_character = {
+		nand = {
+			has_role = agitator
+			owner = {
+				has_law = law_type:law_monarchy
+				has_law = law_type:law_multicultural
+				has_law = law_type:law_guaranteed_liberties
+				has_law = law_type:law_womens_suffrage
+				has_law = law_type:law_compulsory_primary_school
+			}
+		}
+		interest_group = {
+			or = {
+				is_interest_group_type = ig_intelligentsia
+				is_interest_group_type = ig_trade_unions
+			}
+		}
+		interest_group = {
+			nor = {
+				has_variable = chose_vanguardism
+				has_variable = communist_ig_var
+				has_variable = chose_fascism
+				has_variable = chose_conservatism
+				has_variable = chose_ethno_nationalism
+			}
+		}
+	}
+}
+daoyu_move_pop_religion_trigger = {
+	or = {
+		and = { has_global_variable = daoyu_move_pop_catholic scope:daoyu_migration_from = { any_scope_pop = { culture = { has_variable = daoyu_target_culture } religion = rel:catholic is_pop_type = $TYPE$ } } }
+		and = { has_global_variable = daoyu_move_pop_protestant scope:daoyu_migration_from = { any_scope_pop = { culture = { has_variable = daoyu_target_culture } religion = rel:protestant is_pop_type = $TYPE$ } } }
+		and = { has_global_variable = daoyu_move_pop_orthodox scope:daoyu_migration_from = { any_scope_pop = { culture = { has_variable = daoyu_target_culture } religion = rel:orthodox is_pop_type = $TYPE$ } } }
+		and = { has_global_variable = daoyu_move_pop_oriental_orthodox scope:daoyu_migration_from = { any_scope_pop = { culture = { has_variable = daoyu_target_culture } religion = rel:oriental_orthodox is_pop_type = $TYPE$ } } }
+		and = { has_global_variable = daoyu_move_pop_sunni scope:daoyu_migration_from = { any_scope_pop = { culture = { has_variable = daoyu_target_culture } religion = rel:sunni is_pop_type = $TYPE$ } } }
+		and = { has_global_variable = daoyu_move_pop_shiite scope:daoyu_migration_from = { any_scope_pop = { culture = { has_variable = daoyu_target_culture } religion = rel:shiite is_pop_type = $TYPE$ } } }
+		and = { has_global_variable = daoyu_move_pop_jewish scope:daoyu_migration_from = { any_scope_pop = { culture = { has_variable = daoyu_target_culture } religion = rel:jewish is_pop_type = $TYPE$ } } }
+		and = { has_global_variable = daoyu_move_pop_mahayana scope:daoyu_migration_from = { any_scope_pop = { culture = { has_variable = daoyu_target_culture } religion = rel:mahayana is_pop_type = $TYPE$ } } }
+		and = { has_global_variable = daoyu_move_pop_gelugpa scope:daoyu_migration_from = { any_scope_pop = { culture = { has_variable = daoyu_target_culture } religion = rel:gelugpa is_pop_type = $TYPE$ } } }
+		and = { has_global_variable = daoyu_move_pop_confucian scope:daoyu_migration_from = { any_scope_pop = { culture = { has_variable = daoyu_target_culture } religion = rel:confucian is_pop_type = $TYPE$ } } }
+		and = { has_global_variable = daoyu_move_pop_theravada scope:daoyu_migration_from = { any_scope_pop = { culture = { has_variable = daoyu_target_culture } religion = rel:theravada is_pop_type = $TYPE$ } } }
+		and = { has_global_variable = daoyu_move_pop_hindu scope:daoyu_migration_from = { any_scope_pop = { culture = { has_variable = daoyu_target_culture } religion = rel:hindu is_pop_type = $TYPE$ } } }
+		and = { has_global_variable = daoyu_move_pop_shinto scope:daoyu_migration_from = { any_scope_pop = { culture = { has_variable = daoyu_target_culture } religion = rel:shinto is_pop_type = $TYPE$ } } }
+		and = { has_global_variable = daoyu_move_pop_sikh scope:daoyu_migration_from = { any_scope_pop = { culture = { has_variable = daoyu_target_culture } religion = rel:sikh is_pop_type = $TYPE$ } } }
+		and = { has_global_variable = daoyu_move_pop_animist scope:daoyu_migration_from = { any_scope_pop = { culture = { has_variable = daoyu_target_culture } religion = rel:animist is_pop_type = $TYPE$ } } }
+		and = { has_global_variable = daoyu_move_pop_atheist scope:daoyu_migration_from = { any_scope_pop = { culture = { has_variable = daoyu_target_culture } religion = rel:atheist is_pop_type = $TYPE$ } } }
+		and = { has_global_variable = daoyu_from_665 scope:daoyu_migration_from = { any_scope_pop = { culture = { has_variable = daoyu_target_culture } is_pop_type = $TYPE$ } } }
+	}
+}
+daoyu_move_pop_religion_unemployed_trigger = {
+	or = {
+		and = { has_global_variable = daoyu_move_pop_catholic scope:daoyu_migration_from = { any_scope_pop = { culture = { has_variable = daoyu_target_culture } religion = rel:catholic is_employed = no } } }
+		and = { has_global_variable = daoyu_move_pop_protestant scope:daoyu_migration_from = { any_scope_pop = { culture = { has_variable = daoyu_target_culture } religion = rel:protestant is_employed = no } } }
+		and = { has_global_variable = daoyu_move_pop_orthodox scope:daoyu_migration_from = { any_scope_pop = { culture = { has_variable = daoyu_target_culture } religion = rel:orthodox is_employed = no } } }
+		and = { has_global_variable = daoyu_move_pop_oriental_orthodox scope:daoyu_migration_from = { any_scope_pop = { culture = { has_variable = daoyu_target_culture } religion = rel:oriental_orthodox is_employed = no } } }
+		and = { has_global_variable = daoyu_move_pop_sunni scope:daoyu_migration_from = { any_scope_pop = { culture = { has_variable = daoyu_target_culture } religion = rel:sunni is_employed = no } } }
+		and = { has_global_variable = daoyu_move_pop_shiite scope:daoyu_migration_from = { any_scope_pop = { culture = { has_variable = daoyu_target_culture } religion = rel:shiite is_employed = no } } }
+		and = { has_global_variable = daoyu_move_pop_jewish scope:daoyu_migration_from = { any_scope_pop = { culture = { has_variable = daoyu_target_culture } religion = rel:jewish is_employed = no } } }
+		and = { has_global_variable = daoyu_move_pop_mahayana scope:daoyu_migration_from = { any_scope_pop = { culture = { has_variable = daoyu_target_culture } religion = rel:mahayana is_employed = no } } }
+		and = { has_global_variable = daoyu_move_pop_gelugpa scope:daoyu_migration_from = { any_scope_pop = { culture = { has_variable = daoyu_target_culture } religion = rel:gelugpa is_employed = no } } }
+		and = { has_global_variable = daoyu_move_pop_confucian scope:daoyu_migration_from = { any_scope_pop = { culture = { has_variable = daoyu_target_culture } religion = rel:confucian is_employed = no } } }
+		and = { has_global_variable = daoyu_move_pop_theravada scope:daoyu_migration_from = { any_scope_pop = { culture = { has_variable = daoyu_target_culture } religion = rel:theravada is_employed = no } } }
+		and = { has_global_variable = daoyu_move_pop_hindu scope:daoyu_migration_from = { any_scope_pop = { culture = { has_variable = daoyu_target_culture } religion = rel:hindu is_employed = no } } }
+		and = { has_global_variable = daoyu_move_pop_shinto scope:daoyu_migration_from = { any_scope_pop = { culture = { has_variable = daoyu_target_culture } religion = rel:shinto is_employed = no } } }
+		and = { has_global_variable = daoyu_move_pop_sikh scope:daoyu_migration_from = { any_scope_pop = { culture = { has_variable = daoyu_target_culture } religion = rel:sikh is_employed = no } } }
+		and = { has_global_variable = daoyu_move_pop_animist scope:daoyu_migration_from = { any_scope_pop = { culture = { has_variable = daoyu_target_culture } religion = rel:animist is_employed = no } } }
+		and = { has_global_variable = daoyu_move_pop_atheist scope:daoyu_migration_from = { any_scope_pop = { culture = { has_variable = daoyu_target_culture } religion = rel:atheist is_employed = no } } }
+		and = { has_global_variable = daoyu_from_665 scope:daoyu_migration_from = { any_scope_pop = { culture = { has_variable = daoyu_target_culture } is_employed = no } } }
+	}
+}
+daoyu_a_o_r_homeland_trigger = {
+	or = {
+		and = { has_global_variable = daoyu_remove_homeland any_state = { has_variable = daoyu_target_state state_region = { is_homeland = cu:$CULTURE$ } } }
+		and = { has_global_variable = daoyu_add_homeland any_state = { has_variable = daoyu_target_state any_scope_pop = { has_pop_culture = $CULTURE$ } not = { state_region = { is_homeland = cu:$CULTURE$ } } } }
+	}
+}
+daoyu_show_nonexistent_country_ABS = { not = { exists = c:ABS } or = { has_global_variable = daoyu_sort_E_A has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_ABU = { not = { exists = c:ABU } or = { has_global_variable = daoyu_sort_E_T has_global_variable = daoyu_sort_C_T } }
+daoyu_show_nonexistent_country_ACE = { not = { exists = c:ACE } or = { has_global_variable = daoyu_sort_E_A has_global_variable = daoyu_sort_C_Y } }
+daoyu_show_nonexistent_country_ACH = { not = { exists = c:ACH } or = { has_global_variable = daoyu_sort_E_A has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_ADG = { not = { exists = c:ADG } or = { has_global_variable = daoyu_sort_E_A has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_AFG = { not = { exists = c:AFG } or = { has_global_variable = daoyu_sort_E_A has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_AGJ = { not = { exists = c:AGJ } or = { has_global_variable = daoyu_sort_E_A has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_AHG = { not = { exists = c:AHG } or = { has_global_variable = daoyu_sort_E_A has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_AIR = { not = { exists = c:AIR } or = { has_global_variable = daoyu_sort_E_A has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_ALB = { not = { exists = c:ALB } or = { has_global_variable = daoyu_sort_E_A has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_ALD = { not = { exists = c:ALD } or = { has_global_variable = daoyu_sort_E_A has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_AMZ = { not = { exists = c:AMZ } or = { has_global_variable = daoyu_sort_E_A has_global_variable = daoyu_sort_C_Y } }
+daoyu_show_nonexistent_country_ANH = { not = { exists = c:ANH } or = { has_global_variable = daoyu_sort_E_A has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_ANK = { not = { exists = c:ANK } or = { has_global_variable = daoyu_sort_E_A has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_ANL = { not = { exists = c:ANL } or = { has_global_variable = daoyu_sort_E_A has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_AOT = { not = { exists = c:AOT } or = { has_global_variable = daoyu_sort_E_A has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_ARA = { not = { exists = c:ARA } or = { has_global_variable = daoyu_sort_E_A has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_ARG = { not = { exists = c:ARG } or = { has_global_variable = daoyu_sort_E_A has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_ARM = { not = { exists = c:ARM } or = { has_global_variable = daoyu_sort_E_A has_global_variable = daoyu_sort_C_Y } }
+daoyu_show_nonexistent_country_ASA = { not = { exists = c:ASA } or = { has_global_variable = daoyu_sort_E_N has_global_variable = daoyu_sort_C_X } }
+daoyu_show_nonexistent_country_ASH = { not = { exists = c:ASH } or = { has_global_variable = daoyu_sort_E_A has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_AST = { not = { exists = c:AST } or = { has_global_variable = daoyu_sort_E_A has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_AUS = { not = { exists = c:AUS } or = { has_global_variable = daoyu_sort_E_A has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_AWA = { not = { exists = c:AWA } or = { has_global_variable = daoyu_sort_E_A has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_AWS = { not = { exists = c:AWS } or = { has_global_variable = daoyu_sort_E_A has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_AYI = { not = { exists = c:AYI } or = { has_global_variable = daoyu_sort_E_A has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_AZB = { not = { exists = c:AZB } or = { has_global_variable = daoyu_sort_E_A has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_BAB = { not = { exists = c:BAB } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_BAD = { not = { exists = c:BAD } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_BAH = { not = { exists = c:BAH } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_BAL = { not = { exists = c:BAL } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_BAS = { not = { exists = c:BAS } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_BAV = { not = { exists = c:BAV } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_BEL = { not = { exists = c:BEL } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_BEN = { not = { exists = c:BEN } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_BER = { not = { exists = c:BER } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_BGI = { not = { exists = c:BGI } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_BGL = { not = { exists = c:BGL } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_BGM = { not = { exists = c:BGM } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_BHO = { not = { exists = c:BHO } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_BHU = { not = { exists = c:BHU } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_BIC = { not = { exists = c:BIC } or = { has_global_variable = daoyu_sort_E_E has_global_variable = daoyu_sort_C_D } }
+daoyu_show_nonexistent_country_BIK = { not = { exists = c:BIK } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_BLA = { not = { exists = c:BLA } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_BLE = { not = { exists = c:BLE } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_BLG = { not = { exists = c:BLG } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_BMB = { not = { exists = c:BMB } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_BND = { not = { exists = c:BND } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_BNG = { not = { exists = c:BNG } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_BNY = { not = { exists = c:BNY } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_BOB = { not = { exists = c:BOB } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_BOH = { not = { exists = c:BOH } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_BOL = { not = { exists = c:BOL } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_BOR = { not = { exists = c:BOR } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_BOS = { not = { exists = c:BOS } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_BRA = { not = { exists = c:BRA } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_BRD = { not = { exists = c:BRD } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_BRE = { not = { exists = c:BRE } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_BRI = { not = { exists = c:BRI } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_BRN = { not = { exists = c:BRN } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_BRU = { not = { exists = c:BRU } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_W } }
+daoyu_show_nonexistent_country_BRZ = { not = { exists = c:BRZ } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_BST = { not = { exists = c:BST } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_BUG = { not = { exists = c:BUG } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_BUK = { not = { exists = c:BUK } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_BUL = { not = { exists = c:BUL } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_BUN = { not = { exists = c:BUN } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_BUR = { not = { exists = c:BUR } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_BYE = { not = { exists = c:BYE } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_BYZ = { not = { exists = c:BYZ } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_CAL = { not = { exists = c:CAL } or = { has_global_variable = daoyu_sort_E_C has_global_variable = daoyu_sort_C_J } }
+daoyu_show_nonexistent_country_CAM = { not = { exists = c:CAM } or = { has_global_variable = daoyu_sort_E_C has_global_variable = daoyu_sort_C_J } }
+daoyu_show_nonexistent_country_CAN = { not = { exists = c:CAN } or = { has_global_variable = daoyu_sort_E_C has_global_variable = daoyu_sort_C_J } }
+daoyu_show_nonexistent_country_CAS = { not = { exists = c:CAS } or = { has_global_variable = daoyu_sort_E_C has_global_variable = daoyu_sort_C_K } }
+daoyu_show_nonexistent_country_CAT = { not = { exists = c:CAT } or = { has_global_variable = daoyu_sort_E_C has_global_variable = daoyu_sort_C_J } }
+daoyu_show_nonexistent_country_CAY = { not = { exists = c:CAY } or = { has_global_variable = daoyu_sort_E_C has_global_variable = daoyu_sort_C_K } }
+daoyu_show_nonexistent_country_CHE = { not = { exists = c:CHE } or = { has_global_variable = daoyu_sort_E_C has_global_variable = daoyu_sort_C_Q } }
+daoyu_show_nonexistent_country_CHI = { not = { exists = c:CHI } or = { has_global_variable = daoyu_sort_E_C has_global_variable = daoyu_sort_C_Z } }
+daoyu_show_nonexistent_country_CHK = { not = { exists = c:CHK } or = { has_global_variable = daoyu_sort_E_C has_global_variable = daoyu_sort_C_S } }
+daoyu_show_nonexistent_country_CHL = { not = { exists = c:CHL } or = { has_global_variable = daoyu_sort_E_C has_global_variable = daoyu_sort_C_Z } }
+daoyu_show_nonexistent_country_CHP = { not = { exists = c:CHP } or = { has_global_variable = daoyu_sort_E_C has_global_variable = daoyu_sort_C_Z } }
+daoyu_show_nonexistent_country_CLM = { not = { exists = c:CLM } or = { has_global_variable = daoyu_sort_E_C has_global_variable = daoyu_sort_C_G } }
+daoyu_show_nonexistent_country_CMI = { not = { exists = c:CMI } or = { has_global_variable = daoyu_sort_E_C has_global_variable = daoyu_sort_C_Q } }
+daoyu_show_nonexistent_country_CNG = { not = { exists = c:CNG } or = { has_global_variable = daoyu_sort_E_C has_global_variable = daoyu_sort_C_G } }
+daoyu_show_nonexistent_country_CNW = { not = { exists = c:CNW } or = { has_global_variable = daoyu_sort_E_C has_global_variable = daoyu_sort_C_K } }
+daoyu_show_nonexistent_country_COB = { not = { exists = c:COB } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_S } }
+daoyu_show_nonexistent_country_COL = { not = { exists = c:COL } or = { has_global_variable = daoyu_sort_E_C has_global_variable = daoyu_sort_C_G } }
+daoyu_show_nonexistent_country_COM = { not = { exists = c:COM } or = { has_global_variable = daoyu_sort_E_C has_global_variable = daoyu_sort_C_K } }
+daoyu_show_nonexistent_country_COS = { not = { exists = c:COS } or = { has_global_variable = daoyu_sort_E_C has_global_variable = daoyu_sort_C_G } }
+daoyu_show_nonexistent_country_CRE = { not = { exists = c:CRE } or = { has_global_variable = daoyu_sort_E_C has_global_variable = daoyu_sort_C_K } }
+daoyu_show_nonexistent_country_CRI = { not = { exists = c:CRI } or = { has_global_variable = daoyu_sort_E_C has_global_variable = daoyu_sort_C_K } }
+daoyu_show_nonexistent_country_CRO = { not = { exists = c:CRO } or = { has_global_variable = daoyu_sort_E_C has_global_variable = daoyu_sort_C_K } }
+daoyu_show_nonexistent_country_CSA = { not = { exists = c:CSA } or = { has_global_variable = daoyu_sort_E_C has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_CUB = { not = { exists = c:CUB } or = { has_global_variable = daoyu_sort_E_C has_global_variable = daoyu_sort_C_G } }
+daoyu_show_nonexistent_country_CYP = { not = { exists = c:CYP } or = { has_global_variable = daoyu_sort_E_C has_global_variable = daoyu_sort_C_S } }
+daoyu_show_nonexistent_country_CZH = { not = { exists = c:CZH } or = { has_global_variable = daoyu_sort_E_C has_global_variable = daoyu_sort_C_J } }
+daoyu_show_nonexistent_country_DAG = { not = { exists = c:DAG } or = { has_global_variable = daoyu_sort_E_D has_global_variable = daoyu_sort_C_D } }
+daoyu_show_nonexistent_country_DAH = { not = { exists = c:DAH } or = { has_global_variable = daoyu_sort_E_D has_global_variable = daoyu_sort_C_D } }
+daoyu_show_nonexistent_country_DAI = { not = { exists = c:DAI } or = { has_global_variable = daoyu_sort_E_D has_global_variable = daoyu_sort_C_D } }
+daoyu_show_nonexistent_country_DAK = { not = { exists = c:DAK } or = { has_global_variable = daoyu_sort_E_D has_global_variable = daoyu_sort_C_D } }
+daoyu_show_nonexistent_country_DEN = { not = { exists = c:DEN } or = { has_global_variable = daoyu_sort_E_D has_global_variable = daoyu_sort_C_D } }
+daoyu_show_nonexistent_country_DES = { not = { exists = c:DES } or = { has_global_variable = daoyu_sort_E_D has_global_variable = daoyu_sort_C_D } }
+daoyu_show_nonexistent_country_DFR = { not = { exists = c:DFR } or = { has_global_variable = daoyu_sort_E_D has_global_variable = daoyu_sort_C_D } }
+daoyu_show_nonexistent_country_DFT = { not = { exists = c:DFT } or = { has_global_variable = daoyu_sort_E_D has_global_variable = daoyu_sort_C_D } }
+daoyu_show_nonexistent_country_DKT = { not = { exists = c:DKT } or = { has_global_variable = daoyu_sort_E_D has_global_variable = daoyu_sort_C_D } }
+daoyu_show_nonexistent_country_DLA = { not = { exists = c:DLA } or = { has_global_variable = daoyu_sort_E_D has_global_variable = daoyu_sort_C_D } }
+daoyu_show_nonexistent_country_DNK = { not = { exists = c:DNK } or = { has_global_variable = daoyu_sort_E_D has_global_variable = daoyu_sort_C_D } }
+daoyu_show_nonexistent_country_DOM = { not = { exists = c:DOM } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_S } }
+daoyu_show_nonexistent_country_DZG = { not = { exists = c:DZG } or = { has_global_variable = daoyu_sort_E_D has_global_variable = daoyu_sort_C_D } }
+daoyu_show_nonexistent_country_ECU = { not = { exists = c:ECU } or = { has_global_variable = daoyu_sort_E_E has_global_variable = daoyu_sort_C_E } }
+daoyu_show_nonexistent_country_EGY = { not = { exists = c:EGY } or = { has_global_variable = daoyu_sort_E_E has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_ELS = { not = { exists = c:ELS } or = { has_global_variable = daoyu_sort_E_E has_global_variable = daoyu_sort_C_S } }
+daoyu_show_nonexistent_country_ENG = { not = { exists = c:ENG } or = { has_global_variable = daoyu_sort_E_E has_global_variable = daoyu_sort_C_Y } }
+daoyu_show_nonexistent_country_EST = { not = { exists = c:EST } or = { has_global_variable = daoyu_sort_E_E has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_ETH = { not = { exists = c:ETH } or = { has_global_variable = daoyu_sort_E_E has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_EWE = { not = { exists = c:EWE } or = { has_global_variable = daoyu_sort_E_E has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_FIN = { not = { exists = c:FIN } or = { has_global_variable = daoyu_sort_E_F has_global_variable = daoyu_sort_C_F } }
+daoyu_show_nonexistent_country_FJI = { not = { exists = c:FJI } or = { has_global_variable = daoyu_sort_E_F has_global_variable = daoyu_sort_C_F } }
+daoyu_show_nonexistent_country_FLA = { not = { exists = c:FLA } or = { has_global_variable = daoyu_sort_E_F has_global_variable = daoyu_sort_C_F } }
+daoyu_show_nonexistent_country_FNG = { not = { exists = c:FNG } or = { has_global_variable = daoyu_sort_E_F has_global_variable = daoyu_sort_C_F } }
+daoyu_show_nonexistent_country_FRA = { not = { exists = c:FRA } or = { has_global_variable = daoyu_sort_E_F has_global_variable = daoyu_sort_C_F } }
+daoyu_show_nonexistent_country_FRM = { not = { exists = c:FRM } or = { has_global_variable = daoyu_sort_E_F has_global_variable = daoyu_sort_C_F } }
+daoyu_show_nonexistent_country_FSA = { not = { exists = c:FSA } or = { has_global_variable = daoyu_sort_E_F has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_FTJ = { not = { exists = c:FTJ } or = { has_global_variable = daoyu_sort_E_F has_global_variable = daoyu_sort_C_F } }
+daoyu_show_nonexistent_country_FTR = { not = { exists = c:FTR } or = { has_global_variable = daoyu_sort_E_F has_global_variable = daoyu_sort_C_F } }
+daoyu_show_nonexistent_country_GAL = { not = { exists = c:GAL } or = { has_global_variable = daoyu_sort_E_G has_global_variable = daoyu_sort_C_J } }
+daoyu_show_nonexistent_country_GAM = { not = { exists = c:GAM } or = { has_global_variable = daoyu_sort_E_G has_global_variable = daoyu_sort_C_G } }
+daoyu_show_nonexistent_country_GBR = { not = { exists = c:GBR } or = { has_global_variable = daoyu_sort_E_G has_global_variable = daoyu_sort_C_D } }
+daoyu_show_nonexistent_country_GCO = { not = { exists = c:GCO } or = { has_global_variable = daoyu_sort_E_G has_global_variable = daoyu_sort_C_D } }
+daoyu_show_nonexistent_country_GEO = { not = { exists = c:GEO } or = { has_global_variable = daoyu_sort_E_G has_global_variable = daoyu_sort_C_G } }
+daoyu_show_nonexistent_country_GER = { not = { exists = c:GER } or = { has_global_variable = daoyu_sort_E_G has_global_variable = daoyu_sort_C_D } }
+daoyu_show_nonexistent_country_GGO = { not = { exists = c:GGO } or = { has_global_variable = daoyu_sort_E_G has_global_variable = daoyu_sort_C_G } }
+daoyu_show_nonexistent_country_GGR = { not = { exists = c:GGR } or = { has_global_variable = daoyu_sort_E_G has_global_variable = daoyu_sort_C_D } }
+daoyu_show_nonexistent_country_GJM = { not = { exists = c:GJM } or = { has_global_variable = daoyu_sort_E_G has_global_variable = daoyu_sort_C_G } }
+daoyu_show_nonexistent_country_GLC = { not = { exists = c:GLC } or = { has_global_variable = daoyu_sort_E_G has_global_variable = daoyu_sort_C_H } }
+daoyu_show_nonexistent_country_GLD = { not = { exists = c:GLD } or = { has_global_variable = daoyu_sort_E_G has_global_variable = daoyu_sort_C_G } }
+daoyu_show_nonexistent_country_GRE = { not = { exists = c:GRE } or = { has_global_variable = daoyu_sort_E_G has_global_variable = daoyu_sort_C_X } }
+daoyu_show_nonexistent_country_GRI = { not = { exists = c:GRI } or = { has_global_variable = daoyu_sort_E_G has_global_variable = daoyu_sort_C_G } }
+daoyu_show_nonexistent_country_GRN = { not = { exists = c:GRN } or = { has_global_variable = daoyu_sort_E_G has_global_variable = daoyu_sort_C_G } }
+daoyu_show_nonexistent_country_GUA = { not = { exists = c:GUA } or = { has_global_variable = daoyu_sort_E_G has_global_variable = daoyu_sort_C_W } }
+daoyu_show_nonexistent_country_GWA = { not = { exists = c:GWA } or = { has_global_variable = daoyu_sort_E_G has_global_variable = daoyu_sort_C_G } }
+daoyu_show_nonexistent_country_HAI = { not = { exists = c:HAI } or = { has_global_variable = daoyu_sort_E_H has_global_variable = daoyu_sort_C_H } }
+daoyu_show_nonexistent_country_HAM = { not = { exists = c:HAM } or = { has_global_variable = daoyu_sort_E_H has_global_variable = daoyu_sort_C_H } }
+daoyu_show_nonexistent_country_HAN = { not = { exists = c:HAN } or = { has_global_variable = daoyu_sort_E_H has_global_variable = daoyu_sort_C_H } }
+daoyu_show_nonexistent_country_HAR = { not = { exists = c:HAR } or = { has_global_variable = daoyu_sort_E_H has_global_variable = daoyu_sort_C_H } }
+daoyu_show_nonexistent_country_HAU = { not = { exists = c:HAU } or = { has_global_variable = daoyu_sort_E_G has_global_variable = daoyu_sort_C_G } }
+daoyu_show_nonexistent_country_HAW = { not = { exists = c:HAW } or = { has_global_variable = daoyu_sort_E_H has_global_variable = daoyu_sort_C_X } }
+daoyu_show_nonexistent_country_HDJ = { not = { exists = c:HDJ } or = { has_global_variable = daoyu_sort_E_H has_global_variable = daoyu_sort_C_H } }
+daoyu_show_nonexistent_country_HEK = { not = { exists = c:HEK } or = { has_global_variable = daoyu_sort_E_H has_global_variable = daoyu_sort_C_H } }
+daoyu_show_nonexistent_country_HES = { not = { exists = c:HES } or = { has_global_variable = daoyu_sort_E_H has_global_variable = daoyu_sort_C_H } }
+daoyu_show_nonexistent_country_HHE = { not = { exists = c:HHE } or = { has_global_variable = daoyu_sort_E_H has_global_variable = daoyu_sort_C_H } }
+daoyu_show_nonexistent_country_HLA = { not = { exists = c:HLA } or = { has_global_variable = daoyu_sort_E_H has_global_variable = daoyu_sort_C_H } }
+daoyu_show_nonexistent_country_HMB = { not = { exists = c:HMB } or = { has_global_variable = daoyu_sort_E_H has_global_variable = daoyu_sort_C_H } }
+daoyu_show_nonexistent_country_HND = { not = { exists = c:HND } or = { has_global_variable = daoyu_sort_E_I has_global_variable = daoyu_sort_C_Y } }
+daoyu_show_nonexistent_country_HOB = { not = { exists = c:HOB } or = { has_global_variable = daoyu_sort_E_H has_global_variable = daoyu_sort_C_H } }
+daoyu_show_nonexistent_country_HOL = { not = { exists = c:HOL } or = { has_global_variable = daoyu_sort_E_H has_global_variable = daoyu_sort_C_H } }
+daoyu_show_nonexistent_country_HON = { not = { exists = c:HON } or = { has_global_variable = daoyu_sort_E_H has_global_variable = daoyu_sort_C_H } }
+daoyu_show_nonexistent_country_HRO = { not = { exists = c:HRO } or = { has_global_variable = daoyu_sort_E_H has_global_variable = daoyu_sort_C_H } }
+daoyu_show_nonexistent_country_HUN = { not = { exists = c:HUN } or = { has_global_variable = daoyu_sort_E_H has_global_variable = daoyu_sort_C_X } }
+daoyu_show_nonexistent_country_HYD = { not = { exists = c:HYD } or = { has_global_variable = daoyu_sort_E_H has_global_variable = daoyu_sort_C_H } }
+daoyu_show_nonexistent_country_IBE = { not = { exists = c:IBE } or = { has_global_variable = daoyu_sort_E_I has_global_variable = daoyu_sort_C_Y } }
+daoyu_show_nonexistent_country_IBO = { not = { exists = c:IBO } or = { has_global_variable = daoyu_sort_E_I has_global_variable = daoyu_sort_C_Y } }
+daoyu_show_nonexistent_country_ICL = { not = { exists = c:ICL } or = { has_global_variable = daoyu_sort_E_I has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_IND = { not = { exists = c:IND } or = { has_global_variable = daoyu_sort_E_I has_global_variable = daoyu_sort_C_Y } }
+daoyu_show_nonexistent_country_ION = { not = { exists = c:ION } or = { has_global_variable = daoyu_sort_E_I has_global_variable = daoyu_sort_C_Y } }
+daoyu_show_nonexistent_country_IRC = { not = { exists = c:IRC } or = { has_global_variable = daoyu_sort_E_I has_global_variable = daoyu_sort_C_T } }
+daoyu_show_nonexistent_country_IRE = { not = { exists = c:IRE } or = { has_global_variable = daoyu_sort_E_I has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_IRQ = { not = { exists = c:IRQ } or = { has_global_variable = daoyu_sort_E_I has_global_variable = daoyu_sort_C_Y } }
+daoyu_show_nonexistent_country_ISQ = { not = { exists = c:ISQ } or = { has_global_variable = daoyu_sort_E_I has_global_variable = daoyu_sort_C_Y } }
+daoyu_show_nonexistent_country_ISR = { not = { exists = c:ISR } or = { has_global_variable = daoyu_sort_E_I has_global_variable = daoyu_sort_C_Y } }
+daoyu_show_nonexistent_country_ITA = { not = { exists = c:ITA } or = { has_global_variable = daoyu_sort_E_I has_global_variable = daoyu_sort_C_Y } }
+daoyu_show_nonexistent_country_JAI = { not = { exists = c:JAI } or = { has_global_variable = daoyu_sort_E_J has_global_variable = daoyu_sort_C_Z } }
+daoyu_show_nonexistent_country_JAM = { not = { exists = c:JAM } or = { has_global_variable = daoyu_sort_E_J has_global_variable = daoyu_sort_C_Y } }
+daoyu_show_nonexistent_country_JAN = { not = { exists = c:JAN } or = { has_global_variable = daoyu_sort_E_J has_global_variable = daoyu_sort_C_Y } }
+daoyu_show_nonexistent_country_JAP = { not = { exists = c:JAP } or = { has_global_variable = daoyu_sort_E_J has_global_variable = daoyu_sort_C_R } }
+daoyu_show_nonexistent_country_JAS = { not = { exists = c:JAS } or = { has_global_variable = daoyu_sort_E_J has_global_variable = daoyu_sort_C_J } }
+daoyu_show_nonexistent_country_JAV = { not = { exists = c:JAV } or = { has_global_variable = daoyu_sort_E_J has_global_variable = daoyu_sort_C_Z } }
+daoyu_show_nonexistent_country_JLF = { not = { exists = c:JLF } or = { has_global_variable = daoyu_sort_E_J has_global_variable = daoyu_sort_C_Q } }
+daoyu_show_nonexistent_country_JOD = { not = { exists = c:JOD } or = { has_global_variable = daoyu_sort_E_J has_global_variable = daoyu_sort_C_J } }
+daoyu_show_nonexistent_country_JOH = { not = { exists = c:JOH } or = { has_global_variable = daoyu_sort_E_J has_global_variable = daoyu_sort_C_R } }
+daoyu_show_nonexistent_country_KAL = { not = { exists = c:KAL } or = { has_global_variable = daoyu_sort_E_K has_global_variable = daoyu_sort_C_K } }
+daoyu_show_nonexistent_country_KAS = { not = { exists = c:KAS } or = { has_global_variable = daoyu_sort_E_K has_global_variable = daoyu_sort_C_K } }
+daoyu_show_nonexistent_country_KAU = { not = { exists = c:KAU } or = { has_global_variable = daoyu_sort_E_K has_global_variable = daoyu_sort_C_K } }
+daoyu_show_nonexistent_country_KAZ = { not = { exists = c:KAZ } or = { has_global_variable = daoyu_sort_E_K has_global_variable = daoyu_sort_C_H } }
+daoyu_show_nonexistent_country_KBA = { not = { exists = c:KBA } or = { has_global_variable = daoyu_sort_E_K has_global_variable = daoyu_sort_C_K } }
+daoyu_show_nonexistent_country_KBD = { not = { exists = c:KBD } or = { has_global_variable = daoyu_sort_E_K has_global_variable = daoyu_sort_C_K } }
+daoyu_show_nonexistent_country_KBU = { not = { exists = c:KBU } or = { has_global_variable = daoyu_sort_E_K has_global_variable = daoyu_sort_C_K } }
+daoyu_show_nonexistent_country_KFA = { not = { exists = c:KFA } or = { has_global_variable = daoyu_sort_E_K has_global_variable = daoyu_sort_C_K } }
+daoyu_show_nonexistent_country_KHI = { not = { exists = c:KHI } or = { has_global_variable = daoyu_sort_E_K has_global_variable = daoyu_sort_C_X } }
+daoyu_show_nonexistent_country_KKY = { not = { exists = c:KKY } or = { has_global_variable = daoyu_sort_E_K has_global_variable = daoyu_sort_C_J } }
+daoyu_show_nonexistent_country_KNG = { not = { exists = c:KNG } or = { has_global_variable = daoyu_sort_E_K has_global_variable = daoyu_sort_C_K } }
+daoyu_show_nonexistent_country_KNK = { not = { exists = c:KNK } or = { has_global_variable = daoyu_sort_E_K has_global_variable = daoyu_sort_C_K } }
+daoyu_show_nonexistent_country_KOK = { not = { exists = c:KOK } or = { has_global_variable = daoyu_sort_E_K has_global_variable = daoyu_sort_C_H } }
+daoyu_show_nonexistent_country_KON = { not = { exists = c:KON } or = { has_global_variable = daoyu_sort_E_K has_global_variable = daoyu_sort_C_G } }
+daoyu_show_nonexistent_country_KOR = { not = { exists = c:KOR } or = { has_global_variable = daoyu_sort_E_K has_global_variable = daoyu_sort_C_D } }
+daoyu_show_nonexistent_country_KRA = { not = { exists = c:KRA } or = { has_global_variable = daoyu_sort_E_K has_global_variable = daoyu_sort_C_K } }
+daoyu_show_nonexistent_country_KRG = { not = { exists = c:KRG } or = { has_global_variable = daoyu_sort_E_K has_global_variable = daoyu_sort_C_K } }
+daoyu_show_nonexistent_country_KRT = { not = { exists = c:KRT } or = { has_global_variable = daoyu_sort_E_K has_global_variable = daoyu_sort_C_K } }
+daoyu_show_nonexistent_country_KRU = { not = { exists = c:KRU } or = { has_global_variable = daoyu_sort_E_K has_global_variable = daoyu_sort_C_K } }
+daoyu_show_nonexistent_country_KSN = { not = { exists = c:KSN } or = { has_global_variable = daoyu_sort_E_K has_global_variable = daoyu_sort_C_K } }
+daoyu_show_nonexistent_country_KTI = { not = { exists = c:KTI } or = { has_global_variable = daoyu_sort_E_K has_global_variable = daoyu_sort_C_K } }
+daoyu_show_nonexistent_country_KUK = { not = { exists = c:KUK } or = { has_global_variable = daoyu_sort_E_D has_global_variable = daoyu_sort_C_D } }
+daoyu_show_nonexistent_country_KUT = { not = { exists = c:KUT } or = { has_global_variable = daoyu_sort_E_K has_global_variable = daoyu_sort_C_K } }
+daoyu_show_nonexistent_country_KZH = { not = { exists = c:KZH } or = { has_global_variable = daoyu_sort_E_K has_global_variable = daoyu_sort_C_X } }
+daoyu_show_nonexistent_country_KZM = { not = { exists = c:KZM } or = { has_global_variable = daoyu_sort_E_K has_global_variable = daoyu_sort_C_K } }
+daoyu_show_nonexistent_country_LAD = { not = { exists = c:LAD } or = { has_global_variable = daoyu_sort_E_L has_global_variable = daoyu_sort_C_L } }
+daoyu_show_nonexistent_country_LAN = { not = { exists = c:LAN } or = { has_global_variable = daoyu_sort_E_L has_global_variable = daoyu_sort_C_L } }
+daoyu_show_nonexistent_country_LAO = { not = { exists = c:LAO } or = { has_global_variable = daoyu_sort_E_L has_global_variable = daoyu_sort_C_L } }
+daoyu_show_nonexistent_country_LAT = { not = { exists = c:LAT } or = { has_global_variable = daoyu_sort_E_L has_global_variable = daoyu_sort_C_L } }
+daoyu_show_nonexistent_country_LBA = { not = { exists = c:LBA } or = { has_global_variable = daoyu_sort_E_L has_global_variable = daoyu_sort_C_L } }
+daoyu_show_nonexistent_country_LGA = { not = { exists = c:LGA } or = { has_global_variable = daoyu_sort_E_L has_global_variable = daoyu_sort_C_L } }
+daoyu_show_nonexistent_country_LIB = { not = { exists = c:LIB } or = { has_global_variable = daoyu_sort_E_L has_global_variable = daoyu_sort_C_L } }
+daoyu_show_nonexistent_country_LIP = { not = { exists = c:LIP } or = { has_global_variable = daoyu_sort_E_L has_global_variable = daoyu_sort_C_L } }
+daoyu_show_nonexistent_country_SCM = { not = { exists = c:SCM } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_S } }
+daoyu_show_nonexistent_country_HOH = { not = { exists = c:HOH } or = { has_global_variable = daoyu_sort_E_H has_global_variable = daoyu_sort_C_H } }
+daoyu_show_nonexistent_country_SCW = { not = { exists = c:SCW } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_S } }
+daoyu_show_nonexistent_country_LIT = { not = { exists = c:LIT } or = { has_global_variable = daoyu_sort_E_L has_global_variable = daoyu_sort_C_L } }
+daoyu_show_nonexistent_country_LKT = { not = { exists = c:LKT } or = { has_global_variable = daoyu_sort_E_L has_global_variable = daoyu_sort_C_L } }
+daoyu_show_nonexistent_country_LND = { not = { exists = c:LND } or = { has_global_variable = daoyu_sort_E_L has_global_variable = daoyu_sort_C_L } }
+daoyu_show_nonexistent_country_LNG = { not = { exists = c:LNG } or = { has_global_variable = daoyu_sort_E_L has_global_variable = daoyu_sort_C_L } }
+daoyu_show_nonexistent_country_LOM = { not = { exists = c:LOM } or = { has_global_variable = daoyu_sort_E_L has_global_variable = daoyu_sort_C_L } }
+daoyu_show_nonexistent_country_LUA = { not = { exists = c:LUA } or = { has_global_variable = daoyu_sort_E_L has_global_variable = daoyu_sort_C_L } }
+daoyu_show_nonexistent_country_LUB = { not = { exists = c:LUB } or = { has_global_variable = daoyu_sort_E_L has_global_variable = daoyu_sort_C_L } }
+daoyu_show_nonexistent_country_LUC = { not = { exists = c:LUC } or = { has_global_variable = daoyu_sort_E_L has_global_variable = daoyu_sort_C_L } }
+daoyu_show_nonexistent_country_LUO = { not = { exists = c:LUO } or = { has_global_variable = daoyu_sort_E_L has_global_variable = daoyu_sort_C_L } }
+daoyu_show_nonexistent_country_LUX = { not = { exists = c:LUX } or = { has_global_variable = daoyu_sort_E_L has_global_variable = daoyu_sort_C_L } }
+daoyu_show_nonexistent_country_LZO = { not = { exists = c:LZO } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_MAD = { not = { exists = c:MAD } or = { has_global_variable = daoyu_sort_E_M has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_MAK = { not = { exists = c:MAK } or = { has_global_variable = daoyu_sort_E_M has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_MAN = { not = { exists = c:MAN } or = { has_global_variable = daoyu_sort_E_M has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_MAY = { not = { exists = c:MAY } or = { has_global_variable = daoyu_sort_E_M has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_MCH = { not = { exists = c:MCH } or = { has_global_variable = daoyu_sort_E_M has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_MCR = { not = { exists = c:MCR } or = { has_global_variable = daoyu_sort_E_M has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_MDK = { not = { exists = c:MDK } or = { has_global_variable = daoyu_sort_E_M has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_MEC = { not = { exists = c:MEC } or = { has_global_variable = daoyu_sort_E_M has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_MST = { not = { exists = c:MST } or = { has_global_variable = daoyu_sort_E_M has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_WLD = { not = { exists = c:WLD } or = { has_global_variable = daoyu_sort_E_W has_global_variable = daoyu_sort_C_W } }
+daoyu_show_nonexistent_country_MEI = { not = { exists = c:MEI } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_S } }
+daoyu_show_nonexistent_country_MEW = { not = { exists = c:MEW } or = { has_global_variable = daoyu_sort_E_M has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_MEX = { not = { exists = c:MEX } or = { has_global_variable = daoyu_sort_E_M has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_MGL = { not = { exists = c:MGL } or = { has_global_variable = daoyu_sort_E_M has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_MJT = { not = { exists = c:MJT } or = { has_global_variable = daoyu_sort_E_M has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_MKT = { not = { exists = c:MKT } or = { has_global_variable = daoyu_sort_E_M has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_MNB = { not = { exists = c:MNB } or = { has_global_variable = daoyu_sort_E_M has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_MNC = { not = { exists = c:MNC } or = { has_global_variable = daoyu_sort_E_M has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_MOD = { not = { exists = c:MOD } or = { has_global_variable = daoyu_sort_E_M has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_MOL = { not = { exists = c:MOL } or = { has_global_variable = daoyu_sort_E_M has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_MON = { not = { exists = c:MON } or = { has_global_variable = daoyu_sort_E_M has_global_variable = daoyu_sort_C_H } }
+daoyu_show_nonexistent_country_MOR = { not = { exists = c:MOR } or = { has_global_variable = daoyu_sort_E_M has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_MOS = { not = { exists = c:MOS } or = { has_global_variable = daoyu_sort_E_M has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_MSH = { not = { exists = c:MSH } or = { has_global_variable = daoyu_sort_E_M has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_MSI = { not = { exists = c:MSI } or = { has_global_variable = daoyu_sort_E_M has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_MSK = { not = { exists = c:MSK } or = { has_global_variable = daoyu_sort_E_M has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_MSN = { not = { exists = c:MSN } or = { has_global_variable = daoyu_sort_E_M has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_MTB = { not = { exists = c:MTB } or = { has_global_variable = daoyu_sort_E_M has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_MTC = { not = { exists = c:MTC } or = { has_global_variable = daoyu_sort_E_M has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_MUG = { not = { exists = c:MUG } or = { has_global_variable = daoyu_sort_E_H has_global_variable = daoyu_sort_C_Y } }
+daoyu_show_nonexistent_country_MYS = { not = { exists = c:MYS } or = { has_global_variable = daoyu_sort_E_M has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_NAG = { not = { exists = c:NAG } or = { has_global_variable = daoyu_sort_E_N has_global_variable = daoyu_sort_C_N } }
+daoyu_show_nonexistent_country_NAH = { not = { exists = c:NAH } or = { has_global_variable = daoyu_sort_E_A has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_NAL = { not = { exists = c:NAL } or = { has_global_variable = daoyu_sort_E_N has_global_variable = daoyu_sort_C_N } }
+daoyu_show_nonexistent_country_NAM = { not = { exists = c:NAM } or = { has_global_variable = daoyu_sort_E_N has_global_variable = daoyu_sort_C_N } }
+daoyu_show_nonexistent_country_NAS = { not = { exists = c:NAS } or = { has_global_variable = daoyu_sort_E_N has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_NAV = { not = { exists = c:NAV } or = { has_global_variable = daoyu_sort_E_N has_global_variable = daoyu_sort_C_N } }
+daoyu_show_nonexistent_country_NEJ = { not = { exists = c:NEJ } or = { has_global_variable = daoyu_sort_E_N has_global_variable = daoyu_sort_C_N } }
+daoyu_show_nonexistent_country_NEN = { not = { exists = c:NEN } or = { has_global_variable = daoyu_sort_E_N has_global_variable = daoyu_sort_C_X } }
+daoyu_show_nonexistent_country_NEP = { not = { exists = c:NEP } or = { has_global_variable = daoyu_sort_E_N has_global_variable = daoyu_sort_C_N } }
+daoyu_show_nonexistent_country_NET = { not = { exists = c:NET } or = { has_global_variable = daoyu_sort_E_N has_global_variable = daoyu_sort_C_N } }
+daoyu_show_nonexistent_country_NEW = { not = { exists = c:NEW } or = { has_global_variable = daoyu_sort_E_N has_global_variable = daoyu_sort_C_N } }
+daoyu_show_nonexistent_country_NGF = { not = { exists = c:NGF } or = { has_global_variable = daoyu_sort_E_N has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_NIC = { not = { exists = c:NIC } or = { has_global_variable = daoyu_sort_E_N has_global_variable = daoyu_sort_C_N } }
+daoyu_show_nonexistent_country_NOR = { not = { exists = c:NOR } or = { has_global_variable = daoyu_sort_E_N has_global_variable = daoyu_sort_C_N } }
+daoyu_show_nonexistent_country_NRU = { not = { exists = c:NRU } or = { has_global_variable = daoyu_sort_E_N has_global_variable = daoyu_sort_C_N } }
+daoyu_show_nonexistent_country_NTO = { not = { exists = c:NTO } or = { has_global_variable = daoyu_sort_E_N has_global_variable = daoyu_sort_C_Y } }
+daoyu_show_nonexistent_country_NTU = { not = { exists = c:NTU } or = { has_global_variable = daoyu_sort_E_N has_global_variable = daoyu_sort_C_N } }
+daoyu_show_nonexistent_country_NUE = { not = { exists = c:NUE } or = { has_global_variable = daoyu_sort_E_N has_global_variable = daoyu_sort_C_N } }
+daoyu_show_nonexistent_country_NVJ = { not = { exists = c:NVJ } or = { has_global_variable = daoyu_sort_E_N has_global_variable = daoyu_sort_C_N } }
+daoyu_show_nonexistent_country_NYM = { not = { exists = c:NYM } or = { has_global_variable = daoyu_sort_E_N has_global_variable = daoyu_sort_C_N } }
+daoyu_show_nonexistent_country_NZL = { not = { exists = c:NZL } or = { has_global_variable = daoyu_sort_E_N has_global_variable = daoyu_sort_C_X } }
+daoyu_show_nonexistent_country_NZP = { not = { exists = c:NZP } or = { has_global_variable = daoyu_sort_E_N has_global_variable = daoyu_sort_C_N } }
+daoyu_show_nonexistent_country_OLD = { not = { exists = c:OLD } or = { has_global_variable = daoyu_sort_E_O has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_OMA = { not = { exists = c:OMA } or = { has_global_variable = daoyu_sort_E_O has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_ORA = { not = { exists = c:ORA } or = { has_global_variable = daoyu_sort_E_O has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_ORG = { not = { exists = c:ORG } or = { has_global_variable = daoyu_sort_E_O has_global_variable = daoyu_sort_C_E } }
+daoyu_show_nonexistent_country_ORI = { not = { exists = c:ORI } or = { has_global_variable = daoyu_sort_E_O has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_OUA = { not = { exists = c:OUA } or = { has_global_variable = daoyu_sort_E_O has_global_variable = daoyu_sort_C_W } }
+daoyu_show_nonexistent_country_OVM = { not = { exists = c:OVM } or = { has_global_variable = daoyu_sort_E_O has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_OYO = { not = { exists = c:OYO } or = { has_global_variable = daoyu_sort_E_O has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_OZH = { not = { exists = c:OZH } or = { has_global_variable = daoyu_sort_E_O has_global_variable = daoyu_sort_C_Z } }
+daoyu_show_nonexistent_country_PAN = { not = { exists = c:PAN } or = { has_global_variable = daoyu_sort_E_P has_global_variable = daoyu_sort_C_P } }
+daoyu_show_nonexistent_country_PAP = { not = { exists = c:PAP } or = { has_global_variable = daoyu_sort_E_R has_global_variable = daoyu_sort_C_L } }
+daoyu_show_nonexistent_country_PAR = { not = { exists = c:PAR } or = { has_global_variable = daoyu_sort_E_P has_global_variable = daoyu_sort_C_P } }
+daoyu_show_nonexistent_country_PAT = { not = { exists = c:PAT } or = { has_global_variable = daoyu_sort_E_M has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_PER = { not = { exists = c:PER } or = { has_global_variable = daoyu_sort_E_P has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_PEU = { not = { exists = c:PEU } or = { has_global_variable = daoyu_sort_E_P has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_PHI = { not = { exists = c:PHI } or = { has_global_variable = daoyu_sort_E_P has_global_variable = daoyu_sort_C_F } }
+daoyu_show_nonexistent_country_PLC = { not = { exists = c:PLC } or = { has_global_variable = daoyu_sort_E_P has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_PLY = { not = { exists = c:PLY } or = { has_global_variable = daoyu_sort_E_T has_global_variable = daoyu_sort_C_T } }
+daoyu_show_nonexistent_country_PNS = { not = { exists = c:PNS } or = { has_global_variable = daoyu_sort_E_P has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_PNM = { not = { exists = c:PNM } or = { has_global_variable = daoyu_sort_E_P has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_POL = { not = { exists = c:POL } or = { has_global_variable = daoyu_sort_E_P has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_POM = { not = { exists = c:POM } or = { has_global_variable = daoyu_sort_E_P has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_POR = { not = { exists = c:POR } or = { has_global_variable = daoyu_sort_E_P has_global_variable = daoyu_sort_C_P } }
+daoyu_show_nonexistent_country_PPU = { not = { exists = c:PPU } or = { has_global_variable = daoyu_sort_E_P has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_PRG = { not = { exists = c:PRG } or = { has_global_variable = daoyu_sort_E_P has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_PRU = { not = { exists = c:PRU } or = { has_global_variable = daoyu_sort_E_P has_global_variable = daoyu_sort_C_P } }
+daoyu_show_nonexistent_country_PCO = { not = { exists = c:PCO } or = { has_global_variable = daoyu_sort_E_P has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_QUE = { not = { exists = c:QUE } or = { has_global_variable = daoyu_sort_E_Q has_global_variable = daoyu_sort_C_K } }
+daoyu_show_nonexistent_country_ROM = { not = { exists = c:ROM } or = { has_global_variable = daoyu_sort_E_R has_global_variable = daoyu_sort_C_L } }
+daoyu_show_nonexistent_country_RUS = { not = { exists = c:RUS } or = { has_global_variable = daoyu_sort_E_R has_global_variable = daoyu_sort_C_E } }
+daoyu_show_nonexistent_country_RUT = { not = { exists = c:RUT } or = { has_global_variable = daoyu_sort_E_R has_global_variable = daoyu_sort_C_L } }
+daoyu_show_nonexistent_country_RWD = { not = { exists = c:RWD } or = { has_global_variable = daoyu_sort_E_R has_global_variable = daoyu_sort_C_L } }
+daoyu_show_nonexistent_country_SAF = { not = { exists = c:SAF } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_N } }
+daoyu_show_nonexistent_country_SAR = { not = { exists = c:SAR } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_S } }
+daoyu_show_nonexistent_country_SAX = { not = { exists = c:SAX } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_S } }
+daoyu_show_nonexistent_country_SCA = { not = { exists = c:SCA } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_S } }
+daoyu_show_nonexistent_country_SCH = { not = { exists = c:SCH } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_S } }
+daoyu_show_nonexistent_country_SCN = { not = { exists = c:SCN } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_S } }
+daoyu_show_nonexistent_country_SCO = { not = { exists = c:SCO } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_S } }
+daoyu_show_nonexistent_country_SDM = { not = { exists = c:SDM } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_X } }
+daoyu_show_nonexistent_country_SEQ = { not = { exists = c:SEQ } or = { has_global_variable = daoyu_sort_E_I has_global_variable = daoyu_sort_C_Y } }
+daoyu_show_nonexistent_country_SER = { not = { exists = c:SER } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_S } }
+daoyu_show_nonexistent_country_SGF = { not = { exists = c:SGF } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_N } }
+daoyu_show_nonexistent_country_SGU = { not = { exists = c:SGU } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_S } }
+daoyu_show_nonexistent_country_SHI = { not = { exists = c:SHI } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_X } }
+daoyu_show_nonexistent_country_SHW = { not = { exists = c:SHW } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_S } }
+daoyu_show_nonexistent_country_SIA = { not = { exists = c:SIA } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_X } }
+daoyu_show_nonexistent_country_SIC = { not = { exists = c:SIC } or = { has_global_variable = daoyu_sort_E_T has_global_variable = daoyu_sort_C_L } }
+daoyu_show_nonexistent_country_SIK = { not = { exists = c:SIK } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_X } }
+daoyu_show_nonexistent_country_SIL = { not = { exists = c:SIL } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_S } }
+daoyu_show_nonexistent_country_SIN = { not = { exists = c:SIN } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_X } }
+daoyu_show_nonexistent_country_SKH = { not = { exists = c:SKH } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_S } }
+daoyu_show_nonexistent_country_SLO = { not = { exists = c:SLO } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_S } }
+daoyu_show_nonexistent_country_SLV = { not = { exists = c:SLV } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_S } }
+daoyu_show_nonexistent_country_SNG = { not = { exists = c:SNG } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_S } }
+daoyu_show_nonexistent_country_SOK = { not = { exists = c:SOK } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_S } }
+daoyu_show_nonexistent_country_SPA = { not = { exists = c:SPA } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_X } }
+daoyu_show_nonexistent_country_SRR = { not = { exists = c:SRR } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_S } }
+daoyu_show_nonexistent_country_SSU = { not = { exists = c:SSU } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_S } }
+daoyu_show_nonexistent_country_SWE = { not = { exists = c:SWE } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_R } }
+daoyu_show_nonexistent_country_SWI = { not = { exists = c:SWI } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_R } }
+daoyu_show_nonexistent_country_TBI = { not = { exists = c:TBI } or = { has_global_variable = daoyu_sort_E_T has_global_variable = daoyu_sort_C_T } }
+daoyu_show_nonexistent_country_TEX = { not = { exists = c:TEX } or = { has_global_variable = daoyu_sort_E_T has_global_variable = daoyu_sort_C_D } }
+daoyu_show_nonexistent_country_TGR = { not = { exists = c:TGR } or = { has_global_variable = daoyu_sort_E_T has_global_variable = daoyu_sort_C_T } }
+daoyu_show_nonexistent_country_TIB = { not = { exists = c:TIB } or = { has_global_variable = daoyu_sort_E_T has_global_variable = daoyu_sort_C_X } }
+daoyu_show_nonexistent_country_TKE = { not = { exists = c:TKE } or = { has_global_variable = daoyu_sort_E_T has_global_variable = daoyu_sort_C_T } }
+daoyu_show_nonexistent_country_TNG = { not = { exists = c:TNG } or = { has_global_variable = daoyu_sort_E_T has_global_variable = daoyu_sort_C_T } }
+daoyu_show_nonexistent_country_TPG = { not = { exists = c:TPG } or = { has_global_variable = daoyu_sort_E_H has_global_variable = daoyu_sort_C_T } }
+daoyu_show_nonexistent_country_TPS = { not = { exists = c:TPS } or = { has_global_variable = daoyu_sort_E_T has_global_variable = daoyu_sort_C_T } }
+daoyu_show_nonexistent_country_TRA = { not = { exists = c:TRA } or = { has_global_variable = daoyu_sort_E_T has_global_variable = daoyu_sort_C_T } }
+daoyu_show_nonexistent_country_TRE = { not = { exists = c:TRE } or = { has_global_variable = daoyu_sort_E_T has_global_variable = daoyu_sort_C_D } }
+daoyu_show_nonexistent_country_TRI = { not = { exists = c:TRI } or = { has_global_variable = daoyu_sort_E_T has_global_variable = daoyu_sort_C_D } }
+daoyu_show_nonexistent_country_TRK = { not = { exists = c:TRK } or = { has_global_variable = daoyu_sort_E_T has_global_variable = daoyu_sort_C_T } }
+daoyu_show_nonexistent_country_TRN = { not = { exists = c:TRN } or = { has_global_variable = daoyu_sort_E_T has_global_variable = daoyu_sort_C_D } }
+daoyu_show_nonexistent_country_TRS = { not = { exists = c:TRS } or = { has_global_variable = daoyu_sort_E_T has_global_variable = daoyu_sort_C_T } }
+daoyu_show_nonexistent_country_TRZ = { not = { exists = c:TRZ } or = { has_global_variable = daoyu_sort_E_T has_global_variable = daoyu_sort_C_T } }
+daoyu_show_nonexistent_country_TSW = { not = { exists = c:TSW } or = { has_global_variable = daoyu_sort_E_T has_global_variable = daoyu_sort_C_C } }
+daoyu_show_nonexistent_country_TUA = { not = { exists = c:TUA } or = { has_global_variable = daoyu_sort_E_T has_global_variable = daoyu_sort_C_T } }
+daoyu_show_nonexistent_country_TUN = { not = { exists = c:TUN } or = { has_global_variable = daoyu_sort_E_T has_global_variable = daoyu_sort_C_T } }
+daoyu_show_nonexistent_country_TUR = { not = { exists = c:TUR } or = { has_global_variable = daoyu_sort_E_T has_global_variable = daoyu_sort_C_T } }
+daoyu_show_nonexistent_country_TUS = { not = { exists = c:TUS } or = { has_global_variable = daoyu_sort_E_T has_global_variable = daoyu_sort_C_T } }
+daoyu_show_nonexistent_country_UBD = { not = { exists = c:UBD } or = { has_global_variable = daoyu_sort_E_U has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_UCA = { not = { exists = c:UCA } or = { has_global_variable = daoyu_sort_E_C has_global_variable = daoyu_sort_C_Z } }
+daoyu_show_nonexistent_country_UKR = { not = { exists = c:UKR } or = { has_global_variable = daoyu_sort_E_U has_global_variable = daoyu_sort_C_W } }
+daoyu_show_nonexistent_country_ULS = { not = { exists = c:ULS } or = { has_global_variable = daoyu_sort_E_U has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_URU = { not = { exists = c:URU } or = { has_global_variable = daoyu_sort_E_U has_global_variable = daoyu_sort_C_W } }
+daoyu_show_nonexistent_country_USA = { not = { exists = c:USA } or = { has_global_variable = daoyu_sort_E_A has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_UZH = { not = { exists = c:UZH } or = { has_global_variable = daoyu_sort_E_U has_global_variable = daoyu_sort_C_D } }
+daoyu_show_nonexistent_country_VEN = { not = { exists = c:VEN } or = { has_global_variable = daoyu_sort_E_V has_global_variable = daoyu_sort_C_W } }
+daoyu_show_nonexistent_country_VIE = { not = { exists = c:VIE } or = { has_global_variable = daoyu_sort_E_V has_global_variable = daoyu_sort_C_W } }
+daoyu_show_nonexistent_country_VNT = { not = { exists = c:VNT } or = { has_global_variable = daoyu_sort_E_V has_global_variable = daoyu_sort_C_W } }
+daoyu_show_nonexistent_country_VNZ = { not = { exists = c:VNZ } or = { has_global_variable = daoyu_sort_E_V has_global_variable = daoyu_sort_C_W } }
+daoyu_show_nonexistent_country_WAD = { not = { exists = c:WAD } or = { has_global_variable = daoyu_sort_E_W has_global_variable = daoyu_sort_C_W } }
+daoyu_show_nonexistent_country_WAL = { not = { exists = c:WAL } or = { has_global_variable = daoyu_sort_E_W has_global_variable = daoyu_sort_C_W } }
+daoyu_show_nonexistent_country_WBL = { not = { exists = c:WBL } or = { has_global_variable = daoyu_sort_E_G has_global_variable = daoyu_sort_C_G } }
+daoyu_show_nonexistent_country_WEI = { not = { exists = c:WEI } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_S } }
+daoyu_show_nonexistent_country_WES = { not = { exists = c:WES } or = { has_global_variable = daoyu_sort_E_W has_global_variable = daoyu_sort_C_W } }
+daoyu_show_nonexistent_country_WIN = { not = { exists = c:WIN } or = { has_global_variable = daoyu_sort_E_W has_global_variable = daoyu_sort_C_X } }
+daoyu_show_nonexistent_country_WLG = { not = { exists = c:WLG } or = { has_global_variable = daoyu_sort_E_W has_global_variable = daoyu_sort_C_W } }
+daoyu_show_nonexistent_country_WLL = { not = { exists = c:WLL } or = { has_global_variable = daoyu_sort_E_W has_global_variable = daoyu_sort_C_W } }
+daoyu_show_nonexistent_country_WLO = { not = { exists = c:WLO } or = { has_global_variable = daoyu_sort_E_W has_global_variable = daoyu_sort_C_W } }
+daoyu_show_nonexistent_country_WLS = { not = { exists = c:WLS } or = { has_global_variable = daoyu_sort_E_W has_global_variable = daoyu_sort_C_W } }
+daoyu_show_nonexistent_country_WSG = { not = { exists = c:WSG } or = { has_global_variable = daoyu_sort_E_W has_global_variable = daoyu_sort_C_W } }
+daoyu_show_nonexistent_country_WUR = { not = { exists = c:WUR } or = { has_global_variable = daoyu_sort_E_W has_global_variable = daoyu_sort_C_F } }
+daoyu_show_nonexistent_country_XIN = { not = { exists = c:XIN } or = { has_global_variable = daoyu_sort_E_U has_global_variable = daoyu_sort_C_W } }
+daoyu_show_nonexistent_country_YEM = { not = { exists = c:YEM } or = { has_global_variable = daoyu_sort_E_Y has_global_variable = daoyu_sort_C_Y } }
+daoyu_show_nonexistent_country_MAH = { not = { exists = c:MAH } or = { has_global_variable = daoyu_sort_E_M has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_KAT = { not = { exists = c:KAT } or = { has_global_variable = daoyu_sort_E_K has_global_variable = daoyu_sort_C_K } }
+daoyu_show_nonexistent_country_ZAI = { not = { exists = c:ZAI } or = { has_global_variable = daoyu_sort_E_A has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_LAH = { not = { exists = c:LAH } or = { has_global_variable = daoyu_sort_E_L has_global_variable = daoyu_sort_C_L } }
+daoyu_show_nonexistent_country_JAB = { not = { exists = c:JAB } or = { has_global_variable = daoyu_sort_E_J has_global_variable = daoyu_sort_C_J } }
+daoyu_show_nonexistent_country_BHN = { not = { exists = c:BHN } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_YKA = { not = { exists = c:YKA } or = { has_global_variable = daoyu_sort_E_Y has_global_variable = daoyu_sort_C_Y } }
+daoyu_show_nonexistent_country_YUG = { not = { exists = c:YUG } or = { has_global_variable = daoyu_sort_E_Y has_global_variable = daoyu_sort_C_N } }
+daoyu_show_nonexistent_country_ZAN = { not = { exists = c:ZAN } or = { has_global_variable = daoyu_sort_E_Z has_global_variable = daoyu_sort_C_S } }
+daoyu_show_nonexistent_country_ZND = { not = { exists = c:ZND } or = { has_global_variable = daoyu_sort_E_A has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_ZUL = { not = { exists = c:ZUL } or = { has_global_variable = daoyu_sort_E_Z has_global_variable = daoyu_sort_C_Z } }
+daoyu_show_nonexistent_country_SMI = { not = { exists = c:SMI } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_S } }
+daoyu_show_nonexistent_country_MLT = { not = { exists = c:MLT } or = { has_global_variable = daoyu_sort_E_M has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_ULR = { not = { exists = c:ULR } or = { has_global_variable = daoyu_sort_E_U has_global_variable = daoyu_sort_C_W } }
+daoyu_show_nonexistent_country_MCO = { not = { exists = c:MCO } or = { has_global_variable = daoyu_sort_E_M has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_TWT = { not = { exists = c:TWT } or = { has_global_variable = daoyu_sort_E_T has_global_variable = daoyu_sort_C_T } }
+daoyu_show_nonexistent_country_BSS = { not = { exists = c:BSS } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_TIR = { not = { exists = c:TIR } or = { has_global_variable = daoyu_sort_E_T has_global_variable = daoyu_sort_C_T } }
+daoyu_show_nonexistent_country_KSS = { not = { exists = c:KSS } or = { has_global_variable = daoyu_sort_E_K has_global_variable = daoyu_sort_C_J } }
+daoyu_show_nonexistent_country_GAO = { not = { exists = c:GAO } or = { has_global_variable = daoyu_sort_E_G has_global_variable = daoyu_sort_C_J } }
+daoyu_show_nonexistent_country_TIV = { not = { exists = c:TIV } or = { has_global_variable = daoyu_sort_E_T has_global_variable = daoyu_sort_C_D } }
+daoyu_show_nonexistent_country_SRA = { not = { exists = c:SRA } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_S } }
+daoyu_show_nonexistent_country_EQU = { not = { exists = c:EQU } or = { has_global_variable = daoyu_sort_E_E has_global_variable = daoyu_sort_C_C } }
+daoyu_show_nonexistent_country_BJA = { not = { exists = c:BJA } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_NBA = { not = { exists = c:NBA } or = { has_global_variable = daoyu_sort_E_N has_global_variable = daoyu_sort_C_N } }
+daoyu_show_nonexistent_country_SUD = { not = { exists = c:SUD } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_S } }
+daoyu_show_nonexistent_country_SKM = { not = { exists = c:SKM } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_S } }
+daoyu_show_nonexistent_country_CHW = { not = { exists = c:CHW } or = { has_global_variable = daoyu_sort_E_C has_global_variable = daoyu_sort_C_Q } }
+daoyu_show_nonexistent_country_LMW = { not = { exists = c:LMW } or = { has_global_variable = daoyu_sort_E_L has_global_variable = daoyu_sort_C_L } }
+daoyu_show_nonexistent_country_MKU = { not = { exists = c:MKU } or = { has_global_variable = daoyu_sort_E_M has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_SNA = { not = { exists = c:SNA } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_S } }
+daoyu_show_nonexistent_country_BTG = { not = { exists = c:BTG } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_XHO = { not = { exists = c:XHO } or = { has_global_variable = daoyu_sort_E_X has_global_variable = daoyu_sort_C_K } }
+daoyu_show_nonexistent_country_UYA = { not = { exists = c:UYA } or = { has_global_variable = daoyu_sort_E_U has_global_variable = daoyu_sort_C_Y } }
+daoyu_show_nonexistent_country_PRM = { not = { exists = c:PRM } or = { has_global_variable = daoyu_sort_E_P has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_HZJ = { not = { exists = c:HZJ } or = { has_global_variable = daoyu_sort_E_H has_global_variable = daoyu_sort_C_H } }
+daoyu_show_nonexistent_country_TRC = { not = { exists = c:TRC } or = { has_global_variable = daoyu_sort_E_T has_global_variable = daoyu_sort_C_T } }
+daoyu_show_nonexistent_country_SIB = { not = { exists = c:SIB } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_X } }
+daoyu_show_nonexistent_country_YAK = { not = { exists = c:YAK } or = { has_global_variable = daoyu_sort_E_Y has_global_variable = daoyu_sort_C_Y } }
+daoyu_show_nonexistent_country_ASM = { not = { exists = c:ASM } or = { has_global_variable = daoyu_sort_E_A has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_MNP = { not = { exists = c:MNP } or = { has_global_variable = daoyu_sort_E_M has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_TOB = { not = { exists = c:TOB } or = { has_global_variable = daoyu_sort_E_T has_global_variable = daoyu_sort_C_T } }
+daoyu_show_nonexistent_country_KLT = { not = { exists = c:KLT } or = { has_global_variable = daoyu_sort_E_K has_global_variable = daoyu_sort_C_J } }
+daoyu_show_nonexistent_country_HTH = { not = { exists = c:HTH } or = { has_global_variable = daoyu_sort_E_H has_global_variable = daoyu_sort_C_H } }
+daoyu_show_nonexistent_country_KRN = { not = { exists = c:KRN } or = { has_global_variable = daoyu_sort_E_K has_global_variable = daoyu_sort_C_K } }
+daoyu_show_nonexistent_country_KHM = { not = { exists = c:KHM } or = { has_global_variable = daoyu_sort_E_K has_global_variable = daoyu_sort_C_K } }
+daoyu_show_nonexistent_country_KHN = { not = { exists = c:KHN } or = { has_global_variable = daoyu_sort_E_K has_global_variable = daoyu_sort_C_K } }
+daoyu_show_nonexistent_country_AIN = { not = { exists = c:AIN } or = { has_global_variable = daoyu_sort_E_A has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_EZO = { not = { exists = c:EZO } or = { has_global_variable = daoyu_sort_E_E has_global_variable = daoyu_sort_C_X } }
+daoyu_show_nonexistent_country_QIA = { not = { exists = c:QIA } or = { has_global_variable = daoyu_sort_E_Q has_global_variable = daoyu_sort_C_Q } }
+daoyu_show_nonexistent_country_FRS = { not = { exists = c:FRS } or = { has_global_variable = daoyu_sort_E_F has_global_variable = daoyu_sort_C_T } }
+daoyu_show_nonexistent_country_YUN = { not = { exists = c:YUN } or = { has_global_variable = daoyu_sort_E_Y has_global_variable = daoyu_sort_C_Y } }
+daoyu_show_nonexistent_country_YUE = { not = { exists = c:YUE } or = { has_global_variable = daoyu_sort_E_Y has_global_variable = daoyu_sort_C_Y } }
+daoyu_show_nonexistent_country_OAX = { not = { exists = c:OAX } or = { has_global_variable = daoyu_sort_E_O has_global_variable = daoyu_sort_C_W } }
+daoyu_show_nonexistent_country_AYM = { not = { exists = c:AYM } or = { has_global_variable = daoyu_sort_E_A has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_WYU = { not = { exists = c:WYU } or = { has_global_variable = daoyu_sort_E_W has_global_variable = daoyu_sort_C_W } }
+daoyu_show_nonexistent_country_TPI = { not = { exists = c:TPI } or = { has_global_variable = daoyu_sort_E_T has_global_variable = daoyu_sort_C_T } }
+daoyu_show_nonexistent_country_PUE = { not = { exists = c:PUE } or = { has_global_variable = daoyu_sort_E_P has_global_variable = daoyu_sort_C_P } }
+daoyu_show_nonexistent_country_NNV = { not = { exists = c:NNV } or = { has_global_variable = daoyu_sort_E_N has_global_variable = daoyu_sort_C_N } }
+daoyu_show_nonexistent_country_NVL = { not = { exists = c:NVL } or = { has_global_variable = daoyu_sort_E_N has_global_variable = daoyu_sort_C_N } }
+daoyu_show_nonexistent_country_ATB = { not = { exists = c:ATB } or = { has_global_variable = daoyu_sort_E_A has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_CSC = { not = { exists = c:CSC } or = { has_global_variable = daoyu_sort_E_C has_global_variable = daoyu_sort_C_K } }
+daoyu_show_nonexistent_country_IRO = { not = { exists = c:IRO } or = { has_global_variable = daoyu_sort_E_H has_global_variable = daoyu_sort_C_H } }
+daoyu_show_nonexistent_country_MSC = { not = { exists = c:MSC } or = { has_global_variable = daoyu_sort_E_M has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_UTE = { not = { exists = c:UTE } or = { has_global_variable = daoyu_sort_E_U has_global_variable = daoyu_sort_C_Y } }
+daoyu_show_nonexistent_country_APC = { not = { exists = c:APC } or = { has_global_variable = daoyu_sort_E_A has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_CCM = { not = { exists = c:CCM } or = { has_global_variable = daoyu_sort_E_O has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_ORN = { not = { exists = c:ORN } or = { has_global_variable = daoyu_sort_E_O has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_SRB = { not = { exists = c:SRB } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_S } }
+daoyu_show_nonexistent_country_YUC = { not = { exists = c:YUC } or = { has_global_variable = daoyu_sort_E_Y has_global_variable = daoyu_sort_C_Y } }
+daoyu_show_nonexistent_country_RIO = { not = { exists = c:RIO } or = { has_global_variable = daoyu_sort_E_R has_global_variable = daoyu_sort_C_L } }
+daoyu_show_nonexistent_country_PNI = { not = { exists = c:PNI } or = { has_global_variable = daoyu_sort_E_P has_global_variable = daoyu_sort_C_P } }
+daoyu_show_nonexistent_country_CEY = { not = { exists = c:CEY } or = { has_global_variable = daoyu_sort_E_C has_global_variable = daoyu_sort_C_X } }
+daoyu_show_nonexistent_country_HBC = { not = { exists = c:HBC } or = { has_global_variable = daoyu_sort_E_H has_global_variable = daoyu_sort_C_H } }
+daoyu_show_nonexistent_country_ONT = { not = { exists = c:ONT } or = { has_global_variable = daoyu_sort_E_O has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_NBS = { not = { exists = c:NBS } or = { has_global_variable = daoyu_sort_E_N has_global_variable = daoyu_sort_C_X } }
+daoyu_show_nonexistent_country_NSW = { not = { exists = c:NSW } or = { has_global_variable = daoyu_sort_E_N has_global_variable = daoyu_sort_C_X } }
+daoyu_show_nonexistent_country_WAS = { not = { exists = c:WAS } or = { has_global_variable = daoyu_sort_E_W has_global_variable = daoyu_sort_C_X } }
+daoyu_show_nonexistent_country_SAS = { not = { exists = c:SAS } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_N } }
+daoyu_show_nonexistent_country_UNT = { not = { exists = c:UNT } or = { has_global_variable = daoyu_sort_E_U has_global_variable = daoyu_sort_C_L } }
+daoyu_show_nonexistent_country_NNG = { not = { exists = c:NNG } or = { has_global_variable = daoyu_sort_E_N has_global_variable = daoyu_sort_C_N } }
+daoyu_show_nonexistent_country_GML = { not = { exists = c:GML } or = { has_global_variable = daoyu_sort_E_G has_global_variable = daoyu_sort_C_K } }
+daoyu_show_nonexistent_country_TAS = { not = { exists = c:TAS } or = { has_global_variable = daoyu_sort_E_T has_global_variable = daoyu_sort_C_T } }
+daoyu_show_nonexistent_country_ZIM = { not = { exists = c:ZIM } or = { has_global_variable = daoyu_sort_E_Z has_global_variable = daoyu_sort_C_J } }
+daoyu_show_nonexistent_country_BLH = { not = { exists = c:BLH } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_MAL = { not = { exists = c:MAL } or = { has_global_variable = daoyu_sort_E_M has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_OCC = { not = { exists = c:OCC } or = { has_global_variable = daoyu_sort_E_O has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_TUV = { not = { exists = c:TUV } or = { has_global_variable = daoyu_sort_E_T has_global_variable = daoyu_sort_C_T } }
+daoyu_show_nonexistent_country_COR = { not = { exists = c:COR } or = { has_global_variable = daoyu_sort_E_C has_global_variable = daoyu_sort_C_K } }
+daoyu_show_nonexistent_country_TNS = { not = { exists = c:TNS } or = { has_global_variable = daoyu_sort_E_T has_global_variable = daoyu_sort_C_T } }
+daoyu_show_nonexistent_country_FER = { not = { exists = c:FER } or = { has_global_variable = daoyu_sort_E_K has_global_variable = daoyu_sort_C_K } }
+daoyu_show_nonexistent_country_IUS = { not = { exists = c:IUS } or = { has_global_variable = daoyu_sort_E_K has_global_variable = daoyu_sort_C_K } }
+daoyu_show_nonexistent_country_NCA = { not = { exists = c:NCA } or = { has_global_variable = daoyu_sort_E_M has_global_variable = daoyu_sort_C_S } }
+daoyu_show_nonexistent_country_DON = { not = { exists = c:DON } or = { has_global_variable = daoyu_sort_E_D has_global_variable = daoyu_sort_C_D } }
+daoyu_show_nonexistent_country_SYR = { not = { exists = c:SYR } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_X } }
+daoyu_show_nonexistent_country_EOT = { not = { exists = c:EOT } or = { has_global_variable = daoyu_sort_E_E has_global_variable = daoyu_sort_C_W } }
+daoyu_show_nonexistent_country_LEB = { not = { exists = c:LEB } or = { has_global_variable = daoyu_sort_E_L has_global_variable = daoyu_sort_C_L } }
+daoyu_show_nonexistent_country_GNG = { not = { exists = c:GNG } or = { has_global_variable = daoyu_sort_E_D has_global_variable = daoyu_sort_C_D } }
+daoyu_show_nonexistent_country_HNA = { not = { exists = c:HNA } or = { has_global_variable = daoyu_sort_E_H has_global_variable = daoyu_sort_C_H } }
+daoyu_show_nonexistent_country_AHU = { not = { exists = c:AHU } or = { has_global_variable = daoyu_sort_E_A has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_ZHI = { not = { exists = c:ZHI } or = { has_global_variable = daoyu_sort_E_Z has_global_variable = daoyu_sort_C_Z } }
+daoyu_show_nonexistent_country_SHN = { not = { exists = c:SHN } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_S } }
+daoyu_show_nonexistent_country_GUI = { not = { exists = c:GUI } or = { has_global_variable = daoyu_sort_E_G has_global_variable = daoyu_sort_C_G } }
+daoyu_show_nonexistent_country_SIH = { not = { exists = c:SIH } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_S } }
+daoyu_show_nonexistent_country_SHA = { not = { exists = c:SHA } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_S } }
+daoyu_show_nonexistent_country_XIB = { not = { exists = c:XIB } or = { has_global_variable = daoyu_sort_E_X has_global_variable = daoyu_sort_C_X } }
+daoyu_show_nonexistent_country_MUI = { not = { exists = c:MUI } or = { has_global_variable = daoyu_sort_E_M has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_ALT = { not = { exists = c:ALT } or = { has_global_variable = daoyu_sort_E_L has_global_variable = daoyu_sort_C_L } }
+daoyu_show_nonexistent_country_AFS = { not = { exists = c:AFS } or = { has_global_variable = daoyu_sort_E_F has_global_variable = daoyu_sort_C_Z } }
+daoyu_show_nonexistent_country_GNI = { not = { exists = c:GNI } or = { has_global_variable = daoyu_sort_E_G has_global_variable = daoyu_sort_C_G } }
+daoyu_show_nonexistent_country_SAH = { not = { exists = c:SAH } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_S } }
+daoyu_show_nonexistent_country_DEI = { not = { exists = c:DEI } or = { has_global_variable = daoyu_sort_E_E has_global_variable = daoyu_sort_C_D } }
+daoyu_show_nonexistent_country_ARP = { not = { exists = c:ARP } or = { has_global_variable = daoyu_sort_E_A has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_PWN = { not = { exists = c:PWN } or = { has_global_variable = daoyu_sort_E_P has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_BLF = { not = { exists = c:BLF } or = { has_global_variable = daoyu_sort_E_N has_global_variable = daoyu_sort_C_H } }
+daoyu_show_nonexistent_country_TRH = { not = { exists = c:TRH } or = { has_global_variable = daoyu_sort_E_T has_global_variable = daoyu_sort_C_T } }
+daoyu_show_nonexistent_country_UOM = { not = { exists = c:UOM } or = { has_global_variable = daoyu_sort_E_M has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_SAK = { not = { exists = c:SAK } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_X } }
+daoyu_show_nonexistent_country_PON = { not = { exists = c:PON } or = { has_global_variable = daoyu_sort_E_P has_global_variable = daoyu_sort_C_K } }
+daoyu_show_nonexistent_country_SMB = { not = { exists = c:SMB } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_S } }
+daoyu_show_nonexistent_country_JMB = { not = { exists = c:JMB } or = { has_global_variable = daoyu_sort_E_J has_global_variable = daoyu_sort_C_Z } }
+daoyu_show_nonexistent_country_YOG = { not = { exists = c:YOG } or = { has_global_variable = daoyu_sort_E_Y has_global_variable = daoyu_sort_C_R } }
+daoyu_show_nonexistent_country_BTN = { not = { exists = c:BTN } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_SEL = { not = { exists = c:SEL } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_X } }
+daoyu_show_nonexistent_country_PRK = { not = { exists = c:PRK } or = { has_global_variable = daoyu_sort_E_P has_global_variable = daoyu_sort_C_P } }
+daoyu_show_nonexistent_country_SRK = { not = { exists = c:SRK } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_S } }
+daoyu_show_nonexistent_country_SLW = { not = { exists = c:SLW } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_S } }
+daoyu_show_nonexistent_country_TID = { not = { exists = c:TID } or = { has_global_variable = daoyu_sort_E_T has_global_variable = daoyu_sort_C_D } }
+daoyu_show_nonexistent_country_STG = { not = { exists = c:STG } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_X } }
+daoyu_show_nonexistent_country_BNJ = { not = { exists = c:BNJ } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_SUL = { not = { exists = c:SUL } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_S } }
+daoyu_show_nonexistent_country_THL = { not = { exists = c:THL } or = { has_global_variable = daoyu_sort_E_T has_global_variable = daoyu_sort_C_T } }
+daoyu_show_nonexistent_country_SLK = { not = { exists = c:SLK } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_S } }
+daoyu_show_nonexistent_country_NVS = { not = { exists = c:NVS } or = { has_global_variable = daoyu_sort_E_N has_global_variable = daoyu_sort_C_X } }
+daoyu_show_nonexistent_country_SMS = { not = { exists = c:SMS } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_S } }
+daoyu_show_nonexistent_country_CHC = { not = { exists = c:CHC } or = { has_global_variable = daoyu_sort_E_C has_global_variable = daoyu_sort_C_C } }
+daoyu_show_nonexistent_country_CIR = { not = { exists = c:CIR } or = { has_global_variable = daoyu_sort_E_C has_global_variable = daoyu_sort_C_Q } }
+daoyu_show_nonexistent_country_MGD = { not = { exists = c:MGD } or = { has_global_variable = daoyu_sort_E_M has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_ASS = { not = { exists = c:ASS } or = { has_global_variable = daoyu_sort_E_A has_global_variable = daoyu_sort_C_Y } }
+daoyu_show_nonexistent_country_CTF = { not = { exists = c:CTF } or = { has_global_variable = daoyu_sort_E_C has_global_variable = daoyu_sort_C_S } }
+daoyu_show_nonexistent_country_KLM = { not = { exists = c:KLM } or = { has_global_variable = daoyu_sort_E_K has_global_variable = daoyu_sort_C_K } }
+daoyu_show_nonexistent_country_CAU = { not = { exists = c:CAU } or = { has_global_variable = daoyu_sort_E_T has_global_variable = daoyu_sort_C_W } }
+daoyu_show_nonexistent_country_SAV = { not = { exists = c:SAV } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_S } }
+daoyu_show_nonexistent_country_CON = { not = { exists = c:CON } or = { has_global_variable = daoyu_sort_E_C has_global_variable = daoyu_sort_C_J } }
+daoyu_show_nonexistent_country_TUG = { not = { exists = c:TUG } or = { has_global_variable = daoyu_sort_E_T has_global_variable = daoyu_sort_C_T } }
+daoyu_show_nonexistent_country_AIT = { not = { exists = c:AIT } or = { has_global_variable = daoyu_sort_E_A has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_MAS = { not = { exists = c:MAS } or = { has_global_variable = daoyu_sort_E_M has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_RHE = { not = { exists = c:RHE } or = { has_global_variable = daoyu_sort_E_R has_global_variable = daoyu_sort_C_L } }
+daoyu_show_nonexistent_country_PRC = { not = { exists = c:PRC } or = { has_global_variable = daoyu_sort_E_P has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_GZA = { not = { exists = c:GZA } or = { has_global_variable = daoyu_sort_E_G has_global_variable = daoyu_sort_C_J } }
+daoyu_show_nonexistent_country_MRV = { not = { exists = c:MRV } or = { has_global_variable = daoyu_sort_E_M has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_BRG = { not = { exists = c:BRG } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_BMM = { not = { exists = c:BMM } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_PAU = { not = { exists = c:PAU } or = { has_global_variable = daoyu_sort_E_P has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_EQT = { not = { exists = c:EQT } or = { has_global_variable = daoyu_sort_E_C has_global_variable = daoyu_sort_C_C } }
+daoyu_show_nonexistent_country_CTR = { not = { exists = c:CTR } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_S } }
+daoyu_show_nonexistent_country_MNG = { not = { exists = c:MNG } or = { has_global_variable = daoyu_sort_E_M has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_FND = { not = { exists = c:FND } or = { has_global_variable = daoyu_sort_E_F has_global_variable = daoyu_sort_C_A } }
+daoyu_show_nonexistent_country_BHI = { not = { exists = c:BHI } or = { has_global_variable = daoyu_sort_E_B has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_PBC = { not = { exists = c:PBC } or = { has_global_variable = daoyu_sort_E_P has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_IQU = { not = { exists = c:IQU } or = { has_global_variable = daoyu_sort_E_I has_global_variable = daoyu_sort_C_Y } }
+daoyu_show_nonexistent_country_NPU = { not = { exists = c:NPU } or = { has_global_variable = daoyu_sort_E_N has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_RSM = { not = { exists = c:RSM } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_S } }
+daoyu_show_nonexistent_country_HRE = { not = { exists = c:HRE } or = { has_global_variable = daoyu_sort_E_C has_global_variable = daoyu_sort_C_Z } }
+daoyu_show_nonexistent_country_UNL = { not = { exists = c:UNL } or = { has_global_variable = daoyu_sort_E_U has_global_variable = daoyu_sort_C_N } }
+daoyu_show_nonexistent_country_RHN = { not = { exists = c:RHN } or = { has_global_variable = daoyu_sort_E_C has_global_variable = daoyu_sort_C_L } }
+daoyu_show_nonexistent_country_PLT = { not = { exists = c:PLT } or = { has_global_variable = daoyu_sort_E_R has_global_variable = daoyu_sort_C_L } }
+daoyu_show_nonexistent_country_SPU = { not = { exists = c:SPU } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_N } }
+daoyu_show_nonexistent_country_NCR = { not = { exists = c:NCR } or = { has_global_variable = daoyu_sort_E_N has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_SCR = { not = { exists = c:SCR } or = { has_global_variable = daoyu_sort_E_S has_global_variable = daoyu_sort_C_N } }
+daoyu_show_nonexistent_country_CLI = { not = { exists = c:CLI } or = { has_global_variable = daoyu_sort_E_C has_global_variable = daoyu_sort_C_K } }
+daoyu_show_nonexistent_country_GRG = { not = { exists = c:GRG } or = { has_global_variable = daoyu_sort_E_G has_global_variable = daoyu_sort_C_Z } }
+daoyu_show_nonexistent_country_FLR = { not = { exists = c:FLR } or = { has_global_variable = daoyu_sort_E_F has_global_variable = daoyu_sort_C_F } }
+daoyu_show_nonexistent_country_PAK = { not = { exists = c:PAK } or = { has_global_variable = daoyu_sort_E_P has_global_variable = daoyu_sort_C_B } }
+daoyu_show_nonexistent_country_MGB = { not = { exists = c:MGB } or = { has_global_variable = daoyu_sort_E_M has_global_variable = daoyu_sort_C_M } }
+daoyu_show_nonexistent_country_TIS = { not = { exists = c:TIS } or = { has_global_variable = daoyu_sort_E_T has_global_variable = daoyu_sort_C_L } }
+daoyu_single_commander_hq_trigger = {
+	and = {
+		has_variable = daoyu_hq_$REGION$
+		any_military_formation = {
+			filter = { is_army = yes }
+			hq_region = sr:$REGION$
+			any_scope_character = { has_role = general has_variable = daoyu_potential_target_character }
+		}
+	}
+}
+daoyu_unit_type_army_trigger = {
+	or = {
+		has_unit_type = unit_type:combat_unit_type_irregular_infantry
+		has_unit_type = unit_type:combat_unit_type_line_infantry
+		has_unit_type = unit_type:combat_unit_type_skirmish_infantry
+		has_unit_type = unit_type:combat_unit_type_trench_infantry
+		has_unit_type = unit_type:combat_unit_type_squad_infantry
+		has_unit_type = unit_type:combat_unit_type_mechanized_infantry
+		has_unit_type = unit_type:combat_unit_type_cannon_artillery
+		has_unit_type = unit_type:combat_unit_type_mobile_artillery
+		has_unit_type = unit_type:combat_unit_type_shrapnel_artillery
+		has_unit_type = unit_type:combat_unit_type_siege_artillery
+		has_unit_type = unit_type:combat_unit_type_heavy_tank
+		has_unit_type = unit_type:combat_unit_type_hussars
+		has_unit_type = unit_type:combat_unit_type_dragoons
+		has_unit_type = unit_type:combat_unit_type_cuirassiers
+		has_unit_type = unit_type:combat_unit_type_lancers
+		has_unit_type = unit_type:combat_unit_type_light_tanks
+	}
+}
+daoyu_unit_type_fleet_trigger = {
+	or = {
+		has_unit_type = unit_type:combat_unit_type_frigate
+		has_unit_type = unit_type:combat_unit_type_destroyer
+		has_unit_type = unit_type:combat_unit_type_torpedo_boat
+		has_unit_type = unit_type:combat_unit_type_scout_cruiser
+		has_unit_type = unit_type:combat_unit_type_man_o_war
+		has_unit_type = unit_type:combat_unit_type_ironclad
+		has_unit_type = unit_type:combat_unit_type_monitor
+		has_unit_type = unit_type:combat_unit_type_dreadnought
+		has_unit_type = unit_type:combat_unit_type_battleship
+		has_unit_type = unit_type:combat_unit_type_submarine
+		has_unit_type = unit_type:combat_unit_type_carrier
+	}
+}
+daoyu_page_turning_trigger = {
+	or = {
+		has_variable = daoyu_page_01
+		has_variable = daoyu_page_02
+		has_variable = daoyu_page_03
+		has_variable = daoyu_page_04
+		has_variable = daoyu_page_05
+	}
+}
+daoyu_building_lens_trigger = {
+	has_technology_researched = $TECHNOLOGY$
+	any_scope_state = { has_decree = decree_daoyu_target_state }
+}
+daoyu_building_state_trait_trigger = {
+	or = {
+		and = { has_global_variable = daoyu_remove_building_state_trait any_state = { has_state_trait = $STATE_TRAIT$ } }
+		has_global_variable = daoyu_add_building_state_trait
+	}
+}
+daoyu_resources_building_state_trait_trigger = {
+	any_state = {
+		or = {
+			has_state_trait = building_coal_mine
+			has_state_trait = building_iron_mine
+			has_state_trait = building_lead_mine
+			has_state_trait = building_sulfur_mine
+			has_state_trait = building_gold_mine
+			has_state_trait = building_gold_fields
+			has_state_trait = building_oil_rig
+			has_state_trait = building_logging_camp
+			has_state_trait = building_rubber_plantation
+			has_state_trait = building_whaling_station
+			has_state_trait = building_fishing_wharf
+		}
+	}
+}
+daoyu_agriculture_building_state_trait_trigger = {
+	any_state = {
+		or = {
+			has_state_trait = building_rye_farm
+			has_state_trait = building_wheat_farm
+			has_state_trait = building_rice_farm
+			has_state_trait = building_maize_farm
+			has_state_trait = building_millet_farm
+			has_state_trait = building_livestock_ranch
+			has_state_trait = building_vineyard_plantation
+			has_state_trait = building_dye_plantation
+			has_state_trait = building_silk_plantation
+			has_state_trait = building_cotton_plantation
+			has_state_trait = building_coffee_plantation
+			has_state_trait = building_tea_plantation
+			has_state_trait = building_tobacco_plantation
+			has_state_trait = building_sugar_plantation
+			has_state_trait = building_banana_plantation
+			has_state_trait = building_opium_plantation
+		}
+	}
+}
+daoyu_industry_building_state_trait_trigger = {
+	any_state = {
+		or = {
+			has_state_trait = building_food_industry
+			has_state_trait = building_textile_mills
+			has_state_trait = building_furniture_manufacturies
+			has_state_trait = building_glassworks
+			has_state_trait = building_tooling_workshops
+			has_state_trait = building_paper_mills
+			has_state_trait = building_shipyards
+			has_state_trait = building_arms_industry
+			has_state_trait = building_chemical_plants
+			has_state_trait = building_synthetics_plants
+			has_state_trait = building_steel_mills
+			has_state_trait = building_motor_industry
+			has_state_trait = building_war_machine_industry
+			has_state_trait = building_electrics_industry
+			has_state_trait = building_munition_plants
+			has_state_trait = building_power_plant
+		}
+	}
+}
+daoyu_has_principle = {
+	or = {
+		and = { has_global_variable = daoyu_remove_principle power_bloc = { or = { has_principle = principle:principle_$PRI$_1 has_principle = principle:principle_$PRI$_2 has_principle = principle:principle_$PRI$_3 } } }
+		and = { not = { has_global_variable = daoyu_remove_principle } power_bloc = { not = { has_principle = principle:principle_$PRI$_3 } } }
+	}
+}

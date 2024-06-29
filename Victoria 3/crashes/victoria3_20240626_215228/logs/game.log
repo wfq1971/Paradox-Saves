@@ -1,0 +1,1766 @@
+[21:50:52][jomini_eventmanager.cpp:627]: >=== NAMESPACE > '1848' is set to #1000000
+[21:50:52][jomini_eventmanager.cpp:580]: Events loaded events/1848.txt' #9
+[21:50:52][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'africa_colonial_events' is set to #1010000
+[21:50:52][jomini_eventmanager.cpp:580]: Events loaded events/africa_colonial_events.txt' #6
+[21:50:52][jomini_eventmanager.cpp:580]: Events loaded events/africa_colonial_events_02.txt' #2
+[21:50:52][jomini_eventmanager.cpp:580]: Events loaded events/africa_colonial_events_03.txt' #5
+[21:50:52][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'alaska' is set to #1020000
+[21:50:52][jomini_eventmanager.cpp:580]: Events loaded events/alaska_events.txt' #4
+[21:50:52][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'amazon' is set to #1030000
+[21:50:52][jomini_eventmanager.cpp:580]: Events loaded events/amazon_events.txt' #3
+[21:50:52][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'assassination_events' is set to #1040000
+[21:50:52][jomini_eventmanager.cpp:580]: Events loaded events/assassination_events.txt' #8
+[21:50:52][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'emu_war' is set to #1050000
+[21:50:52][jomini_eventmanager.cpp:580]: Events loaded events/australia_events.txt' #1
+[21:50:52][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'autocracy' is set to #1060000
+[21:50:52][jomini_eventmanager.cpp:580]: Events loaded events/autocracy_events.txt' #3
+[21:50:52][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'belle_epoque_events' is set to #1070000
+[21:50:52][jomini_eventmanager.cpp:580]: Events loaded events/belle_epoque_events.txt' #20
+[21:50:52][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'bic_breakup' is set to #1080000
+[21:50:52][jomini_eventmanager.cpp:580]: Events loaded events/bic_breakup.txt' #1
+[21:50:52][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'boxer_rebellion_events' is set to #1090000
+[21:50:52][jomini_eventmanager.cpp:580]: Events loaded events/boxer_rebellion_events.txt' #4
+[21:50:52][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'raj' is set to #1100000
+[21:50:52][jomini_eventmanager.cpp:580]: Events loaded events/british_raj_events.txt' #7
+[21:50:52][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'can_aus' is set to #1110000
+[21:50:52][jomini_eventmanager.cpp:580]: Events loaded events/canada_australia_events.txt' #8
+[21:50:52][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'canal_events' is set to #1120000
+[21:50:52][jomini_eventmanager.cpp:580]: Events loaded events/canal_events.txt' #10
+[21:50:52][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'central_america' is set to #1130000
+[21:50:52][jomini_eventmanager.cpp:580]: Events loaded events/central_america_events.txt' #3
+[21:50:52][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'character_events' is set to #1140000
+[21:50:52][jomini_eventmanager.cpp:580]: Events loaded events/character_events.txt' #7
+[21:50:52][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'cholera' is set to #1150000
+[21:50:52][jomini_eventmanager.cpp:580]: Events loaded events/cholera.txt' #1
+[21:50:52][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'civil_war_events' is set to #1160000
+[21:50:52][jomini_eventmanager.cpp:580]: Events loaded events/civil_war_events.txt' #1
+[21:50:52][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'colonial_administration_events' is set to #1170000
+[21:50:52][jomini_eventmanager.cpp:580]: Events loaded events/colonial_administration_events.txt' #2
+[21:50:52][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'commander_events' is set to #1180000
+[21:50:52][jomini_eventmanager.cpp:580]: Events loaded events/commander_events.txt' #4
+[21:50:52][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'communism' is set to #1190000
+[21:50:52][jomini_eventmanager.cpp:580]: Events loaded events/communism.txt' #11
+[21:50:52][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'congo_free_state_events' is set to #1200000
+[21:50:52][jomini_eventmanager.cpp:580]: Events loaded events/congo_free_state_events.txt' #6
+[21:50:52][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'corn_laws' is set to #1210000
+[21:50:52][jomini_eventmanager.cpp:580]: Events loaded events/corn_laws_events.txt' #4
+[21:50:52][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'crime_events' is set to #1220000
+[21:50:52][jomini_eventmanager.cpp:580]: Events loaded events/crime_events.txt' #6
+[21:50:52][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'cultural_homeland_events' is set to #1230000
+[21:50:52][jomini_eventmanager.cpp:580]: Events loaded events/cultural_homeland_events.txt' #6
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'debug' is set to #1240000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/debug_events.txt' #17
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'decree_events' is set to #1250000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/decree_events.txt' #6
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/decree_events_02.txt' #10
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'dei_breakup' is set to #1260000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/dei_breakup.txt' #1
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'diplomatic_events' is set to #1270000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/diplomatic_events.txt' #1
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'diplomatic_friction' is set to #1280000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/diplomatic_friction_events.txt' #4
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'discrimination_events' is set to #1290000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/discrimination_events.txt' #4
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'dreadnought_hoax' is set to #1300000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/dreadnought_hoax.txt' #1
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'dual_monarchy' is set to #1310000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/dual_monarchy.txt' #1
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'east_indies' is set to #1320000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/east_indies_je_events.txt' #3
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'egyptian_crisis_events' is set to #1330000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/egyptian_crisis_events.txt' #3
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'ethiopia' is set to #1340000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/ethiopia.txt' #1
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'famine_political' is set to #1350000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/famine_political_events.txt' #5
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'fascism_events' is set to #1360000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/fascism_events.txt' #7
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'french_pretenders' is set to #1370000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/french_pretenders.txt' #8
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'french_pretenders_pulse' is set to #1380000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/french_pretenders_pulse.txt' #15
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'generals' is set to #1390000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/general_events.txt' #1
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'german_unification' is set to #1400000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/german_unification.txt' #5
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'goldrush' is set to #1410000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/gold_rush.txt' #5
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'government_conflicts' is set to #1420000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/government_conflicts_events.txt' #11
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'exhibition_events' is set to #1430000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/grand_exhibition_events.txt' #8
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'greece' is set to #1440000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/greece_events.txt' #3
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'hawaii_events' is set to #1450000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/hawaii_events.txt' #5
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'heavenly' is set to #1460000
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'CHI_missionaries' is set to #1470000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/heavenly_kingdom_events.txt' #11
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'hispaniola_events' is set to #1480000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/hispaniola_events.txt' #5
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'historical_events' is set to #1490000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/historical_events.txt' #1
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'ig_leaders' is set to #1500000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/ig_leaders.txt' #7
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'ig_petitions' is set to #1510000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/ig_petitions.txt' #8
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'ig_revolutions' is set to #1520000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/ig_revolutions.txt' #9
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'ig_suppression_events' is set to #1530000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/ig_suppression_events.txt' #10
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'indochina' is set to #1540000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/indochina.txt' #4
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'industrial_accident_events' is set to #1550000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/industrial_accidents_events.txt' #6
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'italian_unification' is set to #1560000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/italian_unification.txt' #8
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'marx_events' is set to #1570000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/karl_marx_events.txt' #1
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'korea' is set to #1580000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/korea_events.txt' #1
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'krakatoa' is set to #1590000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/krakatoa_events.txt' #5
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'krakow' is set to #1600000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/krakow_events.txt' #2
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'land_reclamation' is set to #1610000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/land_reclamation.txt' #1
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'law_imposition_events' is set to #1620000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/law_imposition_events.txt' #3
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'liberalism' is set to #1630000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/liberalism.txt' #4
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'famine_events' is set to #1640000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/major_famine_events.txt' #4
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'major_railways' is set to #1650000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/major_railways.txt' #3
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'manifest_destiny' is set to #1660000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/manifest_destiny_events.txt' #3
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'meiji' is set to #1670000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/meiji_restoration.txt' #13
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'metro' is set to #1680000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/metro_events.txt' #1
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'regional_events' is set to #1690000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/misc_regional_events.txt' #0
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'formation' is set to #1700000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/misc_unifications.txt' #21
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'movement_events' is set to #1710000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/movement_events.txt' #15
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'native_resettlement' is set to #1720000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/native_resettlement.txt' #7
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'natural_disaster_events' is set to #1730000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/natural_disasters_events.txt' #8
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'neighbor_events' is set to #1740000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/neighbor_events.txt' #7
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'nihilism' is set to #1750000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/nihilism.txt' #13
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'obligation_events' is set to #1760000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/obligation_events.txt' #6
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'oil_rush' is set to #1770000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/oil_rush_events.txt' #5
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'opium_events' is set to #1780000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/opium_events.txt' #1
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'opium_wars' is set to #1790000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/opium_wars_events.txt' #8
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'oregon' is set to #1800000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/oregon_events.txt' #3
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'oscar_wilde_events' is set to #1810000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/oscar_wilde.txt' #1
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'patagonia' is set to #1820000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/patagonia.txt' #2
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'peoples_springtime' is set to #1830000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/peoples_springtime.txt' #8
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'pm_events' is set to #1840000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/pm_events.txt' #5
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'poland_events' is set to #1850000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/poland_events.txt' #7
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'prohibition' is set to #1860000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/prohibition_events.txt' #8
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'prostitution' is set to #1870000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/prostitution_events.txt' #4
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'psychology_events' is set to #1880000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/psychology_events.txt' #6
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'red_scare' is set to #1890000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/red_scare_events.txt' #16
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'resignation' is set to #1900000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/resignation.txt' #3
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'romania' is set to #1910000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/romania_events.txt' #4
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'wedding' is set to #1920000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/royal_wedding.txt' #3
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'russia_monarchy' is set to #1930000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/russia_events.txt' #11
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'russo_chinese' is set to #1940000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/russo_chinese_events.txt' #4
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'scotland_yard' is set to #1950000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/scotland_yard.txt' #1
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'secession_events' is set to #1960000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/secession_situations.txt' #9
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'sick_man' is set to #1970000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/sick_man_events.txt' #3
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'skyscraper' is set to #1980000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/skyscraper_events.txt' #2
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'slave_owner_paranoia_events' is set to #1990000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/slave_owner_paranoia_events.txt' #3
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'slave_revolt' is set to #2000000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/slave_revolts.txt' #3
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'south_america' is set to #2010000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/south_america_events.txt' #1
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'plague' is set to #2020000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/spanish_flu_events.txt' #10
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'sol_events' is set to #2030000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/standard_of_living_events.txt' #6
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'strike' is set to #2040000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/strike_events.txt' #9
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'subject_interactions' is set to #2050000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/subject_interaction_evts.txt' #1
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'suffragist_events' is set to #2060000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/suffragist_events.txt' #10
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'tanzimat_events' is set to #2070000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/tanzimat_events.txt' #9
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'technology_events' is set to #2080000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/technology_events.txt' #6
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'test' is set to #2090000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/test_events.txt' #0
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'texan_war_of_independence' is set to #2100000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/texan_war_of_independence_events.txt' #3
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'tibet_expedition_events' is set to #2110000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/tibetan_expedition.txt' #22
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'titanic' is set to #2120000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/titanic_events.txt' #3
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'trade_route_events' is set to #2130000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/trade_route_events.txt' #5
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'trains' is set to #2140000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/train_events.txt' #1
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'tunguska' is set to #2150000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/tunguska.txt' #1
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'urbanization_events' is set to #2160000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/urbanization_events.txt' #5
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'vampire_panic' is set to #2170000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/vampire_panic_events.txt' #1
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'veiled_protectorate' is set to #2180000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/veiled_protectorate_events.txt' #1
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'victoria' is set to #2190000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/victoria_events.txt' #2
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'warlord_china_events' is set to #2200000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/warlord_china_events.txt' #4
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'zanzibar' is set to #2210000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/zanzibar_events.txt' #1
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'agitator_legal_events' is set to #2220000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/agitators_events/agitator_law_events_2.txt' #30
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'agitators_election_events' is set to #2230000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/agitators_events/agitators_election_events.txt' #50
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'agitators_law_events' is set to #2240000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/agitators_events/agitators_law_events.txt' #30
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'algeria_events' is set to #2250000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/agitators_events/algeria_events.txt' #8
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'coup' is set to #2260000
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'coup_pulse_events' is set to #2270000
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'coup_aftermath_events' is set to #2280000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/agitators_events/coup_events.txt' #27
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'dreyfus' is set to #2290000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/agitators_events/dreyfus_events.txt' #9
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'exiles_events' is set to #2300000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/agitators_events/exiles_events.txt' #11
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'exiles_more_events' is set to #2310000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/agitators_events/exiles_events_02.txt' #10
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'garibaldi_events' is set to #2320000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/agitators_events/garibaldi_events.txt' #4
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'historical_agitators' is set to #2330000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/agitators_events/historic_agitator_events.txt' #22
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'land_ownership_law_events' is set to #2340000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/agitators_events/land_ownership_law_events.txt' #18
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'luddite_law_events' is set to #2350000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/agitators_events/luddite_law_events.txt' #6
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'natural_borders' is set to #2360000
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'rhine_confederation' is set to #2370000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/agitators_events/natural_borders.txt' #6
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'paris_commune' is set to #2380000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/agitators_events/paris_commune_events.txt' #5
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'paris_commune_pulse_events' is set to #2390000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/agitators_events/paris_commune_pulse_events.txt' #16
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'provisional_government_events' is set to #2400000
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'government_petition_events' is set to #2410000
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'government_collapse' is set to #2420000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/agitators_events/provisional_government_events.txt' #3
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'revolution_pulse1_events' is set to #2430000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/agitators_events/revolution_events_01.txt' #19
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'revolution_pulse_events' is set to #2440000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/agitators_events/revolution_events_02.txt' #40
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'revolution_pulse2_events' is set to #2450000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/agitators_events/revolution_events_03.txt' #9
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'silkworm_diseases' is set to #2460000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/agitators_events/silkworm_diseases.txt' #9
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'slave_revolt_events' is set to #2470000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/agitators_events/slave_revolt_events.txt' #1
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'yeet_agitator_events' is set to #2480000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/agitators_events/yeet_agitator_events.txt' #3
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'fsa_events' is set to #2490000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/american_civil_war/00_fsa_events.txt' #1
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'acw_events' is set to #2500000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/american_civil_war/acw_events.txt' #8
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'acw_followup_events' is set to #2510000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/american_civil_war/acw_followup_events.txt' #8
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'acw_je_events' is set to #2520000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/american_civil_war/acw_je_events.txt' #4
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'wild_west' is set to #2530000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/american_civil_war/acw_wild_west_events.txt' #3
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'acre_dispute' is set to #2540000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/brazil/acre_dispute.txt' #4
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'amazonas' is set to #2550000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/brazil/amazonas.txt' #8
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'brazil_navy' is set to #2560000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/brazil/brazil_navy.txt' #4
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'brazilian_minors' is set to #2570000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/brazil/brazilian_minors.txt' #4
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'brazilian_slavery' is set to #2580000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/brazil/brazilian_slavery.txt' #13
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'caudillo' is set to #2590000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/brazil/caudillo.txt' #6
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'coffee_with_milk' is set to #2600000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/brazil/coffee_with_milk.txt' #16
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'cristo_redentor' is set to #2610000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/brazil/cristo_redentor.txt' #2
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'culture_brazil' is set to #2620000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/brazil/culture_brazil_events.txt' #7
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'culture_south_america' is set to #2630000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/brazil/culture_south_america.txt' #4
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'gran_colombia' is set to #2640000
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'andean_federation' is set to #2650000
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'la_plata' is set to #2660000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/brazil/gran_colombia.txt' #6
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'bp1_misc' is set to #2670000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/brazil/misc_events.txt' #3
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'paraguay' is set to #2680000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/brazil/paraguay.txt' #12
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'bp1_patagonia' is set to #2690000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/brazil/patagonia_events.txt' #1
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'pedro' is set to #2700000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/brazil/pedro_brazil_events.txt' #14
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'peru_bolivia_events' is set to #2710000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/brazil/peru_bolivia.txt' #8
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'positivism' is set to #2720000
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'positivism_pulse' is set to #2730000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/brazil/positivism.txt' #9
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'sa_migration' is set to #2740000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/brazil/south_america_migration.txt' #4
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'BRZ_populism' is set to #2750000
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'BRZ_vargas' is set to #2760000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/brazil/vargas.txt' #17
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'communist_elections' is set to #2770000
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'cable_street' is set to #2780000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/election_events/communist_fascist_election_events.txt' #5
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'election_conservative_events' is set to #2790000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/election_events/election_conservative_events.txt' #4
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'election_contextual_events' is set to #2800000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/election_events/election_contextual_events.txt' #8
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'election_liberal_events' is set to #2810000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/election_events/election_liberal_events.txt' #4
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'election_moderate_events' is set to #2820000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/election_events/election_moderate_events.txt' #2
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'election_neutral' is set to #2830000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/election_events/election_neutral_events.txt' #8
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'election_other_parties_events' is set to #2840000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/election_events/election_other_parties_events.txt' #5
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'cold' is set to #2850000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/expedition_events/antarctic_expedition_events.txt' #15
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'expedition_events' is set to #2860000
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'ai_expedition_simulator' is set to #2870000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/expedition_events/central_africa_expedition_events.txt' #15
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/expedition_events/congo_river_expedition_events.txt' #19
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/expedition_events/niger_river_expedition_events.txt' #31
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/expedition_events/west_america_expedition_events.txt' #34
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'anarchy' is set to #2880000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/law_events/anarchy_law.txt' #3
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'anti_state_religion' is set to #2890000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/law_events/anti_state_religion_law_events.txt' #3
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'bureaucracy' is set to #2900000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/law_events/bureaucracy.txt' #3
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'children_rights_events' is set to #2910000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/law_events/children_rights_events.txt' #6
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'citizenship_laws' is set to #2920000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/law_events/citizenship_laws.txt' #6
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'colonization' is set to #2930000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/law_events/colonization_laws.txt' #4
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'conscription_laws' is set to #2940000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/law_events/conscription_laws.txt' #3
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'council_republic_law_events' is set to #2950000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/law_events/council_republic_law_events.txt' #3
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'distribution_of_power_laws' is set to #2960000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/law_events/distribution_of_power_laws.txt' #12
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'economy_laws' is set to #2970000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/law_events/economy_laws.txt' #6
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'education_laws' is set to #2980000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/law_events/education_laws.txt' #6
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'free_speech_laws' is set to #2990000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/law_events/free_speech_laws.txt' #6
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'healthcare_laws' is set to #3000000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/law_events/healthcare_laws.txt' #6
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'internal_security_events' is set to #3010000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/law_events/internal_security_events.txt' #6
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'isolation' is set to #3020000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/law_events/isolationism_law.txt' #2
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'labor_rights' is set to #3030000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/law_events/labor_rights_laws.txt' #6
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'law_events' is set to #3040000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/law_events/law_events.txt' #3
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'generic_laws' is set to #3050000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/law_events/law_events_01.txt' #12
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'law_notification' is set to #3060000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/law_events/law_notification.txt' #4
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'laws' is set to #3070000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/law_events/laws.txt' #1
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'laws_police' is set to #3080000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/law_events/laws_police.txt' #3
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'migration_laws' is set to #3090000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/law_events/migration_laws.txt' #6
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'monarchy_law_events' is set to #3100000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/law_events/monarchy_laws.txt' #4
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'republic_laws' is set to #3110000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/law_events/republic_laws.txt' #3
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'rights_of_women_laws' is set to #3120000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/law_events/rights_of_women_laws.txt' #7
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'single_party_state' is set to #3130000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/law_events/single_party_state_laws.txt' #7
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'slavery_law_events' is set to #3140000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/law_events/slavery_laws.txt' #7
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'state_atheism' is set to #3150000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/law_events/state_atheism.txt' #6
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'tax' is set to #3160000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/law_events/tax_laws.txt' #6
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'technocracy' is set to #3170000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/law_events/technocracy_law.txt' #3
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'theocracy' is set to #3180000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/law_events/theocracy.txt' #3
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'unable_to_enact' is set to #3190000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/law_events/unable_to_enact_events.txt' #2
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'welfare_laws' is set to #3200000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/law_events/welfare_laws_events.txt' #9
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'earn_recognition_events' is set to #3210000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/soi_events/00_earn_recognition_events.txt' #1
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'gg_afghanistan' is set to #3220000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/soi_events/00_ep1_afghanistan_events.txt' #6
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'caucasuswar' is set to #3230000
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'caucasuswar_end' is set to #3240000
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'caucasus_expulsions' is set to #3250000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/soi_events/00_ep1_caucasus_events.txt' #18
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'gg_core' is set to #3260000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/soi_events/00_ep1_great_game_events.txt' #3
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'kazakhstan_events' is set to #3270000
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'russian_central_asia' is set to #3280000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/soi_events/00_ep1_kazakh_events.txt' #11
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'gg_korea' is set to #3290000
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'korea_monarchy' is set to #3300000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/soi_events/00_ep1_korea_events.txt' #12
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'persia_events' is set to #3310000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/soi_events/00_ep1_persia_events.txt' #8
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'lobby_events' is set to #3320000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/soi_events/00_lobbies_events_01.txt' #10
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/soi_events/00_lobbies_events_03.txt' #20
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'lobby_core' is set to #3330000
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'lobby_proposal' is set to #3340000
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'fund_lobbies_events' is set to #3350000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/soi_events/00_lobbies_events_04.txt' #30
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'aviation' is set to #3360000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/tech_events/aviation.txt' #1
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'camera_film_pm_events' is set to #3370000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/tech_events/camera_film_pm_events.txt' #2
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'flamethrowers_event' is set to #3380000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/tech_events/flamethrowers_event.txt' #1
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'military_tech_events' is set to #3390000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/tech_events/military_tech_events_01.txt' #4
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'naval_tech_events' is set to #3400000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/tech_events/naval_tech_events.txt' #5
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'nursing_events' is set to #3410000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/tech_events/nursing_events.txt' #4
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'production_tech_events' is set to #3420000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/tech_events/production_tech_events.txt' #13
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'rubber_events' is set to #3430000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/tech_events/rubber_events.txt' #1
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'dt_society_events' is set to #3440000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/tech_events/society_events_01.txt' #3
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'society_tech_events' is set to #3450000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/tech_events/society_events_03.txt' #2
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/tech_events/society_tech_events.txt' #2
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'dan_society_tech_events' is set to #3460000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/tech_events/society_techs_02.txt' #1
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'trench_warfare' is set to #3470000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/tech_events/trench_warfare.txt' #1
+[21:50:53][jomini_eventmanager.cpp:627]: >=== NAMESPACE > 'war_crimes' is set to #3480000
+[21:50:53][jomini_eventmanager.cpp:580]: Events loaded events/tech_events/war_crimes_events.txt' #2
+[21:50:53][jomini_eventmanager.cpp:587]: >>> Total of : 1655
+[21:51:06][gamestate.cpp:1223]: Warning: we're loading a save file while missing mod(s). Might cause unexpected issues.
+warning!X 缺少Mod：!
+   indent_newline: • Daoyu Cheat - Achievement Available Cheat Tool!
+   indent_newline: • No local product!
+   indent_newline: • Infinite Resources Buildings with Investment Pool!
+   indent_newline: • Luxury Goods Factories!
+   indent_newline: • Cheat Buildings!
+   indent_newline: • Rapid construction!
+   indent_newline: • Restrict Autonomous Investment!
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 60
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 60
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 60
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 53
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 53
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 69
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 69
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 53
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 87
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 69
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 87
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 87
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 99
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 99
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 111
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 111
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 99
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 123
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 111
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 123
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 135
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 123
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 135
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 135
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 60
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 60
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 53
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 53
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 69
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 69
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 87
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 87
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 99
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 99
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 111
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 111
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 123
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 123
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 135
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 135
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 60
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 60
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 53
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 53
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 69
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 69
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 87
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 87
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 99
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 99
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 111
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 111
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 123
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 123
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 135
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 135
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 60
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 60
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 53
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 53
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 69
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 69
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 87
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 87
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 99
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 99
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 111
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 111
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 123
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 123
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 135
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 135
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 60
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 53
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 60
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 69
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 87
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 53
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 99
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 69
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 111
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 87
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 123
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 99
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 135
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 111
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 123
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 135
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 60
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 53
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 69
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 87
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 99
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 111
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 123
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 135
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 60
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 53
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 69
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 87
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 99
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 111
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 123
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 135
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 60
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 53
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 69
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 87
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 99
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 111
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 123
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 135
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 60
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 53
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 69
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 87
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 99
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 111
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 123
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 135
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 60
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 53
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 69
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 87
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 99
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 111
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 123
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 135
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/coa_templates.txt line: 67
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/coa_templates.txt line: 82
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/coa_templates.txt line: 97
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/coa_templates.txt line: 107
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/coa_templates.txt line: 118
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/coa_templates.txt line: 135
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/coa_templates.txt line: 174
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/coa_templates.txt line: 199
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/coa_templates.txt line: 213
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/coa_templates.txt line: 256
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/coa_templates.txt line: 281
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/coa_templates.txt line: 295
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/coa_templates.txt line: 310
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/color_lists.txt line: 13
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/color_lists.txt line: 22
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/color_lists.txt line: 13
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/color_lists.txt line: 22
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/color_lists.txt line: 37
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/color_lists.txt line: 44
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/color_lists.txt line: 13
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/color_lists.txt line: 22
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/colored_emblem_lists.txt line: 22
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/colored_emblem_lists.txt line: 30
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/colored_emblem_lists.txt line: 45
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/colored_emblem_lists.txt line: 70
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/colored_emblem_lists.txt line: 76
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/colored_emblem_lists.txt line: 82
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/colored_emblem_lists.txt line: 91
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/colored_emblem_lists.txt line: 98
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/colored_emblem_lists.txt line: 126
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/colored_emblem_lists.txt line: 135
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/colored_emblem_lists.txt line: 154
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/colored_emblem_lists.txt line: 165
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/colored_emblem_lists.txt line: 175
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/colored_emblem_lists.txt line: 190
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/colored_emblem_lists.txt line: 198
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/colored_emblem_lists.txt line: 211
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/colored_emblem_lists.txt line: 223
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/colored_emblem_lists.txt line: 229
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/colored_emblem_lists.txt line: 236
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/colored_emblem_lists.txt line: 253
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/colored_emblem_lists.txt line: 263
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/colored_emblem_lists.txt line: 273
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/colored_emblem_lists.txt line: 280
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/colored_emblem_lists.txt line: 299
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/colored_emblem_lists.txt line: 309
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/colored_emblem_lists.txt line: 331
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/colored_emblem_lists.txt line: 343
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/colored_emblem_lists.txt line: 365
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/colored_emblem_lists.txt line: 389
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/colored_emblem_lists.txt line: 396
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/colored_emblem_lists.txt line: 404
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/colored_emblem_lists.txt line: 415
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/colored_emblem_lists.txt line: 422
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/colored_emblem_lists.txt line: 429
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/color_lists.txt line: 13
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/color_lists.txt line: 22
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/color_lists.txt line: 37
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/color_lists.txt line: 44
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/color_lists.txt line: 13
+
+[21:51:21][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/coat_of_arms/template_lists/color_lists.txt line: 22
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 60
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 60
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 60
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 53
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 53
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 53
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 69
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 69
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 87
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 69
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 99
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 87
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 87
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 111
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 99
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 99
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 111
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 123
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 123
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 111
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 135
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 135
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 123
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 135
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 60
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 60
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 53
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 53
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 69
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 69
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 87
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 87
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 99
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 99
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 111
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 111
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 123
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 135
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 123
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 135
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 60
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 60
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 53
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 53
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 69
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 69
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 87
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 87
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 99
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 99
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 111
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 111
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 123
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 123
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 135
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 135
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 60
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 53
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 60
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 69
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 53
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 87
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 69
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 99
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 87
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 111
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 99
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 123
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 135
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 111
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 60
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 123
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 53
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 135
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 69
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 60
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 87
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 53
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 99
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 69
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 111
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 87
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 123
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 99
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 135
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 111
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 60
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 123
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 53
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 135
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 69
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 87
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 99
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 111
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 123
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 135
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 60
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 53
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 69
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 87
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 99
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 111
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 123
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 135
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 60
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 53
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 69
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 87
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 99
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 111
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 123
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 135
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 60
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 53
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 69
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 87
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 99
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 111
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 123
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 135
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 60
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 53
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 69
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 87
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 99
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 111
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 123
+
+[21:52:28][jomini_script_system.cpp:265]: Script system error!
+  Error: untyped trigger [ Scoped object of type 'country_definition' is not valid () ]
+  Script location: file: common/flag_definitions/00_flag_definitions.txt line: 135
+
